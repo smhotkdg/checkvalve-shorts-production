@@ -13,6 +13,7 @@ args.add_argument('--preview', action='store_true')
 args.add_argument('--render', action='store_true')
 args.add_argument('--draft', action='store_true')
 args.add_argument('--timing', type=Path)
+args.add_argument('--start-frame', type=int, default=1)
 args.add_argument('--out', type=Path, default=ROOT/'outputs/blender')
 options = args.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 options.out.mkdir(parents=True, exist_ok=True)
@@ -219,7 +220,9 @@ if options.preview:
         scene.render.filepath=str(options.out/f'{label}.png')
         bpy.ops.render.render(write_still=True)
 if options.render:
-    scene.render.filepath=str(options.out/'frames/frame_')
-    (options.out/'frames').mkdir(exist_ok=True)
+    frames_dir=ROOT/'work/hybrid/frames'
+    frames_dir.mkdir(parents=True,exist_ok=True)
+    scene.frame_start=options.start_frame
+    scene.render.filepath=str(frames_dir/'frame_')
     bpy.ops.render.render(animation=True)
 print(json.dumps({'blend':str(blend_path),'frames':1200,'fps':24,'duration':50,'timing_status':'provisional; retime from final Piljae audio','preview':options.preview}))

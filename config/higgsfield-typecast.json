@@ -11,9 +11,10 @@
   "recommended_alternative": "controlled_mechanics_with_higgsfield_supporting_clips",
   "route_change_accepted": true,
   "voice": {"provider": "typecast", "name_kor": "필재", "model": "ssfm-v30", "tempo": 1.0, "format": "wav", "fallback_allowed": false},
-  "image": {"model": "seedream_v5_pro", "resolution": "1k", "count": 3},
-  "video": {"model": "minimax_h3", "resolution": "2K", "clip_seconds": 10, "clip_count": 5},
-  "quote": {"checked_on": "2026-10-10", "source": "Higgsfield connector estimate tools; no job submitted", "image_credits_each": 1.25, "video_credits_each": 20, "base_total": 103.75, "one_clip_retry_total": 123.75, "two_clip_retry_total": 143.75, "all_clips_regenerated_total": 203.75, "excludes": ["Typecast usage", "extra images", "separate paid editing or enhancement", "additional retries"]},
+  "image": {"model": "seedream_v5_pro", "resolution": "1k", "count": 1},
+  "video": {"model": "minimax_h3", "resolution": "2K", "clip_seconds": 10, "clip_count": 1, "timeline_seconds_used": 8},
+  "blender": {"scene_source": "src/blender/checkvalve_scene.py", "timing_source": "src/blender/timing.json", "timeline_seconds_used": 42},
+  "quote": {"checked_on": "2026-10-10", "source": "Higgsfield connector estimate tools", "image_credits_each": 1.25, "video_credits_each": 20, "base_total": 21.25, "one_clip_retry_total": 41.25, "two_clip_retry_total": 61.25, "all_clips_regenerated_total": 41.25, "this_run_additional_image_retry": 1.25, "this_run_accepted_jobs_quoted_total": 22.5, "excludes": ["Typecast usage", "extra images", "separate paid editing or enhancement", "additional retries"]},
   "style": {"look": "consistent stylized cutaway engineering explainer", "background": "dark navy", "flow_color": "cyan", "spring_color": "gold", "closed_color": "coral", "composition": "large title above, mechanism central, compact Korean speech captions below", "story": ["problem", "structure", "opening", "closing", "operating condition and recap"]},
   "guards": ["resolve actual Piljae voice_id from authenticated API catalog", "measure final speech before visual generation", "one approved mechanism asset reused across clips", "water flows around the solid poppet, never through it", "no generated speech or baked text in raw clips", "Korean labels and captions added in post", "Whisper timing from final Piljae audio", "never silently replace Piljae", "never silently switch route", "persist every submitted job_id", "never retry an unknown submission automatically"]
 }

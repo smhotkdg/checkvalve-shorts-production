@@ -27,8 +27,13 @@ def prepare(output_dir):
         'Closing: pressure difference decreases, spring returns the poppet to the seat; reverse pressure helps hold it closed.',
         'Operating condition: show insufficient then sufficient differential pressure and finish with a clear open/closed recap.'
     ]
+    if config['requested_route'] == 'blender_higgsfield_typecast_piljae':
+        narration = (ROOT / 'src/blender/narration-script.txt').read_text(encoding='utf-8').strip()
+        shared = 'Original stylized 3D engineering exterior: opaque teal pump, silver pipe and brass inline check valve on dark navy. Generous blank space above and below. No internal mechanism, no text, no labels, no logos, no people, no speech. '
+        image_prompts = ['Clean staged exterior establishing image. Do not reveal internal parts.']
+        scenes = ['Slow gentle camera push-in with subtle metal highlights; preserve exact manufactured exterior geometry. Motion from first frame.']
     images = [{'index': i+1, 'params': {'model': config['image']['model'], 'resolution': config['image']['resolution'], 'aspect_ratio': '9:16', 'count': 1, 'prompt': shared + ' ' + prompt}} for i, prompt in enumerate(image_prompts)]
-    videos = [{'index': i+1, 'params': {'model': config['video']['model'], 'resolution': config['video']['resolution'], 'duration': 10, 'aspect_ratio': '9:16', 'count': 1, 'prompt': shared + ' Motion begins in the first frame. ' + scene}, 'required_references': ['approved_environment_media_id', 'approved_mechanism_media_id'], 'submission_ready': False} for i, scene in enumerate(scenes)]
+    videos = [{'index': i+1, 'params': {'model': config['video']['model'], 'resolution': config['video']['resolution'], 'duration': 10, 'aspect_ratio': '9:16', 'count': 1, 'prompt': shared + ' Motion begins in the first frame. ' + scene}, 'required_references': ['approved_intro_image_media_id'], 'submission_ready': False} for i, scene in enumerate(scenes)]
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / 'narration-script.txt').write_text(narration+'\n', encoding='utf-8')
     (output_dir / 'requests-draft.json').write_text(json.dumps({'not_for_direct_submission': True, 'images': images, 'videos': videos, 'note': 'Approve style, then generate matching assets using the actual approved style reference. Resolve all media IDs before any video submission. Re-time visuals from final Piljae speech.'}, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
