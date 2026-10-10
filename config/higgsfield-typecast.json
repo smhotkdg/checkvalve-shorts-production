@@ -1,21 +1,32 @@
 {
-  "schema_version": 1,
-  "topic": "external top climbing tower crane: adding a mast section",
-  "reference_channel": "https://www.youtube.com/channel/UCEtLvsrVXP7QtodFwcyFckA",
+  "schema_version": 2,
+  "active_topic": "tower-crane",
+  "topic_config": "topics/tower-crane/topic.json",
+  "reference_video": "https://www.youtube.com/shorts/q5C9HCN2QY4",
+  "reference_title": "물속 다리 기둥을 세운 천재적인 해결법, 코퍼댐 공법의 진화",
+  "reference_channel": "https://www.youtube.com/@%EC%9D%B4%EB%9F%B0%EA%B1%B0%EC%A7%807",
   "duration_seconds": 50,
   "aspect_ratio": "9:16",
   "final_size": [
     1080,
     1920
   ],
+  "fps": 24,
   "thumbnail": false,
   "publish_to_youtube": false,
   "requested_route": "blender_higgsfield_typecast_piljae",
-  "recommended_alternative": "controlled_mechanics_with_higgsfield_supporting_clips",
-  "route_change_accepted": true,
+  "deliverables_per_topic": [
+    "topics/<slug>/brief.md: principle, accuracy guards, story beats, shot table",
+    "topics/<slug>/narration.txt: exact Piljae TTS text only",
+    "topics/<slug>/title-description.txt: 3 Shorts title options, description, hashtags, final script",
+    "topics/<slug>/topic.json: clips, draft timeline, caption keywords, topic guards",
+    "outputs/<slug>-final.mp4, outputs/<slug>.srt, outputs/<slug>-verification.json (local only, not in Git)"
+  ],
   "voice": {
     "provider": "typecast",
     "name_kor": "필재",
+    "voice_id_last_verified": "tc_68257f68bc6e3c161ab5078d",
+    "voice_id_rule": "always re-resolve from the authenticated /v3/voices catalog; never hard-code",
     "model": "ssfm-v30",
     "tempo": 1.0,
     "format": "wav",
@@ -24,150 +35,97 @@
       "pitch_preserving_rate": 0.94,
       "use_hosted_audio_clock": true,
       "pad_mixed_audio_to_video_seconds": 50
+    },
+    "length_budget": {
+      "raw_seconds_max": 46.0,
+      "after_rate_seconds_max": 49.0,
+      "payoff_tail_seconds_min": 1.0,
+      "rule": "if raw Piljae audio exceeds the budget, shorten the script and regenerate; never speed it up and never let atrim cut speech",
+      "estimate": "about 6.5 Korean characters (spaces excluded) per raw second; checkvalve 292 chars = 44.6 s"
     }
   },
-  "image": {
-    "source": "detailed original Blender PBR reference frame",
-    "generation_required": false,
-    "count": 0
-  },
-  "video": {
-    "clip_count": 3,
-    "timeline_seconds_used": 14,
-    "clips": [
-      {
-        "purpose": "cinematic ascending crane hook",
-        "model": "kling3_0",
-        "mode": "pro",
-        "sound": "off",
-        "seconds": 5
-      },
-      {
-        "purpose": "connection fastener detail; use seconds 0.9-3.9 at timeline 31.7-34.7",
-        "model": "kling3_0",
-        "mode": "pro",
-        "sound": "off",
-        "seconds": 4
-      },
-      {
-        "purpose": "completed crane and hoist in motion",
-        "model": "kling3_0",
-        "mode": "pro",
-        "sound": "off",
-        "seconds": 6
-      }
-    ]
-  },
-  "blender": {
-    "scene_input": "work/project/scene.blend",
-    "continuous_animation": true,
-    "sync_to_measured_voice": true,
-    "fps": 24,
-    "engine": "BLENDER_EEVEE",
-    "timeline_seconds_used": 36,
-    "prepared_body_seconds": 39,
-    "body_frame_start": 121,
-    "body_frame_end": 1056,
-    "camera_shots": 15,
-    "camera_type": "perspective with changing views and continuous parallax",
-    "model_detail": [
-      "closed steel lattice chords",
-      "connection flanges and hex bolts",
-      "cables and hoist trolley",
-      "hydraulic barrel, chrome rod, hoses and yoke",
-      "reflective glazing",
-      "concrete foundation and building site"
-    ],
-    "materials": "PBR painted metal, galvanized fasteners, aggregate concrete, chrome and glazing; AgX; ambient occlusion; beveled edges"
-  },
-  "quote": {
-    "checked_on": "2026-10-10",
-    "source": "Higgsfield connector estimate tools",
-    "clip_credits": [
-      7.5,
-      6,
-      9
-    ],
-    "base_total": 22.5,
-    "revision_spent_including_rejected_hook_and_fastener": 36,
-    "retry_cost": "Recheck the affected clip before submitting a known-outcome retry.",
-    "excludes": [
-      "Typecast API usage",
-      "extra image generation",
-      "additional retries"
-    ]
-  },
-  "style": {
-    "look": "realistic detailed industrial engineering CGI with close mechanical action",
-    "priority": "viewer engagement and meaningful motion before credit minimization",
-    "sound_design": "original quiet pulse bed, transitions, mast contact, hoist motor, hydraulic rumble and ratchet strokes; narrator remains dominant",
-    "composition": "short large white/yellow headings, moving process central, larger short Korean captions on a contrasting footer",
-    "story": [
+  "story": {
+    "reference_structure": [
       "problem",
       "solution in motion",
       "new obstacle",
       "improved solution",
       "completed result"
-    ]
-  },
-  "guards": [
-    "resolve actual Piljae voice_id from authenticated API catalog",
-    "measure final speech before visual generation",
-    "one approved mechanism asset reused across clips",
-    "no generated speech or baked text in raw clips",
-    "Korean labels and captions added in post",
-    "Whisper timing from final Piljae audio",
-    "never silently replace Piljae",
-    "never silently switch route",
-    "persist every submitted job_id",
-    "never retry an unknown submission automatically",
-    "hook prepares new section on introduction rails before climbing",
-    "balance the upper works before jacking",
-    "jack reacts against existing mast via support yoke; base mast stays fixed",
-    "climbing cage and entire upper assembly rise together",
-    "section enters the gap only after enough clearance exists",
-    "secure the connection before seating upper works on the new section",
-    "explain generic top climbing; do not claim a specific crane model or universal procedure"
-  ],
-  "reference_video": "https://www.youtube.com/shorts/q5C9HCN2QY4",
-  "topic_selection_status": "selected_by_user",
-  "story_direction": {
-    "reference": "https://www.youtube.com/shorts/q5C9HCN2QY4",
-    "requirements": [
-      "continuous meaningful animation",
-      "narration follows visible cause and effect",
-      "problem, solution, new obstacle, improved solution, completed result",
-      "no static hold or still-image zoom as a substitute for meaningful object animation",
-      "original spoken text rather than copied reference wording"
     ],
-    "analysis_status": "manual_review_completed",
-    "review_basis": "observed browser video frames and platform-provided captions"
+    "immersion_structure": [
+      "0-2 s visual hook: the most impressive moment of the process, already moving",
+      "2-5 s open loop: a spoken question answered only near the end",
+      "problem",
+      "solution in motion",
+      "new obstacle (announced explicitly)",
+      "improved solution with a slowed, close-up 'satisfying' moment",
+      "payoff line that answers the open loop",
+      "loop ending whose last frame matches the first frame"
+    ],
+    "guide": "docs/immersion-guide.md"
   },
-  "native_edit": {
-    "render_concurrency": 2,
-    "render_shards": 5,
-    "bitrate_bits_per_second": 7000000,
-    "audio_input": "premixed Piljae plus quiet original sound design",
+  "style": {
+    "look": "realistic detailed engineering CGI, PBR materials, AgX, ambient occlusion, beveled edges",
+    "priority": "viewer engagement and accurate meaningful motion before credit minimization",
+    "motion_rule": "no static hold over 1 s; a new shot or a clear state change at least every 3 s",
+    "scale_cues": "always include a known-size object (person, car, tugboat) in wide shots",
+    "composition": "short large white/yellow headings, stage progress chips at top, moving process central, short Korean captions on a contrasting footer"
+  },
+  "layout": {
+    "title_band_pixels": [
+      0,
+      0,
+      1080,
+      280
+    ],
     "picture_window_pixels": [
       0,
       280,
       1080,
       1400
     ],
-    "caption_space_begins_y": 1400
+    "caption_space_begins_y": 1400,
+    "horizontal_centering": {
+      "required": true,
+      "rule": "every title, progress chip, caption line and the picture window is horizontally centered on x=540 with symmetric left/right margins",
+      "tolerance_pixels": 2,
+      "verify": "after the final render, measure the non-background bounding box of title and caption rows on start, middle and end frames; |left margin - right margin| <= 2 px, else fix and re-render"
+    }
   },
   "captions": {
     "language": "ko",
     "font": "Noto Sans CJK KR Bold",
-    "timing_source": "Whisper on final Piljae audio",
-    "wording_source": "exact authored script",
-    "style": "larger white bold Korean text with dark outline on a plain dark lower panel",
+    "timing_source": "Whisper on final hosted Piljae audio",
+    "wording_source": "exact authored script (topics/<slug>/narration.txt)",
+    "style": "white bold Korean text with dark outline on a plain dark lower panel; topic keywords in yellow",
+    "keyword_highlight_color": "#FFD400",
     "max_words": 4,
     "max_chars": 22,
     "fontsize_fraction": 0.038,
     "max_width_fraction": 0.8,
     "bottom_fraction": 0.15,
     "max_lines": 2,
+    "minimum_similarity": 0.9,
     "verify_at_phone_preview_width": 360
-  }
+  },
+  "native_edit": {
+    "render_concurrency": 2,
+    "render_shards": 5,
+    "bitrate_bits_per_second": 7000000,
+    "audio_input": "premixed Piljae plus quiet original sound design; Whisper uses the clean Piljae file"
+  },
+  "guards": [
+    "resolve actual Piljae voice_id from authenticated API catalog",
+    "measure final speech before visual generation",
+    "show the current Higgsfield and Typecast cost and balance and get user approval before any paid generation",
+    "one approved mechanism asset reused across clips",
+    "no generated speech or baked text in raw clips",
+    "Korean labels and captions added in post",
+    "never silently replace Piljae",
+    "never silently switch route",
+    "persist every submitted job_id",
+    "never retry an unknown submission automatically",
+    "original spoken text; never copy reference wording",
+    "explain the generic method; do not claim a specific project's numbers unless verified"
+  ]
 }

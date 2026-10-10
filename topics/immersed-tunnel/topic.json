@@ -1,0 +1,94 @@
+{
+  "slug": "immersed-tunnel",
+  "topic": "immersed tube tunnel: floating, ballasting and hydrostatic joining of a tunnel element",
+  "status": "script_draft_ready",
+  "topic_selection_status": "selected_by_user",
+  "work_dir": "work/immersed-tunnel",
+  "narration_file": "topics/immersed-tunnel/narration.txt",
+  "narration_estimate": {
+    "characters_without_spaces": 273,
+    "raw_seconds": 41.7,
+    "after_rate_seconds": 44.4
+  },
+  "progress_chips": ["① 띄우기", "② 내리기", "③ 붙이기", "④ 완성"],
+  "caption_keywords": ["함체", "탱크", "자갈", "고무 패킹", "수압"],
+  "video": {
+    "clip_count": 3,
+    "timeline_seconds_used": 16,
+    "clips": [
+      {
+        "id": "H1",
+        "purpose": "hook: element and tugboat on the surface, element starts sinking, camera dives below the waterline with it",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "Blender surface frame with tugboat for scale",
+        "timeline": [0.0, 4.2]
+      },
+      {
+        "id": "H2",
+        "purpose": "casting dock floods, bulkhead-sealed element floats and is towed out",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "Blender casting dock frame showing both end bulkheads",
+        "timeline": [12.7, 17.4]
+      },
+      {
+        "id": "H3",
+        "purpose": "cars drive through the finished tunnel; camera exits and rises to the sea surface matching the first frame (loop)",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 8,
+        "start_frame": "Blender tunnel interior frame",
+        "end_frame": "same surface composition as the first frame of H1",
+        "timeline": [42.0, 50.0]
+      }
+    ]
+  },
+  "blender": {
+    "engine": "BLENDER_EEVEE",
+    "fps": 24,
+    "continuous_animation": true,
+    "sync_to_measured_voice": true,
+    "timeline_seconds_used": 34,
+    "camera_type": "perspective with changing views and continuous parallax; X-ray cross-sections for tanks and the joint chamber",
+    "groups": [
+      "seabed: soft sediment layers, dredged trench, gravel foundation bed, backfill",
+      "existing element end (fixed)",
+      "new element (moves): concrete box section, two traffic bores, end bulkheads, internal ballast tanks with visible water level",
+      "suspension: pontoons and winch cables",
+      "joint: GINA-type rubber gasket with soft nose, pull jacks, joint chamber between bulkheads, pump",
+      "pressure arrows (hydrostatic) as animated overlays",
+      "scale cues: tugboat, diver or car"
+    ],
+    "model_detail": [
+      "concrete with formwork seams and chamfered edges",
+      "steel bulkhead plates with stiffeners and hatches",
+      "rubber gasket that visibly deforms from round nose to flattened",
+      "hydraulic pull jacks with chrome rods and hoses",
+      "turbid underwater volume with light shafts and particles"
+    ]
+  },
+  "sound_design": "surface water and tug engine, muffled underwater ambience after the dive, low pulse bed, ballast and joint pumps, hydraulic jack, rubber contact, deep compression thud, steel bulkhead removal, falling backfill, car pass-by; narrator stays dominant",
+  "guards": [
+    "element floats only because both ends are sealed by temporary bulkheads; small freeboard",
+    "ballast water goes into internal tanks; the traffic bores stay dry",
+    "trench and gravel bed are finished before lowering",
+    "element hangs from pontoon or winch cables while lowering; no free fall",
+    "existing element never moves",
+    "pull jacks make the first light gasket contact before any dewatering",
+    "only the joint chamber between the two bulkheads is dewatered",
+    "compression comes from unbalanced hydrostatic pressure on the far-end bulkhead",
+    "bulkheads are removed only after the joint is sealed; then backfill",
+    "no water passing through concrete or bulkheads",
+    "generic method; no specific tunnel dimensions, depth or weight"
+  ],
+  "quote": {
+    "status": "not_checked",
+    "rule": "query the Higgsfield estimate tools and Typecast balance immediately before generating and get user approval"
+  }
+}

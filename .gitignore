@@ -33,3 +33,8 @@ node_modules/
 /outputs/blender/frames/
 *.blend1
 *.blend2
+/topics/**/*.wav
+/topics/**/*.mp3
+/topics/**/*.mp4
+/topics/**/*.png
+/topics/**/*.blend

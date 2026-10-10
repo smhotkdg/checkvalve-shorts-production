@@ -1,0 +1,143 @@
+{
+  "slug": "tower-crane",
+  "topic": "external top climbing tower crane: adding a mast section",
+  "status": "script_draft_ready",
+  "topic_selection_status": "selected_by_user",
+  "work_dir": "work/tower-crane",
+  "narration_file": "topics/tower-crane/narration.txt",
+  "narration_estimate": {
+    "characters_without_spaces": 282,
+    "raw_seconds": 43.1,
+    "after_rate_seconds": 45.8
+  },
+  "progress_chips": [
+    "① 준비",
+    "② 균형",
+    "③ 상승",
+    "④ 삽입"
+  ],
+  "caption_keywords": [
+    "클라이밍 케이지",
+    "마스트",
+    "균형",
+    "유압 실린더",
+    "걸쇠"
+  ],
+  "video": {
+    "clip_count": 3,
+    "timeline_seconds_used": 14,
+    "clips": [
+      {
+        "id": "H1",
+        "purpose": "wide urban site: building rising floor by floor beside the crane, workers for scale, camera rises",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "Blender wide site frame",
+        "timeline": [
+          7.6,
+          12.7
+        ]
+      },
+      {
+        "id": "H2",
+        "purpose": "connection flange bolt tightening close-up; use about 3 s matching the spoken '볼트로 잇고'",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 4,
+        "start_frame": "Blender flange close-up with new section seated",
+        "timeline": [
+          38.3,
+          41.3
+        ]
+      },
+      {
+        "id": "H3",
+        "purpose": "taller crane slews and hoists material; camera rises to end on the same low angle as the first frame (loop)",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 6,
+        "start_frame": "Blender wide frame of the finished taller crane",
+        "end_frame": "same low-angle composition as frame 1",
+        "timeline": [
+          44.0,
+          50.0
+        ]
+      }
+    ]
+  },
+  "blender": {
+    "engine": "BLENDER_EEVEE",
+    "fps": 24,
+    "continuous_animation": true,
+    "sync_to_measured_voice": true,
+    "timeline_seconds_used": 36,
+    "camera_type": "perspective with changing views and continuous parallax",
+    "groups": [
+      "foundation (fixed)",
+      "fixed mast sections",
+      "upper works: slewing unit, jib, counter-jib, cab, trolley, hook",
+      "external climbing cage with introduction rails",
+      "hydraulic jack with support yoke and climbing pawls on mast steps",
+      "new mast section",
+      "building under construction and site, workers for scale",
+      "center-of-gravity marker and tilt arrows as overlays"
+    ],
+    "model_detail": [
+      "closed steel lattice chords",
+      "connection flanges and hex bolts",
+      "cables and hoist trolley",
+      "hydraulic barrel, chrome rod, hoses and yoke",
+      "reflective glazing",
+      "concrete foundation and building site"
+    ],
+    "materials": "PBR painted metal, galvanized fasteners, aggregate concrete, chrome and glazing; AgX; ambient occlusion; beveled edges"
+  },
+  "sound_design": "original quiet pulse bed, transitions, mast contact, hoist motor, hydraulic rumble and ratchet strokes, trolley drive, impact wrench on flange bolts, wind at height, deep thud when the upper seats; narrator remains dominant",
+  "guards": [
+    "resolve actual Piljae voice_id from authenticated API catalog",
+    "measure final speech before visual generation",
+    "one approved mechanism asset reused across clips",
+    "no generated speech or baked text in raw clips",
+    "Korean labels and captions added in post",
+    "Whisper timing from final Piljae audio",
+    "never silently replace Piljae",
+    "never silently switch route",
+    "persist every submitted job_id",
+    "never retry an unknown submission automatically",
+    "hook prepares new section on introduction rails before climbing",
+    "balance the upper works before jacking",
+    "jack reacts against existing mast via support yoke; base mast stays fixed",
+    "climbing cage and entire upper assembly rise together",
+    "section enters the gap only after enough clearance exists",
+    "secure the connection before seating upper works on the new section",
+    "explain generic top climbing; do not claim a specific crane model or universal procedure",
+    "climbing proceeds in two jack strokes with pawls holding between strokes",
+    "no bolts are removed before the balance step is complete"
+  ],
+  "quote": {
+    "status": "stale",
+    "last": {
+      "checked_on": "2026-10-10",
+      "source": "Higgsfield connector estimate tools",
+      "clip_credits": [
+        7.5,
+        6,
+        9
+      ],
+      "base_total": 22.5,
+      "revision_spent_including_rejected_hook_and_fastener": 36,
+      "retry_cost": "Recheck the affected clip before submitting a known-outcome retry.",
+      "excludes": [
+        "Typecast API usage",
+        "extra image generation",
+        "additional retries"
+      ]
+    },
+    "rule": "query the Higgsfield estimate tools and Typecast balance immediately before generating and get user approval"
+  },
+  "notes": "a previous non-immersion crane configuration existed; this package is the immersion-format version"
+}

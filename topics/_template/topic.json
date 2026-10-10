@@ -1,0 +1,14 @@
+{
+  "slug": "<slug>",
+  "topic": "",
+  "status": "draft",
+  "work_dir": "work/<slug>",
+  "narration_file": "topics/<slug>/narration.txt",
+  "progress_chips": [],
+  "caption_keywords": [],
+  "video": {"clip_count": 0, "timeline_seconds_used": 0, "clips": []},
+  "blender": {"engine": "BLENDER_EEVEE", "fps": 24, "continuous_animation": true, "sync_to_measured_voice": true, "groups": [], "model_detail": []},
+  "sound_design": "",
+  "guards": [],
+  "quote": {"status": "not_checked"}
+}
