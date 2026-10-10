@@ -22,3 +22,6 @@ node_modules/
 /src/*.wav
 /outputs/piljae*.wav
 /outputs/git-share.zip
+/outputs/blender/frames/
+*.blend1
+*.blend2

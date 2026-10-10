@@ -1,4 +1,4 @@
-param([string]$PythonCommand = '')
+param([string]$PythonCommand = '', [switch]$GenerateNarration, [string]$ScriptPath = '', [string]$OutputPath = '')
 $ErrorActionPreference = 'Stop'
 $typecastWorkspace = Split-Path -Parent $PSScriptRoot
 $typecastWorkDirectory = Join-Path $typecastWorkspace 'work'
@@ -23,9 +23,16 @@ $typecastPreviousKey = $env:TYPECAST_API_KEY
 $typecastSecretPointer = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($typecastSecret)
 try {
     $env:TYPECAST_API_KEY = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($typecastSecretPointer)
-    & $PythonCommand (Join-Path $typecastWorkspace 'src\typecast_api_bridge.py')
-    if ($LASTEXITCODE -ne 0) { throw 'API verification incomplete; no audio generated' }
-    Write-Host 'Connected. Piljae voice verified. No audio generation requested.'
+    $typecastBridgeArguments = @((Join-Path $typecastWorkspace 'src\typecast_api_bridge.py'))
+    if ($GenerateNarration) {
+        if (-not $ScriptPath) { $ScriptPath = Join-Path $typecastWorkspace 'work\higgsfield-typecast\narration-script.txt' }
+        if (-not $OutputPath) { $OutputPath = Join-Path $typecastWorkspace 'outputs\piljae.wav' }
+        $typecastBridgeArguments += @('--generate', '--script', $ScriptPath, '--out', $OutputPath)
+    }
+    & $PythonCommand @typecastBridgeArguments
+    if ($LASTEXITCODE -ne 0) { throw 'API operation incomplete; inspect its status before retrying a generation' }
+    if ($GenerateNarration) { Write-Host 'Piljae narration generated.' }
+    else { Write-Host 'Connected. Piljae voice verified. No audio generation requested.' }
 } finally {
     [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($typecastSecretPointer)
     if ($null -eq $typecastPreviousKey) { Remove-Item Env:\TYPECAST_API_KEY -ErrorAction SilentlyContinue }
