@@ -100,7 +100,7 @@
   "style": {
     "look": "realistic detailed industrial engineering CGI with close mechanical action",
     "priority": "viewer engagement and meaningful motion before credit minimization",
-    "sound_design": "original quiet pulse bed, transitions, gate contact, water, grinding and harbour horn; narrator remains dominant",
+    "sound_design": "original quiet pulse bed, transitions, mast contact, hoist motor, hydraulic rumble and ratchet strokes; narrator remains dominant",
     "composition": "short large white/yellow headings, moving process central, larger short Korean captions on a contrasting footer",
     "story": [
       "problem",
@@ -146,7 +146,7 @@
   "native_edit": {
     "render_concurrency": 2,
     "render_shards": 5,
-    "bitrate_bits_per_second": 6500000,
+    "bitrate_bits_per_second": 7000000,
     "audio_input": "premixed Piljae plus quiet original sound design",
     "picture_window_pixels": [
       0,
