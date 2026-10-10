@@ -27,30 +27,35 @@
     "count": 0
   },
   "video": {
-    "model": "minimax_h3",
-    "resolution": "2K",
-    "clip_seconds": 5,
-    "clip_count": 1,
-    "timeline_seconds_used": 5
+    "clip_count": 3,
+    "timeline_seconds_used": 19,
+    "clips": [
+      {"purpose": "underwater hook", "model": "minimax_h3", "resolution": "2K", "seconds": 5},
+      {"purpose": "maintenance action", "model": "kling3_0", "mode": "pro", "sound": "off", "seconds": 6},
+      {"purpose": "dynamic departure", "model": "kling3_0", "mode": "pro", "sound": "off", "seconds": 8, "references": ["start_image", "end_image"]}
+    ]
   },
   "blender": {
     "scene_input": "work/project/scene.blend",
     "continuous_animation": true,
     "sync_to_measured_voice": true,
     "fps": 24,
-    "timeline_seconds_used": 45,
+    "engine": "BLENDER_EEVEE",
+    "timeline_seconds_used": 31,
+    "prepared_body_seconds": 37,
     "body_frame_start": 121,
-    "body_frame_end": 1200
+    "body_frame_end": 1008,
+    "camera_shots": 13,
+    "camera_type": "perspective with changing views and continuous parallax"
   },
   "quote": {
     "checked_on": "2026-10-10",
     "source": "Higgsfield connector estimate tools",
     "image_credits_each": 0,
-    "video_credits_each": 10,
-    "base_total": 10,
-    "one_clip_retry_total": 20,
-    "two_clip_retry_total": 30,
-    "all_clips_regenerated_total": 20,
+    "clip_credits": [10, 9, 12],
+    "base_total": 31,
+    "revision_spent_including_rejected_departure": 47,
+    "retry_cost": "depends on the selected clip; recheck before submission",
     "excludes": [
       "Typecast usage",
       "extra images",
@@ -59,7 +64,9 @@
     ]
   },
   "style": {
-    "look": "clear 3D process explainer",
+    "look": "dynamic 3D process explainer with lit materials, close views and action",
+    "priority": "viewer engagement and meaningful motion before credit minimization",
+    "sound_design": "original quiet pulse bed, transitions, gate contact, water, grinding and harbour horn; narrator remains dominant",
     "composition": "large white and yellow title above, animated process central, compact Korean speech captions below",
     "story": [
       "problem",
