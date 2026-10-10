@@ -25,7 +25,8 @@ Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재** 내레�
 1. 주제 선정 (기준: [immersion-guide.md 5장](docs/immersion-guide.md))
 2. `topics/_template/`을 `topics/<slug>/`로 복사하고 원리·대본·제목·설명·장면표 작성
 3. `config/higgsfield-typecast.json`의 `active_topic`과 `topic_config` 변경
-4. [Claude Code 프롬프트](docs/claude-code-prompt.md)의 `<slug>`를 바꿔 실행
+4. 실행: `powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <slug>`
+   (최신 main을 받고, 도구를 점검한 뒤, [Claude Code 프롬프트](docs/claude-code-prompt.md)를 채워 Claude Code를 엽니다)
 
 ## 보관 원칙
 

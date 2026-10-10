@@ -2,6 +2,14 @@
 
 아래 명령의 `<slug>`는 주제 폴더 이름입니다(현재 `immersed-tunnel`). 주제별 작업 파일은 `work/<slug>/`에 둡니다.
 
+## 한 번에 시작
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <slug>
+```
+
+최신 main 받기 → 주제 파일·Typecast 키·Python·Blender·FFmpeg·Claude Code 점검 → `work/<slug>/claude-prompt.txt` 생성 → Claude Code 실행 순서입니다. `-NoLaunch`는 점검과 프롬프트 생성만 합니다.
+
 ## 필요한 환경
 
 - Python 3: Typecast 연결 스크립트는 표준 라이브러리만 사용합니다.

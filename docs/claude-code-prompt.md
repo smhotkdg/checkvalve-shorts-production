@@ -1,6 +1,13 @@
 # Claude Code 실행 프롬프트
 
-저장소 루트(로컬 `work/typecast-key.xml`이 있는 기존 클론)에서 Claude Code를 열고, `<slug>`를 주제 폴더 이름으로 바꿔 붙여 넣습니다. 현재 주제는 `tower-crane`, 다음은 `immersed-tunnel`입니다.
+가장 쉬운 방법은 저장소 루트(로컬 `work/typecast-key.xml`이 있는 기존 클론)에서 아래 명령을 실행하는 것입니다. 최신 main을 받고, 필요한 도구를 점검한 뒤, 아래 프롬프트의 `<slug>`를 채워 `work/<slug>/claude-prompt.txt`로 만들고 Claude Code를 엽니다.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug tower-crane
+# 점검과 프롬프트 생성만: -NoLaunch / Blender 경로가 다르면: -BlenderPath 'D:\...\blender.exe'
+```
+
+직접 붙여 넣을 때는 `<slug>`를 주제 폴더 이름으로 바꿉니다. 현재 주제는 `tower-crane`, 다음은 `immersed-tunnel`입니다.
 
 ```text
 이 저장소에서 50초 9:16 쇼츠를 제작해 줘. 주제 폴더는 topics/<slug>/ 이야.
