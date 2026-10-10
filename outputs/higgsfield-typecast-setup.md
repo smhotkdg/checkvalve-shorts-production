@@ -1,6 +1,10 @@
-# Higgsfield + Typecast 필재 제작 준비
+# 초기 Higgsfield + Typecast 제작 준비 기록
 
-기준일: 2026-10-10. **설정·샘플 요청 준비 완료, 계정 조건 미충족으로 새 영상 생성은 대기 중입니다.**
+**이 문서는 무료 계정 시점의 이전 기록입니다. 아래 대기 상태·5클립 경로·초기 견적은 현재 상태가 아닙니다.** 이후 Blender + Higgsfield + Typecast 필재 경로로 변경해 50초 영상을 완성했습니다. 현재 Higgsfield Plus 연결과 필재 API 인증·음성 생성을 확인했으며 실제 사용량은 22.5크레딧입니다.
+
+최신 자료: [완성 영상](checkvalve-hybrid-final.mp4), [제작·재현 안내](hybrid-production-guide.md), [제목·설명·대본](checkvalve-hybrid-title-description.txt).
+
+이하 초기 기록의 기준일: 2026-10-10, 계정 조건 미충족으로 생성 대기 중이던 시점.
 
 ## 제작 목표
 

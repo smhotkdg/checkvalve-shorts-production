@@ -225,4 +225,4 @@ if options.render:
     scene.frame_start=options.start_frame
     scene.render.filepath=str(frames_dir/'frame_')
     bpy.ops.render.render(animation=True)
-print(json.dumps({'blend':str(blend_path),'frames':1200,'fps':24,'duration':50,'timing_status':'provisional; retime from final Piljae audio','preview':options.preview}))
+print(json.dumps({'blend':str(blend_path),'frames':1200,'fps':24,'duration':50,'timing_status':'measured Piljae timing supplied' if options.timing else 'provisional; retime from final Piljae audio','preview':options.preview}))

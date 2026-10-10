@@ -15,7 +15,7 @@ export default async ({ project }) => {
   p.cut(voice,{from:0,dur:44.6,at:0});
   const phases = [
     [0,8,'펌프가 멈추면\n물이 되돌아온다?','역류를 막는 작은 장치'],
-    [8,15.65,'체크밸브의 내부','밸브 시트 · 마개 · 스프링'],
+    [8,15.65,'체크밸브의 내부','밸브 시트, 마개, 스프링'],
     [15.65,27.65,'압력 차가 충분하면','마개가 움직이고, 스프링은 압축'],
     [27.65,36.63,'압력이 줄면 닫힌다','스프링과 역압이 닫힘을 돕습니다'],
     [36.63,40.51,'열리기 시작하는 조건','최소 개방 압력 차'],
@@ -30,12 +30,12 @@ export default async ({ project }) => {
   }
   p.compose(<frame width={1080} height={1920} layout="none">
     <text x={365} y={760} width={110} height={65} typography={{fontAssetId:font.id,script:'Hang',language:'ko',direction:'ltr'}} fontSize={30} color="#B9C9D3" align="center">시트</text>
-    <text x={455} y={1055} width={130} height={65} typography={{fontAssetId:font.id,script:'Hang',language:'ko',direction:'ltr'}} fontSize={30} color="#F1F4ED" align="center">마개</text>
+    <text x={385} y={1055} width={130} height={65} typography={{fontAssetId:font.id,script:'Hang',language:'ko',direction:'ltr'}} fontSize={30} color="#F1F4ED" align="center">마개</text>
     <text x={575} y={760} width={180} height={65} typography={{fontAssetId:font.id,script:'Hang',language:'ko',direction:'ltr'}} fontSize={30} color="#FFD469" align="center">스프링</text>
   </frame>,{at:8,dur:7.65,name:'Part labels'});
   await p.frame(20,path.join(root,'edit-open.png'));
   await p.frame(2,path.join(root,'edit-intro.png'));
   if (process.env.HYBRID_PREVIEW_ONLY !== '1') {
-    await p.render(path.join(root,'clean-master.mp4'),{depth:8,bitrate:'4M',accel:'auto'});
+    await p.render(path.join(root,'clean-master.mp4'),{depth:8,bitrate:4000000,accel:'auto'});
   }
 };

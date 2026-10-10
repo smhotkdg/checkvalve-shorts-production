@@ -1,6 +1,6 @@
 # Typecast 필재 API 연결 준비
 
-상태: 연결 코드 준비 완료. 인증 미완료, 실제 음성 목록 조회와 생성은 미실행.
+상태: 2026-10-10 실제 API 인증과 필재 조회·음성 생성에 성공했습니다. 다른 PC에서는 로컬 키를 다시 설정해야 합니다.
 
 ## 확인한 공식 자료
 
@@ -33,14 +33,14 @@ python src/typecast_api_bridge.py
 
 ## 인증 확인 후 음성 생성
 
-`src/checkvalve/script.json`에서 말할 문장만 UTF-8 텍스트로 저장합니다. 제목·설명·해시태그를 TTS에 넣지 않습니다. 환경 변수에 키가 설정된 터미널에서:
+최신 발화 대본은 `src/blender/narration-script.txt`입니다. 제목·설명·해시태그를 TTS에 넣지 않습니다. 환경 변수에 키가 설정된 터미널에서:
 
 ```sh
-python src/typecast_api_bridge.py --generate --script work/narration-script.txt --out outputs/piljae.wav
+python src/typecast_api_bridge.py --generate --script src/blender/narration-script.txt --out outputs/piljae-next.wav
 ```
 
-명시적인 `--generate` 호출은 계정의 크레딧을 사용합니다. 이 인계에서는 실행하지 않았습니다. `POST /v1/text-to-speech`에 `ssfm-v30`, 조회한 `voice_id`, WAV 출력과 자연 속도(`audio_tempo=1.0`)를 보냅니다. 기존 출력이 있으면 덮어쓰지 않습니다.
+명시적인 `--generate` 호출은 계정의 크레딧을 사용합니다. 이번 제작에서는 실제 필재 초안과 최종 음성을 생성했습니다. `POST /v1/text-to-speech`에 `ssfm-v30`, 조회한 `voice_id`, WAV 출력과 자연 속도(`audio_tempo=1.0`)를 보냅니다. 기존 출력이 있으면 덮어쓰지 않습니다. 최신 대본은 `src/blender/narration-script.txt`, 음성은 `outputs/piljae-v2.wav`입니다.
 
 키나 HTTP 오류 본문을 출력하지 않고 인증 정보를 포함한 리디렉션도 따르지 않습니다. 네트워크 오류로 결과가 불명확한 경우 재생성을 자동 반복하지 않습니다.
 
-실제 API 응답으로 검증해야 하는 준비 코드입니다. 현재 확인한 것은 문법 검사와 키 미등록 시 중단 동작이며 서버 연결 성공·필재 생성 성공은 아직 확인하지 않았습니다.
+실제 목록에서 필재 original 음성과 ssfm-v30 지원을 확인했고 WAV 형식과 길이도 검증했습니다. 최종 음성은 44.6초입니다. 다음 실행에서도 실제 계정의 목록을 확인하며 임의의 voice_id나 다른 음성으로 대체하지 않습니다.

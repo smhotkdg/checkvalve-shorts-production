@@ -1,46 +1,81 @@
 {
   "status": "complete",
-  "route": "native_2d_plus_separate_tts",
-  "voice": "ko-KR-InJoonNeural",
+  "route": "blender_higgsfield_typecast_piljae",
+  "voice": "Typecast Piljae / 필재",
   "thumbnail": false,
-  "media_id": "720687ad-fda1-4638-a8ed-04ac7dec5459",
-  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38YBRfuCBuPxERIN1dsk3hVwYrh/720687ad-fda1-4638-a8ed-04ac7dec5459.mp4",
+  "media_id": "0a44ff3b-bad4-44d4-88dd-8fe6b79ba10e",
+  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38YBRfuCBuPxERIN1dsk3hVwYrh/0a44ff3b-bad4-44d4-88dd-8fe6b79ba10e.mp4",
+  "current_deliverable": "outputs/checkvalve-hybrid-final.mp4",
   "verification": {
-    "duration": 50,
-    "audio_duration": 50,
-    "width": 1080,
-    "height": 1920,
-    "fps": 24,
-    "bytes": 2181035,
-    "caption_count": 23,
-    "timed_words": 62,
-    "caption_words": 62,
-    "similarity": 0.9032258064516129,
+    "programs": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "24/1",
+        "duration": "50.000000"
+      },
+      {
+        "codec_type": "audio",
+        "r_frame_rate": "0/0",
+        "duration": "50.000000"
+      }
+    ],
+    "format": {
+      "duration": "50.000000"
+    },
+    "sha256": "702b90983fd1bf1e5b75fbc7aba466c3ab8a74fa1b731bd84f96367669086d21",
+    "bytes": 4983903,
+    "caption_words": 91,
     "decode": "pass",
-    "visual_caption_check": "start/middle/end inspected; readable Korean; no subject overlap"
+    "voice": "Typecast Piljae",
+    "script_word_match": "pass",
+    "caption_count": 24,
+    "alignment_similarity": 0.903954802259887,
+    "visual_check": "intro, part labels, open state, ending captions inspected; readable Korean; labels inside frame"
   },
-  "original_provider_block": "Requires basic plan or higher; no generative jobs accepted.",
-  "published_to_youtube": false,
+  "video_sha256": "702b90983fd1bf1e5b75fbc7aba466c3ab8a74fa1b731bd84f96367669086d21",
   "typecast": {
     "connection_code_ready": true,
-    "authenticated": false,
-    "piljae_api_available": null,
-    "piljae_generated": false,
-    "piljae_applied": false
+    "authenticated": true,
+    "piljae_api_available": true,
+    "piljae_generated": true,
+    "piljae_applied": true
   },
-  "video_sha256": "d1e26f70fdceba71783b98bdc43176123ff939166511d441b9c065457df350b0",
-  "new_higgsfield_typecast_run": {
-    "configuration_ready": true,
-    "generation_ready": false,
-    "requested_voice": "필재",
-    "requested_route": "higgsfield_generated_video_typecast_piljae",
-    "recommended_alternative": "controlled_mechanics_with_higgsfield_supporting_clips",
-    "alternative_accepted": false,
-    "higgsfield_checked_on": "2026-10-10",
-    "higgsfield_plan": "free",
-    "higgsfield_credits": 0,
-    "quoted_base_generation_credits": 103.75,
-    "paid_jobs_submitted": 0,
-    "blockers": ["Higgsfield model entitlement and credits", "Typecast API authentication and actual Piljae availability"]
-  }
+  "higgsfield": {
+    "plan": "plus",
+    "initial_credits": 100,
+    "remaining_credits": 77.5,
+    "spent_credits": 22.5,
+    "checked_on": "2026-10-10"
+  },
+  "blockers": [],
+  "published_to_youtube": false,
+  "legacy_2d": {
+    "status": "complete",
+    "route": "native_2d_plus_separate_tts",
+    "voice": "ko-KR-InJoonNeural",
+    "media_id": "720687ad-fda1-4638-a8ed-04ac7dec5459",
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38YBRfuCBuPxERIN1dsk3hVwYrh/720687ad-fda1-4638-a8ed-04ac7dec5459.mp4",
+    "verification": {
+      "duration": 50,
+      "audio_duration": 50,
+      "width": 1080,
+      "height": 1920,
+      "fps": 24,
+      "bytes": 2181035,
+      "caption_count": 23,
+      "timed_words": 62,
+      "caption_words": 62,
+      "similarity": 0.9032258064516129,
+      "decode": "pass",
+      "visual_caption_check": "start/middle/end inspected; readable Korean; no subject overlap"
+    },
+    "video_sha256": "d1e26f70fdceba71783b98bdc43176123ff939166511d441b9c065457df350b0",
+    "deliverable": "outputs/checkvalve-final.mp4"
+  },
+  "history": [
+    "Initial generation was blocked on the former free account; the user later selected the hybrid workflow and configured paid Higgsfield and Typecast access."
+  ]
 }
