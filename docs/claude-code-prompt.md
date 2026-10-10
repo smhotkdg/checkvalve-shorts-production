@@ -3,11 +3,11 @@
 가장 쉬운 방법은 저장소 루트(로컬 `work/typecast-key.xml`이 있는 기존 클론)에서 아래 명령을 실행하는 것입니다. 최신 main을 받고, 필요한 도구를 점검한 뒤, 아래 프롬프트의 `<slug>`를 채워 `work/<slug>/claude-prompt.txt`로 만들고 Claude Code를 엽니다.
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug tower-crane
+powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug canal-lock
 # 점검과 프롬프트 생성만: -NoLaunch / Blender 경로가 다르면: -BlenderPath 'D:\...\blender.exe'
 ```
 
-직접 붙여 넣을 때는 `<slug>`를 주제 폴더 이름으로 바꿉니다. 현재 주제는 `tower-crane`, 다음은 `immersed-tunnel`입니다.
+직접 붙여 넣을 때는 `<slug>`를 주제 폴더 이름으로 바꿉니다. 현재 다음 제작 주제는 `canal-lock`입니다. `tower-crane`과 `immersed-tunnel`의 초안도 보관합니다.
 
 ```text
 이 저장소에서 50초 9:16 쇼츠를 제작해 줘. 주제 폴더는 topics/<slug>/ 이야.
@@ -40,19 +40,20 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug to
 - topic.json의 sound_design대로 원본 효과음 트랙을 만들고 필재와 미리 믹스해(필재가 항상 가장 크게). 자막 분석엔 깨끗한 필재만 써.
 
 6. 편집
-- 1080×1920·24fps, 원본 화면은 꽉 채우고 텍스트는 오버레이. config의 layout(v2)을 따라:
-  상단 0~300px 텍스트 금지(아이폰 상단·쇼츠 UI), 300~470px 제목과 진행 칩(topic.json progress_chips), 470~1250px 주요 동작 영역, 1250~1450px 자막 패널(두 줄 블록 중심 y=1350), 1450px 아래와 오른쪽 버튼 열은 텍스트 금지.
+- 1080×1920·24fps, 원본 화면은 꽉 채우고 텍스트는 오버레이. config의 layout(v3)을 따라:
+  상단 0~500px 텍스트 금지, 500~660px 짧은 제목과 진행 칩(topic.json progress_chips), 660~1140px 주요 동작의 중심, 1140~1380px 자막 패널(한 줄·두 줄 블록 중심 y=1260), 1380px 아래와 오른쪽 버튼 열은 텍스트 금지. 고정 좌표를 모든 폰의 공식 safe area로 간주하지 말고 기종별 표시 비율과 UI로 확인해.
   Blender 카메라와 생성 클립 구도도 주요 동작이 470~1250px 안에 오도록 잡아.
-- 자막: Noto Sans CJK KR Bold, 3.8%, 폭 76% 이내, 최대 4어절·22자·두 줄, caption_keywords는 #FFD400 노란색.
+- 자막: Noto Sans CJK KR Bold, 3.8%, 폭 74% 이내(외곽선 포함), 최대 4어절·22자·두 줄, caption_keywords는 #FFD400 노란색.
 - 가로 중앙 정렬 필수: 제목, 진행 칩, 자막 각 줄, 영상 창 모두 x=540 기준 정확히 가운데, 좌우 여백 대칭.
-- 훅의 반응어(예: 제정신) 순간엔 빠른 펀치인, 짧은 저음 히트, 크게 키운 노란 자막을 동시에 줘.
+- 훅 반응어는 짧은 저음과 노란색으로 강조하되 위치·크기 상한을 지켜. topic.json visual_direction이 있으면 그 질감·가속감속·카메라 상한을 우선 적용해. canal-lock은 강한 펀치인 없이 전체·중간 거리 화면을 80% 이상 유지하고 질감이 보이는 대표 프레임을 먼저 검수해.
 - 핵심 순간(brief.md에 슬로모션으로 표시된 장면)은 속도 램프와 저음 효과로 강조해.
 - 마지막 프레임이 첫 프레임 구도와 이어지게 맞춰.
 
 7. 검수 (전부 통과해야 완료)
 - ffprobe: 영상·음성 모두 50.000초, 1080×1920, 24fps. 전체 디코딩 통과.
 - 자막 문구가 narration.txt와 일치, 정렬 유사도 0.90 이상, 누락 없음.
-- 시작·중간·끝 프레임을 360px 폭으로 확인: 겹침, 글꼴, 대비, 크기. 쇼츠 UI 안전 영역 마스크(상단 300px, 하단 470px, 오른쪽 버튼 열)를 겹쳐서 텍스트가 마스크에 닿지 않는지 확인하고, 그 미리보기 이미지를 나에게 보여 줘.
+- 시작·중간·끝 프레임을 360px 폭으로 확인: 겹침, 글꼴, 대비, 크기. 보수적인 폰 UI 가림 마스크(상단 500px, 하단 540px, 오른쪽 버튼 열)와 9:16·9:19.5·9:20 표시 예시를 겹쳐서 텍스트가 마스크에 닿지 않는지 확인하고, 그 미리보기 이미지를 나에게 보여 줘.
+- 가장 긴 두 줄 자막과 반응어도 같은 안전 영역 안에 있는지 확인해. 단면·부품 설명 중에도 전체 구조를 파악할 수 있어야 해.
 - 같은 프레임에서 제목·자막 텍스트의 좌우 여백 차이 2px 이하인지 측정. 넘으면 고치고 다시 렌더해.
 - 1초 넘게 변화 없는 구간이 없는지 프레임 차이로 확인.
 - 첫 프레임과 마지막 프레임 구도 비교.

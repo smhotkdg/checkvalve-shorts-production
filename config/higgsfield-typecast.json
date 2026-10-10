@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "active_topic": "tower-crane",
-  "topic_config": "topics/tower-crane/topic.json",
+  "active_topic": "canal-lock",
+  "topic_config": "topics/canal-lock/topic.json",
   "reference_video": "https://www.youtube.com/shorts/q5C9HCN2QY4",
   "reference_title": "물속 다리 기둥을 세운 천재적인 해결법, 코퍼댐 공법의 진화",
   "reference_channel": "https://www.youtube.com/@%EC%9D%B4%EB%9F%B0%EA%B1%B0%EC%A7%807",
@@ -69,39 +69,39 @@
     "priority": "viewer engagement and accurate meaningful motion before credit minimization",
     "motion_rule": "no static hold over 1 s; a new shot or a clear state change at least every 3 s",
     "scale_cues": "always include a known-size object (person, car, tugboat) in wide shots",
-    "composition": "short large white/yellow headings, stage progress chips at top, moving process central, short Korean captions on a contrasting footer"
+    "composition": "short white/yellow title and compact progress chip near 30 percent screen height; meaningful moving mechanism in context; captions near 65 percent screen height"
   },
   "layout": {
-    "version": 2,
-    "reason": "user: text pushed to the very top or bottom is hard to read on iPhone; keep reading text near the upper-middle and out of the Shorts UI zones",
+    "version": 3,
+    "reason": "2026-10-11 user: text too high is hard to read across phones; gather title and captions nearer the center",
     "top_safe_zone_pixels": [
       0,
       0,
       1080,
-      300
+      500
     ],
     "title_band_pixels": [
       0,
-      300,
+      500,
       1080,
-      470
+      660
     ],
-    "title_band_center_y": 385,
+    "title_band_center_y": 580,
     "action_focus_pixels": [
       0,
-      470,
+      660,
       1080,
-      1250
+      1140
     ],
     "caption_panel_pixels": [
       0,
-      1250,
+      1140,
       1080,
-      1450
+      1380
     ],
     "bottom_ui_zone_pixels": [
       0,
-      1450,
+      1380,
       1080,
       1920
     ],
@@ -112,10 +112,13 @@
       1920
     ],
     "rules": [
-      "no title, chip or caption pixels inside top_safe_zone, bottom_ui_zone or right_button_column",
-      "picture is full-bleed 1080x1920; zones are overlay placements, not a cropped window",
-      "Blender cameras and generated clips keep the main action inside action_focus_pixels",
-      "title band sits clearly lower than before but stays above the frame center (y=960)"
+      "keep all title, chip and caption ink inside the central reading bands; no text in the top 500 px, bottom 540 px or right button column",
+      "picture is full-bleed 1080x1920; these zones guide overlay placement and framing, never crop the whole mechanism into a narrow window",
+      "center each line horizontally on x=540; use at most 74 percent frame width including outline",
+      "use a short one-line title and compact chip inside the title band; shrink or reword before moving text toward screen edges",
+      "keep the caption block centered on y=1260; one line and two lines share the same block center",
+      "reaction and keyword emphasis use color and sound within the same size and position limits",
+      "conservative production margins are not universal phone safe-area specifications; verify actual output with UI masks and multiple display aspect ratios"
     ],
     "horizontal_centering": {
       "required": true,
@@ -123,7 +126,9 @@
       "tolerance_pixels": 2,
       "verify": "after the final render, measure the non-background bounding box of title and caption rows on start, middle and end frames; |left margin - right margin| <= 2 px, else fix and re-render"
     },
-    "phone_check": "overlay a Shorts UI safe-zone mask (top 300 px, bottom 470 px, right button column) on start, middle and end frames at 360 px width; no text may touch the mask"
+    "phone_check": "check first, middle, last and longest two-line caption at 360 px width; use top 500 px, bottom 540 px and right button mask; review centered 9:16, 9:19.5 and 9:20 display simulations without changing output aspect ratio",
+    "title_font_pixels": 56,
+    "progress_chip_font_pixels": 34
   },
   "captions": {
     "language": "ko",
@@ -135,17 +140,17 @@
     "max_words": 4,
     "max_chars": 22,
     "fontsize_fraction": 0.038,
-    "max_width_fraction": 0.76,
+    "max_width_fraction": 0.74,
     "max_lines": 2,
     "minimum_similarity": 0.9,
     "verify_at_phone_preview_width": 360,
     "panel_pixels": [
       0,
-      1250,
+      1140,
       1080,
-      1450
+      1380
     ],
-    "vertical_anchor": "two-line block vertically centered in the caption panel (center y=1350); a single line sits at the same center"
+    "vertical_anchor": "one-line or two-line block vertically centered at y=1260; ink and outline remain inside y=1140-1380"
   },
   "native_edit": {
     "render_concurrency": 2,

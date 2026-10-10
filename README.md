@@ -4,8 +4,11 @@ Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재** 내레�
 
 레퍼런스: https://www.youtube.com/shorts/q5C9HCN2QY4 (문제 → 해결 동작 → 새로운 난관 → 추가 해결 → 완성)
 
-**현재 주제: 타워크레인 톱 클라이밍** — [`topics/tower-crane/`](topics/tower-crane/)  
-다음 주제: 침매터널 — [`topics/immersed-tunnel/`](topics/immersed-tunnel/)
+**다음 제작 주제: 운하 갑문** — [`topics/canal-lock/`](topics/canal-lock/)
+
+배 한 척과 수위 변화로 설명하는 쉬운 주제입니다. 질감, 완만한 카메라, 전체 구조 파악과 중앙 텍스트 배치(v3)를 반영했습니다.
+
+기존 몰입형 초안: [`타워크레인`](topics/tower-crane/) · [`침매터널`](topics/immersed-tunnel/)
 
 ## 구조
 
