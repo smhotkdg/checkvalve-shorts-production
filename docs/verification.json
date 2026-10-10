@@ -1,0 +1,10 @@
+{
+  "duration": 50.0,
+  "audio_duration": 50.0,
+  "width": 1080,
+  "height": 1920,
+  "fps": "24/1",
+  "bytes": 2181035,
+  "caption_count": 23,
+  "decode": "pass"
+}

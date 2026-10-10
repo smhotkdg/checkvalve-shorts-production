@@ -1,0 +1,4 @@
+# FFmpeg is a separate system dependency.
+Pillow
+numpy
+edge-tts
