@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "topic": null,
+  "topic": "fixed graving dry dock: repairing the underside of a large ship",
   "reference_channel": "https://www.youtube.com/channel/UCEtLvsrVXP7QtodFwcyFckA",
   "duration_seconds": 50,
   "aspect_ratio": "9:16",
@@ -22,31 +22,35 @@
     "fallback_allowed": false
   },
   "image": {
-    "model": "seedream_v5_pro",
-    "resolution": "1k",
-    "count": 1
+    "source": "original Blender reference frame",
+    "generation_required": false,
+    "count": 0
   },
   "video": {
     "model": "minimax_h3",
     "resolution": "2K",
-    "clip_seconds": 10,
+    "clip_seconds": 5,
     "clip_count": 1,
-    "timeline_seconds_used": 8
+    "timeline_seconds_used": 5
   },
   "blender": {
     "scene_input": "work/project/scene.blend",
     "continuous_animation": true,
-    "sync_to_measured_voice": true
+    "sync_to_measured_voice": true,
+    "fps": 24,
+    "timeline_seconds_used": 45,
+    "body_frame_start": 121,
+    "body_frame_end": 1200
   },
   "quote": {
     "checked_on": "2026-10-10",
     "source": "Higgsfield connector estimate tools",
-    "image_credits_each": 1.25,
-    "video_credits_each": 20,
-    "base_total": 21.25,
-    "one_clip_retry_total": 41.25,
-    "two_clip_retry_total": 61.25,
-    "all_clips_regenerated_total": 41.25,
+    "image_credits_each": 0,
+    "video_credits_each": 10,
+    "base_total": 10,
+    "one_clip_retry_total": 20,
+    "two_clip_retry_total": 30,
+    "all_clips_regenerated_total": 20,
     "excludes": [
       "Typecast usage",
       "extra images",
@@ -69,7 +73,9 @@
     "resolve actual Piljae voice_id from authenticated API catalog",
     "measure final speech before visual generation",
     "one approved mechanism asset reused across clips",
-    "water flows around the solid poppet, never through it",
+    "blocks are positioned before entry; close entrance before draining",
+    "ship settles on supports while water continues to fall",
+    "refill and equalize inside and outside levels before opening entrance",
     "no generated speech or baked text in raw clips",
     "Korean labels and captions added in post",
     "Whisper timing from final Piljae audio",
@@ -79,7 +85,7 @@
     "never retry an unknown submission automatically"
   ],
   "reference_video": "https://www.youtube.com/shorts/q5C9HCN2QY4",
-  "topic_selection_status": "reconsider_from_new_reference",
+  "topic_selection_status": "selected_by_user",
   "story_direction": {
     "reference": "https://www.youtube.com/shorts/q5C9HCN2QY4",
     "requirements": [
@@ -92,5 +98,11 @@
     "analysis_status": "manual_review_completed",
     "review_basis": "observed browser video frames and platform-provided captions"
   },
-  "proposed_topic": "fixed graving dry dock; not yet selected"
+  "captions": {
+    "language": "ko",
+    "font": "Noto Sans CJK KR Bold",
+    "timing_source": "Whisper on final Piljae audio",
+    "wording_source": "exact authored script",
+    "style": "small white text with black outline, lower safe area"
+  }
 }

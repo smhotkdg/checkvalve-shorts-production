@@ -44,10 +44,31 @@ ffmpeg -framerate 24 -start_number 1 -i work\render\frame_%04d.png -c:v libx264 
 ffprobe -v error -show_entries format=duration -of json work\project\piljae.wav
 ```
 
+현재 50초 구성은 Higgsfield 도입 5초 + Blender 본문 45초입니다. Blender 장면 자체를 전체 50초·24fps로 설계했다면 본문은 121~1200 프레임에 해당합니다. 이 구성의 명령 예시는 다음과 같습니다. 입력 장면이 다른 구간으로 설계되어 있으면 실제 구간을 사용합니다.
+
+```powershell
+& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' --background work\project\scene.blend --render-output work\render\frame_ --render-format PNG --frame-start 121 --frame-end 1200 --render-anim
+ffmpeg -framerate 24 -start_number 121 -i work\render\frame_%04d.png -frames:v 1080 -c:v libx264 -preset fast -crf 20 -pix_fmt yuv420p -movflags +faststart work\project\blender-body.mp4
+```
+
 ## Higgsfield와 최종 편집
 
 Higgsfield 이미지·영상 생성은 연결된 도구에서 실행합니다. 이 저장소에 Higgsfield API 인증 토큰이나 주제별 제작 소스를 넣지 않습니다. 구조의 정확성이 필요한 움직임은 Blender로 만들고 필요한 보조 장면만 생성합니다.
 
 필재 발화를 기준으로 영상·장면 전환·제목·자막을 맞춥니다. 생성 영상의 원래 음성을 제외하고 최종 필재 음성만 사용합니다. 장면별 움직임이 멈추지 않는지, 화면 변화와 설명의 인과관계가 맞는지 검수합니다.
+
+현재 모델 설정은 MiniMax H3, 2K, 9:16, 5초·1개입니다. Blender 기준 프레임을 시작 이미지로 쓰며 별도 이미지 생성은 필요하지 않습니다. 실제 모델 비용을 조회한 후 생성합니다. 2026-10-10 기준 이 구성의 영상 생성은 10크레딧이었습니다.
+
+최종 편집은 연결된 Higgsedit의 1080×1920·24fps 타임라인에서 도입 0~5초, 본문 5~50초, 필재 음성 0초 시작으로 배치합니다. 자막은 최종 음성을 Whisper로 분석한 뒤 정확한 원본 대본과 대조합니다. 한국어 글꼴 Noto Sans CJK KR Bold를 사용하고, 자막을 넣은 뒤 시작·중간·끝 화면과 영상·음성 길이를 다시 확인합니다.
+
+Higgsedit 제작 스크립트는 저장소에 포함하지 않습니다. 별도로 준비한 주제별 편집 스크립트가 연결된 실행 환경의 work/project/edit.jsx에 있을 때 다음 명령으로 실행합니다.
+
+```bash
+higgsedit build work/project/edit.jsx
+ffprobe -v error -show_entries stream=codec_type,width,height,duration:format=duration -of json work/project/final.mp4
+ffmpeg -v error -i work/project/final.mp4 -f null -
+```
+
+로컬 제작 파일을 연결된 도구로 옮길 때는 업로드 슬롯을 받은 뒤 파일이 있는 환경에서 curl PUT을 실행하고, HTTP 200을 확인한 후 업로드를 확정합니다. 파일 바이트를 텍스트나 base64로 중계하지 않습니다. 비밀키와 서명된 업로드 주소를 Git에 저장하지 않습니다.
 
 완성 결과물은 로컬 outputs/에 보관하며 Git에서는 제외합니다. 키·작업 캐시·개별 제작 소스도 추적하지 않습니다.
