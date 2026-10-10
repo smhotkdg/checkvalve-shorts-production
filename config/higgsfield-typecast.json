@@ -33,7 +33,7 @@
   },
   "video": {
     "clip_count": 3,
-    "timeline_seconds_used": 15,
+    "timeline_seconds_used": 14,
     "clips": [
       {
         "purpose": "cinematic ascending crane hook",
@@ -43,7 +43,7 @@
         "seconds": 5
       },
       {
-        "purpose": "connection fastener detail",
+        "purpose": "connection fastener detail; use seconds 0.9-3.9 at timeline 31.7-34.7",
         "model": "kling3_0",
         "mode": "pro",
         "sound": "off",
@@ -64,7 +64,7 @@
     "sync_to_measured_voice": true,
     "fps": 24,
     "engine": "BLENDER_EEVEE",
-    "timeline_seconds_used": 35,
+    "timeline_seconds_used": 36,
     "prepared_body_seconds": 39,
     "body_frame_start": 121,
     "body_frame_end": 1056,
@@ -89,6 +89,7 @@
       9
     ],
     "base_total": 22.5,
+    "revision_spent_including_rejected_hook_and_fastener": 36,
     "retry_cost": "Recheck the affected clip before submitting a known-outcome retry.",
     "excludes": [
       "Typecast API usage",
