@@ -55,6 +55,8 @@ Blender는 EEVEE, AgX, PBR 재질, 베벨, 환경광 차폐를 씁니다. 전체
 
 ## Higgsfield
 
+Claude Code에서는 저장소의 `.mcp.json`에 공식 Higgsfield MCP(`https://mcp.higgsfield.ai/mcp`)가 등록되어 있습니다. 이 폴더에서 Claude Code를 처음 열 때 서버 사용을 승인하고, `/mcp`에서 higgsfield를 선택해 브라우저로 로그인합니다(OAuth, API 키 불필요). 연결 여부는 `claude mcp list`로 확인합니다. 이전 체크밸브·드라이독 제작은 Codex의 Higgsfield 연결과 Higgsedit·HF_WORKFLOWS 도구를 썼으므로, Claude Code에서 같은 편집·자막 도구가 없으면 FFmpeg와 Python으로 대체합니다.
+
 연결된 도구에서 실행합니다. 이 저장소에 Higgsfield 토큰이나 제작 소스를 넣지 않습니다. 클립 구성은 `topic.json`의 `video.clips`를 따릅니다. 승인된 Blender 프레임을 시작 이미지로 쓰고, 도착 상태가 중요한 장면은 끝 프레임도 지정합니다. 생성 전 견적·잔액 확인과 사용자 승인, 생성 후 방향·구조·순서 검수를 합니다.
 
 ## 사운드와 편집
