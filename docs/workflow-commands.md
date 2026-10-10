@@ -77,6 +77,8 @@ ffprobe -v error -show_entries stream=codec_type,width,height,duration:format=du
 ffmpeg -v error -i work/project/final.mp4 -f null -
 ```
 
+현재 연결된 편집 환경은 메모리가 제한되어 있으므로 렌더를 동시에 중복 실행하지 않습니다. 편집 스크립트의 p.render 옵션은 depth 8, bitrate 6500000, concurrency 2, shards 5를 사용합니다. 2K 생성 영상과 1080p 프레임을 함께 처리할 때 기본 동시 작업 수보다 메모리를 안정적으로 사용합니다.
+
 로컬 제작 파일을 연결된 도구로 옮길 때는 업로드 슬롯을 받은 뒤 파일이 있는 환경에서 curl PUT을 실행하고, HTTP 200을 확인한 후 업로드를 확정합니다. 파일 바이트를 텍스트나 base64로 중계하지 않습니다. 비밀키와 서명된 업로드 주소를 Git에 저장하지 않습니다.
 
 완성 결과물은 로컬 outputs/에 보관하며 Git에서는 제외합니다. 키·작업 캐시·개별 제작 소스도 추적하지 않습니다.

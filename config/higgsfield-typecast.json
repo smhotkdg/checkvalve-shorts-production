@@ -105,6 +105,14 @@
     "analysis_status": "manual_review_completed",
     "review_basis": "observed browser video frames and platform-provided captions"
   },
+  "native_edit": {
+    "render_concurrency": 2,
+    "render_shards": 5,
+    "bitrate_bits_per_second": 6500000,
+    "audio_input": "premixed Piljae plus quiet original sound design",
+    "picture_window_pixels": [0, 320, 1080, 1520],
+    "caption_space_begins_y": 1520
+  },
   "captions": {
     "language": "ko",
     "font": "Noto Sans CJK KR Bold",
