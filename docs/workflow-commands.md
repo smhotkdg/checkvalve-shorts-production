@@ -103,4 +103,4 @@ ffmpeg -i piljae.wav -af 'atempo=0.94,apad,atrim=0:50' -ar 44100 -ac 1 narration
 python3 "$HF_WORKFLOWS/video-montage/scripts/audio_to_captions.py" narration-final.wav --srt caps.srt --json caption-report.json --script script.json --language ko --model medium --max-words 4 --max-chars 22 --minimum-similarity .90
 ```
 
-영상 본문 창은 1080×1920 원본을 배치하고 상단 0~280px와 하단 1480px 이후에 제목·자막 패널을 올립니다. 원본 영상에 높이 1200px를 지정해 이중 중앙 정렬이 생기는 구성을 피합니다. 제목과 자막은 Noto Sans CJK KR Bold, 자막 크기 기준 3.8%·폭 80%·하단 여백 15%·최대 두 줄입니다. 문장을 4어절·22자 이내로 짧게 나누면 일괄 축소를 줄일 수 있습니다. 실제 제목·자막이 들어간 시작·중간·끝 프레임을 360px 너비로 보고 겹침, 글꼴, 대비와 크기를 확인합니다. 자막 생성은 설치된 스킬 버너를 사용하며 자체 FFmpeg 자막 필터로 재구현하지 않습니다.
+영상 본문 창은 1080×1920 원본을 배치하고 상단 0~280px와 하단 1400px 이후에 제목·자막 패널을 올립니다. 두 줄 자막의 첫 줄까지 패널 안에 들어가는지 실제 출력에서 확인합니다. 원본 영상에 높이 1200px를 지정해 이중 중앙 정렬이 생기는 구성을 피합니다. 제목과 자막은 Noto Sans CJK KR Bold, 자막 크기 기준 3.8%·폭 80%·하단 여백 15%·최대 두 줄입니다. 문장을 4어절·22자 이내로 짧게 나누면 일괄 축소를 줄일 수 있습니다. 실제 제목·자막이 들어간 시작·중간·끝 프레임을 360px 너비로 보고 겹침, 글꼴, 대비와 크기를 확인합니다. 자막 생성은 설치된 스킬 버너를 사용하며 자체 FFmpeg 자막 필터로 재구현하지 않습니다.
