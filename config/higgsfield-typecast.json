@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "topic": "fixed graving dry dock: repairing the underside of a large ship",
+  "topic": "external top climbing tower crane: adding a mast section",
   "reference_channel": "https://www.youtube.com/channel/UCEtLvsrVXP7QtodFwcyFckA",
   "duration_seconds": 50,
   "aspect_ratio": "9:16",
@@ -19,20 +19,43 @@
     "model": "ssfm-v30",
     "tempo": 1.0,
     "format": "wav",
-    "fallback_allowed": false
+    "fallback_allowed": false,
+    "postprocess": {
+      "pitch_preserving_rate": 0.94,
+      "use_hosted_audio_clock": true,
+      "pad_mixed_audio_to_video_seconds": 50
+    }
   },
   "image": {
-    "source": "original Blender reference frame",
+    "source": "detailed original Blender PBR reference frame",
     "generation_required": false,
     "count": 0
   },
   "video": {
     "clip_count": 3,
-    "timeline_seconds_used": 19,
+    "timeline_seconds_used": 15,
     "clips": [
-      {"purpose": "underwater hook", "model": "minimax_h3", "resolution": "2K", "seconds": 5},
-      {"purpose": "maintenance action", "model": "kling3_0", "mode": "pro", "sound": "off", "seconds": 6},
-      {"purpose": "dynamic departure", "model": "kling3_0", "mode": "pro", "sound": "off", "seconds": 8, "references": ["start_image", "end_image"]}
+      {
+        "purpose": "cinematic ascending crane hook",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5
+      },
+      {
+        "purpose": "connection fastener detail",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 4
+      },
+      {
+        "purpose": "completed crane and hoist in motion",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 6
+      }
     ]
   },
   "blender": {
@@ -41,33 +64,43 @@
     "sync_to_measured_voice": true,
     "fps": 24,
     "engine": "BLENDER_EEVEE",
-    "timeline_seconds_used": 31,
-    "prepared_body_seconds": 37,
+    "timeline_seconds_used": 35,
+    "prepared_body_seconds": 39,
     "body_frame_start": 121,
-    "body_frame_end": 1008,
-    "camera_shots": 13,
-    "camera_type": "perspective with changing views and continuous parallax"
+    "body_frame_end": 1056,
+    "camera_shots": 15,
+    "camera_type": "perspective with changing views and continuous parallax",
+    "model_detail": [
+      "closed steel lattice chords",
+      "connection flanges and hex bolts",
+      "cables and hoist trolley",
+      "hydraulic barrel, chrome rod, hoses and yoke",
+      "reflective glazing",
+      "concrete foundation and building site"
+    ],
+    "materials": "PBR painted metal, galvanized fasteners, aggregate concrete, chrome and glazing; AgX; ambient occlusion; beveled edges"
   },
   "quote": {
     "checked_on": "2026-10-10",
     "source": "Higgsfield connector estimate tools",
-    "image_credits_each": 0,
-    "clip_credits": [10, 9, 12],
-    "base_total": 31,
-    "revision_spent_including_rejected_departure": 47,
-    "retry_cost": "depends on the selected clip; recheck before submission",
+    "clip_credits": [
+      7.5,
+      6,
+      9
+    ],
+    "base_total": 22.5,
+    "retry_cost": "Recheck the affected clip before submitting a known-outcome retry.",
     "excludes": [
-      "Typecast usage",
-      "extra images",
-      "separate paid editing or enhancement",
+      "Typecast API usage",
+      "extra image generation",
       "additional retries"
     ]
   },
   "style": {
-    "look": "dynamic 3D process explainer with lit materials, close views and action",
+    "look": "realistic detailed industrial engineering CGI with close mechanical action",
     "priority": "viewer engagement and meaningful motion before credit minimization",
     "sound_design": "original quiet pulse bed, transitions, gate contact, water, grinding and harbour horn; narrator remains dominant",
-    "composition": "large white and yellow title above, animated process central, compact Korean speech captions below",
+    "composition": "short large white/yellow headings, moving process central, larger short Korean captions on a contrasting footer",
     "story": [
       "problem",
       "solution in motion",
@@ -80,16 +113,20 @@
     "resolve actual Piljae voice_id from authenticated API catalog",
     "measure final speech before visual generation",
     "one approved mechanism asset reused across clips",
-    "blocks are positioned before entry; close entrance before draining",
-    "ship settles on supports while water continues to fall",
-    "refill and equalize inside and outside levels before opening entrance",
     "no generated speech or baked text in raw clips",
     "Korean labels and captions added in post",
     "Whisper timing from final Piljae audio",
     "never silently replace Piljae",
     "never silently switch route",
     "persist every submitted job_id",
-    "never retry an unknown submission automatically"
+    "never retry an unknown submission automatically",
+    "hook prepares new section on introduction rails before climbing",
+    "balance the upper works before jacking",
+    "jack reacts against existing mast via support yoke; base mast stays fixed",
+    "climbing cage and entire upper assembly rise together",
+    "section enters the gap only after enough clearance exists",
+    "secure the connection before seating upper works on the new section",
+    "explain generic top climbing; do not claim a specific crane model or universal procedure"
   ],
   "reference_video": "https://www.youtube.com/shorts/q5C9HCN2QY4",
   "topic_selection_status": "selected_by_user",
@@ -110,14 +147,26 @@
     "render_shards": 5,
     "bitrate_bits_per_second": 6500000,
     "audio_input": "premixed Piljae plus quiet original sound design",
-    "picture_window_pixels": [0, 320, 1080, 1520],
-    "caption_space_begins_y": 1520
+    "picture_window_pixels": [
+      0,
+      280,
+      1080,
+      1480
+    ],
+    "caption_space_begins_y": 1480
   },
   "captions": {
     "language": "ko",
     "font": "Noto Sans CJK KR Bold",
     "timing_source": "Whisper on final Piljae audio",
     "wording_source": "exact authored script",
-    "style": "small white text with black outline, lower safe area"
+    "style": "larger white bold Korean text with dark outline on a plain dark lower panel",
+    "max_words": 4,
+    "max_chars": 22,
+    "fontsize_fraction": 0.038,
+    "max_width_fraction": 0.8,
+    "bottom_fraction": 0.15,
+    "max_lines": 2,
+    "verify_at_phone_preview_width": 360
   }
 }

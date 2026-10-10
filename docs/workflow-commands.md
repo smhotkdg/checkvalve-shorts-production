@@ -82,3 +82,25 @@ ffmpeg -v error -i work/project/final.mp4 -f null -
 로컬 제작 파일을 연결된 도구로 옮길 때는 업로드 슬롯을 받은 뒤 파일이 있는 환경에서 curl PUT을 실행하고, HTTP 200을 확인한 후 업로드를 확정합니다. 파일 바이트를 텍스트나 base64로 중계하지 않습니다. 비밀키와 서명된 업로드 주소를 Git에 저장하지 않습니다.
 
 완성 결과물은 로컬 outputs/에 보관하며 Git에서는 제외합니다. 키·작업 캐시·개별 제작 소스도 추적하지 않습니다.
+
+## 상세 모델과 더 읽기 쉬운 자막 기준
+
+현재 설정 파일의 활성 주제는 외부 톱 클라이밍 타워크레인입니다. 과거 드라이독 예시와 타임라인을 새 주제에 그대로 적용하지 않습니다. Blender 본문 입력은 5~44초, 121~1056 프레임이며 생성 연결부 장면 4초를 교체해 Blender 35초와 생성 영상 15초를 사용합니다. 실제 발화와 승인된 구조를 기준으로 구간을 다시 측정합니다.
+
+렌더 출력 경로는 반드시 절대 경로로 넘깁니다. Blender가 상대 출력 경로를 드라이브 루트 기준으로 해석할 수 있습니다.
+
+```powershell
+& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' --background (Join-Path (Get-Location) 'work\project\scene.blend') --render-output (Join-Path (Get-Location) 'work\render\frame_') --render-format PNG --frame-start 121 --frame-end 1056 --render-anim
+ffmpeg -framerate 24 -start_number 121 -i work/render/frame_%04d.png -frames:v 936 -c:v libx264 -crf 19 -pix_fmt yuv420p work/project/blender-body.mp4
+```
+
+장비는 기초·고정 마스트·상부·클라이밍 케이지·유압 잭·삽입 마스트를 별도 그룹으로 모델링합니다. 전체 이동과 유압 로드 스트로크를 연결하고 새 부재의 레일 높이와 삽입 끝 상태를 확인합니다. 강재의 격자, 연결 플랜지·육각 볼트, 호스와 케이블을 보존합니다. 하중 균형·지지·클리어런스를 확인하고 불가능한 관통이나 공중 연결부가 나오지 않게 합니다.
+
+필재 속도 조정에는 피치를 유지하는 atempo를 쓰되, 자막 타이밍은 조정 전 음성에서 추정하지 않습니다. 최종 업로드된 음성을 다시 받아 실제 사용 오디오에서 Whisper로 분석합니다.
+
+```bash
+ffmpeg -i piljae.wav -af 'atempo=0.94,apad,atrim=0:50' -ar 44100 -ac 1 narration-final.wav
+python3 "$HF_WORKFLOWS/video-montage/scripts/audio_to_captions.py" narration-final.wav --srt caps.srt --json caption-report.json --script script.json --language ko --model medium --max-words 4 --max-chars 22 --minimum-similarity .90
+```
+
+영상 본문 창은 1080×1920 원본을 배치하고 상단 0~280px와 하단 1480px 이후에 제목·자막 패널을 올립니다. 원본 영상에 높이 1200px를 지정해 이중 중앙 정렬이 생기는 구성을 피합니다. 제목과 자막은 Noto Sans CJK KR Bold, 자막 크기 기준 3.8%·폭 80%·하단 여백 15%·최대 두 줄입니다. 문장을 4어절·22자 이내로 짧게 나누면 일괄 축소를 줄일 수 있습니다. 실제 제목·자막이 들어간 시작·중간·끝 프레임을 360px 너비로 보고 겹침, 글꼴, 대비와 크기를 확인합니다. 자막 생성은 설치된 스킬 버너를 사용하며 자체 FFmpeg 자막 필터로 재구현하지 않습니다.
