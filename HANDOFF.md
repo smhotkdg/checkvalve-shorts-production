@@ -2,6 +2,12 @@
 
 기준일: 2026-10-10 (Asia/Seoul)
 
+## 최신 요청: Higgsfield 영상 + Typecast 필재
+
+사용자는 기존 참고 채널 형식을 유지하며 영상은 Higgsfield, 음성은 Typecast 필재인 경로로 한 편을 준비하고 Git을 업데이트하도록 요청했습니다. 이후 Higgsfield가 가장 적합한지와 1편당 크레딧을 질문했습니다. 현재 활성 설정은 `config/higgsfield-typecast.json`, 실행 준비는 `src/prepare_production.py`, 비용·계정 조건은 `outputs/higgsfield-typecast-setup.md`입니다.
+
+현 연결 계정은 무료 플랜·0크레딧이며 Typecast 키도 없습니다. 설정 준비와 실제 생성 준비를 구분하세요. 설정은 준비했지만 새 영상 생성은 계정 조건 충족 전까지 대기합니다. 핵심 기계 동작을 직접 설계하고 Higgsfield는 보조 컷에 사용하는 대안을 권장했으나, 사용자가 경로 변경을 선택하기 전까지 전체 Higgsfield 설정을 유지합니다.
+
 ## 목표와 사용자 선택
 
 - 참고 채널: https://www.youtube.com/channel/UCEtLvsrVXP7QtodFwcyFckA

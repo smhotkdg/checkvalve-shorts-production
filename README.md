@@ -4,6 +4,8 @@
 
 ## 현재 상태
 
+**새 제작 경로 준비:** [Higgsfield + Typecast 필재 설정 및 비용](outputs/higgsfield-typecast-setup.md). 현재 설정과 샘플 요청은 준비했지만, Higgsfield 생성 크레딧과 Typecast 인증이 없어 새 영상 생성은 대기 중입니다. 아래 완성본은 기존 InJoon 버전입니다.
+
 | 항목 | 상태 |
 |---|---|
 | 완성 영상 | 50.000초 / 1080×1920 / 24fps / H.264 + AAC |
@@ -19,6 +21,13 @@
 - [제목·설명·실제 대본](outputs/checkvalve-title-description.txt)
 - **작업을 이어갈 때 먼저 읽기:** [HANDOFF.md](HANDOFF.md)
 - [Typecast API 연결 방법](docs/typecast-api.md)
+- [새 제작 설정](config/higgsfield-typecast.json)
+
+```sh
+python src/prepare_production.py
+```
+
+위 명령은 대본과 연결 도구용 요청 초안을 로컬에 준비합니다. API 호출이나 유료 생성을 수행하지 않습니다.
 
 ## 파일 구성
 
