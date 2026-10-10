@@ -6,12 +6,24 @@
   "work_dir": "work/immersed-tunnel",
   "narration_file": "topics/immersed-tunnel/narration.txt",
   "narration_estimate": {
-    "characters_without_spaces": 273,
-    "raw_seconds": 41.7,
-    "after_rate_seconds": 44.4
+    "characters_without_spaces": 282,
+    "raw_seconds": 43.1,
+    "after_rate_seconds": 45.8
   },
-  "progress_chips": ["① 띄우기", "② 내리기", "③ 붙이기", "④ 완성"],
-  "caption_keywords": ["함체", "탱크", "자갈", "고무 패킹", "수압"],
+  "progress_chips": [
+    "① 띄우기",
+    "② 내리기",
+    "③ 붙이기",
+    "④ 완성"
+  ],
+  "caption_keywords": [
+    "놀라 자빠지죠",
+    "함체",
+    "탱크",
+    "자갈",
+    "고무 패킹",
+    "수압"
+  ],
   "video": {
     "clip_count": 3,
     "timeline_seconds_used": 16,
@@ -24,7 +36,10 @@
         "sound": "off",
         "seconds": 5,
         "start_frame": "Blender surface frame with tugboat for scale",
-        "timeline": [0.0, 4.2]
+        "timeline": [
+          0.0,
+          4.2
+        ]
       },
       {
         "id": "H2",
@@ -34,7 +49,10 @@
         "sound": "off",
         "seconds": 5,
         "start_frame": "Blender casting dock frame showing both end bulkheads",
-        "timeline": [12.7, 17.4]
+        "timeline": [
+          12.7,
+          17.4
+        ]
       },
       {
         "id": "H3",
@@ -45,7 +63,10 @@
         "seconds": 8,
         "start_frame": "Blender tunnel interior frame",
         "end_frame": "same surface composition as the first frame of H1",
-        "timeline": [42.0, 50.0]
+        "timeline": [
+          42.0,
+          50.0
+        ]
       }
     ]
   },
@@ -90,5 +111,9 @@
   "quote": {
     "status": "not_checked",
     "rule": "query the Higgsfield estimate tools and Typecast balance immediately before generating and get user approval"
+  },
+  "hook": {
+    "pattern": "unbelievable fact + exaggerated reaction phrase",
+    "line": "거대한 콘크리트 터널을 통째로 바다에 가라앉힙니다. 처음 보면 놀라 자빠지죠."
   }
 }

@@ -6,9 +6,9 @@
   "work_dir": "work/tower-crane",
   "narration_file": "topics/tower-crane/narration.txt",
   "narration_estimate": {
-    "characters_without_spaces": 282,
-    "raw_seconds": 43.1,
-    "after_rate_seconds": 45.8
+    "characters_without_spaces": 287,
+    "raw_seconds": 43.8,
+    "after_rate_seconds": 46.6
   },
   "progress_chips": [
     "① 준비",
@@ -17,7 +17,8 @@
     "④ 삽입"
   ],
   "caption_keywords": [
-    "클라이밍 케이지",
+    "제정신",
+    "케이지",
     "마스트",
     "균형",
     "유압 실린더",
@@ -139,5 +140,9 @@
     },
     "rule": "query the Higgsfield estimate tools and Typecast balance immediately before generating and get user approval"
   },
-  "notes": "a previous non-immersion crane configuration existed; this package is the immersion-format version"
+  "notes": "a previous non-immersion crane configuration existed; this package is the immersion-format version",
+  "hook": {
+    "pattern": "unbelievable fact + exaggerated reaction phrase",
+    "line": "타워크레인이 자기 몸을 스스로 들어 올립니다. 처음 보면 제정신이 아닌 줄 알죠."
+  }
 }
