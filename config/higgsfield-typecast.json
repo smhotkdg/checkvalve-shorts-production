@@ -72,25 +72,58 @@
     "composition": "short large white/yellow headings, stage progress chips at top, moving process central, short Korean captions on a contrasting footer"
   },
   "layout": {
+    "version": 2,
+    "reason": "user: text pushed to the very top or bottom is hard to read on iPhone; keep reading text near the upper-middle and out of the Shorts UI zones",
+    "top_safe_zone_pixels": [
+      0,
+      0,
+      1080,
+      300
+    ],
     "title_band_pixels": [
       0,
-      0,
+      300,
       1080,
-      280
+      470
     ],
-    "picture_window_pixels": [
+    "title_band_center_y": 385,
+    "action_focus_pixels": [
       0,
-      280,
+      470,
       1080,
-      1400
+      1250
     ],
-    "caption_space_begins_y": 1400,
+    "caption_panel_pixels": [
+      0,
+      1250,
+      1080,
+      1450
+    ],
+    "bottom_ui_zone_pixels": [
+      0,
+      1450,
+      1080,
+      1920
+    ],
+    "right_button_column_pixels": [
+      960,
+      900,
+      1080,
+      1920
+    ],
+    "rules": [
+      "no title, chip or caption pixels inside top_safe_zone, bottom_ui_zone or right_button_column",
+      "picture is full-bleed 1080x1920; zones are overlay placements, not a cropped window",
+      "Blender cameras and generated clips keep the main action inside action_focus_pixels",
+      "title band sits clearly lower than before but stays above the frame center (y=960)"
+    ],
     "horizontal_centering": {
       "required": true,
       "rule": "every title, progress chip, caption line and the picture window is horizontally centered on x=540 with symmetric left/right margins",
       "tolerance_pixels": 2,
       "verify": "after the final render, measure the non-background bounding box of title and caption rows on start, middle and end frames; |left margin - right margin| <= 2 px, else fix and re-render"
-    }
+    },
+    "phone_check": "overlay a Shorts UI safe-zone mask (top 300 px, bottom 470 px, right button column) on start, middle and end frames at 360 px width; no text may touch the mask"
   },
   "captions": {
     "language": "ko",
@@ -102,11 +135,17 @@
     "max_words": 4,
     "max_chars": 22,
     "fontsize_fraction": 0.038,
-    "max_width_fraction": 0.8,
-    "bottom_fraction": 0.15,
+    "max_width_fraction": 0.76,
     "max_lines": 2,
     "minimum_similarity": 0.9,
-    "verify_at_phone_preview_width": 360
+    "verify_at_phone_preview_width": 360,
+    "panel_pixels": [
+      0,
+      1250,
+      1080,
+      1450
+    ],
+    "vertical_anchor": "two-line block vertically centered in the caption panel (center y=1350); a single line sits at the same center"
   },
   "native_edit": {
     "render_concurrency": 2,
