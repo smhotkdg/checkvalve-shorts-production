@@ -16,9 +16,9 @@ Studio 구독과 API 이용은 별도입니다. 가격·크레딧·상업 이용
 저장소 폴더에서 PowerShell로 실행합니다.
 
 ```powershell
-.\outputs\connect-typecast.ps1
+.\scripts\connect-typecast.ps1
 # 필요한 경우 Python 실행 파일 직접 지정
-.\outputs\connect-typecast.ps1 -PythonCommand 'C:\path\to\python.exe'
+.\scripts\connect-typecast.ps1 -PythonCommand 'C:\path\to\python.exe'
 ```
 
 입력은 화면에 표시하지 않습니다. 키는 Windows 사용자 계정에 묶인 암호화 파일 `work/typecast-key.xml`로 보관하며 Git에서 제외합니다. 다른 PC에서는 다시 입력해야 합니다. 키를 바꾸려면 해당 로컬 파일을 삭제하고 다시 입력합니다.
@@ -33,13 +33,13 @@ python src/typecast_api_bridge.py
 
 ## 인증 확인 후 음성 생성
 
-최신 발화 대본은 `src/blender/narration-script.txt`입니다. 제목·설명·해시태그를 TTS에 넣지 않습니다. 환경 변수에 키가 설정된 터미널에서:
+발화 대본은 로컬 `work/project/narration.txt`에 준비합니다. 제목·설명·해시태그를 TTS에 넣지 않습니다. 환경 변수에 키가 설정된 터미널에서:
 
 ```sh
-python src/typecast_api_bridge.py --generate --script src/blender/narration-script.txt --out outputs/piljae-next.wav
+python src/typecast_api_bridge.py --generate --script work/project/narration.txt --out work/project/piljae.wav
 ```
 
-명시적인 `--generate` 호출은 계정의 크레딧을 사용합니다. 이번 제작에서는 실제 필재 초안과 최종 음성을 생성했습니다. `POST /v1/text-to-speech`에 `ssfm-v30`, 조회한 `voice_id`, WAV 출력과 자연 속도(`audio_tempo=1.0`)를 보냅니다. 기존 출력이 있으면 덮어쓰지 않습니다. 최신 대본은 `src/blender/narration-script.txt`, 음성은 `outputs/piljae-v2.wav`입니다.
+명시적인 `--generate` 호출은 계정의 크레딧을 사용합니다. 이번 제작에서는 실제 필재 초안과 최종 음성을 생성했습니다. `POST /v1/text-to-speech`에 `ssfm-v30`, 조회한 `voice_id`, WAV 출력과 자연 속도(`audio_tempo=1.0`)를 보냅니다. 기존 출력이 있으면 덮어쓰지 않습니다. 주제별 대본과 생성 음성은 Git에 포함하지 않습니다.
 
 키나 HTTP 오류 본문을 출력하지 않고 인증 정보를 포함한 리디렉션도 따르지 않습니다. 네트워크 오류로 결과가 불명확한 경우 재생성을 자동 반복하지 않습니다.
 

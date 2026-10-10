@@ -1,4 +1,2 @@
-# FFmpeg is a separate system dependency.
-Pillow
-numpy
-edge-tts
+# Typecast API bridge uses only Python 3 standard-library modules.
+# Blender, FFmpeg and the connected Higgsfield environment are separate prerequisites.

@@ -25,8 +25,8 @@ try {
     $env:TYPECAST_API_KEY = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($typecastSecretPointer)
     $typecastBridgeArguments = @((Join-Path $typecastWorkspace 'src\typecast_api_bridge.py'))
     if ($GenerateNarration) {
-        if (-not $ScriptPath) { $ScriptPath = Join-Path $typecastWorkspace 'work\higgsfield-typecast\narration-script.txt' }
-        if (-not $OutputPath) { $OutputPath = Join-Path $typecastWorkspace 'outputs\piljae.wav' }
+        if (-not $ScriptPath) { $ScriptPath = Join-Path $typecastWorkspace 'work\project\narration.txt' }
+        if (-not $OutputPath) { $OutputPath = Join-Path $typecastWorkspace 'work\project\piljae.wav' }
         $typecastBridgeArguments += @('--generate', '--script', $ScriptPath, '--out', $OutputPath)
     }
     & $PythonCommand @typecastBridgeArguments

@@ -1,4 +1,12 @@
 /work/
+/outputs/
+/src/blender/
+/src/checkvalve/
+/src/prepare_production.py
+/docs/hybrid-production-run.json
+/docs/hybrid-verification.json
+/docs/project-state.json
+/docs/verification.json
 .env
 .env.*
 !.env.example

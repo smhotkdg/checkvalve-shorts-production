@@ -1,29 +1,16 @@
-# Blender + Higgsfield + Typecast 필재: 체크밸브 50초 쇼츠
+# 쇼츠 제작: 명령어와 환경설정
 
-참고 채널의 문제 제시 → 내부 구조 → 부품 움직임 → 작동 조건 구성을 반영한 한국어 세로 쇼츠입니다. **최신 완성본은 Typecast 필재 음성**입니다.
+Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재**를 사용하는 작업 환경입니다. 이 저장소에는 실행 명령, 설정 문서, Typecast 연결 스크립트만 보관합니다. 대본·주제별 제작 코드·영상·음성·자막·이미지·Blender 원본은 각 작업 환경에서 별도로 관리합니다.
 
-- [완성 영상 MP4](outputs/checkvalve-hybrid-final.mp4)
-- [제목·설명·최종 대본](outputs/checkvalve-hybrid-title-description.txt)
-- [제작 과정·비용·재현 방법](outputs/hybrid-production-guide.md)
-- [다른 작업에서 이어가기](HANDOFF.md)
-- [Blender 편집 원본](outputs/blender/checkvalve.blend)
-- [필재 나레이션 WAV](outputs/piljae-v2.wav)
+- [환경설정과 실행 명령](docs/workflow-commands.md)
+- [Typecast API 연결 안내](docs/typecast-api.md)
+- [작업 인계와 제작 기준](HANDOFF.md)
+- [제작 설정](config/higgsfield-typecast.json)
 
-| 역할 | 실제 도구와 결과 |
-|---|---|
-| 핵심 원리 | Blender 5.2.2 LTS, 직접 만든 단면과 구동 키프레임 |
-| 도입 | Higgsfield 이미지 2개(수정 포함) + 10초 영상 1개, 첫 8초 사용 |
-| 음성 | 실제 API에서 조회·생성한 Typecast 필재, 자연 속도, 44.6초 |
-| 편집 | Higgsedit, 도입 8초 + 본문 42초 |
-| 자막 | 최종 음성에서 Whisper 시간 측정, 대본 91단어 모두 포함 |
-| 출력 | 50초, 1080×1920, 24fps, 한국어 제목과 화면 자막 |
+현재 레퍼런스: https://www.youtube.com/shorts/q5C9HCN2QY4
 
-Higgsfield 실제 사용량은 **22.5크레딧**입니다. 시작 100 → 완료 후 77.5로 확인했습니다. Typecast 비용은 별도입니다. 첫 샘플의 Blender 본문은 540×960 렌더를 최종 편집에서 확대했으며, 원본 소스로 1080×1920 렌더도 가능합니다.
+제작 기준은 **애니메이션을 계속 진행하며, 내레이션이 화면의 변화와 다음 결과를 이어서 설명하는 것**입니다. 다음 주제는 이 레퍼런스를 분석한 뒤 다시 정합니다. 음성은 필재로 유지합니다.
 
-작업을 이어갈 때 HANDOFF.md와 제작 안내를 먼저 읽으세요. 설정은 config/higgsfield-typecast.json, Blender 소스와 실제 음성에 맞춘 시간표는 src/blender/, API 클라이언트는 src/typecast_api_bridge.py입니다.
+API 키는 로컬에만 보관합니다. Windows 연결 스크립트는 키를 숨김 입력으로 받아 사용자 계정에 묶인 암호화 파일로 저장합니다. 다른 PC에서는 키와 Higgsfield 연결을 다시 설정해야 합니다.
 
-Typecast 키는 각 PC에서 로컬로 설정합니다. Windows에서는 outputs/connect-typecast.ps1을 기본 실행하면 숨김 입력으로 보관하고 필재를 조회합니다. 생성은 별도 명령이며 기존 파일을 덮어쓰지 않습니다. [API 연결 안내](docs/typecast-api.md)를 참고하세요. 키·인증 파일·프레임 캐시는 Git에서 제외합니다.
-
-python src/prepare_production.py는 새 실행의 요청 초안과 대본을 준비합니다. 이 명령만으로 Higgsfield 생성이 시작되지는 않습니다.
-
-[이전 2D + InJoon 영상](outputs/checkvalve-final.mp4)과 [초기 분석·제작 기록](outputs/checkvalve-production-plan.md)은 이력입니다. 최신 결과는 위의 필재 버전이며 별도 썸네일과 유튜브 게시를 수행하지 않았습니다.
+이전 커밋에 있던 제작 결과물은 최신 버전의 추적 대상에서 제외했습니다. 과거 커밋의 기록은 유지됩니다.

@@ -1,8 +1,0 @@
-{
-  "source": "Measured Typecast Piljae speech via Whisper; edited transitions inside spoken explanation windows",
-  "intro_end": 8.0,
-  "open_start": 18.2,
-  "close_start": 28.0,
-  "condition_start": 36.35,
-  "recap_start": 40.27
-}
