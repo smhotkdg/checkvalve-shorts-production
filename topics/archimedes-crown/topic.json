@@ -1,7 +1,22 @@
 {
   "slug": "archimedes-crown",
   "topic": "Archimedes crown story: equal mass, different metal volume and water displacement",
-  "status": "production_in_progress",
+  "status": "delivered_ko",
+  "delivery": {
+    "completed_on": "2026-10-11",
+    "video_local": "outputs/archimedes-crown-final.mp4",
+    "captions_local": "outputs/archimedes-crown.srt",
+    "verification_local": "outputs/archimedes-crown-verification.json",
+    "duration_seconds": 44,
+    "size": [1080,1920],
+    "fps": 24,
+    "layout_version": 5,
+    "checks": "full decode, complete voice, authored caption text, all overlay bounds and centering, scene displacement order, encoded-frame review and simulated 9:16/9:19.5/9:20 displays passed",
+    "higgsfield_credits_actual": 7.5,
+    "typecast_characters_actual": 323,
+    "limitations": "Blender core rendered at 720x1280 and Lanczos-upscaled; warm material style recreated, not pixel-identical to the generated opening; water-level difference exaggerated for explanation",
+    "git_scope": "settings, production input text and instructions only; media, Blender source, keys and signed URLs remain local"
+  },
   "created_on": "2026-10-11",
   "format": "historical_problem_solution",
   "format_reference": "https://www.youtube.com/shorts/41vfH3EtqOM",
@@ -9,8 +24,8 @@
   "work_dir": "work/archimedes-crown",
   "narration_file": "topics/archimedes-crown/narration.txt",
   "language_sets": {"required": ["ko"]},
-  "title_fixed": "왕관을 녹이면 안 된다는데?",
-  "title_fixed_lines": ["왕관을 녹이면", "안 된다는데?"],
+  "title_fixed": "무게는 똑같은데 진짜 금일까?",
+  "title_fixed_lines": ["무게는 똑같은데", "진짜 금일까?"],
   "duration_target_seconds": 44,
   "layout_policy": {
     "source": "config/higgsfield-typecast.json",
@@ -59,8 +74,14 @@
     "engine":"BLENDER_EEVEE",
     "fps":24,
     "continuous_animation":true,
+    "motion_notes":"damped pan sway; vessels slide into position; gentle submerged-object inspection with constant levels during full immersion; controlled rotation and final lift; mild camera orbit without strong zoom",
     "sync_to_measured_voice":true,
     "timeline_seconds_used":39,
+    "source_render_size":[720,1280],
+    "final_size":[1080,1920],
+    "upscale_filter":"Lanczos; captions rendered natively at final size",
+    "render_samples":16,
+    "scene_file":"work/archimedes-crown/scene-motion-v2.blend",
     "groups":["single ornate low gold circlet","equal-mass pure-gold nugget","bronze equal-arm balance with two identical pans","two identical transparent cylindrical vessels and equal initial water volumes","fine suspension threads","warm limestone tabletop and ivory woven linen","unused crucible and tongs","subtle olive plant in background"],
     "model_detail":["raised olive-leaf ornament identical across scenes","subtle gold and bronze roughness variations","cloth weave and soft folds","limestone grain and gentle bevels","clear vessel rims and smooth water surfaces"],
     "color_roles":{"crown_and_nugget":"natural warm gold, never orange coding","balance":"aged bronze","water":"clear pale blue","linen":"cream","background":"warm beige"}
@@ -73,6 +94,7 @@
     "max_in_shot_scale_change":1.15,
     "detail_seconds_max":3,
     "easing_seconds_min":0.4,
+    "background_depth_of_field":"subtle background only, following approved image; objects, glass and measurement surfaces remain readable",
     "viewer_follows":"same gold crown; left pure gold/right crown; rise of water only after contact",
     "continuity":"gold circlet identity, material, ornament and dimensions persist; no extra crowns; calm object action with soft acceleration",
     "style_frames":["crown intact on linen","horizontal bronze scale","identical vessels before contact","fully immersed gold/crown with differing levels"]
@@ -93,5 +115,5 @@
     "raw clips have no baked captions, title, labels or speech; all overlays obey global layout v5"
   ],
   "sources":[{"title":"NYU: Archimedes golden crown, Vitruvius story and measurement limitations","url":"https://math.nyu.edu/Archimedes/Crown/CrownIntroOLD.html","verified_on":"2026-10-11"}],
-  "quote":{"status":"checked_and_generation_authorized_by_user","typecast_characters":323,"higgsfield_credits_expected":7.5,"higgsfield_balance_at_preflight":910.3,"rule":"user authorized completing this video; persist job IDs locally and resolve unknown submissions before retries"}
+  "quote":{"status":"checked_and_generation_authorized_by_user","typecast_characters":323,"higgsfield_credits_expected":7.5,"rule":"user authorized completing this video; persist job IDs locally and resolve unknown submissions before retries; account balances stay local"}
 }

@@ -12,7 +12,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 ```text
 이 저장소에서 9:16 쇼츠(config의 기본 길이와 topic.json의 duration_target_seconds를 참고하되 실제 음성 길이로 확정)를 활성화된 언어 세트만 제작해 줘. 현재는 한국어만이고 영어 제작은 하지 마. 주제 폴더는 topics/<slug>/ 이야.
 먼저 config의 language_sets.required를 읽고 topic.json에 같은 설정이 있으면 주제 설정을 우선해. en이 없으면 아래 영어 단계·영어 파일 읽기·영어 전달/검수를 모두 건너뛰고 새 영어 파일을 만들지 마. 기존 영어 자료를 삭제하거나 변경하지 마. en이 활성화된 경우에만 두 세트는 같은 화면 편집·효과음을 쓰고 음성·자막·고정 제목을 다르게 만들어.
-이번 기준 세 가지를 꼭 지켜: (1) 3D는 config의 visual_clarity대로 단순하고 한눈에 이해되게, (2) 화면 텍스트는 고정 제목 하나와 자막뿐이고 진행 칩·단계 제목·부품 이름표는 넣지 않기, (3) 자막과 제목 뒤에 배경 패널·띠·상자를 넣지 않고 외곽선과 그림자만 쓰기.
+이번 기준 세 가지를 꼭 지켜: (1) 3D는 config의 visual_clarity대로 한눈에 이해되게 하되 주제의 승인된 재질·이미지 방향을 우선하기, (2) 화면 텍스트는 고정 제목 블록 하나와 자막뿐이고 진행 칩·단계 제목·부품 이름표는 넣지 않기, (3) 자막과 제목 뒤에 배경 패널·띠·상자를 넣지 않고 외곽선과 그림자만 쓰기. 기존 미디어를 재사용하더라도 예전 제목 PNG·자막 패널·좌표를 재사용하지 말고 전역 v5로 다시 합성해.
 
 먼저 읽기: README.md, HANDOFF.md, docs/immersion-guide.md, docs/workflow-commands.md, docs/typecast-api.md, config/higgsfield-typecast.json, topics/<slug>/ 의 brief.md, narration.txt, narration.en.txt(en 활성화 시에만), title-description.txt, title-description.en.txt(en 활성화 시에만), topic.json.
 주제 내용·색·장면은 topic.json, 텍스트 좌표·크기·줄 수·폭은 전역 config layout v5가 무조건 우선이야. topic의 과거 v1~v4 좌표는 재사용하지 마. docs/text-layout.md를 읽고 모든 영상에 같은 비율을 유지해. 이번 reference_analysis 문서를 읽고 원본의 관찰과 우리의 제작 규칙을 구분해. 각 컷에 이전 조립 상태를 이어받고, 접촉 전후를 보여 줘. 두 파일의 guards는 전부 지켜.
