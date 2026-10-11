@@ -10,12 +10,6 @@
     "raw_seconds": 43.1,
     "after_rate_seconds": 45.8
   },
-  "progress_chips": [
-    "① 띄우기",
-    "② 내리기",
-    "③ 붙이기",
-    "④ 완성"
-  ],
   "caption_keywords": [
     "놀라 자빠지죠",
     "함체",
@@ -115,5 +109,6 @@
   "hook": {
     "pattern": "unbelievable fact + exaggerated reaction phrase",
     "line": "거대한 콘크리트 터널을 통째로 바다에 가라앉힙니다. 처음 보면 놀라 자빠지죠."
-  }
+  },
+  "notes": "2026-10-11: layout v4 and visual_clarity apply; ignore the per-step '상단 제목' column in brief.md and use one fixed title; simplify model detail before production"
 }

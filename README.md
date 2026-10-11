@@ -2,24 +2,26 @@
 
 Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재** 내레이션으로 50초 9:16 공학 원리 쇼츠를 만드는 작업 환경입니다.
 
-레퍼런스: https://www.youtube.com/shorts/q5C9HCN2QY4 (문제 → 해결 동작 → 새로운 난관 → 추가 해결 → 완성)
+레퍼런스 ('이런거지' 채널)
+- 기본 포맷 `principle_info`(원리 + 마지막 정보): https://www.youtube.com/shorts/5UjFpjehQwc
+- 보조 포맷 `problem_solution`(문제 → 해결 → 새 난관 → 추가 해결 → 완성): https://www.youtube.com/shorts/q5C9HCN2QY4
 
-**다음 제작 주제: 운하 갑문** — [`topics/canal-lock/`](topics/canal-lock/)
+**다음 제작 주제: 냉장고** — [`topics/refrigerator/`](topics/refrigerator/) · 냉기를 만드는 게 아니라 열을 옮기는 기계, 끝 정보는 문을 열어 둬도 방이 더워지는 이유
 
-배 한 척과 수위 변화로 설명하는 쉬운 주제입니다. 질감, 완만한 카메라, 전체 구조 파악과 중앙 텍스트 배치(v3)를 반영했습니다.
+공통 기준(2026-10-11): 단순하고 한눈에 이해되는 3D(`visual_clarity`), 화면 텍스트는 고정 제목과 자막뿐(진행 칩 없음), 자막 배경 패널 없음(레이아웃 v4), 한국어·영어 두 세트.
 
-기존 몰입형 초안: [`타워크레인`](topics/tower-crane/) · [`침매터널`](topics/immersed-tunnel/)
+다른 초안: [`운하 갑문`](topics/canal-lock/) · [`침매터널`](topics/immersed-tunnel/) / 완료: [`타워크레인`](topics/tower-crane/)
 
 ## 구조
 
 | 경로 | 내용 |
 |---|---|
 | [config/higgsfield-typecast.json](config/higgsfield-typecast.json) | 전역 규칙: 길이, 음성, 길이 예산, 레이아웃(가로 중앙 정렬), 자막, 공통 검수 조건 |
-| [docs/immersion-guide.md](docs/immersion-guide.md) | 몰입형 포맷: 훅, 오픈 루프, 화면 리듬, 진행 칩, 루프 엔딩 |
+| [docs/immersion-guide.md](docs/immersion-guide.md) | 포맷(원리+정보 / 문제 해결), 단순한 3D 기준, 화면 텍스트 규칙 |
 | [docs/claude-code-prompt.md](docs/claude-code-prompt.md) | 매 주제에 그대로 쓰는 Claude Code 실행 프롬프트 |
 | [docs/workflow-commands.md](docs/workflow-commands.md) | 환경설정과 실행 명령 |
 | [docs/typecast-api.md](docs/typecast-api.md) | Typecast 필재 API 연결 |
-| `topics/<slug>/` | 주제별 텍스트: brief.md, narration.txt, title-description.txt, topic.json |
+| `topics/<slug>/` | 주제별 텍스트: brief.md, narration.txt, narration.en.txt, title-description(.en).txt, topic.json |
 | `topics/_template/` | 새 주제 시작용 빈 양식 |
 | [HANDOFF.md](HANDOFF.md) | 제작 이력과 인계 |
 

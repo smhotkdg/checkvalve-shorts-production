@@ -1,0 +1,121 @@
+{
+  "slug": "refrigerator",
+  "topic": "household refrigerator: it does not make cold, it moves heat from inside to outside (vapor-compression loop)",
+  "status": "script_draft_ready_en_draft_needs_approval",
+  "topic_selection_status": "selected_by_assistant_from_user_request_simplified_principle_with_final_info",
+  "created_on": "2026-10-11",
+  "format": "principle_info",
+  "format_reference": "https://www.youtube.com/shorts/5UjFpjehQwc",
+  "work_dir": "work/refrigerator",
+  "narration_file": "topics/refrigerator/narration.txt",
+  "narration_file_en": "topics/refrigerator/narration.en.txt",
+  "title_fixed": "냉장고는 어떻게 차가워질까?",
+  "title_fixed_en": "How does a fridge get cold?",
+  "narration_estimate": {
+    "characters_without_spaces": 278,
+    "raw_seconds": 44.7,
+    "after_rate_seconds": 47.6,
+    "rate_basis": "tower-crane measurement: 287 chars = 46.15 s raw",
+    "status": "unmeasured; replace with actual Piljae audio timings before production"
+  },
+  "caption_keywords": ["말도 안 되죠", "냉매", "증발", "압축기", "열을 옮기는", "더워지죠"],
+  "caption_keywords_en": ["absurd", "refrigerant", "evaporating", "compressor", "moves heat", "warmer"],
+  "hook": {
+    "pattern": "flip a common belief + reaction",
+    "line": "냉장고는 찬 공기를 만드는 기계가 아닙니다. 처음 들으면 말도 안 되죠.",
+    "punch_in": false,
+    "emphasis": "yellow reaction words within the normal caption size, short low hit"
+  },
+  "final_info": {
+    "line": "그래서 여름에 냉장고 문을 열어 둬도, 방은 시원해지지 않습니다. / 꺼낸 열이 뒤로 나오고, 모터 열까지 더해져 오히려 더워지죠.",
+    "visual": "room cross-section: a little cool air at the open door, more heat dots out of the back coils and compressor, whole room tint slowly warms"
+  },
+  "video": {
+    "clip_count": 2,
+    "timeline_seconds_used": 10,
+    "clips": [
+      {
+        "id": "H1",
+        "purpose": "hook: the same simple white fridge in a plain bright room; door swings open and the inside light comes on; slow gentle camera; same clean stylized look, shape and colors as the start frame; no added props, people or text",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "approved Blender front three-quarter frame of the closed fridge",
+        "timeline": [0.0, 5.0]
+      },
+      {
+        "id": "H2",
+        "purpose": "final info setup: a person on a hot day opens the same fridge wide and stands in front of it; plain simple room; same fridge shape and colors; no extra props or text",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "approved Blender room frame with the same fridge and one simple person figure",
+        "timeline": [37.5, 42.5]
+      }
+    ]
+  },
+  "blender": {
+    "engine": "BLENDER_EEVEE",
+    "fps": 24,
+    "continuous_animation": true,
+    "sync_to_measured_voice": true,
+    "timeline_seconds_used": 40,
+    "camera_type": "one main three-quarter side cutaway of the fridge (inside on the left, back coils right, compressor bottom right) for at least 60 percent of runtime; short medium shots that always return to it",
+    "groups": [
+      "fridge body as a clean white box with the near side panel removed by a flat cut plane",
+      "two simple food items inside (carton, apple) as heat sources",
+      "one refrigerant loop: inner evaporator pipe, compressor, zigzag back condenser coil, thin capillary passage",
+      "refrigerant fill shader: blue when cold, red-orange when hot, color change placed exactly after the compressor and after the capillary",
+      "heat dots: small glowing orange particles with controlled paths (not a physics simulation)",
+      "analogy set: one hand with an alcohol droplet that evaporates",
+      "final room set: simple room cross-section, the same fridge, one simple person figure, room color tint that warms"
+    ],
+    "model_detail": [
+      "large clean shapes with small bevels; no insulation layers, fans, wires, shelves, frost or vapor clouds",
+      "pipes as smooth tubes with a slightly transparent wall so the refrigerant color is visible",
+      "compressor as a simple rounded can with one visible piston in its cutaway"
+    ],
+    "materials": "matte white and light grey bodies; blue/red refrigerant; orange heat dots; bright even light; soft shadows; AgX",
+    "color_roles": {
+      "cold_refrigerant": "blue",
+      "hot_refrigerant": "red-orange",
+      "heat_dots": "small glowing orange",
+      "named_part_highlight": "soft yellow rim glow for about 1.5 s",
+      "structure": "white / light grey matte",
+      "exception_note": "this topic uses blue/red as temperature meaning instead of a single hero accent"
+    }
+  },
+  "visual_direction": {
+    "clarity_reference": "config/higgsfield-typecast.json visual_clarity",
+    "layout_reference": "config/higgsfield-typecast.json layout v4 (fixed title only, captions without panel)",
+    "main_view_fraction": 0.6,
+    "viewer_follows": "the orange heat dots: they go into the inner pipe, travel with the refrigerant and leave at the back coil",
+    "style_frames": ["main cutaway, dots entering the inner pipe", "compressor medium shot, blue turning red", "full loop, few dots inside and many outside", "room cross-section of the final info"]
+  },
+  "sound_design": "soft room tone, fridge door and light click, gentle flow through pipes, compressor hum, warm air release at the back coils, thin hiss at the capillary, summer room ambience, one low hit for the reaction and one for the summary line; Piljae remains dominant",
+  "guards": [
+    "heat is absorbed in the inner pipe and released at the outer coil; never show cold being produced by the compressor or refrigerant",
+    "refrigerant is the same fluid circulating in a closed loop; never consumed or refilled",
+    "refrigerant is hot after the compressor and cold after the narrow passage; color changes exactly there",
+    "heat dots move only along the loop direction: food/air -> inner pipe -> compressor -> back coil -> room",
+    "the final claim is about the whole room temperature; a little cool air at the open door may be shown",
+    "generic simplified household fridge; no brand, refrigerant name, temperature or power figures",
+    "use shared layout v4: one fixed title y=500-660, captions y=1140-1380 without background, horizontal center x=540; no step chips, step headings or part labels",
+    "clarity before texture: only the parts listed in blender.groups; one main cutaway view keeps the same orientation",
+    "measure final Piljae narration before committing shot times; if it runs long, lengthen the video instead of trimming speech",
+    "each generated source duration must cover its final timeline span"
+  ],
+  "sources": [
+    {
+      "title": "Sears Home Services: How Does a Refrigerator Work?",
+      "url": "https://www.searshomeservices.com/blog/how-does-a-refrigerator-work-overview",
+      "verified_on": "2026-10-11"
+    }
+  ],
+  "quote": {
+    "status": "not_checked",
+    "rule": "query current Higgsfield estimates, Typecast balance and English voice usage before paid generation and get user approval"
+  }
+}

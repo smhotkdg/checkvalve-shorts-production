@@ -1,0 +1,35 @@
+Status: draft, needs user approval before English voice generation.
+
+Title options
+1. No Machine Lifts This Boat. Water Does.
+2. How Boats Climb a Canal Without a Lift
+3. How a Canal Lock Moves Boats Up and Down
+
+Recommended: 1 (answers the hook question)
+
+On-screen title (fixed for the whole video)
+How does the boat go up?
+
+Description
+Canals at different heights are connected by locks.
+Change the water level in the chamber, and the floating boat rises or falls with it.
+Why the front gate has to wait, and how water does all the lifting, shown in simple 3D animation.
+
+A simplified concept animation of a generic single-chamber lock, not an operating guide.
+Structure and water levels: Blender / establishing shots: Higgsfield / narration: Typecast
+
+#canallock #canal #boat #engineering #howitworks #shorts
+
+Final English narration
+This boat climbs to the next level while still floating. Unbelievable, right?
+So where's the machine that lifts it?
+The canal ahead is high. The boat's side is low.
+First, the chamber matches the low side, the boat moves in, and the gate behind it closes.
+Now open the channel from the high side, and water flows in, lifting the boat with it.
+The water enters through a small channel. The floor never moves; only the boat floats up.
+But the front gate can't open yet.
+While the levels differ, water would rush through hard.
+Once the levels match, the channel closes and the front gate opens to let the boat out.
+Going down, you just let water out to the low side.
+No moving floor. It's an elevator that moves boats with water.
+That's a canal lock.

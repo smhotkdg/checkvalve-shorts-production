@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "active_topic": "canal-lock",
-  "topic_config": "topics/canal-lock/topic.json",
+  "active_topic": "refrigerator",
+  "topic_config": "topics/refrigerator/topic.json",
   "reference_video": "https://www.youtube.com/shorts/q5C9HCN2QY4",
   "reference_title": "물속 다리 기둥을 세운 천재적인 해결법, 코퍼댐 공법의 진화",
   "reference_channel": "https://www.youtube.com/@%EC%9D%B4%EB%9F%B0%EA%B1%B0%EC%A7%807",
@@ -44,7 +44,8 @@
       "after_rate_seconds_max": 49.0,
       "payoff_tail_seconds_min": 1.0,
       "rule": "if raw Piljae audio exceeds the budget, shorten the script and regenerate; never speed it up and never let atrim cut speech",
-      "estimate": "about 6.5 Korean characters (spaces excluded) per raw second; checkvalve 292 chars = 44.6 s"
+      "estimate": "about 6.2 Korean characters (spaces excluded) per raw second; measured: checkvalve 292 chars = 44.6 s, tower-crane 287 chars = 46.15 s; use the slower rate",
+      "over_budget_rule": "2026-10-11 user: running a little long is fine; lengthen the video (e.g. 51 s) instead of cutting speech; still never speed up or trim speech"
     }
   },
   "language_sets": {
@@ -98,22 +99,44 @@
       "problem",
       "solution in motion",
       "new obstacle (announced explicitly)",
-      "improved solution with a slowed, close-up 'satisfying' moment",
+      "improved solution with a slowed medium-shot 'satisfying' moment",
       "payoff line that answers the open loop",
       "loop ending whose last frame matches the first frame"
     ],
-    "guide": "docs/immersion-guide.md"
+    "guide": "docs/immersion-guide.md",
+    "formats": {
+      "default": "principle_info",
+      "principle_info": [
+        "0-5 s hook: flip a common belief or show a surprising fact + reaction word",
+        "open question",
+        "one everyday analogy",
+        "the principle as 3-4 visible steps (a loop or sequence)",
+        "one-sentence summary that answers the question",
+        "final info: a surprising everyday consequence or tip that follows from the principle",
+        "calm wide ending"
+      ],
+      "problem_solution": [
+        "0-2 s visual hook: the most impressive moment of the process, already moving",
+        "2-5 s open loop: a spoken question answered only near the end",
+        "problem",
+        "solution in motion",
+        "new obstacle (announced explicitly)",
+        "improved solution with a slowed medium-shot 'satisfying' moment",
+        "payoff line that answers the open loop",
+        "loop ending whose last frame matches the first frame"
+      ]
+    }
   },
   "style": {
-    "look": "realistic detailed engineering CGI, PBR materials, AgX, ambient occlusion, beveled edges",
+    "look": "clean, simplified 3D explainer: few large readable shapes, color-coded roles, bright even light, plain background; subtle material texture only where it does not add clutter",
     "priority": "viewer engagement and accurate meaningful motion before credit minimization",
     "motion_rule": "no static hold over 1 s; a new shot or a clear state change at least every 3 s",
-    "scale_cues": "always include a known-size object (person, car, tugboat) in wide shots",
-    "composition": "short white/yellow title and compact progress chip near 30 percent screen height; meaningful moving mechanism in context; captions near 65 percent screen height"
+    "scale_cues": "one simple person silhouette (or one car/boat) in wide shots; no extra site props",
+    "composition": "one fixed short title near y=580; the single moving part being explained is the clearest thing in frame; captions near y=1260 with outline only"
   },
   "layout": {
-    "version": 3,
-    "reason": "2026-10-11 user: text too high is hard to read across phones; gather title and captions nearer the center",
+    "version": 4,
+    "reason": "2026-10-11 v3: text gathered near the center for phone readability. v4: user removed per-step text at the top and the caption background panel",
     "top_safe_zone_pixels": [
       0,
       0,
@@ -133,12 +156,6 @@
       1080,
       1140
     ],
-    "caption_panel_pixels": [
-      0,
-      1140,
-      1080,
-      1380
-    ],
     "bottom_ui_zone_pixels": [
       0,
       1380,
@@ -152,30 +169,43 @@
       1920
     ],
     "rules": [
-      "keep all title, chip and caption ink inside the central reading bands; no text in the top 500 px, bottom 540 px or right button column",
+      "keep all title and caption ink inside the central reading bands; no text in the top 500 px, bottom 540 px or right button column",
       "picture is full-bleed 1080x1920; these zones guide overlay placement and framing, never crop the whole mechanism into a narrow window",
       "center each line horizontally on x=540; use at most 74 percent frame width including outline",
-      "use a short one-line title and compact chip inside the title band; shrink or reword before moving text toward screen edges",
+      "on-screen text is only (1) one fixed short title shown for the whole video and (2) captions; no progress chips, step numbers, per-step headings or part labels",
+      "no background box, bar, panel or blurred plate behind captions or the title; readability comes from outline and shadow only",
       "keep the caption block centered on y=1260; one line and two lines share the same block center",
       "reaction and keyword emphasis use color and sound within the same size and position limits",
       "conservative production margins are not universal phone safe-area specifications; verify actual output with UI masks and multiple display aspect ratios"
     ],
     "horizontal_centering": {
       "required": true,
-      "rule": "every title, progress chip, caption line and the picture window is horizontally centered on x=540 with symmetric left/right margins",
+      "rule": "every title and caption line is horizontally centered on x=540 with symmetric left/right margins",
       "tolerance_pixels": 2,
-      "verify": "after the final render, measure the non-background bounding box of title and caption rows on start, middle and end frames; |left margin - right margin| <= 2 px, else fix and re-render"
+      "verify": "after the final render, measure the text-ink bounding box of the title and caption rows on start, middle and end frames; |left margin - right margin| <= 2 px, else fix and re-render"
     },
     "phone_check": "check first, middle, last and longest two-line caption at 360 px width; use top 500 px, bottom 540 px and right button mask; review centered 9:16, 9:19.5 and 9:20 display simulations without changing output aspect ratio",
     "title_font_pixels": 56,
-    "progress_chip_font_pixels": 34
+    "caption_zone_pixels": [
+      0,
+      1140,
+      1080,
+      1380
+    ],
+    "title": {
+      "mode": "one fixed title for the whole video (topic.json title_fixed / title_fixed_en)",
+      "font_pixels": 56,
+      "max_chars_ko": 14,
+      "max_chars_en": 28,
+      "center_y": 580
+    }
   },
   "captions": {
     "language": "ko",
     "font": "Noto Sans CJK KR Bold",
     "timing_source": "Whisper on final hosted Piljae audio",
     "wording_source": "exact authored script (topics/<slug>/narration.txt)",
-    "style": "white bold Korean text with dark outline on a plain dark lower panel; topic keywords in yellow",
+    "style": "white bold text with an 8 px dark outline and a soft drop shadow directly on the picture; no background box, bar, panel or blur plate; topic keywords in yellow",
     "keyword_highlight_color": "#FFD400",
     "max_words": 4,
     "max_chars": 22,
@@ -184,20 +214,23 @@
     "max_lines": 2,
     "minimum_similarity": 0.9,
     "verify_at_phone_preview_width": 360,
-    "panel_pixels": [
+    "vertical_anchor": "one-line or two-line block vertically centered at y=1260; ink, outline and shadow remain inside y=1140-1380",
+    "text_zone_pixels": [
       0,
       1140,
       1080,
       1380
     ],
-    "vertical_anchor": "one-line or two-line block vertically centered at y=1260; ink and outline remain inside y=1140-1380"
+    "background": "none",
+    "outline_pixels": 8,
+    "shadow": "soft drop shadow, 4 px offset, 60 percent black, 6 px blur"
   },
   "captions_en": {
     "language": "en",
     "font": "Noto Sans CJK KR Bold",
     "timing_source": "Whisper on final English narration audio",
     "wording_source": "exact authored script (topics/<slug>/narration.en.txt)",
-    "style": "same panel, outline and size as the Korean captions; topic keywords (topic.json caption_keywords_en) in yellow",
+    "style": "same font size, outline, shadow and position as the Korean captions; no background panel; topic keywords (topic.json caption_keywords_en) in yellow",
     "keyword_highlight_color": "#FFD400",
     "max_words": 5,
     "max_chars": 26,
@@ -205,15 +238,18 @@
     "max_width_fraction": 0.74,
     "max_lines": 2,
     "minimum_similarity": 0.9,
-    "panel_pixels": [
+    "on_screen_titles": "one fixed English title (topic.json title_fixed_en); no progress chips, step headings or Korean text in the English set",
+    "vertical_anchor": "one-line or two-line block vertically centered at y=1260; ink, outline and shadow remain inside y=1140-1380",
+    "verify_at_phone_preview_width": 360,
+    "text_zone_pixels": [
       0,
       1140,
       1080,
       1380
     ],
-    "on_screen_titles": "English titles and progress chips from topic.json (progress_chips_en, shot titles_en); no Korean text in the English set",
-    "vertical_anchor": "one-line or two-line block vertically centered at y=1260; ink and outline remain inside y=1140-1380",
-    "verify_at_phone_preview_width": 360
+    "background": "none",
+    "outline_pixels": 8,
+    "shadow": "soft drop shadow, 4 px offset, 60 percent black, 6 px blur"
   },
   "native_edit": {
     "render_concurrency": 2,
@@ -235,5 +271,43 @@
     "original spoken text; never copy reference wording",
     "explain the generic method; do not claim a specific project's numbers unless verified",
     "never silently replace the chosen English narrator; show its cost and get approval before generation like Piljae"
+  ],
+  "visual_clarity": {
+    "reason": "2026-10-11 user: the tower crane 3D was still hard to read and too complex; simplify the picture so the mechanism is understood at a glance",
+    "one_idea_per_shot": "the part the narration is talking about is the biggest, brightest and only clearly moving thing in frame at that moment",
+    "minimal_parts": "model only parts needed to explain the principle; no repeated detail such as lattice, bolt rows, cables, hoses, pipes or site clutter unless that part is the principle",
+    "color_roles": {
+      "fixed_structure": "light warm grey, matte",
+      "water": "clear medium blue, semi-transparent with a crisp level line",
+      "hero_moving_object": "one saturated accent (orange #FF7A1A) for the main moving object",
+      "named_part_highlight": "when narration first names a part, give it a soft yellow (#FFD400) rim glow for about 1.5 s, then return to normal",
+      "background": "soft sky-to-horizon gradient and a plain ground plane",
+      "rule": "one accent color per frame besides the yellow highlight; no other saturated colors"
+    },
+    "camera": {
+      "main_view": "one main 3/4 or side cross-section view that shows the whole mechanism; used for at least 60 percent of runtime",
+      "max_distinct_viewpoints": 4,
+      "screen_direction": "keep the same left-to-right orientation for the whole video; never flip sides",
+      "moves": "slow eased moves only; return to the main view after every detail shot",
+      "detail_shots": "medium distance, at most 3 s each, never more than 1.15x scale change in a shot"
+    },
+    "lighting": "bright, even, soft shadows; no dark or high-contrast scenes; no fog, particles, lens flare or depth of field",
+    "cutaways": "hidden parts shown with a clean flat-colored cut plane; the cut stays in the same place all video",
+    "arrows": "at most two thick simple arrows on screen (water flow or force), same style every time",
+    "generated_clips": "Higgsfield clips start from approved Blender frames and must keep the same clean look, colors and object set; prompts forbid adding new objects, people crowds, text or realistic clutter",
+    "style_frame_gate": "before any full Blender render or paid generation, render 3-4 style frames (hook, main view, key moment, ending) and get user approval",
+    "glance_test": "downscale each style frame to 360 px wide grayscale; a viewer must be able to name the moving part within 1 second; write the one thing each frame should show and confirm it is the most visible element"
+  },
+  "reference_videos": [
+    {
+      "url": "https://www.youtube.com/shorts/q5C9HCN2QY4",
+      "title": "물속 다리 기둥을 세운 천재적인 해결법, 코퍼댐 공법의 진화",
+      "use": "story format problem_solution"
+    },
+    {
+      "url": "https://www.youtube.com/shorts/5UjFpjehQwc",
+      "title": "자력으로 움직이는 기술, 자기부상열차의 원리",
+      "use": "story format principle_info (default from 2026-10-11): one principle, simple picture, practical info at the end"
+    }
   ]
 }

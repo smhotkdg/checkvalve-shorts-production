@@ -1,23 +1,20 @@
 {
   "slug": "canal-lock",
   "topic": "single-chamber canal lock: a floating boat rises or falls with the chamber water level",
-  "status": "script_draft_ready",
+  "status": "script_draft_ready_en_draft_needs_approval",
   "topic_selection_status": "selected_by_assistant_from_user_request_for_an_easy_next_topic",
   "created_on": "2026-10-11",
   "work_dir": "work/canal-lock",
   "narration_file": "topics/canal-lock/narration.txt",
+  "narration_file_en": "topics/canal-lock/narration.en.txt",
+  "title_fixed": "배는 어떻게 올라갈까?",
+  "title_fixed_en": "How does the boat go up?",
   "narration_estimate": {
     "characters_without_spaces": 272,
     "raw_seconds": 41.8,
     "after_rate_seconds": 44.5,
     "status": "unmeasured; replace with actual Piljae audio timings before production"
   },
-  "progress_chips": [
-    "① 입실",
-    "② 물 채우기",
-    "③ 수위 맞추기",
-    "④ 출항"
-  ],
   "caption_keywords": [
     "기가 막히죠",
     "수위",
@@ -30,7 +27,7 @@
     "pattern": "impossible-looking motion + reaction + one mechanism question",
     "line": "배가 물에 뜬 채 위층으로 올라갑니다. 처음 보면 기가 막히죠.",
     "punch_in": false,
-    "emphasis": "yellow text within the normal safe text size, short low hit; continuous gentle camera"
+    "emphasis": "yellow reaction words within the normal caption size, short low hit; continuous gentle camera"
   },
   "video": {
     "clip_count": 2,
@@ -38,7 +35,7 @@
     "clips": [
       {
         "id": "H1",
-        "purpose": "wide establishing view of the same single lock: boat approaches the open lower entrance; upper gate stays closed; chamber and lower canal levels match; only boat, wake and gentle camera move",
+        "purpose": "wide establishing view of the same single lock: boat approaches the open lower entrance; upper gate stays closed; chamber and lower canal levels match; only boat, wake and gentle camera move; same clean stylized look, colors and objects as the start frame; no added people, props or text",
         "model": "kling3_0",
         "mode": "pro",
         "sound": "off",
@@ -52,7 +49,7 @@
       },
       {
         "id": "H2",
-        "purpose": "boat exits through the already open upper gate at matched water levels; lower gate stays closed; smooth wide tracking; no gate or structure morphing",
+        "purpose": "boat exits through the already open upper gate at matched water levels; lower gate stays closed; smooth wide tracking; no gate or structure morphing; same clean stylized look, colors and objects as the start frame; no added people, props or text",
         "model": "kling3_0",
         "mode": "pro",
         "sound": "off",
@@ -72,32 +69,37 @@
     "continuous_animation": true,
     "sync_to_measured_voice": true,
     "timeline_seconds_used": 40,
-    "camera_type": "mostly wide or medium perspective tracking; stable side-of-lock orientation; full chamber context",
+    "camera_type": "one main side cross-section view of the whole lock (lower canal left, chamber center, upper canal right; boat travels left to right) for at least 60 percent of runtime; a few slow medium shots that always return to it",
     "groups": [
-      "fixed upper and lower canal reaches",
-      "fixed lock chamber floor and walls",
-      "upper and lower paired mitre gates with separate hinge pivots",
-      "separate upper inflow and lower outflow sluices with explanatory water paths",
-      "one boat with hull, cabin glazing, fenders and restrained wake",
-      "chamber water surface moving vertically with the boat",
-      "removable explanatory near-wall cutaway and level markers",
-      "small lockside person and mooring bollards for scale"
+      "fixed lower canal (left) and upper canal (right) as simple channels",
+      "fixed lock chamber: floor and walls as clean blocks; near wall permanently cut away with a flat cut plane",
+      "lower gate pair and upper gate pair, simple mitre gates on hinge pivots",
+      "one upper inflow sluice and one lower outflow sluice as short visible channels in the cut plane, each with a small paddle that slides open",
+      "one boat: simple hull and cabin, the only orange object",
+      "chamber water: one surface that moves vertically, crisp level line visible in the cut plane",
+      "one person silhouette on the lockside for scale"
     ],
     "model_detail": [
-      "gate timber grain, steel reinforcement and fasteners",
-      "concrete joints, waterline stains, dampness variation and fine aggregate",
-      "paint roughness variation, limited edge wear and small rust patches",
-      "rubber fenders and reflective cabin glazing",
-      "small water ripples and consistent wake"
+      "large clean shapes with small bevels; no repeated detail such as bolt rows, railings, ropes or ladders",
+      "subtle surface variation only (soft concrete tone, faint wood tone on gates) so materials read without clutter",
+      "water surface with gentle ripples and a small wake only while the boat moves"
     ],
-    "materials": "physically scaled procedural PBR textures; subtle normal and roughness variation; broad soft light, AgX and beveled edges; consistent exposure",
-    "water_method": "animated surface mesh, procedural normals, controlled water level and small wake; no large fluid simulation required"
+    "materials": "matte light-grey concrete, dark teal gates, orange boat, blue semi-transparent water; bright even light, soft shadows, AgX",
+    "water_method": "animated surface mesh, procedural normals, controlled water level and small wake; no large fluid simulation required",
+    "color_roles": {
+      "boat": "orange #FF7A1A (hero)",
+      "gates": "dark teal; yellow rim glow when named",
+      "sluice_and_flow": "blue arrows inside the cut plane",
+      "structure": "light warm grey",
+      "water": "clear blue with white level line"
+    }
   },
   "visual_direction": {
     "user_feedback": [
       "previous model lacked texture",
       "strong zooms hid the whole mechanism",
-      "phone safe areas made text at the very top hard to read"
+      "phone safe areas made text at the very top hard to read",
+      "2026-10-11: tower crane 3D still not intuitive and too complex; simplify shapes, colors and camera"
     ],
     "camera": {
       "minimum_wide_or_medium_fraction": 0.8,
@@ -109,8 +111,10 @@
       "rule": "establish whole lock, explain from medium distance, return to whole lock after key actions; main objects stay readable"
     },
     "secondary_motion": "small boat buoyancy motion, restrained wake, water ripples and gradual gate easing; no violent sloshing",
-    "layout_reference": "config/higgsfield-typecast.json layout v3",
-    "texture_review": "review one textured wide and one medium reference at phone size before full rendering; judge material distinction and whole mechanism readability"
+    "layout_reference": "config/higgsfield-typecast.json layout v4 (fixed title only, captions without panel)",
+    "texture_review": "render style frames (hook, main side section, levels-equal moment, exit) at phone size; judge whether the moving part is obvious in 1 second, then material distinction",
+    "clarity_reference": "config/higgsfield-typecast.json visual_clarity",
+    "main_view_fraction": 0.6
   },
   "sound_design": "original quiet canal ambience, low boat engine, gradual gate movement, inflow and outflow water; short low hit for the reveal; Piljae remains dominant",
   "guards": [
@@ -121,15 +125,16 @@
     "close the lower outflow sluice before filling from the upper reach; close the upper inflow sluice before draining to the lower reach",
     "do not animate water passing through closed solid gates, hulls or concrete; use the explicit sluice path",
     "reverse-direction demonstration is identified as a separate example; do not teleport an exit boat back into the chamber",
-    "initial rise is a teaser; return to entry with a clear first-step cue",
+    "initial rise is a teaser; return to the entry with the spoken cue '먼저' and a short eased camera move back to the main view; no on-screen step text",
     "show the full boat, both ends and water level relation during the main explanation",
-    "texture must be visible in wide and medium views; avoid uniform plastic surfaces or oversized noise patterns",
     "no abrupt punch-in; keep wide or medium shots for at least 80 percent of runtime",
-    "use shared layout v3: title and chips y=500-660, captions y=1140-1380, horizontal center x=540",
     "test the longest two-line caption and reaction phrase against conservative phone UI masks; never claim these coordinates are universal device safe areas",
     "use generic single-chamber lock geometry; do not claim site dimensions, transit times or an operating procedure",
     "measure final Piljae narration before committing shot times; do not trim speech",
-    "each generated source duration must cover its final timeline span; recheck total 50 seconds after timing changes"
+    "each generated source duration must cover its final timeline span; recheck total 50 seconds after timing changes",
+    "use shared layout v4: one fixed title y=500-660, captions y=1140-1380 without background, horizontal center x=540; no step chips or step headings",
+    "clarity before texture: no clutter props or repeated detail; the boat is the only orange object; one main side-section view keeps the same left-to-right orientation",
+    "show the level difference with the crisp water level lines on both sides of the closed gate, not with text"
   ],
   "sources": [
     {
@@ -147,5 +152,13 @@
     "status": "not_checked",
     "rule": "query current Higgsfield estimates and account balance before paid generation; Typecast usage is separate"
   },
-  "notes": "text-only preparation; no paid jobs or final render submitted; timing is a draft budget"
+  "notes": "text-only preparation; no paid jobs or final render submitted; timing is a draft budget. 2026-10-11: simplified visual direction, removed progress chips, added English draft",
+  "caption_keywords_en": [
+    "Unbelievable",
+    "water level",
+    "channel",
+    "match",
+    "elevator",
+    "canal lock"
+  ]
 }

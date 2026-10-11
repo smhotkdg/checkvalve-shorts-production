@@ -1,0 +1,34 @@
+Status: draft, needs user approval before English voice generation.
+
+Title options
+1. Why an Open Fridge Won't Cool Your Room
+2. Your Fridge Doesn't Make Cold. It Moves Heat.
+3. How a Refrigerator Really Works
+
+Recommended: 1 (ties straight to the final fact)
+
+On-screen title (fixed for the whole video)
+How does a fridge get cold?
+
+Description
+A refrigerator doesn't create cold air. It moves heat from inside to outside.
+Refrigerant evaporates in the inner pipes and absorbs heat, gets squeezed hot by the compressor, dumps that heat through the coils at the back, and comes back cold.
+That's why leaving the fridge open in summer actually warms the room.
+
+A simplified concept animation of a typical household fridge. Some models place the heat-releasing coils in the side walls or underneath.
+Structure and flow: Blender / some shots: Higgsfield / narration: Typecast
+
+#refrigerator #howitworks #science #engineering #shorts
+
+Final English narration
+A fridge doesn't make cold air. Sounds absurd, right?
+So how does the inside get cold?
+Rub alcohol on your hand and it feels cool. As it dries, it carries heat away.
+In the fridge's inner pipes, a refrigerant does the same, evaporating and pulling heat from inside.
+That heat-filled gas gets squeezed by the compressor and turns even hotter.
+In the coils at the back, it dumps that heat and becomes a liquid again.
+Through a narrow passage its pressure drops, and it turns cold and heads back inside.
+This loop keeps pumping heat from inside to outside.
+So a fridge doesn't make cold. It moves heat.
+That's why an open fridge won't cool your room in summer.
+The heat comes out the back, plus the motor's heat, so the room gets warmer.
