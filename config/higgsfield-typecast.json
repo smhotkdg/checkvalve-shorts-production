@@ -202,16 +202,18 @@
     "max_words": 5,
     "max_chars": 26,
     "fontsize_fraction": 0.038,
-    "max_width_fraction": 0.76,
+    "max_width_fraction": 0.74,
     "max_lines": 2,
     "minimum_similarity": 0.9,
     "panel_pixels": [
       0,
-      1250,
+      1140,
       1080,
-      1450
+      1380
     ],
-    "on_screen_titles": "English titles and progress chips from topic.json (progress_chips_en, shot titles_en); no Korean text in the English set"
+    "on_screen_titles": "English titles and progress chips from topic.json (progress_chips_en, shot titles_en); no Korean text in the English set",
+    "vertical_anchor": "one-line or two-line block vertically centered at y=1260; ink and outline remain inside y=1140-1380",
+    "verify_at_phone_preview_width": 360
   },
   "native_edit": {
     "render_concurrency": 2,
