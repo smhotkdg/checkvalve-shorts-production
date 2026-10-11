@@ -2,6 +2,9 @@
   "slug": "archimedes-crown",
   "topic": "Archimedes crown story: equal mass, different metal volume and water displacement",
   "status": "delivered_ko",
+  "latest_variant": "2d-v3",
+  "latest_variant_config": "topics/archimedes-crown/2d-v3.json",
+  "latest_video_local": "outputs/archimedes-crown-2d-v3-final.mp4",
   "delivery": {
     "completed_on": "2026-10-11",
     "video_local": "outputs/archimedes-crown-final.mp4",
