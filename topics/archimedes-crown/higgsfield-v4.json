@@ -1,0 +1,102 @@
+{
+  "variant": "higgsfield-v4",
+  "status": "delivered_ko",
+  "requested_on": "2026-10-11",
+  "route": "shared storyboard-matching illustrated keyframes -> Higgsfield Kling 3 Pro linked start/end shots -> reused verified Typecast Piljae -> native v6 overlays and timed quiet effects",
+  "model": "kling3_0",
+  "mode": "pro",
+  "sound": "off",
+  "duration_seconds": 44,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "layout_policy": {
+    "source": "config/higgsfield-typecast.json",
+    "version": 6,
+    "inherit_global": true,
+    "override_allowed": false
+  },
+  "caption_plan_file": "topics/archimedes-crown/captions-ko.json",
+  "voice_asset_local": "work/archimedes-crown/narration-final.wav",
+  "word_timing_local": "work/archimedes-crown/timing.json",
+  "keyframes_local": "work/archimedes-crown/higgsfield-v4",
+  "credits_quoted": {
+    "pilot": 7.5,
+    "remaining": 60,
+    "total": 78,
+    "note": "backend preflight quotes for seven completed submitted jobs, including one balance correction; not a separate account ledger reconciliation",
+    "balance_correction": 10.5
+  },
+  "additional_typecast_characters": 0,
+  "scenes": [
+    {
+      "name": "opening",
+      "generation_seconds": 7,
+      "start_keyframe": "hero",
+      "end_keyframe": "linen",
+      "prompt": "Continuous educational animation in EXACT warm realistic-shaded hand-inked illustration style of supplied frames. Preserve the same low open gold olive-leaf circlet and same irregular gold nugget, gold LEFT and crown RIGHT whenever compared. No jewels, no hands, no human, no text or arrows, no collage, no ghost duplicates. Whole apparatus visible, medium framing, no aggressive zoom or rapid cuts. All movement is physical repositioning of intact rigid objects; no object morphing or crossfade transformation. Gentle contact responses and subtle metallic reflections. First second: crown drops the short visible gap gently onto linen with a soft cloth compression and tiny bounce. 1-3s it settles, bronze cold crucible/tongs remain stationary behind, never melt crown. 3-6s ONE gold nugget slides in from the LEFT edge across linen, slowing beside crown. Crown moves slightly right to allow comparison, stays whole. 6-7s final subtle glint and cloth settles matching exact ending frame. Fixed camera."
+    },
+    {
+      "name": "balance",
+      "generation_seconds": 10,
+      "start_keyframe": "linen",
+      "end_keyframe": "balance",
+      "prompt": "Continuous educational animation in EXACT warm realistic-shaded hand-inked illustration style of supplied frames. Preserve the same low open gold olive-leaf circlet and same irregular gold nugget, gold LEFT and crown RIGHT whenever compared. No jewels, no hands, no human, no text or arrows, no collage, no ghost duplicates. Whole apparatus visible, medium framing, no aggressive zoom or rapid cuts. All movement is physical repositioning of intact rigid objects; no object morphing or crossfade transformation. Gentle contact responses and subtle metallic reflections. Move from cloth comparison to adjacent bronze scale: during 0-2 s, a smooth medium camera slide reveals the pre-existing bronze scale while the nugget and crown lift from linen and travel to LEFT and RIGHT pans respectively. Old linen/crucible exit framing, no dissolving objects. 2-4s the beam rocks gently around central fixed pivot, pans hang level and follow correctly, weights rest on pans, not floating. 4-6s oscillations damp to a perfectly horizontal beam because masses are equal. 6-10s retain balanced result and subtle perspective movement of at most 3 degrees, highlight shifts on the intact gold surface, no false scale tilt. Arrive at exact ending balanced scale with one nugget left and one crown right."
+    },
+    {
+      "name": "transfer",
+      "generation_seconds": 3,
+      "start_keyframe": "balance",
+      "end_keyframe": "start",
+      "prompt": "Continuous educational animation in EXACT warm realistic-shaded hand-inked illustration style of supplied frames. Preserve the same low open gold olive-leaf circlet and same irregular gold nugget, gold LEFT and crown RIGHT whenever compared. No jewels, no hands, no human, no text or arrows, no collage, no ghost duplicates. Whole apparatus visible, medium framing, no aggressive zoom or rapid cuts. All movement is physical repositioning of intact rigid objects; no object morphing or crossfade transformation. Gentle contact responses and subtle metallic reflections. Both weights lift smoothly OUT of scale pans and move toward TWO identical clear cylindrical water cups on adjacent tabletop, left nugget stays left, right crown stays right. Camera slides smoothly to water station at same medium scale, bronze balance goes up and out of view, no dissolving scale. Both cups contain identical LOW initial amount of blue water. Finish with both objects hovering ABOVE their respective glass rims as in end image. DO NOT immerse yet; water surfaces stay exactly equal and stable, no pouring/splashing, no objects duplicated or transformed."
+    },
+    {
+      "name": "compare-inspect",
+      "generation_seconds": 14,
+      "start_keyframe": "end",
+      "end_keyframe": "inspect",
+      "prompt": "Continuous educational animation in EXACT warm realistic-shaded hand-inked illustration style of supplied frames. Preserve the same low open gold olive-leaf circlet and same irregular gold nugget, gold LEFT and crown RIGHT whenever compared. No jewels, no hands, no human, no text or arrows, no collage, no ghost duplicates. Whole apparatus visible, medium framing, no aggressive zoom or rapid cuts. All movement is physical repositioning of intact rigid objects; no object morphing or crossfade transformation. Gentle contact responses and subtle metallic reflections. Start with metals fully SUBMERGED at cup floors: right waterline clearly higher than left. Both cups same rigid dimensions. Entire 14 seconds metals remain submerged and physically still, NO extra sinking, floating, rotating or changing shape, NO added water and NO further level rise. 0-3s residual small ripples settle while both levels stay different. 3-7s gentle highlight glides over each actual blue water surface, making left lower/right higher visually readable. 7-14s very slow small camera ELEVATION change, about 8 degrees, no zoom, whole glasses stay visible; reach exact ending view showing blue water filling crown's open centre. No air pocket/bubble inside ring, no silver core/cutaway. Natural delicate water shimmer, measurement heights constant throughout."
+    },
+    {
+      "name": "withdraw-return",
+      "generation_seconds": 6,
+      "start_keyframe": "inspect",
+      "end_keyframe": "linen",
+      "prompt": "Continuous educational animation in EXACT warm realistic-shaded hand-inked illustration style of supplied frames. Preserve the same low open gold olive-leaf circlet and same irregular gold nugget, gold LEFT and crown RIGHT whenever compared. No jewels, no hands, no human, no text or arrows, no collage, no ghost duplicates. Whole apparatus visible, medium framing, no aggressive zoom or rapid cuts. All movement is physical repositioning of intact rigid objects; no object morphing or crossfade transformation. Gentle contact responses and subtle metallic reflections. 0-2s BOTH metals lift smoothly upward out of their own glass cups, LEFT nugget and RIGHT crown remain intact; a few droplets drip back. Water level in each cup DECREASES only while metal withdraws, restoring equal initial low levels. 2-4.5s camera glides gently from cups to adjacent linen as the SAME wet crown and nugget move right/left respectively onto the cloth. Glass cups remain behind and exit framing, NOT morph into linen or gold. 4.5-6s objects land gently on linen, cloth soft response, last tiny droplets fall, end on exact final image with whole intact low crown and nugget, small cold bronze crucible/tongs in background. No duplicate objects during transfer."
+    }
+  ],
+  "pilot": {
+    "generation_seconds": 5,
+    "start_keyframe": "immersion-start.png",
+    "end_keyframe": "immersion-end.png",
+    "status": "completed_and_reviewed",
+    "review": "one gold left and one open crown right descend without visible identity loss; both submerged; right calm final water surface higher; small contact splash; no text in generation"
+  },
+  "picture_reframe": "move water/linen views upward 90px at final resolution, shifting only empty background out; retain whole apparatus; balance view keeps top finial below fixed title",
+  "guards": [
+    "same cup dimensions and initial amounts",
+    "same rigid open crown/no trapped air",
+    "no water rise before actual entry",
+    "final right waterline visibly higher with intentional illustrative exaggeration",
+    "no extra rise after full immersion",
+    "semantic planned caption breaks preserve exact speech",
+    "no forced object duplication at withdrawal/linen return",
+    "inspect actual encoded frames before reporting completion"
+  ],
+  "video_local": "outputs/archimedes-crown-higgsfield-v4-final.mp4",
+  "git_scope": "settings, commands, prompts and storyboard text only; no production code, images, audio, video, signed URLs or credentials",
+  "completed_on": "2026-10-11",
+  "submitted_job_count": 7,
+  "balance_correction": {
+    "generation_seconds": 7,
+    "source": "actual balance transfer frame at 5.5 seconds, as start image",
+    "end": "same level balance keyframe",
+    "editing": "3 s of original transfer + 6.5417 s of corrected settling/level shot; inspected settling retimed to 1.25 s so beam is level before spoken horizontal result",
+    "reason": "original generation approached level too late for the Piljae sentence"
+  },
+  "verification_summary": "44 s full decode, complete authored Korean captions, unchanged verified Piljae take, v6 overlay bounds/centering and three phone ratios passed; encoded initial surfaces both y=1004, comparison y=942/854 (88px gap); encoded balance/immersion/inspection/return reviewed",
+  "captions_local": "outputs/archimedes-crown-higgsfield-v4.srt",
+  "verification_local": "outputs/archimedes-crown-higgsfield-v4-verification.json"
+}

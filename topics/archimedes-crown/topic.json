@@ -2,9 +2,9 @@
   "slug": "archimedes-crown",
   "topic": "Archimedes crown story: equal mass, different metal volume and water displacement",
   "status": "delivered_ko",
-  "latest_variant": "2d-v3",
-  "latest_variant_config": "topics/archimedes-crown/2d-v3.json",
-  "latest_video_local": "outputs/archimedes-crown-2d-v3-final.mp4",
+  "latest_variant": "higgsfield-v4",
+  "latest_variant_config": "topics/archimedes-crown/higgsfield-v4.json",
+  "latest_video_local": "outputs/archimedes-crown-higgsfield-v4-final.mp4",
   "delivery": {
     "completed_on": "2026-10-11",
     "video_local": "outputs/archimedes-crown-final.mp4",
@@ -32,16 +32,16 @@
   "duration_target_seconds": 44,
   "layout_policy": {
     "source": "config/higgsfield-typecast.json",
-    "version": 5,
+    "version": 6,
     "inherit_global": true,
     "override_allowed": false,
     "rule": "mandatory for every video: global headline/caption proportions; topic supplies words only"
   },
   "approved_style": {
     "approved_on": "2026-10-11",
-    "local_reference": "work/archimedes-crown/style-preview-v1.png",
-    "scope": "user approved gold crown board look and explicitly requested closest possible image fidelity in video; user-approved screenshot layout v5 supersedes board text positions",
-    "portable_prompt": "Warm realistic studio 3D: same low gold circlet with raised olive-leaf ornament and no gems; fine gold scratches, bronze balance with gentle patina; cream woven linen, warm limestone tabletop, tan plaster background, subtle olive plant at rear left. Buttery soft golden daylight, realistic contact shadows, medium shots with complete objects visible. Never flat plastic or low-poly. Pure gold nugget always left, same circlet always right. Identical transparent vessels, same starting water amount. No baked text in raw images or clips; title and captions added using global layout v5."
+    "local_reference": "work/archimedes-crown/storyboard-v3/storyboard-10-scenes.png",
+    "scope": "user approved gold crown board look and explicitly requested closest possible image fidelity in video; user-approved screenshot layout v6 supersedes board text positions",
+    "portable_prompt": "Warm cream realistic-shaded hand-inked illustration matching the approved 10-panel storyboard: same low open gold olive-leaf circlet without gems, irregular pure-gold nugget left and crown right, patinated bronze scale, fine beige linen and warm limestone textures. Same intact object identities across shared start/end frames. Whole apparatus visible at medium distance, no aggressive zoom, no generated text/labels/arrows/duplicates. Same transparent blue-water cups and low initial amount, right higher after full immersion, open ring filled by water, stable levels afterwards. Native title/captions use mandatory global layout v6."
   },
   "narration_measured": {
     "provider": "Typecast",
@@ -90,7 +90,7 @@
     "color_roles":{"crown_and_nugget":"natural warm gold, never orange coding","balance":"aged bronze","water":"clear pale blue","linen":"cream","background":"warm beige"}
   },
   "visual_direction": {
-    "layout_reference":"config/higgsfield-typecast.json layout v5, mandatory global proportions",
+    "layout_reference":"config/higgsfield-typecast.json layout v6, mandatory global proportions",
     "main_view_fraction":0.65,
     "wide_medium_fraction_min":0.85,
     "max_distinct_viewpoints":4,
@@ -104,7 +104,7 @@
   },
   "sound_design":"quiet linen contact, bronze pan settling and small water-contact ripples; original effects, Piljae dominant, no generated speech",
   "guards":[
-    "global layout v5 mandatory for every video; never restore old title y=580 or caption y=1260",
+    "global layout v6 mandatory for every video; never restore old title y=580 or caption y=1260",
     "preserve approved gold crown image materials and proportions as closely as possible",
     "Korean Piljae only; do not create English audio or captions now",
     "Vitruvius later retelling, not a proven contemporary event or literal historic apparatus",
@@ -115,8 +115,9 @@
     "never combine displacement comparison with hydrostatic scale tilt in one explanation",
     "no melting, damage, magic exposed silver, swapped left/right objects or camera-only idle padding",
     "final audio is complete; extend picture if needed, never truncate or accelerate speech",
-    "raw clips have no baked captions, title, labels or speech; all overlays obey global layout v5"
+    "raw clips have no baked captions, title, labels or speech; all overlays obey global layout v6"
   ],
   "sources":[{"title":"NYU: Archimedes golden crown, Vitruvius story and measurement limitations","url":"https://math.nyu.edu/Archimedes/Crown/CrownIntroOLD.html","verified_on":"2026-10-11"}],
-  "quote":{"status":"checked_and_generation_authorized_by_user","typecast_characters":323,"higgsfield_credits_expected":7.5,"rule":"user authorized completing this video; persist job IDs locally and resolve unknown submissions before retries; account balances stay local"}
+  "quote":{"status":"checked_and_generation_authorized_by_user","typecast_characters":323,"higgsfield_credits_expected":78,"rule":"user authorized completing this video; persist job IDs locally and resolve unknown submissions before retries; account balances stay local"},
+  "caption_plan_file": "topics/archimedes-crown/captions-ko.json"
 }

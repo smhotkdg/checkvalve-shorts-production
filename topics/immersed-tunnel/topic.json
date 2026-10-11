@@ -110,10 +110,10 @@
     "pattern": "unbelievable fact + exaggerated reaction phrase",
     "line": "거대한 콘크리트 터널을 통째로 바다에 가라앉힙니다. 처음 보면 놀라 자빠지죠."
   },
-  "notes": "2026-10-11: layout v5 and visual_clarity apply; ignore the per-step '상단 제목' column in brief.md and use one fixed title; simplify model detail before production",
+  "notes": "2026-10-11: layout v6 and visual_clarity apply; ignore the per-step '상단 제목' column in brief.md and use one fixed title; simplify model detail before production",
   "layout_policy": {
     "source": "config/higgsfield-typecast.json",
-    "version": 5,
+    "version": 6,
     "inherit_global": true,
     "override_allowed": false,
     "rule": "all new renders use the user-approved screenshot proportions; historical delivered videos are not rewritten"

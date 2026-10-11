@@ -14,7 +14,7 @@
   "fps": 24,
   "thumbnail": false,
   "publish_to_youtube": false,
-  "requested_route": "blender_higgsfield_typecast_piljae",
+  "requested_route": "storyboard_keyframes_higgsfield_typecast_piljae",
   "deliverables_per_topic": [
     "topics/<slug>/brief.md: principle, accuracy guards, story beats, shot table",
     "topics/<slug>/narration.txt: exact Piljae TTS text only",
@@ -138,16 +138,16 @@
     }
   },
   "style": {
-    "look": "clean, simplified 3D explainer: few large readable shapes, color-coded roles, bright even light, plain background; subtle material texture only where it does not add clutter",
+    "look": "reference-led warm realistic-shaded ink illustration; preserve gold/bronze/linen/limestone textures and continuous intact object motion, using storyboard-linked Higgsfield start/end images",
     "priority": "viewer engagement and accurate meaningful motion before credit minimization",
-    "motion_rule": "no static padding over 1 s; meaningful state change every 2-3 s; track object and assembly continuity; fixed parts must stay fixed, camera-only drift is not a mechanism event",
+    "motion_rule": "Continuous meaningful actions and state continuity; keep rigid parts rigid and object identities fixed. During a measured result, keep the result physically stable and use subtle water ripples, material reflections or a small camera change for liveliness. Do not invent state changes solely to avoid a calm explanatory comparison.",
     "scale_cues": "use a scale cue only when useful; a small tabletop fastener needs no person silhouette",
-    "composition": "one fixed headline block centered at x=540,y=260 (normally two lines, white then yellow); one caption block centered at x=540,y=1306; layout v5 is mandatory for every topic and enabled language"
+    "composition": "one fixed headline block centered at x=540,y=260 (normally two lines, white then yellow); one caption block centered at x=540,y=1360; layout v6 is mandatory for every topic and enabled language"
   },
   "layout": {
-    "version": 5,
+    "version": 6,
     "approved_on": "2026-10-11",
-    "reason": "User supplied car-window screenshot and explicitly required its headline/caption proportions for ALL future videos; supersedes v1-v4 central title coordinates.",
+    "reason": "2026-10-11 user requested narration captions slightly lower and semantic line breaks; headline proportions from approved v5 remain.",
     "canonical_source": "config/higgsfield-typecast.json layout, captions and captions_en",
     "scope": "all topics, new templates, Korean and every enabled language; existing finished media stay historical",
     "override_policy": "MANDATORY: use this global layout even when old topic text mentions another version. Topic may supply words, line breaks and keywords only; never override coordinates, sizes, widths or safe zones without a newer explicit user request.",
@@ -158,7 +158,7 @@
     "normalized": {
       "center_x": 0.5,
       "title_center_y": 0.13541666666666666,
-      "caption_center_y": 0.6802083333333333,
+      "caption_center_y": 0.7083333333333334,
       "title_font_height": 0.05625,
       "caption_font_height": 0.03333333333333333,
       "title_max_width": 0.87,
@@ -197,15 +197,15 @@
     ],
     "caption_zone_pixels": [
       0,
-      1180,
+      1230,
       1080,
-      1430
+      1470
     ],
     "rules": [
-      "MANDATORY for every new video: title block center (540,260), caption block center (540,1306) at 1080x1920; scale every coordinate and stroke proportionally for other 9:16 resolutions.",
+      "MANDATORY for every new video: title block center (540,260), caption block center (540,1360) at 1080x1920; scale every coordinate and stroke proportionally for other 9:16 resolutions.",
       "fixed headline is one block, normally two lines: first white, second yellow #FFD400; use topic title_fixed_lines when supplied, otherwise wrap the existing title without rewriting it.",
       "title font 108 px (fit down to 84 only when needed), heavy Korean sans, slight italic shear 0.10, dark 14 px outline and soft shadow; complete ink including outline/shadow inside title band and max 87 percent width.",
-      "caption font 64 px, bold, max two lines and 74 percent width; one and two lines share the SAME block center y=1306; white with yellow topic keyword emphasis, 8 px outline and soft shadow.",
+      "caption font 64 px, bold, max two lines and 74 percent width; one and two lines share the SAME block center y=1360; white with yellow topic keyword emphasis, 8 px outline and soft shadow.",
       "text is fixed headline and speech captions only; no progress chips, step headings, part labels or caption/title background box, bar, panel or blurred plate.",
       "full-bleed picture; never crop the scene into the action-focus rectangle; show the complete apparatus around the middle and avoid hiding measured surfaces behind text.",
       "no text in top 90 px, bottom 440 px or right UI column; do not reuse the obsolete top-500-px mask because the user now explicitly approved a higher headline.",
@@ -217,7 +217,7 @@
       "rule": "center the actual rendered ink bbox of EACH title/caption line (including italic overhang and outline) at x=540; equal side margins",
       "verify": "start, middle, end, longest one-line and two-line captions; measure separate overlay masks"
     },
-    "phone_check": "360 px wide; text bounds [100,440] and [1180,1430]; masks top 90, bottom 440, right column; also inspect 9:19.5 and 9:20 display simulations. Keep approved layout rather than shifting text per scene.",
+    "phone_check": "360 px wide; text bounds [100,440] and [1230,1470]; masks top 90, bottom 440, right column; also inspect 9:19.5 and 9:20 display simulations. Keep approved layout rather than shifting text per scene.",
     "title_font_pixels": 108,
     "title": {
       "mode": "one fixed headline block for whole video; normally two lines",
@@ -245,22 +245,27 @@
       }
     },
     "caption": {
-      "center_y": 1306,
+      "center_y": 1360,
       "font_pixels": 64,
       "max_lines": 2,
       "line_gap_pixels": 12
     },
     "acceptance": {
       "require_preview_before_final_composite": true,
-      "require_config_version": 5,
+      "require_config_version": 6,
       "checks": [
-        "title and caption block centers match normalized v5",
+        "title and caption block centers match normalized v6",
         "actual ink within designated bands and max widths",
         "every line centered within 2 px",
         "no panel or extra labels",
         "no text overlaps UI masks or critical measurement surfaces",
         "no per-shot coordinate changes"
       ]
+    },
+    "revision_from_v5": {
+      "caption_shift_pixels": 54,
+      "title_unchanged": true,
+      "completed_outputs_preserved": true
     }
   },
   "captions": {
@@ -270,26 +275,27 @@
     "wording_source": "exact authored script (topics/<slug>/narration.txt)",
     "style": "white bold text with an 8 px dark outline and a soft drop shadow directly on the picture; no background box, bar, panel or blur plate; topic keywords in yellow",
     "keyword_highlight_color": "#FFD400",
-    "max_words": 4,
-    "max_chars": 22,
+    "max_words": 7,
+    "max_chars": 28,
     "fontsize_fraction": 0.03333333333333333,
     "max_width_fraction": 0.74,
     "max_lines": 2,
     "minimum_similarity": 0.9,
     "verify_at_phone_preview_width": 360,
-    "vertical_anchor": "one-line or two-line block centered at y=1306; ink, outline and shadow inside y=1180-1430",
+    "vertical_anchor": "one-line or two-line block centered at y=1360; ink, outline and shadow inside y=1230-1470",
     "text_zone_pixels": [
       0,
-      1180,
+      1230,
       1080,
-      1430
+      1470
     ],
     "background": "none",
     "outline_pixels": 8,
     "shadow": "soft drop shadow, 4 px offset, 60 percent black, 6 px blur",
     "font_pixels": 64,
-    "layout_version": 5,
-    "on_screen_titles": "layout v5 fixed headline block, max two lines (white first, yellow second), center y=260; no progress chips, step headings or part labels"
+    "layout_version": 6,
+    "on_screen_titles": "layout v6 fixed headline block, max two lines (white first, yellow second), center y=260; no progress chips, step headings or part labels",
+    "line_break_rule": "Plan semantic phrase boundaries before rendering; do not split a word or detach a connective from its clause. Prefer balanced two lines at whitespace; never shrink the caption font. Split an overlong phrase into successive meaningful timed captions, preserving every authored word."
   },
   "captions_en": {
     "language": "en",
@@ -304,20 +310,21 @@
     "max_width_fraction": 0.74,
     "max_lines": 2,
     "minimum_similarity": 0.9,
-    "on_screen_titles": "layout v5 fixed headline block, max two lines (white first, yellow second), center y=260; no progress chips, step headings or part labels",
-    "vertical_anchor": "one-line or two-line block centered at y=1306; ink, outline and shadow inside y=1180-1430",
+    "on_screen_titles": "layout v6 fixed headline block, max two lines (white first, yellow second), center y=260; no progress chips, step headings or part labels",
+    "vertical_anchor": "one-line or two-line block centered at y=1360; ink, outline and shadow inside y=1230-1470",
     "verify_at_phone_preview_width": 360,
     "text_zone_pixels": [
       0,
-      1180,
+      1230,
       1080,
-      1430
+      1470
     ],
     "background": "none",
     "outline_pixels": 8,
     "shadow": "soft drop shadow, 4 px offset, 60 percent black, 6 px blur",
     "font_pixels": 64,
-    "layout_version": 5
+    "layout_version": 6,
+    "line_break_rule": "Plan semantic phrase boundaries before rendering; do not split a word or detach a connective from its clause. Prefer balanced two lines at whitespace; never shrink the caption font. Split an overlong phrase into successive meaningful timed captions, preserving every authored word."
   },
   "native_edit": {
     "render_concurrency": 2,
@@ -362,10 +369,11 @@
     "lighting": "bright, even, soft shadows; no dark or high-contrast scenes; no fog, particles, lens flare or depth of field",
     "cutaways": "hidden parts shown with a clean flat-colored cut plane; the cut stays in the same place all video",
     "arrows": "at most two thick simple arrows on screen (water flow or force), same style every time",
-    "generated_clips": "Higgsfield clips start from approved Blender frames and must keep the same clean look, colors and object set; prompts forbid adding new objects, people crowds, text or realistic clutter",
-    "style_frame_gate": "before any full Blender render or paid generation, render 3-4 style frames (hook, main view, key moment, ending) and get user approval",
+    "generated_clips": "Higgsfield uses approved reference/keyframes, generated illustration or Blender according to active topic; preserve the same look, colors, rigid objects and state sequence. No unexpected objects, people, text or clutter.",
+    "style_frame_gate": "Reuse the user-approved storyboard/style for an authorized continuation. For a newly proposed visual direction not already approved, show hook/main/key/ending style frames before full production.",
     "glance_test": "downscale each style frame to 360 px wide grayscale; a viewer must be able to name the moving part within 1 second; write the one thing each frame should show and confirm it is the most visible element",
-    "layout_authority": "global layout v5 is mandatory; topic colors/style never change text proportions"
+    "layout_authority": "global layout v6 is mandatory; topic colors/style never change text proportions",
+    "scope": "baseline for engineering topics; the current approved topic reference determines illustration versus 3D, material textures and object palette. Global text layout cannot be overridden."
   },
   "reference_videos": [
     {

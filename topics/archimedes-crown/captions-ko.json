@@ -1,0 +1,21 @@
+{
+  "language": "ko",
+  "layout_source": "config/higgsfield-typecast.json",
+  "layout_version": 6,
+  "timing_source": "verified clean Piljae word timings, never estimated",
+  "rule": "Each entry preserves the exact words of its narration sentence. Lines are planned by meaning before measuring ink. Maximum two lines; never cut inside a word. Full spoken text must match narration.txt in order.",
+  "sentences": [
+    [["옛날 사람들은", "멘탈이 나가버렸습니다."]],
+    [["왕관이 진짜 금인지", "알아내라는데,"], ["녹이면 안 됐거든요."]],
+    [["전해지는", "아르키메데스의"], ["왕관 이야기입니다."]],
+    [["같은 무게의 순금과", "비교해도,"], ["저울은 수평입니다."]],
+    [["무게만으로는", "은이 섞였는지"], ["알 수 없었죠."]],
+    [["그래서 이번엔", "무게 대신,"], ["부피를 비교합니다."]],
+    [["같은 물통에", "같은 양의 물을 담고,"], ["두 물체를 넣습니다."]],
+    [["완전히 잠기자,"], ["왕관 쪽 수위가", "더 높아집니다."]],
+    [["같은 무게라도", "은이 섞이면,"], ["순금보다 부피가", "커지거든요."]],
+    [["왕관 가운데 빈 공간은", "물이 채웁니다."]],
+    [["금속 자체가", "밀어낸 물의 양을"], ["비교하는 겁니다."]],
+    [["왕관을", "망가뜨리지 않고도,"], ["차이를", "알아낼 수 있었죠."]]
+  ]
+}

@@ -34,7 +34,7 @@
   },
   "layout_policy": {
     "source": "config/higgsfield-typecast.json",
-    "version": 5,
+    "version": 6,
     "inherit_global": true,
     "override_allowed": false,
     "rule": "all new renders use the user-approved screenshot proportions; historical delivered videos are not rewritten"

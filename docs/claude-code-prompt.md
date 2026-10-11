@@ -12,10 +12,10 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 ```text
 이 저장소에서 9:16 쇼츠(config의 기본 길이와 topic.json의 duration_target_seconds를 참고하되 실제 음성 길이로 확정)를 활성화된 언어 세트만 제작해 줘. 현재는 한국어만이고 영어 제작은 하지 마. 주제 폴더는 topics/<slug>/ 이야.
 먼저 config의 language_sets.required를 읽고 topic.json에 같은 설정이 있으면 주제 설정을 우선해. en이 없으면 아래 영어 단계·영어 파일 읽기·영어 전달/검수를 모두 건너뛰고 새 영어 파일을 만들지 마. 기존 영어 자료를 삭제하거나 변경하지 마. en이 활성화된 경우에만 두 세트는 같은 화면 편집·효과음을 쓰고 음성·자막·고정 제목을 다르게 만들어.
-이번 기준 세 가지를 꼭 지켜: (1) 3D는 config의 visual_clarity대로 한눈에 이해되게 하되 주제의 승인된 재질·이미지 방향을 우선하기, (2) 화면 텍스트는 고정 제목 블록 하나와 자막뿐이고 진행 칩·단계 제목·부품 이름표는 넣지 않기, (3) 자막과 제목 뒤에 배경 패널·띠·상자를 넣지 않고 외곽선과 그림자만 쓰기. 기존 미디어를 재사용하더라도 예전 제목 PNG·자막 패널·좌표를 재사용하지 말고 전역 v5로 다시 합성해.
+이번 기준 세 가지를 꼭 지켜: (1) 3D는 config의 visual_clarity대로 한눈에 이해되게 하되 주제의 승인된 재질·이미지 방향을 우선하기, (2) 화면 텍스트는 고정 제목 블록 하나와 자막뿐이고 진행 칩·단계 제목·부품 이름표는 넣지 않기, (3) 자막과 제목 뒤에 배경 패널·띠·상자를 넣지 않고 외곽선과 그림자만 쓰기. 기존 미디어를 재사용하더라도 예전 제목 PNG·자막 패널·좌표를 재사용하지 말고 전역 v6로 다시 합성해.
 
 먼저 읽기: README.md, HANDOFF.md, docs/immersion-guide.md, docs/workflow-commands.md, docs/typecast-api.md, config/higgsfield-typecast.json, topics/<slug>/ 의 brief.md, narration.txt, narration.en.txt(en 활성화 시에만), title-description.txt, title-description.en.txt(en 활성화 시에만), topic.json.
-주제 내용·색·장면은 topic.json, 텍스트 좌표·크기·줄 수·폭은 전역 config layout v5가 무조건 우선이야. topic의 과거 v1~v4 좌표는 재사용하지 마. docs/text-layout.md를 읽고 모든 영상에 같은 비율을 유지해. 이번 reference_analysis 문서를 읽고 원본의 관찰과 우리의 제작 규칙을 구분해. 각 컷에 이전 조립 상태를 이어받고, 접촉 전후를 보여 줘. 두 파일의 guards는 전부 지켜.
+주제 내용·색·장면은 topic.json, 텍스트 좌표·크기·줄 수·폭은 전역 config layout v6가 무조건 우선이야. topic의 과거 v1~v4 좌표는 재사용하지 마. docs/text-layout.md를 읽고 모든 영상에 같은 비율을 유지해. 이번 reference_analysis 문서를 읽고 원본의 관찰과 우리의 제작 규칙을 구분해. 각 컷에 이전 조립 상태를 이어받고, 접촉 전후를 보여 줘. 두 파일의 guards는 전부 지켜.
 
 1. 대본 점검
 - narration.txt가 brief.md의 정확성 기준과 맞는지 확인해. 사실 오류가 있으면 고칠 문장을 제안하고 내 승인을 받아. 표현은 임의로 바꾸지 마.
@@ -53,8 +53,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 - en 활성화 시에만 같은 효과음 트랙을 영어 나레이션과도 따로 믹스해(mixed-audio-en.wav). 영어 자막 분석엔 깨끗한 영어 음성만 써.
 
 6. 편집
-- 1080×1920·24fps, 원본 화면은 꽉 채우고 텍스트는 오버레이. config의 필수 공통 layout(v5)을 따라:
-  상단 0~90px 텍스트 금지. 제목 블록 중심 (540,260), 영역 y=100~440, 보통 두 줄(첫 줄 흰색·둘째 노란색), 기본 108px·최소 84px·최대 폭 87%. title_fixed_lines가 있으면 쓰고 없으면 title_fixed를 뜻이 유지되게 줄바꿈해. 주요 동작은 620~1240px 중심, 자막 블록 중심 (540,1306), 영역 y=1180~1430, 64px·최대 폭 74%. 한 줄·두 줄 같은 블록 중심. 1480px 아래와 오른쪽 버튼 열 텍스트 금지.
+- 1080×1920·24fps, 원본 화면은 꽉 채우고 텍스트는 오버레이. config의 필수 공통 layout(v6)을 따라:
+  상단 0~90px 텍스트 금지. 제목 블록 중심 (540,260), 영역 y=100~440, 보통 두 줄(첫 줄 흰색·둘째 노란색), 기본 108px·최소 84px·최대 폭 87%. title_fixed_lines가 있으면 쓰고 없으면 title_fixed를 뜻이 유지되게 줄바꿈해. 주요 동작은 620~1240px 중심, 자막 블록 중심 (540,1360), 영역 y=1230~1470, 64px·최대 폭 74%. 한 줄·두 줄 같은 블록 중심. 1480px 아래와 오른쪽 버튼 열 텍스트 금지.
   진행 칩·단계 번호·단계별 제목·부품 이름표는 넣지 마. 고정 좌표를 모든 폰의 공식 safe area로 간주하지 말고 기종별 표시 비율과 UI로 확인해.
   Blender 카메라와 생성 클립 구도도 주요 동작이 620~1240px 중심에 오도록 잡아.
 - 자막: Noto Sans KR Bold, 64px(높이의 3.333%), 폭 74% 이내(외곽선 포함), 최대 4어절·22자·두 줄, caption_keywords는 #FFD400 노란색.
@@ -79,7 +79,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 - 결과를 outputs/<slug>-verification.json에 활성화된 언어 키만으로 저장해(현재 ko만).
 
 8. 전달
-- 최종 합성 전에 반드시 전역 layout.version=5와 실제 제목/자막 픽셀 경계가 맞는지 검사해. 틀리면 완료로 보고하지 마.
+- 최종 합성 전에 반드시 전역 layout.version=6와 실제 제목/자막 픽셀 경계가 맞는지 검사해. 틀리면 완료로 보고하지 마.
 - 한국어: outputs/<slug>-final.mp4, outputs/<slug>.srt / en 활성화 시에만 영어: outputs/<slug>-final-en.mp4, outputs/<slug>.en.srt / outputs/<slug>-verification.json.
 - title-description.txt(그리고 en 활성화 시에만 title-description.en.txt)의 제목 후보·설명·해시태그를 실제 결과에 맞게 다듬어서 최종본을 함께 보여 줘.
 - 썸네일 제작과 유튜브 게시는 하지 마.
