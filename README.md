@@ -3,11 +3,12 @@
 Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재**로 9:16 공학 원리 쇼츠를 만드는 작업 환경입니다. 현재는 **한국어만** 제작합니다. 길이는 주제별 초안과 실제 음성 길이로 정합니다.
 
 레퍼런스 ('이런거지' 채널)
-- 현재 기준 `problem_solution`(같은 물체의 실패 → 개선 → 잠금 → 실사용): https://www.youtube.com/shorts/Gko5JrBC020 · [촘촘한 분석](docs/references/Gko5JrBC020-analysis.md)
+- 최신 기준(문제 때문에 구조가 바뀌는 과정): https://www.youtube.com/shorts/41vfH3EtqOM · [장면과 이야기 분석](docs/references/41vfH3EtqOM-analysis.md)
+- 이전 기준 `problem_solution`(같은 물체의 실패 → 개선 → 잠금 → 실사용): https://www.youtube.com/shorts/Gko5JrBC020 · [촘촘한 분석](docs/references/Gko5JrBC020-analysis.md)
 - 보관 포맷 `principle_info`(원리 + 마지막 정보): https://www.youtube.com/shorts/5UjFpjehQwc
 - 보조 포맷 `problem_solution`(문제 → 해결 → 새 난관 → 추가 해결 → 완성): https://www.youtube.com/shorts/q5C9HCN2QY4
 
-**다음 제작 주제: 콘크리트 속에서 벌어지는 앵커볼트** — [`topics/expansion-anchor/`](topics/expansion-anchor/) · 약 40초 초안, 필재 한국어. 빠지는 막대 → 링 추가 → 조임 → 확장 → 고정 → 받침 적용. 음성 실측·모델링·유료 생성 전 기획 상태입니다.
+**다음 주제는 검토 중입니다.** 최신 방향은 ‘지금은 당연하지만 옛날에는 어떻게 해결했을까?’라는 난관·발견 이야기입니다. 첫 추천은 아르키메데스의 왕관, 물건 개선형 대안은 캔 따개·지퍼입니다. [후보와 사실 확인](docs/topic-candidates.md) · [최신 레퍼런스 분석](docs/references/41vfH3EtqOM-analysis.md) · [유지할 이미지 느낌](docs/style-direction.md). 앵커볼트는 보류, 버클은 서사 부적합, 안전핀은 너무 단순하다는 피드백으로 제외했습니다. 기존 config의 앵커 경로는 보관된 기획이며 현재 선택을 뜻하지 않습니다. 주제 확정 전 기존 앵커 실행 명령을 새 주제 제작에 사용하지 않습니다.
 
 작업 폴더: `C:\Users\cozy0\OneDrive\Desktop\short\checkvalve-shorts-production`. 냉장고의 진행 중 로컬 수정은 보존했습니다.
 

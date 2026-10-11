@@ -1,0 +1,39 @@
+Preview prompts used with the built-in image generation tool, 2026-10-11.
+These are concept/style previews, not verified engineering frames or final layout v4 video overlays.
+Only the buckle material/lighting feel was accepted. Buckle story and safety-pin topic were not selected.
+
+BUCKLE INITIAL PROMPT
+Use case: stylized-concept.
+Asset type: one finished 2-by-2 storyboard contact sheet showing FOUR portrait 9:16 frames for a Korean educational animation Shorts draft. All four frames depict exactly the same two-piece plastic SIDE-RELEASE BACKPACK BUCKLE, same geometry, same orientation and lighting. This is an artistic 3D style preview, not an engineering blueprint.
+Primary request: a warm, polished, realistic yet easy-to-read 3D animation look with tactile matte injection-molded plastic, subtle surface grain, rounded bevels, soft contact shadows, woven fabric straps. No crude toy-like flat shading. Neutral light warm-gray studio background and ground; orange male plug and gray female socket. Generous framing with the COMPLETE buckle and both strap attachment ends visible in every panel. Main elevated three-quarter view, male plug on left inserting toward socket on right. No severe zoom, no macro cropping.
+Mechanical geometry: male plug is ONE molded part with TWO slim flexible side arms ending in outward-facing hook shoulders and one central guide tongue. Female socket is ONE hollow housing with opposed SIDE openings and ledges that catch those shoulders. Do not confuse this with a pronged electrical plug or belt pin buckle. No coil springs, metal hinges or separate latch parts. Keep both flexible arms clearly visible in the cutaway views. Cutaway means a neat removed upper surface to reveal the hollow interior, never X-ray clutter or gratuitous exploded parts.
+Panel top-left: closed intact buckle attached to straps, modest outward tension arrows along the straps show pulling without unlocking; clean full-product silhouette.
+Panel top-right: same orientation, upper face of socket cut away to reveal orange plug arms; both outward shoulders seated against socket ledges. Subtle yellow highlight only at the two contact points. Entire assembly visible.
+Panel bottom-left: same cutaway and assembly, two simple fingertip pads press the exposed side arm ends inward from opposite sides. Small inward arrows show squeeze; shoulders now clear the housing ledges. No complete human, no extra hands, no distorted fingers.
+Panel bottom-right: male plug withdrawn toward the LEFT, female socket remaining at the RIGHT, a small clear separation gap; arms relaxed outward, the same two straps remain connected to their own buckle pieces.
+Composition/text: Each portrait panel simulates 1080x1920 full-bleed video. The SAME short fixed Korean title centered at y≈580 (30% down) in each panel, white bold with dark outline, exact text: "버클은 왜 안 빠질까?".
+Different Korean captions centered at y≈1260 (66% down) within each panel, white bold, dark outline and soft shadow, no background box:
+top-left exact caption "당겨도 잘 안 빠지죠"
+top-right exact caption "작은 턱이 걸려 있습니다"
+bottom-left exact caption "양옆을 누르면 풀립니다"
+bottom-right exact caption "다시 쉽게 분리됩니다".
+Keep mechanism centered around 45-53% panel height, captions and title separate from mechanism. All text inside central safe bands, no text at extreme top/bottom, no stage labels, no numbers, no logo, no watermark, no caption panels, no phone frames, no black letterboxing. Thin neutral gutters between panels only. Visual consistency is essential.
+
+BUCKLE EDIT
+Keep the same object, materials, and 2x2 grid. Ask for central title at 30% and caption at 66% of each panel, and fingers squeezing exposed orange arm buttons rather than the gray housing. The output did not fully satisfy these geometry/placement requests; preserve it only as a material/lighting reference.
+
+SAFETY PIN INITIAL PROMPT (topic subsequently rejected as too simple)
+Use case: stylized-concept.
+Create ONE polished 2x2 storyboard contact sheet, four portrait panels, for an original Korean 3D animated educational Shorts draft about WHY THE SAFETY PIN HAS A PROTECTIVE CLASP AND A COIL SPRING. This is a conceptual design-problem explanation, not a claimed historical chronology.
+Style: realistic tactile materials but minimal readable geometry, warm light-gray studio background, very soft shadows, small bevels, gentle satin metal reflection, clearly woven beige cloth. Similar to a high-quality product 3D render, never a flat toy or cluttered technical drawing. Every panel shows the whole main object, no tight zoom. Same orientation throughout: spring/rounded left end at LEFT, pointed wire end and protective clasp at RIGHT. Silver-gray metal; a tiny warm amber emphasis at the currently explained part.
+Top-left: a plain straight silver garment pin through two overlapping pieces of woven cloth, sharp tip visibly protrudes beyond cloth on right. Demonstrate the exposed-tip PROBLEM without a hand, wounds or blood. Exact Korean caption "끝이 드러나면 위험합니다".
+Top-right: a conceptual folded-back pin wire and a small metal protective clasp at right, pointed free end positioned just OUTSIDE the clasp to show that merely having a cover does not retain an unlatched tip. No coil yet, just a loose rounded bend at left. Keep cover physically attached to the blunt upper arm, not floating. Exact caption "덮개에서 빠지면 다시 위험하죠".
+Bottom-left: same wire now has a clearly visible ONE-turn coil at LEFT, with free pointed arm elastically bent inward toward the clasp at right. Show the tip fully seated UNDER the protective clasp lip. Tiny yellow rim at the coil, no separate coil spring, no screws or hinges, no hand, no arrows crossing text. Exact caption "스프링 힘으로 붙잡습니다".
+Bottom-right: finished standard safety pin CLOSED and correctly fastening the same two woven cloth pieces. Coil at left, protective head clasp at right, sharp tip completely hidden under clasp; do not depict an open safety pin. Whole safety pin shape unmistakable, no extra wires, no connector buckle. Exact caption "이게 우리가 쓰는 안전핀입니다".
+In every panel the same fixed title exact text "안전핀은 왜 둥글까?".
+Typography: Korean bold white with strong dark outline and soft shadow. NO background boxes, banners or black letterboxing. No stage numbers, labels, branding or watermark.
+Layout per portrait panel: keep the top quarter totally empty. Title in central upper band around 30 percent down. Subject at 47 percent down and occupies middle 35-57 percent height, with generous margins. Caption at 66 percent down, one or two short centered lines. Bottom quarter empty. Do not place text near extreme edges. Simple thin neutral gutters separate panels.
+Constraints: geometry must visibly progress in response to the demonstrated problem; preserve visual identity and screen direction. Don't mix loose button-buckle mechanisms, plastic parts, or metal hinge designs into the safety pin. The coil is formed from the same wire, and the clasp retains the free end. Polished clear material texture, no dark drama, no strong zoom or depth-of-field blur.
+
+SAFETY PIN EDIT
+Change only the top-left object to an ordinary straight garment pin, with small solid round head and exposed sharp point. Remove the curled coil/eye there. Preserve all other panels and text. The resulting board is a concept illustration only, not a validated continuous motion sequence.

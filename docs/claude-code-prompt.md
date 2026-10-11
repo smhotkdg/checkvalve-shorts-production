@@ -3,11 +3,11 @@
 가장 쉬운 방법은 저장소 루트(로컬 `work/typecast-key.xml`이 있는 기존 클론)에서 아래 명령을 실행하는 것입니다. 최신 main을 받고, 필요한 도구를 점검한 뒤, 아래 프롬프트의 `<slug>`를 채워 `work/<slug>/claude-prompt.txt`로 만들고 Claude Code를 엽니다.
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug expansion-anchor
+powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <slug>
 # 점검과 프롬프트 생성만: -NoLaunch / Blender 경로가 다르면: -BlenderPath 'D:\...\blender.exe'
 ```
 
-직접 붙여 넣을 때는 `<slug>`를 주제 폴더 이름으로 바꿉니다. 현재 다음 제작 주제는 `expansion-anchor`(한국어만, 같은 물체의 문제 해결 포맷, 약 40초 초안)입니다. `refrigerator` 진행 파일은 보존합니다. `canal-lock`(단순화 반영)과 `immersed-tunnel` 초안도 보관합니다.
+직접 붙여 넣을 때는 `<slug>`를 확정되어 4개 기획 파일이 작성된 주제 폴더 이름으로 바꿉니다. 현재는 [다음 주제 검토 중](topic-candidates.md)이며 이전 `expansion-anchor` 기획은 보류입니다. 주제가 정해지기 전에 이전 앵커 설정으로 제작을 시작하지 않습니다. 최신 역사적 난관·발견과 이미지 방향은 HANDOFF.md, docs/style-direction.md를 우선합니다. `refrigerator` 진행 파일과 기존 주제 초안은 보존합니다.
 
 ```text
 이 저장소에서 9:16 쇼츠(config의 기본 길이와 topic.json의 duration_target_seconds를 참고하되 실제 음성 길이로 확정)를 활성화된 언어 세트만 제작해 줘. 현재는 한국어만이고 영어 제작은 하지 마. 주제 폴더는 topics/<slug>/ 이야.
