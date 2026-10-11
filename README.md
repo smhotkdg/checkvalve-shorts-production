@@ -20,6 +20,8 @@
 
 다른 주제 보관: [`냉장고`](topics/refrigerator/) · [`운하 갑문`](topics/canal-lock/) · [`침매터널`](topics/immersed-tunnel/) / 완료: [`타워크레인`](topics/tower-crane/)
 
+새 주제 초안: [폼페이 — 길 한가운데 거대한 돌을 놓은 이유](topics/pompeii-stepping-stones/storyboard-v1.md). 같은 그림체의 10장면 콘티와 한글 대본을 준비했으며, 핵심 인물 클립 2개 견적은 12.5크레딧입니다. 현재 유료 생성은 실행하지 않았습니다. 공통 비용 규칙은 **50은 상한, 지출 목표 아님**으로 갱신했습니다.
+
 ## 구조
 
 | 경로 | 내용 |

@@ -139,10 +139,20 @@
   },
   "style": {
     "look": "reference-led warm realistic-shaded ink illustration; preserve gold/bronze/linen/limestone textures and continuous intact object motion, using storyboard-linked Higgsfield start/end images",
-    "priority": "viewer engagement and accurate meaningful motion before credit minimization",
+    "priority": "Preserve approved visual quality and meaningful motion while minimizing paid credits; 50 is a ceiling, never a spending target. Prefer exact local animation for mechanisms and only generate necessary character/action clips.",
     "motion_rule": "Continuous meaningful actions and state continuity; keep rigid parts rigid and object identities fixed. During a measured result, keep the result physically stable and use subtle water ripples, material reflections or a small camera change for liveliness. Do not invent state changes solely to avoid a calm explanatory comparison.",
     "scale_cues": "use a scale cue only when useful; a small tabletop fastener needs no person silhouette",
     "composition": "one fixed headline block centered at x=540,y=260 (normally two lines, white then yellow); one caption block centered at x=540,y=1360; layout v6 is mandatory for every topic and enabled language"
+  },
+  "higgsfield_credit_policy": {
+    "hard_cap_per_short": 50,
+    "minimum_spend": 0,
+    "spend_to_cap": false,
+    "strategy": "Use the fewest paid clips needed for the approved motion and style; reuse coherent assets, animate geometry locally, avoid paid audio/upscale/render and automatic retries.",
+    "quote_before_submission": true,
+    "account_for_all_accepted_attempts": true,
+    "unused_budget_is_not_authorization_for_extra_jobs": true,
+    "user_revision": "2026-10-11: 50 is the maximum only; save as much as possible without losing the approved style."
   },
   "layout": {
     "version": 6,

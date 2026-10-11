@@ -1,0 +1,179 @@
+{
+  "slug": "pompeii-stepping-stones",
+  "status": "storyboard-draft",
+  "latest_variant": "storyboard-v1",
+  "storyboard": "topics/pompeii-stepping-stones/storyboard-v1.md",
+  "narration": "topics/pompeii-stepping-stones/narration.txt",
+  "language": "ko",
+  "duration_target_seconds": 43,
+  "duration_rule": "Measure original Piljae narration first; draft duration may change without speeding up or cutting speech.",
+  "layout_policy": {
+    "version": 6,
+    "inherit_global": true,
+    "override_allowed": false
+  },
+  "title_fixed_lines": [
+    "길 한가운데 돌을",
+    "놓은 진짜 이유"
+  ],
+  "caption_keywords": [
+    "폼페이",
+    "돌",
+    "물",
+    "보도",
+    "틈",
+    "바퀴"
+  ],
+  "voice": {
+    "provider": "typecast",
+    "name_kor": "필재",
+    "model": "ssfm-v30",
+    "voice_id_rule": "resolve original voice from authenticated catalog",
+    "fallback_allowed": false
+  },
+  "style": "Approved Egypt warm ivory textured, realistically shaded ink illustration adapted to Roman basalt, plaster, terracotta, linen and timber",
+  "credit_budget": {
+    "scope": "Higgsfield video credits only; Typecast separate",
+    "hard_cap": 50,
+    "minimum_spend": 0,
+    "spend_to_cap": false,
+    "initial_target": 12.5,
+    "quoted_credits_per_5s_standard_silent_clip": 6.25,
+    "quote_type": "cost-only preflight; no job submitted",
+    "quote_date": "2026-10-11",
+    "paid_clips": [
+      {
+        "scene": 3,
+        "model": "kling3_0",
+        "mode": "std",
+        "sound": "off",
+        "duration": 5,
+        "aspect_ratio": "9:16",
+        "quoted_credits": 6.25
+      },
+      {
+        "scene": 5,
+        "model": "kling3_0",
+        "mode": "std",
+        "sound": "off",
+        "duration": 5,
+        "aspect_ratio": "9:16",
+        "quoted_credits": 6.25
+      }
+    ],
+    "actual_spent": 0,
+    "optional_extra_clip": {
+      "quoted_credits": 6.25,
+      "only_if": "Visual verification finds an essential missing action; quote again, do not spend merely because budget remains."
+    },
+    "initial_plus_one_optional": 18.75,
+    "rules": [
+      "Get a fresh quote for exact final submission params before every paid job.",
+      "Use local textured geometry for cart/stone interaction to avoid inaccurate AI wheel collisions and regenerations.",
+      "Reuse consistent street/stone/cart assets; animate actual water, steps and wheel rotation, not only still-image zooms.",
+      "Count accepted failures/retries until refunded; never automatically resubmit an unknown outcome.",
+      "No paid Higgsfield image/upscale/audio/render needed for this plan."
+    ]
+  },
+  "shots": [
+    {
+      "scene": 1,
+      "label": "길 한가운데 돌",
+      "composition": "낮은 넓은 시점. 도로를 가로지르는 디딤돌 3개와 뒤쪽 수레로 의문을 만든다.",
+      "action": "돌이 보이는 낮은 시점 → 도시의 살아 있는 도로로 전환. 단순 확대만 하지 않는다.",
+      "route": "local",
+      "draft_seconds": 4,
+      "narration": "폼페이 사람들은 길 한가운데 커다란 돌을 놓았습니다."
+    },
+    {
+      "scene": 2,
+      "label": "발밑의 문제",
+      "composition": "상점 앞 비스듬한 도로. 얕은 배수가 흐르고 보행자가 보도에서 멈춘다.",
+      "action": "유수·잔물결·인물의 망설임. 장면 03의 동일 인물과 물 흐름을 잇는다.",
+      "route": "local",
+      "draft_seconds": 4,
+      "narration": "길을 막으려던 걸까요? 사실, 발밑에 문제가 있었습니다."
+    },
+    {
+      "scene": 3,
+      "label": "젖기 싫은 발",
+      "composition": "중간 크기의 발/다리 화면. 샌들이 물에 닿으려다 뒤로 물러난다.",
+      "action": "짧은 발 동작과 작은 물 튐. 과도한 클로즈업·큰 홍수 없이 확실한 전후 변화.",
+      "route": "higgsfield",
+      "draft_seconds": 5,
+      "narration": "당시 도로로는 빗물과 생활하수도 흘렀거든요."
+    },
+    {
+      "scene": 4,
+      "label": "보도 높이의 돌",
+      "composition": "양쪽 보도와 세 디딤돌을 가로로 자른 도로 단면.",
+      "action": "차도 높이/돌 윗면/보도 높이를 순서대로 드러내고 물이 아래로 흐른다.",
+      "route": "local",
+      "draft_seconds": 4,
+      "narration": "돌의 윗면을 양쪽 보도와 비슷한 높이로 맞춘 겁니다."
+    },
+    {
+      "scene": 5,
+      "label": "돌을 밟고 건너기",
+      "composition": "같은 인물이 바구니를 들고 돌을 밟아 맞은편 보도로 간다.",
+      "action": "발의 실제 돌 접촉, 균형 잡힌 몸 이동, 아래로 흐르는 물. 돌은 움직이지 않는다.",
+      "route": "higgsfield",
+      "draft_seconds": 5,
+      "narration": "이제 사람들은 물 대신 돌을 밟고 건널 수 있었죠."
+    },
+    {
+      "scene": 6,
+      "label": "수레는 어떻게?",
+      "composition": "정면의 두 바퀴 화물 수레와 고정된 디딤돌.",
+      "action": "정확한 부품을 가진 수레가 돌 앞까지 접근. 충돌 실패를 역사적 사실처럼 연출하지 않는다.",
+      "route": "local",
+      "draft_seconds": 4,
+      "narration": "그런데, 이렇게 돌을 놓으면 수레는 어떻게 지나갈까요?"
+    },
+    {
+      "scene": 7,
+      "label": "틈을 내려다보면",
+      "composition": "엄격한 평면도. 도로 길이 방향과 같은 방향으로 길쭉한 돌 3개, 사이의 두 틈.",
+      "action": "두 바퀴 경로를 두 내부 틈과 맞추며 시점을 전환. 돌을 옮기지 않는다.",
+      "route": "local",
+      "draft_seconds": 4,
+      "narration": "자세히 보면 돌과 돌 사이에 틈이 있습니다."
+    },
+    {
+      "scene": 8,
+      "label": "바퀴는 돌 사이로",
+      "composition": "비슷한 음영/질감의 수레 단면. 바퀴 두 개는 틈, 차축·몸통은 중앙 돌 위로 통과.",
+      "action": "수레 전체 병진+바퀴 회전, 중앙 돌과 차축 사이 여유 유지. 움직이는 실제 기구를 보여준다.",
+      "route": "local",
+      "draft_seconds": 5,
+      "narration": "그 틈으로 바퀴가 지나가고, 수레 몸통은 돌 위를 넘습니다."
+    },
+    {
+      "scene": 9,
+      "label": "물도 계속 흐른다",
+      "composition": "바퀴 자국과 디딤돌 틈이 함께 보이는 낮은 사선 시점.",
+      "action": "물이 돌 사이로 계속 흘러가는 경로 강조. 돌 윗면을 덮는 수심은 피한다.",
+      "route": "local",
+      "draft_seconds": 4,
+      "narration": "물도 돌 사이로 계속 흐를 수 있었고요."
+    },
+    {
+      "scene": 10,
+      "label": "사람·물·바퀴의 길",
+      "composition": "넓은 시점으로 돌아옴. 사람은 맞은편 보도, 수레는 통과 후, 물은 틈으로 흐른다.",
+      "action": "앞선 동작의 완료 상태를 회수한다. 사람과 수레는 시간차를 두고 교차한다.",
+      "route": "local_reuse",
+      "draft_seconds": 4,
+      "narration": "사람은 돌 위로, 물과 바퀴는 돌 사이로. 작은 틈까지 쓴 길이었던 겁니다."
+    }
+  ],
+  "accuracy_guards": [
+    "A three-stone arrangement is one illustrative crossing, not all Pompeii streets.",
+    "Stepping stone long axis is along the street, stones form a row across it.",
+    "Wheels pass between stones; cart axle/underbody has clearance above center stone; no wheel climbing/stone morphing.",
+    "Rainwater and wastewater could flow along road; not a claim that all Roman cities lacked sewers or streets were permanently flooded.",
+    "No universal wheel gauge, modern rail gauge claim, first zebra-crossing claim or proof of direct ancestry.",
+    "No claim that traffic restriction was never a function of any stone; discuss this depicted pedestrian crossing.",
+    "Period people, cart and street facades are reconstruction; do not fabricate original invention dialogue or a documented installation event."
+  ]
+}
