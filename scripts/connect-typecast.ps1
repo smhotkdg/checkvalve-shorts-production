@@ -1,4 +1,5 @@
-param([string]$PythonCommand = '', [switch]$GenerateNarration, [string]$ScriptPath = '', [string]$OutputPath = '')
+param([string]$PythonCommand = '', [switch]$GenerateNarration, [string]$ScriptPath = '', [string]$OutputPath = '',
+      [string]$VoiceName = '', [string]$Language = '', [switch]$ListVoices, [string]$Gender = '', [string]$UseCase = '')
 $ErrorActionPreference = 'Stop'
 $typecastWorkspace = Split-Path -Parent $PSScriptRoot
 $typecastWorkDirectory = Join-Path $typecastWorkspace 'work'
@@ -24,6 +25,13 @@ $typecastSecretPointer = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($
 try {
     $env:TYPECAST_API_KEY = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($typecastSecretPointer)
     $typecastBridgeArguments = @((Join-Path $typecastWorkspace 'src\typecast_api_bridge.py'))
+    if ($VoiceName) { $typecastBridgeArguments += @('--voice-name', $VoiceName) }
+    if ($Language) { $typecastBridgeArguments += @('--language', $Language) }
+    if ($ListVoices) {
+        $typecastBridgeArguments += '--list'
+        if ($Gender) { $typecastBridgeArguments += @('--gender', $Gender) }
+        if ($UseCase) { $typecastBridgeArguments += @('--use-case', $UseCase) }
+    }
     if ($GenerateNarration) {
         if (-not $ScriptPath) { $ScriptPath = Join-Path $typecastWorkspace 'work\project\narration.txt' }
         if (-not $OutputPath) { $OutputPath = Join-Path $typecastWorkspace 'work\project\piljae.wav' }
@@ -31,8 +39,10 @@ try {
     }
     & $PythonCommand @typecastBridgeArguments
     if ($LASTEXITCODE -ne 0) { throw 'API operation incomplete; inspect its status before retrying a generation' }
-    if ($GenerateNarration) { Write-Host 'Piljae narration generated.' }
-    else { Write-Host 'Connected. Piljae voice verified. No audio generation requested.' }
+    $typecastVoiceLabel = if ($VoiceName) { $VoiceName } else { 'Piljae' }
+    if ($ListVoices) { Write-Host 'Voice list printed. No audio generation requested.' }
+    elseif ($GenerateNarration) { Write-Host "$typecastVoiceLabel narration generated." }
+    else { Write-Host "Connected. $typecastVoiceLabel voice verified. No audio generation requested." }
 } finally {
     [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($typecastSecretPointer)
     if ($null -eq $typecastPreviousKey) { Remove-Item Env:\TYPECAST_API_KEY -ErrorAction SilentlyContinue }

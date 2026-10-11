@@ -44,3 +44,18 @@ python src/typecast_api_bridge.py --generate --script topics/<slug>/narration.tx
 키나 HTTP 오류 본문을 출력하지 않고 인증 정보를 포함한 리디렉션도 따르지 않습니다. 네트워크 오류로 결과가 불명확한 경우 재생성을 자동 반복하지 않습니다.
 
 실제 목록에서 필재 original 음성과 ssfm-v30 지원을 확인했고 WAV 형식과 길이도 검증했습니다. 체크밸브 최종 음성은 원음 44.6초였습니다. 다음 실행에서도 실제 계정의 목록을 확인하며 임의의 voice_id나 다른 음성으로 대체하지 않습니다.
+
+## 영어 세트 음성
+
+한국어 세트(필재)와 함께 영어 세트를 만듭니다. 영어 음성은 부드럽고 설명형인 성인 남성 목소리로 하며, 선택한 이름은 `config/higgsfield-typecast.json`의 `voice_en.name_eng`에 둡니다. voice_id는 매번 실제 목록에서 영어 이름으로 다시 찾습니다.
+
+```powershell
+# 후보 조회만 (생성 없음): 이름, 나이대, 용도, 미리듣기 URL
+.\scripts\connect-typecast.ps1 -ListVoices -Gender male -UseCase 'E-learning/Explainer'
+# 선택한 음성 확인만
+.\scripts\connect-typecast.ps1 -VoiceName '<name>'
+# 생성 (크레딧 사용, 승인 후)
+.\scripts\connect-typecast.ps1 -GenerateNarration -VoiceName '<name>' -Language eng -ScriptPath (Join-Path (Get-Location) 'topics\<slug>\narration.en.txt') -OutputPath (Join-Path (Get-Location) 'work\<slug>\en-voice.wav')
+```
+
+`-Language eng`는 요청에 `language: "eng"`를 넣습니다. 크레딧은 글자 수(공백 포함) 기준으로 계산됩니다. 화면은 필재 실측 타이밍이 기준이므로, 영어 음성은 문장 사이 무음에서 잘라 각 한국어 문장의 시작 시각에 맞춰 배치합니다.

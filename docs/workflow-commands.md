@@ -41,6 +41,10 @@ ffmpeg -i work/<slug>/piljae.wav -af 'atempo=0.94,apad,atrim=0:50' -ar 44100 -ac
 python3 "$HF_WORKFLOWS/video-montage/scripts/audio_to_captions.py" work/<slug>/narration-final.wav --srt work/<slug>/caps.srt --json work/<slug>/caption-report.json --script work/<slug>/script.json --language ko --model medium --max-words 4 --max-chars 22 --minimum-similarity .90
 ```
 
+## 영어 세트
+
+영어 대본은 `topics/<slug>/narration.en.txt`(한국어 문장마다 한 줄), 생성 음성은 `work/<slug>/en-voice.wav`입니다. 명령은 `docs/typecast-api.md`의 영어 세트 절을 따릅니다. 0.94 처리 후 문장별로 잘라 필재 `timing.json`의 문장 시작 시각에 배치해 `narration-final-en.wav`를 만들고, 영어 Whisper로 `timing-en.json`과 영어 자막을 만듭니다. 화면 편집과 효과음은 한국어 세트와 같고, 결과는 `outputs/<slug>-final-en.mp4`, `outputs/<slug>.en.srt`입니다.
+
 ## Blender 렌더
 
 `work/<slug>/scene.blend`에 모델과 키프레임을 저장합니다. 출력 경로는 반드시 절대 경로로 넘깁니다. 상대 경로는 드라이브 루트 기준으로 해석될 수 있습니다. 프레임 구간은 `topics/<slug>/topic.json`과 실측 타이밍으로 정합니다.

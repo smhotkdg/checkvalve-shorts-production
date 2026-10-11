@@ -10,9 +10,10 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug ca
 직접 붙여 넣을 때는 `<slug>`를 주제 폴더 이름으로 바꿉니다. 현재 다음 제작 주제는 `canal-lock`입니다. `tower-crane`과 `immersed-tunnel`의 초안도 보관합니다.
 
 ```text
-이 저장소에서 50초 9:16 쇼츠를 제작해 줘. 주제 폴더는 topics/<slug>/ 이야.
+이 저장소에서 50초 9:16 쇼츠를 한국어 세트와 영어 세트로 제작해 줘. 주제 폴더는 topics/<slug>/ 이야.
+두 세트는 같은 화면 편집과 효과음을 쓰고, 나레이션·자막·제목/진행 칩만 다르게 만들어(config의 language_sets).
 
-먼저 읽기: README.md, HANDOFF.md, docs/immersion-guide.md, docs/workflow-commands.md, docs/typecast-api.md, config/higgsfield-typecast.json, topics/<slug>/ 의 brief.md, narration.txt, title-description.txt, topic.json.
+먼저 읽기: README.md, HANDOFF.md, docs/immersion-guide.md, docs/workflow-commands.md, docs/typecast-api.md, config/higgsfield-typecast.json, topics/<slug>/ 의 brief.md, narration.txt, narration.en.txt(있으면), title-description.txt, title-description.en.txt(있으면), topic.json.
 전역 규칙은 config, 주제별 규칙은 topic.json이 우선이야. 두 파일의 guards는 전부 지켜.
 
 1. 대본 점검
@@ -24,6 +25,13 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug ca
 - 원음 길이를 측정해. config의 length_budget(원음 46초 이하)을 넘으면 대본 축약안을 제안하고, 속도를 올리거나 잘라서 맞추지 마.
 - atempo 0.94 → apad → atrim 50초로 narration-final.wav를 만들고, 실제 사용할 호스팅 오디오를 Whisper로 분석해 문장별 시작·끝 시간을 work/<slug>/timing.json에 저장해.
 - 실측 시간으로 topic.json의 clips timeline과 brief.md 장면표를 갱신해.
+
+2-1. 영어 음성 (config의 voice_en, 화면 기준은 필재 timing.json)
+- narration.en.txt가 없으면 한국어 문장마다 한 줄씩 영어 대본을 새로 써서(같은 사실·같은 순서, 직역 금지) 내 승인을 받아. 각 줄은 해당 한국어 문장 구간 안에 끝나는 길이로 쓰고, 훅 반응어는 한국어 펀치인 시점 근처에 오게 해.
+- 부드럽고 설명형인 성인 남성 영어 음성을 쓴다. voice_en.name_eng가 비어 있으면 .\scripts\connect-typecast.ps1 -ListVoices -Gender male -UseCase 'E-learning/Explainer' 로 후보와 미리듣기 URL을 보여 주고 내가 고르게 해.
+- 잔액과 예상 사용량(영어는 글자 수만큼)을 보여 주고 승인 후 -VoiceName <이름> -Language eng 로 생성. 출력: work/<slug>/en-voice.wav (덮어쓰기 금지).
+- atempo 0.94 후 문장 사이 무음에서 잘라 각 영어 문장을 같은 한국어 문장의 시작 시각에 배치해 narration-final-en.wav(영상 길이와 동일)를 만들어. 다음 문장 시작 전에 끝나지 않으면 해당 줄을 줄여 다시 생성하자고 제안해. 속도를 올리거나 자르지 마.
+- Whisper(영어)로 work/<slug>/timing-en.json을 저장해.
 
 3. Blender
 - topic.json의 blender.groups와 model_detail대로 work/<slug>/scene.blend를 만들어. EEVEE, AgX, PBR, 베벨, 환경광 차폐.
@@ -38,6 +46,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug ca
 
 5. 사운드
 - topic.json의 sound_design대로 원본 효과음 트랙을 만들고 필재와 미리 믹스해(필재가 항상 가장 크게). 자막 분석엔 깨끗한 필재만 써.
+- 같은 효과음 트랙을 영어 나레이션과도 따로 믹스해(mixed-audio-en.wav). 영어 자막 분석엔 깨끗한 영어 음성만 써.
 
 6. 편집
 - 1080×1920·24fps, 원본 화면은 꽉 채우고 텍스트는 오버레이. config의 layout(v3)을 따라:
@@ -48,6 +57,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug ca
 - 훅 반응어는 짧은 저음과 노란색으로 강조하되 위치·크기 상한을 지켜. topic.json visual_direction이 있으면 그 질감·가속감속·카메라 상한을 우선 적용해. canal-lock은 강한 펀치인 없이 전체·중간 거리 화면을 80% 이상 유지하고 질감이 보이는 대표 프레임을 먼저 검수해.
 - 핵심 순간(brief.md에 슬로모션으로 표시된 장면)은 속도 램프와 저음 효과로 강조해.
 - 마지막 프레임이 첫 프레임 구도와 이어지게 맞춰.
+- 영어 세트: 같은 화면 편집에 영어 믹스 오디오, 영어 자막(config captions_en: 최대 5단어·26자·두 줄, caption_keywords_en 노란색), 영어 제목과 progress_chips_en을 올려. 영어 세트에는 한국어 글자를 넣지 마. 레이아웃·중앙 정렬 규칙은 한국어와 같아.
 
 7. 검수 (전부 통과해야 완료)
 - ffprobe: 영상·음성 모두 50.000초, 1080×1920, 24fps. 전체 디코딩 통과.
@@ -57,11 +67,12 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug ca
 - 같은 프레임에서 제목·자막 텍스트의 좌우 여백 차이 2px 이하인지 측정. 넘으면 고치고 다시 렌더해.
 - 1초 넘게 변화 없는 구간이 없는지 프레임 차이로 확인.
 - 첫 프레임과 마지막 프레임 구도 비교.
-- 결과를 outputs/<slug>-verification.json에 저장해.
+- 영어 세트도 같은 항목을 검수해(자막은 narration.en.txt와 일치, 유사도 0.90 이상, 각 영어 문장이 다음 한국어 문장 시작 전에 끝나는지, 영어 세트에 한국어 글자가 없는지).
+- 결과를 outputs/<slug>-verification.json에 ko·en 두 세트로 저장해.
 
 8. 전달
-- outputs/<slug>-final.mp4, outputs/<slug>.srt, outputs/<slug>-verification.json.
-- title-description.txt의 제목 후보·설명·해시태그를 실제 결과에 맞게 다듬어서 최종본을 함께 보여 줘.
+- 한국어: outputs/<slug>-final.mp4, outputs/<slug>.srt / 영어: outputs/<slug>-final-en.mp4, outputs/<slug>.en.srt / outputs/<slug>-verification.json.
+- title-description.txt와 title-description.en.txt의 제목 후보·설명·해시태그를 실제 결과에 맞게 다듬어서 최종본을 함께 보여 줘.
 - 썸네일 제작과 유튜브 게시는 하지 마.
 
 9. Git

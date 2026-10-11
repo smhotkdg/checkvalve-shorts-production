@@ -1,10 +1,19 @@
 {
   "slug": "tower-crane",
   "topic": "external top climbing tower crane: adding a mast section",
-  "status": "script_draft_ready",
+  "status": "voice_measured_timeline_synced",
   "topic_selection_status": "selected_by_user",
   "work_dir": "work/tower-crane",
   "narration_file": "topics/tower-crane/narration.txt",
+  "narration_en_file": "topics/tower-crane/narration.en.txt",
+  "duration_override": {
+    "duration_seconds": 51,
+    "reason": "user 2026-10-10: keep the first Piljae take (raw 46.15 s, 0.15 s over the 46 s budget) and lengthen the video instead of shortening the script",
+    "raw_seconds_measured": 46.15,
+    "after_rate_seconds": 49.1,
+    "atrim_seconds": 51,
+    "verify_duration_seconds": 51.0
+  },
   "narration_estimate": {
     "characters_without_spaces": 287,
     "raw_seconds": 43.8,
@@ -16,6 +25,12 @@
     "③ 상승",
     "④ 삽입"
   ],
+  "progress_chips_en": [
+    "① Prep",
+    "② Balance",
+    "③ Lift",
+    "④ Insert"
+  ],
   "caption_keywords": [
     "제정신",
     "케이지",
@@ -24,9 +39,17 @@
     "유압 실린더",
     "걸쇠"
   ],
+  "caption_keywords_en": [
+    "insane",
+    "cage",
+    "mast",
+    "balances",
+    "hydraulic jack",
+    "pawls"
+  ],
   "video": {
     "clip_count": 3,
-    "timeline_seconds_used": 14,
+    "timeline_seconds_used": 13,
     "clips": [
       {
         "id": "H1",
@@ -37,21 +60,21 @@
         "seconds": 5,
         "start_frame": "Blender wide site frame",
         "timeline": [
-          7.6,
-          12.7
+          10.6,
+          15.6
         ]
       },
       {
         "id": "H2",
-        "purpose": "connection flange bolt tightening close-up; use about 3 s matching the spoken '볼트로 잇고'",
+        "purpose": "connection flange bolt tightening close-up; use about 2 s matching the spoken '볼트로 잇고'",
         "model": "kling3_0",
         "mode": "pro",
         "sound": "off",
         "seconds": 4,
         "start_frame": "Blender flange close-up with new section seated",
         "timeline": [
-          38.3,
-          41.3
+          42.0,
+          44.0
         ]
       },
       {
@@ -64,8 +87,8 @@
         "start_frame": "Blender wide frame of the finished taller crane",
         "end_frame": "same low-angle composition as frame 1",
         "timeline": [
-          44.0,
-          50.0
+          45.0,
+          51.0
         ]
       }
     ]
@@ -75,7 +98,7 @@
     "fps": 24,
     "continuous_animation": true,
     "sync_to_measured_voice": true,
-    "timeline_seconds_used": 36,
+    "timeline_seconds_used": 38,
     "camera_type": "perspective with changing views and continuous parallax",
     "groups": [
       "foundation (fixed)",
@@ -144,5 +167,232 @@
   "hook": {
     "pattern": "unbelievable fact + exaggerated reaction phrase",
     "line": "타워크레인이 자기 몸을 스스로 들어 올립니다. 처음 보면 제정신이 아닌 줄 알죠."
+  },
+  "narration_measured": {
+    "raw_seconds": 46.15,
+    "after_rate_seconds": 49.1,
+    "speech_end_seconds": 48.93,
+    "whisper_similarity": 0.958,
+    "timing_file": "work/tower-crane/timing.json",
+    "sentences": [
+      [
+        0.43,
+        2.9
+      ],
+      [
+        3.57,
+        5.58
+      ],
+      [
+        6.19,
+        10.33
+      ],
+      [
+        10.88,
+        15.22
+      ],
+      [
+        15.8,
+        20.14
+      ],
+      [
+        20.79,
+        25.56
+      ],
+      [
+        25.89,
+        29.62
+      ],
+      [
+        30.27,
+        35.24
+      ],
+      [
+        35.42,
+        39.45
+      ],
+      [
+        39.65,
+        44.79
+      ],
+      [
+        45.0,
+        48.93
+      ]
+    ],
+    "cues": {
+      "제정신": 4.16,
+      "케이지": 17.12,
+      "레일": 19.26,
+      "트롤리": 27.46,
+      "균형": 28.54,
+      "볼트를 풀면": 30.5,
+      "유압 실린더": 31.32,
+      "밀어 올립니다": 34.6,
+      "걸쇠": 37.04,
+      "두 번에": 38.3,
+      "틈으로": 40.1,
+      "밀어 넣어": 41.54,
+      "볼트로 잇고": 42.16,
+      "고정합니다": 44.04
+    }
+  },
+  "titles": [
+    {
+      "time": [
+        0.0,
+        5.9
+      ],
+      "ko": "스스로 자라는 크레인",
+      "en": "The crane that grows itself"
+    },
+    {
+      "time": [
+        5.9,
+        10.6
+      ],
+      "ko": "몸통을 어떻게 끼우지?",
+      "en": "How does it fit?"
+    },
+    {
+      "time": [
+        10.6,
+        15.6
+      ],
+      "ko": "① 문제",
+      "en": "① The problem"
+    },
+    {
+      "time": [
+        15.6,
+        20.5
+      ],
+      "ko": "① 준비",
+      "en": "① Prep"
+    },
+    {
+      "time": [
+        20.5,
+        25.7
+      ],
+      "ko": "② 새 난관",
+      "en": "② New obstacle"
+    },
+    {
+      "time": [
+        25.7,
+        30.0
+      ],
+      "ko": "② 균형",
+      "en": "② Balance"
+    },
+    {
+      "time": [
+        30.0,
+        35.3
+      ],
+      "ko": "③ 상승 1",
+      "en": "③ Lift 1"
+    },
+    {
+      "time": [
+        35.3,
+        39.6
+      ],
+      "ko": "③ 상승 2",
+      "en": "③ Lift 2"
+    },
+    {
+      "time": [
+        39.6,
+        44.0
+      ],
+      "ko": "④ 삽입",
+      "en": "④ Insert"
+    },
+    {
+      "time": [
+        44.0,
+        45.0
+      ],
+      "ko": "④ 완성",
+      "en": "④ Done"
+    },
+    {
+      "time": [
+        45.0,
+        51.0
+      ],
+      "ko": "건물과 함께 자란다",
+      "en": "Growing with the building"
+    }
+  ],
+  "english_set": {
+    "voice": "Typecast Hugh (original, ssfm-v30, language eng), user-selected 2026-10-11",
+    "request_characters": 606,
+    "raw_seconds_measured": 38.85,
+    "after_rate_seconds": 41.33,
+    "placement": "each line starts at its Korean sentence start; lines 4 and 9 start 0.51 s and 0.23 s earlier to end 0.25 s before the next Korean sentence",
+    "whisper_similarity": 1.0,
+    "sentences": [
+      [
+        0.43,
+        2.45
+      ],
+      [
+        3.57,
+        4.86
+      ],
+      [
+        6.19,
+        8.76
+      ],
+      [
+        10.37,
+        15.56
+      ],
+      [
+        15.81,
+        20.09
+      ],
+      [
+        20.79,
+        24.49
+      ],
+      [
+        25.89,
+        28.51
+      ],
+      [
+        30.27,
+        34.76
+      ],
+      [
+        35.2,
+        39.4
+      ],
+      [
+        39.65,
+        43.93
+      ],
+      [
+        45.0,
+        48.54
+      ]
+    ],
+    "cues": {
+      "insane": 3.94,
+      "cage": 16.32,
+      "rail": 19.72,
+      "trolley": 27.08,
+      "balances": 27.44,
+      "Bolts out": 30.42,
+      "hydraulic jack": 31.62,
+      "pawls": 37.26,
+      "twice": 38.8,
+      "gap": 41.34,
+      "bolts on": 41.82,
+      "locks down": 43.02
+    }
   }
 }

@@ -20,7 +20,10 @@
     "topics/<slug>/narration.txt: exact Piljae TTS text only",
     "topics/<slug>/title-description.txt: 3 Shorts title options, description, hashtags, final script",
     "topics/<slug>/topic.json: clips, draft timeline, caption keywords, topic guards",
-    "outputs/<slug>-final.mp4, outputs/<slug>.srt, outputs/<slug>-verification.json (local only, not in Git)"
+    "topics/<slug>/narration.en.txt: exact English TTS text only, one line per Korean sentence",
+    "topics/<slug>/title-description.en.txt: English title options, description, hashtags, final English script",
+    "outputs/<slug>-final.mp4, outputs/<slug>.srt, outputs/<slug>-verification.json (local only, not in Git)",
+    "outputs/<slug>-final-en.mp4, outputs/<slug>.en.srt (English set, same picture edit; local only, not in Git)"
   ],
   "voice": {
     "provider": "typecast",
@@ -43,6 +46,43 @@
       "rule": "if raw Piljae audio exceeds the budget, shorten the script and regenerate; never speed it up and never let atrim cut speech",
       "estimate": "about 6.5 Korean characters (spaces excluded) per raw second; checkvalve 292 chars = 44.6 s"
     }
+  },
+  "language_sets": {
+    "required": [
+      "ko",
+      "en"
+    ],
+    "rule": "every topic ships a Korean set (Piljae TTS + Korean captions/titles) and an English set (English TTS + English captions/titles) built on the same picture edit and sound design",
+    "picture_master": "ko: Blender keyframes and clip timelines follow the Korean Piljae timing.json; the English set reuses that picture unchanged",
+    "en_files": {
+      "narration": "topics/<slug>/narration.en.txt",
+      "title_description": "topics/<slug>/title-description.en.txt",
+      "raw_audio": "work/<slug>/en-voice.wav",
+      "final_audio": "work/<slug>/narration-final-en.wav",
+      "timing": "work/<slug>/timing-en.json",
+      "video": "outputs/<slug>-final-en.mp4",
+      "srt": "outputs/<slug>.en.srt"
+    }
+  },
+  "voice_en": {
+    "provider": "typecast",
+    "character": "smooth, calm, explanatory adult male English narrator (user 2026-10-11)",
+    "name_eng": "Hugh",
+    "voice_id_rule": "resolve by English name from the authenticated /v3/voices catalog (original, ssfm-v30); never hard-code; list candidates with connect-typecast.ps1 -ListVoices -Gender male -UseCase 'E-learning/Explainer'",
+    "model": "ssfm-v30",
+    "language": "eng",
+    "tempo": 1.0,
+    "format": "wav",
+    "fallback_allowed": false,
+    "postprocess": {
+      "pitch_preserving_rate": 0.94,
+      "sentence_placement": "cut the English take at its sentence silences and start each English sentence at the matching Korean sentence start from work/<slug>/timing.json, so the shared picture stays in sync; a line that would run past the next Korean start may start earlier into the preceding pause (keep >= 0.35 s after the previous English line and >= 0.25 s before the next Korean start)"
+    },
+    "length_budget": {
+      "rule": "each English sentence (after rate) must end before the next Korean sentence starts; the last one must end at least payoff_tail_seconds_min before the video end; if not, shorten that English line and regenerate; never speed it up and never cut speech",
+      "estimate": "about 3.6 English syllables per raw second for a calm narrator"
+    },
+    "writing_rule": "original English adaptation of each Korean line, same facts and beat order; hook reaction word (e.g. 'insane') must land near the Korean punch-in cue"
   },
   "story": {
     "reference_structure": [
@@ -152,6 +192,27 @@
     ],
     "vertical_anchor": "one-line or two-line block vertically centered at y=1260; ink and outline remain inside y=1140-1380"
   },
+  "captions_en": {
+    "language": "en",
+    "font": "Noto Sans CJK KR Bold",
+    "timing_source": "Whisper on final English narration audio",
+    "wording_source": "exact authored script (topics/<slug>/narration.en.txt)",
+    "style": "same panel, outline and size as the Korean captions; topic keywords (topic.json caption_keywords_en) in yellow",
+    "keyword_highlight_color": "#FFD400",
+    "max_words": 5,
+    "max_chars": 26,
+    "fontsize_fraction": 0.038,
+    "max_width_fraction": 0.76,
+    "max_lines": 2,
+    "minimum_similarity": 0.9,
+    "panel_pixels": [
+      0,
+      1250,
+      1080,
+      1450
+    ],
+    "on_screen_titles": "English titles and progress chips from topic.json (progress_chips_en, shot titles_en); no Korean text in the English set"
+  },
   "native_edit": {
     "render_concurrency": 2,
     "render_shards": 5,
@@ -164,12 +225,13 @@
     "show the current Higgsfield and Typecast cost and balance and get user approval before any paid generation",
     "one approved mechanism asset reused across clips",
     "no generated speech or baked text in raw clips",
-    "Korean labels and captions added in post",
+    "Korean (ko set) and English (en set) labels and captions added in post",
     "never silently replace Piljae",
     "never silently switch route",
     "persist every submitted job_id",
     "never retry an unknown submission automatically",
     "original spoken text; never copy reference wording",
-    "explain the generic method; do not claim a specific project's numbers unless verified"
+    "explain the generic method; do not claim a specific project's numbers unless verified",
+    "never silently replace the chosen English narrator; show its cost and get approval before generation like Piljae"
   ]
 }

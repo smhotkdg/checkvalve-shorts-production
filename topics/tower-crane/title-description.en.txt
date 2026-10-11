@@ -1,0 +1,29 @@
+Title options
+1. This Crane Builds Itself Taller
+2. How a Tower Crane Slides a New Section Under Itself
+3. How Do Cranes Climb Skyscrapers?
+
+Recommended: 1 (matches the hook)
+
+Description
+As a building rises, its tower crane has to rise with it.
+With no bigger crane to help, the crane lifts its own top with a climbing cage and a hydraulic jack, then slides a new mast section into the gap, one at a time.
+Balancing, the two-stroke climb, and inserting and bolting the new section, shown in 3D animation.
+
+Conceptual animation for explanation; it does not reproduce a specific crane model's procedure or figures.
+Core structure: Blender / some shots: Higgsfield / narration: Typecast
+
+#towercrane #construction #engineering #howitworks #shorts
+
+Final English narration
+A tower crane lifts itself.
+Sounds insane, right?
+So how does a new section fit underneath it?
+Buildings rise, the crane must follow, and no bigger crane can help.
+So a cage wraps the top, and a new section waits on a rail.
+Now the real problem: the top must be unbolted from the mast.
+To avoid tipping, the trolley balances it first.
+Bolts out, a hydraulic jack braces on the mast and lifts the whole top.
+Too far for one stroke, so pawls hold it and it climbs twice.
+The new section slides into the gap, bolts on, and the top locks down.
+Lifting itself, it grows with the building, one section at a time.
