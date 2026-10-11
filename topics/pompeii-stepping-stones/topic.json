@@ -1,12 +1,12 @@
 {
   "slug": "pompeii-stepping-stones",
-  "status": "storyboard-draft",
-  "latest_variant": "storyboard-v1",
+  "status": "completed-verified",
+  "latest_variant": "production-v1",
   "storyboard": "topics/pompeii-stepping-stones/storyboard-v1.md",
   "narration": "topics/pompeii-stepping-stones/narration.txt",
   "language": "ko",
-  "duration_target_seconds": 43,
-  "duration_rule": "Measure original Piljae narration first; draft duration may change without speeding up or cutting speech.",
+  "duration_target_seconds": 45,
+  "duration_rule": "Use measured original Piljae speech with pitch-preserving 0.94 rate; no cut speech; 45-second picture edit.",
   "layout_policy": {
     "version": 6,
     "inherit_global": true,
@@ -37,134 +37,203 @@
     "hard_cap": 50,
     "minimum_spend": 0,
     "spend_to_cap": false,
-    "initial_target": 12.5,
+    "initial_target": 25,
     "quoted_credits_per_5s_standard_silent_clip": 6.25,
-    "quote_type": "cost-only preflight; no job submitted",
+    "quote_type": "exact submitted parameters; all four jobs completed; actual charge confirmed by balance difference",
     "quote_date": "2026-10-11",
     "paid_clips": [
       {
-        "scene": 3,
+        "source_scene": 1,
         "model": "kling3_0",
         "mode": "std",
         "sound": "off",
         "duration": 5,
         "aspect_ratio": "9:16",
-        "quoted_credits": 6.25
+        "quoted_credits": 6.25,
+        "status": "completed"
       },
       {
-        "scene": 5,
+        "source_scene": 3,
         "model": "kling3_0",
         "mode": "std",
         "sound": "off",
         "duration": 5,
         "aspect_ratio": "9:16",
-        "quoted_credits": 6.25
+        "quoted_credits": 6.25,
+        "status": "completed"
+      },
+      {
+        "source_scene": 5,
+        "model": "kling3_0",
+        "mode": "std",
+        "sound": "off",
+        "duration": 5,
+        "aspect_ratio": "9:16",
+        "quoted_credits": 6.25,
+        "status": "completed"
+      },
+      {
+        "source_scene": 10,
+        "model": "kling3_0",
+        "mode": "std",
+        "sound": "off",
+        "duration": 5,
+        "aspect_ratio": "9:16",
+        "quoted_credits": 6.25,
+        "status": "completed"
       }
     ],
-    "actual_spent": 0,
-    "optional_extra_clip": {
-      "quoted_credits": 6.25,
-      "only_if": "Visual verification finds an essential missing action; quote again, do not spend merely because budget remains."
-    },
-    "initial_plus_one_optional": 18.75,
+    "actual_spent": 25,
     "rules": [
       "Get a fresh quote for exact final submission params before every paid job.",
       "Use local textured geometry for cart/stone interaction to avoid inaccurate AI wheel collisions and regenerations.",
       "Reuse consistent street/stone/cart assets; animate actual water, steps and wheel rotation, not only still-image zooms.",
       "Count accepted failures/retries until refunded; never automatically resubmit an unknown outcome.",
       "No paid Higgsfield image/upscale/audio/render needed for this plan."
-    ]
+    ],
+    "prior_draft_target": 12.5,
+    "additional_paid_jobs": 0
   },
   "shots": [
     {
       "scene": 1,
       "label": "길 한가운데 돌",
       "composition": "낮은 넓은 시점. 도로를 가로지르는 디딤돌 3개와 뒤쪽 수레로 의문을 만든다.",
-      "action": "돌이 보이는 낮은 시점 → 도시의 살아 있는 도로로 전환. 단순 확대만 하지 않는다.",
-      "route": "local",
-      "draft_seconds": 4,
-      "narration": "폼페이 사람들은 길 한가운데 커다란 돌을 놓았습니다."
+      "action": "수레가 도로를 따라 접근하고 안내 인물·배경 인물이 걸으며 얕은 물이 흐른다.",
+      "route": "higgsfield-recut",
+      "narration": "폼페이 사람들은 길 한가운데 커다란 돌을 놓았습니다.",
+      "start_seconds": 0.0,
+      "end_seconds": 4.166667,
+      "actual_frames": 100,
+      "source_clip": 1,
+      "source_range": [
+        0,
+        2.4
+      ]
     },
     {
       "scene": 2,
       "label": "발밑의 문제",
       "composition": "상점 앞 비스듬한 도로. 얕은 배수가 흐르고 보행자가 보도에서 멈춘다.",
-      "action": "유수·잔물결·인물의 망설임. 장면 03의 동일 인물과 물 흐름을 잇는다.",
-      "route": "local",
-      "draft_seconds": 4,
-      "narration": "길을 막으려던 걸까요? 사실, 발밑에 문제가 있었습니다."
+      "action": "여성이 발밑을 보고 망설이고 옷·배수·배경이 움직인다.",
+      "route": "higgsfield-recut",
+      "narration": "길을 막으려던 걸까요? 사실, 발밑에 문제가 있었습니다.",
+      "start_seconds": 4.166667,
+      "end_seconds": 8.708333,
+      "actual_frames": 109,
+      "source_clip": 3,
+      "source_range": [
+        0,
+        2.4
+      ]
     },
     {
       "scene": 3,
       "label": "젖기 싫은 발",
       "composition": "중간 크기의 발/다리 화면. 샌들이 물에 닿으려다 뒤로 물러난다.",
       "action": "짧은 발 동작과 작은 물 튐. 과도한 클로즈업·큰 홍수 없이 확실한 전후 변화.",
-      "route": "higgsfield",
-      "draft_seconds": 5,
-      "narration": "당시 도로로는 빗물과 생활하수도 흘렀거든요."
+      "route": "higgsfield-recut",
+      "narration": "당시 도로로는 빗물과 생활하수도 흘렀거든요.",
+      "start_seconds": 8.708333,
+      "end_seconds": 12.708333,
+      "actual_frames": 96,
+      "source_clip": 3,
+      "source_range": [
+        2.4,
+        5
+      ]
     },
     {
       "scene": 4,
       "label": "보도 높이의 돌",
       "composition": "양쪽 보도와 세 디딤돌을 가로로 자른 도로 단면.",
-      "action": "차도 높이/돌 윗면/보도 높이를 순서대로 드러내고 물이 아래로 흐른다.",
-      "route": "local",
-      "draft_seconds": 4,
-      "narration": "돌의 윗면을 양쪽 보도와 비슷한 높이로 맞춘 겁니다."
+      "action": "고정된 보도·돌 윗면을 따라 높이 표시가 이동하며 아래로 물이 흐른다.",
+      "route": "native-animated",
+      "narration": "돌의 윗면을 양쪽 보도와 비슷한 높이로 맞춘 겁니다.",
+      "start_seconds": 12.708333,
+      "end_seconds": 16.791667,
+      "actual_frames": 98
     },
     {
       "scene": 5,
       "label": "돌을 밟고 건너기",
       "composition": "같은 인물이 바구니를 들고 돌을 밟아 맞은편 보도로 간다.",
       "action": "발의 실제 돌 접촉, 균형 잡힌 몸 이동, 아래로 흐르는 물. 돌은 움직이지 않는다.",
-      "route": "higgsfield",
-      "draft_seconds": 5,
-      "narration": "이제 사람들은 물 대신 돌을 밟고 건널 수 있었죠."
+      "route": "higgsfield-recut",
+      "narration": "이제 사람들은 물 대신 돌을 밟고 건널 수 있었죠.",
+      "start_seconds": 16.791667,
+      "end_seconds": 22.125,
+      "actual_frames": 128,
+      "source_clip": 5,
+      "source_range": [
+        0,
+        5
+      ]
     },
     {
       "scene": 6,
       "label": "수레는 어떻게?",
-      "composition": "정면의 두 바퀴 화물 수레와 고정된 디딤돌.",
-      "action": "정확한 부품을 가진 수레가 돌 앞까지 접근. 충돌 실패를 역사적 사실처럼 연출하지 않는다.",
-      "route": "local",
-      "draft_seconds": 4,
-      "narration": "그런데, 이렇게 돌을 놓으면 수레는 어떻게 지나갈까요?"
+      "composition": "목재 화물 수레가 고정된 세 디딤돌 앞까지 접근한다.",
+      "action": "수레의 나머지 접근과 실제 바퀴 회전. 돌 사이 통과 직전까지 보여준다.",
+      "route": "higgsfield-recut",
+      "narration": "그런데, 이렇게 돌을 놓으면 수레는 어떻게 지나갈까요?",
+      "start_seconds": 22.125,
+      "end_seconds": 26.375,
+      "actual_frames": 102,
+      "source_clip": 1,
+      "source_range": [
+        2.4,
+        5
+      ]
     },
     {
       "scene": 7,
       "label": "틈을 내려다보면",
       "composition": "엄격한 평면도. 도로 길이 방향과 같은 방향으로 길쭉한 돌 3개, 사이의 두 틈.",
-      "action": "두 바퀴 경로를 두 내부 틈과 맞추며 시점을 전환. 돌을 옮기지 않는다.",
-      "route": "local",
-      "draft_seconds": 4,
-      "narration": "자세히 보면 돌과 돌 사이에 틈이 있습니다."
+      "action": "수레가 같은 두 내부 틈으로 접근하고 이동하는 경로 표시·배수가 연결된다.",
+      "route": "native-animated",
+      "narration": "자세히 보면 돌과 돌 사이에 틈이 있습니다.",
+      "start_seconds": 26.375,
+      "end_seconds": 29.5,
+      "actual_frames": 75
     },
     {
       "scene": 8,
       "label": "바퀴는 돌 사이로",
       "composition": "비슷한 음영/질감의 수레 단면. 바퀴 두 개는 틈, 차축·몸통은 중앙 돌 위로 통과.",
       "action": "수레 전체 병진+바퀴 회전, 중앙 돌과 차축 사이 여유 유지. 움직이는 실제 기구를 보여준다.",
-      "route": "local",
-      "draft_seconds": 5,
-      "narration": "그 틈으로 바퀴가 지나가고, 수레 몸통은 돌 위를 넘습니다."
+      "route": "native-animated",
+      "narration": "그 틈으로 바퀴가 지나가고, 수레 몸통은 돌 위를 넘습니다.",
+      "start_seconds": 29.5,
+      "end_seconds": 34.666667,
+      "actual_frames": 124
     },
     {
       "scene": 9,
       "label": "물도 계속 흐른다",
       "composition": "바퀴 자국과 디딤돌 틈이 함께 보이는 낮은 사선 시점.",
-      "action": "물이 돌 사이로 계속 흘러가는 경로 강조. 돌 윗면을 덮는 수심은 피한다.",
-      "route": "local",
-      "draft_seconds": 4,
-      "narration": "물도 돌 사이로 계속 흐를 수 있었고요."
+      "action": "같은 수레가 통과 후 계속 멀어지며 돌 사이로 물이 흐른다.",
+      "route": "native-animated",
+      "narration": "물도 돌 사이로 계속 흐를 수 있었고요.",
+      "start_seconds": 34.666667,
+      "end_seconds": 37.416667,
+      "actual_frames": 66
     },
     {
       "scene": 10,
       "label": "사람·물·바퀴의 길",
       "composition": "넓은 시점으로 돌아옴. 사람은 맞은편 보도, 수레는 통과 후, 물은 틈으로 흐른다.",
-      "action": "앞선 동작의 완료 상태를 회수한다. 사람과 수레는 시간차를 두고 교차한다.",
-      "route": "local_reuse",
-      "draft_seconds": 4,
-      "narration": "사람은 돌 위로, 물과 바퀴는 돌 사이로. 작은 틈까지 쓴 길이었던 겁니다."
+      "action": "여성이 맞은편 보도를 따라 걸으며 수레·배경 인물·물이 계속 움직인다.",
+      "route": "higgsfield-recut",
+      "narration": "사람은 돌 위로, 물과 바퀴는 돌 사이로. 작은 틈까지 쓴 길이었던 겁니다.",
+      "start_seconds": 37.416667,
+      "end_seconds": 45.0,
+      "actual_frames": 182,
+      "source_clip": 10,
+      "source_range": [
+        0,
+        5
+      ]
     }
   ],
   "accuracy_guards": [
@@ -175,5 +244,10 @@
     "No universal wheel gauge, modern rail gauge claim, first zebra-crossing claim or proof of direct ancestry.",
     "No claim that traffic restriction was never a function of any stone; discuss this depicted pedestrian crossing.",
     "Period people, cart and street facades are reconstruction; do not fabricate original invention dialogue or a documented installation event."
-  ]
+  ],
+  "production": "topics/pompeii-stepping-stones/production-v1.json",
+  "production_notes": "topics/pompeii-stepping-stones/production.md",
+  "duration_actual_seconds": 45,
+  "per_scene_process_motion_required": true,
+  "still_image_camera_pan_only_allowed": false
 }

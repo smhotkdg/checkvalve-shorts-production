@@ -140,7 +140,9 @@
   "style": {
     "look": "reference-led warm realistic-shaded ink illustration; preserve gold/bronze/linen/limestone textures and continuous intact object motion, using storyboard-linked Higgsfield start/end images",
     "priority": "Preserve approved visual quality and meaningful motion while minimizing paid credits; 50 is a ceiling, never a spending target. Prefer exact local animation for mechanisms and only generate necessary character/action clips.",
-    "motion_rule": "Continuous meaningful actions and state continuity; keep rigid parts rigid and object identities fixed. During a measured result, keep the result physically stable and use subtle water ripples, material reflections or a small camera change for liveliness. Do not invent state changes solely to avoid a calm explanatory comparison.",
+    "motion_rule": "Every scene must contain continuous subject or process animation related to the explanation: walking, cart translation, rolling wheels, flowing water or a moving explanatory demonstration. Preserve rigid parts and object identities. During a measured result keep the result stable while real secondary motion continues. Never change a physical result just to make it lively.",
+    "per_scene_process_motion_required": true,
+    "still_image_camera_pan_only_allowed": false,
     "scale_cues": "use a scale cue only when useful; a small tabletop fastener needs no person silhouette",
     "composition": "one fixed headline block centered at x=540,y=260 (normally two lines, white then yellow); one caption block centered at x=540,y=1360; layout v6 is mandatory for every topic and enabled language"
   },

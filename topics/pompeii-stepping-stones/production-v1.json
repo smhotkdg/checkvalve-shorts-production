@@ -1,0 +1,711 @@
+{
+  "variant": "production-v1",
+  "status": "completed-verified",
+  "language": "ko",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration_seconds": 45,
+  "layout_policy": {
+    "inherit_global": true,
+    "required_version": 6,
+    "title_center": [
+      540,
+      260
+    ],
+    "caption_center": [
+      540,
+      1360
+    ],
+    "max_caption_lines": 2
+  },
+  "higgsfield": {
+    "model": "kling3_0",
+    "mode": "std",
+    "sound": "off",
+    "duration_per_clip": 5,
+    "count": 4,
+    "quoted_total": 25,
+    "actual_spent": 25,
+    "hard_cap": 50,
+    "minimum_spend": 0,
+    "spend_to_cap": false,
+    "all_jobs_completed": true,
+    "additional_paid_jobs": 0,
+    "cost_scope": "Higgsfield only; Typecast and built-in image tool separately accounted"
+  },
+  "typecast": {
+    "voice": "original Piljae from authenticated catalog",
+    "model": "ssfm-v30",
+    "characters": 301,
+    "pitch_preserving_tempo": 0.94,
+    "processed_audio_seconds": 43.562358,
+    "speech_end_seconds": 43.13,
+    "caption_chunks": 21
+  },
+  "clips": [
+    {
+      "source_clip": 1,
+      "start_image_prompt": "Create a single full portrait 9:16 high quality animation START FRAME for a Korean Pompeii explanation. Use attached approved storyboard ONLY for style and subject consistency, NOT its grid or text. Warm ivory textured, crisp dark ink contours with physically believable rich shaded materials: weathered grey-black basalt, warm plaster storefronts, red terracotta tile roofs, woven linen, basket fibers, timber grain, iron rims. NOT flat vector, not photoreal human. Ancient Roman Pompeii before destruction. NO text, labels, numbers, arrows, panels, watermarks, explosion, racing chariots or modern stuff.\nMaintain same adult woman, dark brown hair in a simple bun, muted terracotta draped dress over cream linen, brown Roman leather sandals, woven basket. Same timber two-wheel one-axle goods cart with short logs, iron-rimmed spoked wheels, guided by one adult man in cream knee-length tunic; no horses required in these illustrative reconstructions.\nStreet is paved in irregular polygonal dark basalt, with sidewalks higher on both sides. Across the street is a row of THREE separated rounded oblong basalt stepping stones: each long axis runs ALONG the road; top roughly level with the sidewalk; two interior gaps clear for cart wheels. These are low step blocks, not gigantic boulders. Shallow water below stone tops, not river.\nVertical production composition1080x1920: top approximately25% reserve readable quiet sky/plaster/cream for headline. Main visible action within y500..1200 with entire objects and feet. Bottom quarter quiet empty road or warm neutral paper for subtitles, objects not cut off. Keep full spatial relationships, avoid extreme close-ups.\n\nSCENE: Elevated medium-wide diagonal view of entire Roman street. Three stepping stones in lower middle around y1050, TWO-wheeled timber cargo cart in center farther behind the crossing around y790, male guide walks at cart's side, a few quiet background townspeople stay on pavements. Woman with basket stands on left raised pavement near crossing. Cart approaching but wheels have NOT crossed stones. Entire cart, wheel pair, stone row and both sidewalks readable. Buildings low enough to leave sky for headline.",
+      "video_prompt": "Maintain the reference's warm detailed ink illustration, textured Roman stone/wood/linen and fixed rigid objects. Portrait9:16, silent. Calm medium-wide camera; no zoom into faces, no text, no new foreground props, no morphing stones/cart, no additional wheels or limbs. Stone tops remain dry above shallow flowing road water. Keep all action above the lower caption band and headline sky clear. 5-second continuous street motion. The loaded two-wheel timber cart very slowly rolls a SHORT distance toward the viewer, male guide walks alongside with natural short steps, both wheels rotate consistently, logs remain firmly loaded. STOP WITH BOTH WHEELS STILL BEFORE the fixed three-stone row, never cross it in this clip. Woman remains on sidewalk and glances from stones toward cart. Background people stroll along sidewalks, shallow water flows through gaps. A tiny lateral camera drift under3%, no dramatic zoom. Cartoon illustration comes alive with genuine cart translation and walking, not a still-image pan.",
+      "mode": "std",
+      "sound": "off",
+      "duration": 5,
+      "credits": 6.25
+    },
+    {
+      "source_clip": 3,
+      "start_image_prompt": "Create a single full portrait 9:16 high quality animation START FRAME for a Korean Pompeii explanation. Use attached approved storyboard ONLY for style and subject consistency, NOT its grid or text. Warm ivory textured, crisp dark ink contours with physically believable rich shaded materials: weathered grey-black basalt, warm plaster storefronts, red terracotta tile roofs, woven linen, basket fibers, timber grain, iron rims. NOT flat vector, not photoreal human. Ancient Roman Pompeii before destruction. NO text, labels, numbers, arrows, panels, watermarks, explosion, racing chariots or modern stuff.\nMaintain same adult woman, dark brown hair in a simple bun, muted terracotta draped dress over cream linen, brown Roman leather sandals, woven basket. Same timber two-wheel one-axle goods cart with short logs, iron-rimmed spoked wheels, guided by one adult man in cream knee-length tunic; no horses required in these illustrative reconstructions.\nStreet is paved in irregular polygonal dark basalt, with sidewalks higher on both sides. Across the street is a row of THREE separated rounded oblong basalt stepping stones: each long axis runs ALONG the road; top roughly level with the sidewalk; two interior gaps clear for cart wheels. These are low step blocks, not gigantic boulders. Shallow water below stone tops, not river.\nVertical production composition1080x1920: top approximately25% reserve readable quiet sky/plaster/cream for headline. Main visible action within y500..1200 with entire objects and feet. Bottom quarter quiet empty road or warm neutral paper for subtitles, objects not cut off. Keep full spatial relationships, avoid extreme close-ups.\n\nSCENE: Medium-full diagonal view at the same crossing. Woman with basket is at raised left pavement, one foot securely on sidewalk, her other sandal slightly extended toward a shallow flowing patch on the LOWER road, NOT yet touching it. Look concerned at water, no modern cartoon emoji. Show full person including both sandals and surrounding lower street. Three stepping stones visible off to middle right. Water below block tops. Clear entire pose, head below y500 headline reserve. No huge macro foot, no hand or leg cutoffs.",
+      "video_prompt": "Maintain the reference's warm detailed ink illustration, textured Roman stone/wood/linen and fixed rigid objects. Portrait9:16, silent. Calm medium-wide camera; no zoom into faces, no text, no new foreground props, no morphing stones/cart, no additional wheels or limbs. Stone tops remain dry above shallow flowing road water. Keep all action above the lower caption band and headline sky clear. 5-second continuous hesitation and foot reaction. Woman remains at left raised pavement, one foot firmly supports her. Her other extended sandal slowly lowers toward SHALLOW ROAD WATER adjacent to first stone, brushes the edge and makes one tiny splash, then she draws that SAME foot back toward the safe first stone/curb. She looks down and grips her basket, fabric naturally shifts. Show toes approaching water and withdrawal clearly, not a full crossing. Fixed stones and curb. The cart behind may barely creep but must stay BEFORE the row. Small background pedestrians and flowing water continue. Locked camera, full legs always visible, no jumping, no new foot.",
+      "mode": "std",
+      "sound": "off",
+      "duration": 5,
+      "credits": 6.25
+    },
+    {
+      "source_clip": 5,
+      "start_image_prompt": "Create a single full portrait 9:16 high quality animation START FRAME for a Korean Pompeii explanation. Use attached approved storyboard ONLY for style and subject consistency, NOT its grid or text. Warm ivory textured, crisp dark ink contours with physically believable rich shaded materials: weathered grey-black basalt, warm plaster storefronts, red terracotta tile roofs, woven linen, basket fibers, timber grain, iron rims. NOT flat vector, not photoreal human. Ancient Roman Pompeii before destruction. NO text, labels, numbers, arrows, panels, watermarks, explosion, racing chariots or modern stuff.\nMaintain same adult woman, dark brown hair in a simple bun, muted terracotta draped dress over cream linen, brown Roman leather sandals, woven basket. Same timber two-wheel one-axle goods cart with short logs, iron-rimmed spoked wheels, guided by one adult man in cream knee-length tunic; no horses required in these illustrative reconstructions.\nStreet is paved in irregular polygonal dark basalt, with sidewalks higher on both sides. Across the street is a row of THREE separated rounded oblong basalt stepping stones: each long axis runs ALONG the road; top roughly level with the sidewalk; two interior gaps clear for cart wheels. These are low step blocks, not gigantic boulders. Shallow water below stone tops, not river.\nVertical production composition1080x1920: top approximately25% reserve readable quiet sky/plaster/cream for headline. Main visible action within y500..1200 with entire objects and feet. Bottom quarter quiet empty road or warm neutral paper for subtitles, objects not cut off. Keep full spatial relationships, avoid extreme close-ups.\n\nSCENE: Medium-wide diagonal view across the road. Woman with basket is at the LEFT raised pavement, balanced just beginning her crossing: left sandal still at sidewalk, right sandal rests firmly on first of three spaced stepping stones. Remaining two stones lead toward right pavement. All three stone tops and destination visible, upper bodies and feet in middle band, no floating feet. Shallow water flowing beneath tops. Cart NOT in the crossing area. Entire side-to-side footpath visible for animation.",
+      "video_prompt": "Maintain the reference's warm detailed ink illustration, textured Roman stone/wood/linen and fixed rigid objects. Portrait9:16, silent. Calm medium-wide camera; no zoom into faces, no text, no new foreground props, no morphing stones/cart, no additional wheels or limbs. Stone tops remain dry above shallow flowing road water. Keep all action above the lower caption band and headline sky clear. 5-second natural continuous WALK ACROSS the fixed stepping stones from LEFT sidewalk toward RIGHT sidewalk. Starting from the displayed balanced first step, the woman places one sandal firmly on each dry stone top in sequence, shifts weight naturally, basket gently swings; reaches right sidewalk safely at end. Both foot contacts physically precise, exactly two legs, no floating foot or running/jumping. Keep the THREE stones rigid in their positions, gaps filled with low flowing water, never grow a bridge or extra stone. Male guide and loaded cart stay back, do NOT cross or collide. Gentle tracking under4% only, entire crossing path readable.",
+      "mode": "std",
+      "sound": "off",
+      "duration": 5,
+      "credits": 6.25
+    },
+    {
+      "source_clip": 10,
+      "start_image_prompt": "Create a single full portrait 9:16 high quality animation START FRAME for a Korean Pompeii explanation. Use attached approved storyboard ONLY for style and subject consistency, NOT its grid or text. Warm ivory textured, crisp dark ink contours with physically believable rich shaded materials: weathered grey-black basalt, warm plaster storefronts, red terracotta tile roofs, woven linen, basket fibers, timber grain, iron rims. NOT flat vector, not photoreal human. Ancient Roman Pompeii before destruction. NO text, labels, numbers, arrows, panels, watermarks, explosion, racing chariots or modern stuff.\nMaintain same adult woman, dark brown hair in a simple bun, muted terracotta draped dress over cream linen, brown Roman leather sandals, woven basket. Same timber two-wheel one-axle goods cart with short logs, iron-rimmed spoked wheels, guided by one adult man in cream knee-length tunic; no horses required in these illustrative reconstructions.\nStreet is paved in irregular polygonal dark basalt, with sidewalks higher on both sides. Across the street is a row of THREE separated rounded oblong basalt stepping stones: each long axis runs ALONG the road; top roughly level with the sidewalk; two interior gaps clear for cart wheels. These are low step blocks, not gigantic boulders. Shallow water below stone tops, not river.\nVertical production composition1080x1920: top approximately25% reserve readable quiet sky/plaster/cream for headline. Main visible action within y500..1200 with entire objects and feet. Bottom quarter quiet empty road or warm neutral paper for subtitles, objects not cut off. Keep full spatial relationships, avoid extreme close-ups.\n\nSCENE: Elevated medium-wide view of SAME street and crossing after passage. Woman safely standing on RIGHT raised sidewalk, two-wheel loaded cart and male guide are already wholly BEYOND the three stones farther down street on FAR side. Cart moves away from viewer in subsequent animation, no wheel presently overlaps crossing blocks. All three stones lower-middle, flowing shallow water between. Clear town façades and sky, subtle warm sunlight, enough margin around characters.",
+      "video_prompt": "Maintain the reference's warm detailed ink illustration, textured Roman stone/wood/linen and fixed rigid objects. Portrait9:16, silent. Calm medium-wide camera; no zoom into faces, no text, no new foreground props, no morphing stones/cart, no additional wheels or limbs. Stone tops remain dry above shallow flowing road water. Keep all action above the lower caption band and headline sky clear. 5-second continuous completed crossing/payoff. Woman ALREADY on right raised sidewalk turns slightly forward and walks two or three small natural steps ALONG that pavement, basket sways and dress shifts. The loaded cart ALREADY beyond the stone crossing slowly continues farther AWAY down the street, guide walks naturally beside it; wheels rotate, logs fixed. No one crosses the stones again in this clip. Shallow water keeps flowing toward foreground through the two gaps, ripples catch light. Other people stroll on pavements, tiny cloth awning flutter. Camera remains wide, almost locked; no speed rush or dramatic zoom.",
+      "mode": "std",
+      "sound": "off",
+      "duration": 5,
+      "credits": 6.25
+    }
+  ],
+  "source_recut": {
+    "scene1": {
+      "clip": 1,
+      "range": [
+        0,
+        2.4
+      ]
+    },
+    "scene2": {
+      "clip": 3,
+      "range": [
+        0,
+        2.4
+      ]
+    },
+    "scene3": {
+      "clip": 3,
+      "range": [
+        2.4,
+        5
+      ]
+    },
+    "scene5": {
+      "clip": 5,
+      "range": [
+        0,
+        5
+      ]
+    },
+    "scene6": {
+      "clip": 1,
+      "range": [
+        2.4,
+        5
+      ]
+    },
+    "scene10": {
+      "clip": 10,
+      "range": [
+        0,
+        5
+      ]
+    }
+  },
+  "native_scenes": {
+    "4": {
+      "motion": "Shallow water movement plus walking-height trace across fixed curb/stone tops"
+    },
+    "7": {
+      "motion": "Two-wheel cart approaching across a top-down road with rotating wheels and moving water paths",
+      "cart_y_range": [
+        -2.6,
+        -0.95
+      ]
+    },
+    "8": {
+      "motion": "Full cart translation and rolling wheels through the two gaps with visible axle clearance",
+      "cart_y_range": [
+        -0.95,
+        2.25
+      ]
+    },
+    "9": {
+      "motion": "Cart continues away while water remains flowing through fixed gaps",
+      "cart_y_range": [
+        2.25,
+        3.25
+      ]
+    }
+  },
+  "native_geometry": {
+    "units": "Illustrative model units, not excavation measurements",
+    "stone_centers_x": [
+      -1.3,
+      0,
+      1.3
+    ],
+    "stone_width": 0.65,
+    "stone_length_along_road": 1.1,
+    "stone_height": 0.29,
+    "curb_height": 0.29,
+    "wheel_centers_x": [
+      -0.65,
+      0.65
+    ],
+    "wheel_radius": 0.54,
+    "wheel_axle_height": 0.56,
+    "wheel_thickness": 0.13,
+    "axle_bottom": 0.505,
+    "cart_floor_bottom": 0.74,
+    "wheel_rotation_rule": "rotation follows traveled distance divided by radius",
+    "visibility": "per-pixel orthographic depth; foreground pavement must not hide distant cart or stones",
+    "material_rule": "warm textured wood, dark basalt, ink outlines; use source timber colors; preserve stable rigid geometry"
+  },
+  "verification": {
+    "status": "passed",
+    "caption_authored_words_exact": true,
+    "asr_similarity": 0.9759615384615384,
+    "layout_bounds_passed": true,
+    "duration_seconds": 45,
+    "frames": 1080,
+    "full_decode": "passed",
+    "audio_peak_dbfs": -1.1,
+    "caption_chunks": 21,
+    "per_scene_motion_sample_check": [
+      {
+        "scene": 1,
+        "mean_absolute_frame_difference": 32.658
+      },
+      {
+        "scene": 2,
+        "mean_absolute_frame_difference": 35.656
+      },
+      {
+        "scene": 3,
+        "mean_absolute_frame_difference": 37.086
+      },
+      {
+        "scene": 4,
+        "mean_absolute_frame_difference": 0.439
+      },
+      {
+        "scene": 5,
+        "mean_absolute_frame_difference": 58.261
+      },
+      {
+        "scene": 6,
+        "mean_absolute_frame_difference": 42.9
+      },
+      {
+        "scene": 7,
+        "mean_absolute_frame_difference": 3.139
+      },
+      {
+        "scene": 8,
+        "mean_absolute_frame_difference": 9.191
+      },
+      {
+        "scene": 9,
+        "mean_absolute_frame_difference": 4.724
+      },
+      {
+        "scene": 10,
+        "mean_absolute_frame_difference": 19.579
+      }
+    ],
+    "visual_review": "encoded scene samples and simulated phone layouts inspected",
+    "geometry_check": "wheel paths fit both inner gaps; axle/floor clear central stone; wheels remain on lower road",
+    "review_limitation": "Sampling and simulation, not exhaustive verification of every generated pose or every device UI"
+  },
+  "media_policy": "Only settings, prompts, commands, narration and documents in Git; production source/media, keys, signed URLs and job receipts local only",
+  "completed_local_date": "2026-10-12",
+  "timeline": {
+    "fps": 24,
+    "duration": 45,
+    "segments": [
+      {
+        "scene": 1,
+        "start": 0.0,
+        "end": 4.166667,
+        "frames": 100,
+        "route": "higgsfield-recut",
+        "source_clip": 1,
+        "source_start": 0,
+        "source_end": 2.4
+      },
+      {
+        "scene": 2,
+        "start": 4.166667,
+        "end": 8.708333,
+        "frames": 109,
+        "route": "higgsfield-recut",
+        "source_clip": 3,
+        "source_start": 0,
+        "source_end": 2.4
+      },
+      {
+        "scene": 3,
+        "start": 8.708333,
+        "end": 12.708333,
+        "frames": 96,
+        "route": "higgsfield-recut",
+        "source_clip": 3,
+        "source_start": 2.4,
+        "source_end": 5
+      },
+      {
+        "scene": 4,
+        "start": 12.708333,
+        "end": 16.791667,
+        "frames": 98,
+        "route": "native-animated"
+      },
+      {
+        "scene": 5,
+        "start": 16.791667,
+        "end": 22.125,
+        "frames": 128,
+        "route": "higgsfield-recut",
+        "source_clip": 5,
+        "source_start": 0,
+        "source_end": 5
+      },
+      {
+        "scene": 6,
+        "start": 22.125,
+        "end": 26.375,
+        "frames": 102,
+        "route": "higgsfield-recut",
+        "source_clip": 1,
+        "source_start": 2.4,
+        "source_end": 5
+      },
+      {
+        "scene": 7,
+        "start": 26.375,
+        "end": 29.5,
+        "frames": 75,
+        "route": "native-animated"
+      },
+      {
+        "scene": 8,
+        "start": 29.5,
+        "end": 34.666667,
+        "frames": 124,
+        "route": "native-animated"
+      },
+      {
+        "scene": 9,
+        "start": 34.666667,
+        "end": 37.416667,
+        "frames": 66,
+        "route": "native-animated"
+      },
+      {
+        "scene": 10,
+        "start": 37.416667,
+        "end": 45.0,
+        "frames": 182,
+        "route": "higgsfield-recut",
+        "source_clip": 10,
+        "source_start": 0,
+        "source_end": 5
+      }
+    ]
+  },
+  "native_camera": {
+    "projection": "orthographic",
+    "extreme_zoom": false,
+    "4": {
+      "position": [
+        0,
+        -10,
+        3
+      ],
+      "pixels_per_unit": 158,
+      "screen_center": [
+        540,
+        1020
+      ]
+    },
+    "7": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "pixels_per_unit": 110,
+      "screen_center": [
+        540,
+        870
+      ]
+    },
+    "8": {
+      "position": [
+        4,
+        -6,
+        5
+      ],
+      "pixels_per_unit": 150,
+      "screen_center": [
+        540,
+        935
+      ]
+    },
+    "9": {
+      "position": [
+        3,
+        -6,
+        2.6
+      ],
+      "target": [
+        0.35,
+        0,
+        0
+      ],
+      "pixels_per_unit": 124,
+      "screen_center": [
+        540,
+        930
+      ]
+    }
+  },
+  "caption_timing": [
+    {
+      "lines": [
+        "폼페이 사람들은"
+      ],
+      "text": "폼페이 사람들은",
+      "start": 0.11,
+      "end": 1.41
+    },
+    {
+      "lines": [
+        "길 한가운데",
+        "커다란 돌을 놓았습니다."
+      ],
+      "text": "길 한가운데 커다란 돌을 놓았습니다.",
+      "start": 1.41,
+      "end": 4.15
+    },
+    {
+      "lines": [
+        "길을 막으려던 걸까요?"
+      ],
+      "text": "길을 막으려던 걸까요?",
+      "start": 4.15,
+      "end": 5.87
+    },
+    {
+      "lines": [
+        "사실, 발밑에",
+        "문제가 있었습니다."
+      ],
+      "text": "사실, 발밑에 문제가 있었습니다.",
+      "start": 6.73,
+      "end": 8.71
+    },
+    {
+      "lines": [
+        "당시 도로로는"
+      ],
+      "text": "당시 도로로는",
+      "start": 8.71,
+      "end": 10.07
+    },
+    {
+      "lines": [
+        "빗물과 생활하수도",
+        "흘렀거든요."
+      ],
+      "text": "빗물과 생활하수도 흘렀거든요.",
+      "start": 10.07,
+      "end": 12.69
+    },
+    {
+      "lines": [
+        "돌의 윗면을"
+      ],
+      "text": "돌의 윗면을",
+      "start": 12.69,
+      "end": 13.75
+    },
+    {
+      "lines": [
+        "양쪽 보도와 비슷한",
+        "높이로 맞춘 겁니다."
+      ],
+      "text": "양쪽 보도와 비슷한 높이로 맞춘 겁니다.",
+      "start": 13.75,
+      "end": 16.79
+    },
+    {
+      "lines": [
+        "이제 사람들은"
+      ],
+      "text": "이제 사람들은",
+      "start": 16.79,
+      "end": 18.13
+    },
+    {
+      "lines": [
+        "물 대신 돌을 밟고",
+        "건널 수 있었죠."
+      ],
+      "text": "물 대신 돌을 밟고 건널 수 있었죠.",
+      "start": 18.13,
+      "end": 22.13
+    },
+    {
+      "lines": [
+        "그런데, 이렇게 돌을 놓으면"
+      ],
+      "text": "그런데, 이렇게 돌을 놓으면",
+      "start": 22.13,
+      "end": 24.31
+    },
+    {
+      "lines": [
+        "수레는 어떻게",
+        "지나갈까요?"
+      ],
+      "text": "수레는 어떻게 지나갈까요?",
+      "start": 24.31,
+      "end": 26.03
+    },
+    {
+      "lines": [
+        "자세히 보면"
+      ],
+      "text": "자세히 보면",
+      "start": 26.69,
+      "end": 27.39
+    },
+    {
+      "lines": [
+        "돌과 돌 사이에",
+        "틈이 있습니다."
+      ],
+      "text": "돌과 돌 사이에 틈이 있습니다.",
+      "start": 27.39,
+      "end": 29.49
+    },
+    {
+      "lines": [
+        "그 틈으로 바퀴가 지나가고,"
+      ],
+      "text": "그 틈으로 바퀴가 지나가고,",
+      "start": 29.49,
+      "end": 32.09
+    },
+    {
+      "lines": [
+        "수레 몸통은",
+        "돌 위를 넘습니다."
+      ],
+      "text": "수레 몸통은 돌 위를 넘습니다.",
+      "start": 32.09,
+      "end": 34.65
+    },
+    {
+      "lines": [
+        "물도 돌 사이로"
+      ],
+      "text": "물도 돌 사이로",
+      "start": 34.65,
+      "end": 35.95
+    },
+    {
+      "lines": [
+        "계속 흐를 수 있었고요."
+      ],
+      "text": "계속 흐를 수 있었고요.",
+      "start": 35.95,
+      "end": 37.43
+    },
+    {
+      "lines": [
+        "사람은 돌 위로,"
+      ],
+      "text": "사람은 돌 위로,",
+      "start": 37.43,
+      "end": 38.89
+    },
+    {
+      "lines": [
+        "물과 바퀴는 돌 사이로."
+      ],
+      "text": "물과 바퀴는 돌 사이로.",
+      "start": 39.07,
+      "end": 41.13
+    },
+    {
+      "lines": [
+        "작은 틈까지 쓴",
+        "길이었던 겁니다."
+      ],
+      "text": "작은 틈까지 쓴 길이었던 겁니다.",
+      "start": 41.13,
+      "end": 43.13
+    }
+  ],
+  "audio_mix": {
+    "voice_loudnorm": {
+      "integrated_lufs": -16,
+      "true_peak_dbfs": -1.5,
+      "loudness_range": 7
+    },
+    "effects_gain": 0.65,
+    "limiter": 0.95,
+    "sample_rate": 44100,
+    "quiet_water_bed": true,
+    "music": false,
+    "effects": [
+      [
+        0.6,
+        "water"
+      ],
+      [
+        1.3,
+        "rope"
+      ],
+      [
+        3.0,
+        "rope"
+      ],
+      [
+        4.3,
+        "water"
+      ],
+      [
+        6.5,
+        "water"
+      ],
+      [
+        9.0,
+        "water"
+      ],
+      [
+        11.4,
+        "sand"
+      ],
+      [
+        12.75,
+        "whoosh"
+      ],
+      [
+        14.0,
+        "water"
+      ],
+      [
+        17.3,
+        "sand"
+      ],
+      [
+        18.6,
+        "sand"
+      ],
+      [
+        19.8,
+        "sand"
+      ],
+      [
+        21.0,
+        "sand"
+      ],
+      [
+        22.7,
+        "rope"
+      ],
+      [
+        24.6,
+        "rope"
+      ],
+      [
+        26.4,
+        "whoosh"
+      ],
+      [
+        27.2,
+        "rope"
+      ],
+      [
+        29.5,
+        "whoosh"
+      ],
+      [
+        30.2,
+        "rope"
+      ],
+      [
+        31.6,
+        "rope"
+      ],
+      [
+        33.0,
+        "rope"
+      ],
+      [
+        34.7,
+        "whoosh"
+      ],
+      [
+        35.5,
+        "water"
+      ],
+      [
+        36.6,
+        "water"
+      ],
+      [
+        38.3,
+        "sand"
+      ],
+      [
+        39.8,
+        "rope"
+      ],
+      [
+        42.0,
+        "rope"
+      ],
+      [
+        43.3,
+        "reveal"
+      ]
+    ],
+    "effect_names": {
+      "sand": "quiet sandal footstep",
+      "rope": "timber/wheel creak",
+      "water": "small flowing-water/splash",
+      "whoosh": "short scene-change swish",
+      "reveal": "quiet final accent"
+    },
+    "synthetic_effects": true,
+    "priority": "narration"
+  },
+  "encoding": {
+    "video": "H.264",
+    "preset": "fast",
+    "crf": 18,
+    "pixel_format": "yuv420p",
+    "audio": "AAC",
+    "audio_bitrate": "192k",
+    "faststart": true,
+    "subtitles": "burned into pixels"
+  }
+}
