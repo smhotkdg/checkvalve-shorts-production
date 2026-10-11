@@ -8,10 +8,10 @@ Recommended: 1 (matches the hook)
 Description
 As a building rises, its tower crane has to rise with it.
 With no bigger crane to help, the crane lifts its own top with a climbing cage and a hydraulic jack, then slides a new mast section into the gap, one at a time.
-Balancing, the two-stroke climb, and inserting and bolting the new section, shown in 3D animation.
+Balancing with the trolley, the two-stroke hydraulic climb held by pawls, and sliding in and bolting the new section, shown in 3D animation.
 
 Conceptual animation for explanation; it does not reproduce a specific crane model's procedure or figures.
-Core structure: Blender / some shots: Higgsfield / narration: Typecast
+Core structure: Blender / some shots: Higgsfield / narration: Typecast (Hugh)
 
 #towercrane #construction #engineering #howitworks #shorts
 

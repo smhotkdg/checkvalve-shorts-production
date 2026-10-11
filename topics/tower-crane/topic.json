@@ -1,7 +1,7 @@
 {
   "slug": "tower-crane",
   "topic": "external top climbing tower crane: adding a mast section",
-  "status": "voice_measured_timeline_synced",
+  "status": "delivered_ko_en",
   "topic_selection_status": "selected_by_user",
   "work_dir": "work/tower-crane",
   "narration_file": "topics/tower-crane/narration.txt",
@@ -394,5 +394,24 @@
       "bolts on": 41.82,
       "locks down": 43.02
     }
+  },
+  "delivery": {
+    "date": "2026-10-11",
+    "outputs": [
+      "outputs/tower-crane-final.mp4",
+      "outputs/tower-crane.srt",
+      "outputs/tower-crane-final-en.mp4",
+      "outputs/tower-crane.en.srt",
+      "outputs/tower-crane-verification.json"
+    ],
+    "verification": "all checks pass for ko and en (51.000 s, 1080x1920, 24 fps, full decode, captions match scripts, safe zones clear, centering diff <= 1 px, no static run > 2 frames)",
+    "credits": {
+      "typecast_piljae": 385,
+      "typecast_english_hugh": 606,
+      "higgsfield": 22.5
+    },
+    "higgsfield_jobs": "work/tower-crane/jobs.json (local)",
+    "edit_note": "higgsedit and the caption-burner skill were not installed on this PC; overlays were drawn with Pillow (Noto Sans KR VF Bold) and encoded with ffmpeg at 7 Mbps",
+    "slow_motion_note": "the 35.3-39.6 s stroke is keyframed slow in Blender (no time remap) so picture and narration stay in sync"
   }
 }
