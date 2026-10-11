@@ -1,7 +1,7 @@
 {
   "slug": "refrigerator",
   "topic": "household refrigerator: it does not make cold, it moves heat from inside to outside (vapor-compression loop)",
-  "status": "script_hook_revised_en_draft_needs_approval",
+  "status": "delivered_ko_en",
   "topic_selection_status": "selected_by_assistant_from_user_request_simplified_principle_with_final_info",
   "created_on": "2026-10-11",
   "format": "principle_info",
@@ -46,7 +46,7 @@
   },
   "video": {
     "clip_count": 2,
-    "timeline_seconds_used": 10,
+    "timeline_seconds_used": 9.65,
     "clips": [
       {
         "id": "H1",
@@ -58,8 +58,9 @@
         "start_frame": "approved Blender room frame with the same fridge and one simple person figure",
         "timeline": [
           0.0,
-          4.6
-        ]
+          4.85
+        ],
+        "edit_push_in": 0.04
       },
       {
         "id": "H2",
@@ -70,8 +71,8 @@
         "seconds": 5,
         "start_frame": "approved Blender frame of the fridge back coil with a hand nearby",
         "timeline": [
-          46.8,
-          52.0
+          49.2,
+          54.0
         ]
       }
     ]
@@ -81,7 +82,7 @@
     "fps": 24,
     "continuous_animation": true,
     "sync_to_measured_voice": true,
-    "timeline_seconds_used": 42,
+    "timeline_seconds_used": 44.35,
     "camera_type": "one main three-quarter side cutaway of the fridge (inside on the left, back coils right, compressor bottom right) for at least 60 percent of runtime; short medium shots that always return to it",
     "groups": [
       "fridge body as a clean white box with the near side panel removed by a flat cut plane",
@@ -141,8 +142,211 @@
     }
   ],
   "quote": {
-    "status": "not_checked",
-    "rule": "query current Higgsfield estimates, Typecast balance and English voice usage before paid generation and get user approval"
+    "status": "done",
+    "typecast_credits": {
+      "piljae": 389,
+      "hugh_full": 792,
+      "hugh_lines_3_7": 282
+    },
+    "higgsfield_credits": 22.5,
+    "higgsfield_note": "H1 first attempt rejected (fridge turned into a two-door model); regenerated with an end frame (user-approved)"
   },
-  "duration_target_seconds": 52
+  "duration_target_seconds": 54,
+  "duration_override": {
+    "duration_seconds": 54,
+    "reason": "user 2026-10-11: Piljae raw 49.8 s (3.8 s over the 46 s budget); keep the take and lengthen the video",
+    "raw_seconds_measured": 49.8,
+    "after_rate_seconds": 52.98,
+    "speech_end": 52.772,
+    "atrim_seconds": 54,
+    "verify_duration_seconds": 54.0
+  },
+  "narration_measured": {
+    "whisper_similarity": 0.9656,
+    "sentences": [
+      [
+        0.409,
+        3.023
+      ],
+      [
+        3.496,
+        4.703
+      ],
+      [
+        4.981,
+        5.721
+      ],
+      [
+        6.5,
+        8.317
+      ],
+      [
+        8.821,
+        10.602
+      ],
+      [
+        11.072,
+        12.734
+      ],
+      [
+        13.093,
+        16.907
+      ],
+      [
+        17.424,
+        20.412
+      ],
+      [
+        20.887,
+        24.728
+      ],
+      [
+        25.522,
+        29.716
+      ],
+      [
+        30.71,
+        34.14
+      ],
+      [
+        34.572,
+        39.059
+      ],
+      [
+        40.007,
+        44.633
+      ],
+      [
+        45.544,
+        48.825
+      ],
+      [
+        49.491,
+        52.772
+      ]
+    ],
+    "lines": [
+      [
+        0.409,
+        4.703
+      ],
+      [
+        4.981,
+        8.317
+      ],
+      [
+        8.821,
+        12.734
+      ],
+      [
+        13.093,
+        16.907
+      ],
+      [
+        17.424,
+        20.412
+      ],
+      [
+        20.887,
+        24.728
+      ],
+      [
+        25.522,
+        29.716
+      ],
+      [
+        30.71,
+        34.14
+      ],
+      [
+        34.572,
+        39.059
+      ],
+      [
+        40.007,
+        44.633
+      ],
+      [
+        45.544,
+        48.825
+      ],
+      [
+        49.491,
+        52.772
+      ]
+    ],
+    "note": "Whisper returned no word times for the first six segments; sentence bounds were snapped to the real pauses (silencedetect)"
+  },
+  "english_set": {
+    "voice": "Typecast Hugh (ssfm-v30, eng)",
+    "takes": [
+      "en-voice.wav (792 chars, 49.5 s raw)",
+      "en-voice-3-7.wav (lines 3-7 shortened, 282 chars, 19.6 s)"
+    ],
+    "note": "lines 3-7 of the first take ran past the Korean lines; user approved shortening and regenerating only those lines, spliced into one take",
+    "placement": [
+      [
+        0.409,
+        4.26
+      ],
+      [
+        4.784,
+        8.571
+      ],
+      [
+        8.821,
+        12.991
+      ],
+      [
+        13.093,
+        16.982
+      ],
+      [
+        17.424,
+        19.933
+      ],
+      [
+        20.887,
+        24.524
+      ],
+      [
+        25.522,
+        30.266
+      ],
+      [
+        30.71,
+        33.443
+      ],
+      [
+        34.572,
+        37.508
+      ],
+      [
+        40.007,
+        44.262
+      ],
+      [
+        45.544,
+        48.82
+      ],
+      [
+        49.491,
+        52.733
+      ]
+    ],
+    "whisper_similarity": 1.0
+  },
+  "delivery": {
+    "date": "2026-10-11",
+    "outputs": [
+      "outputs/refrigerator-final.mp4",
+      "outputs/refrigerator.srt",
+      "outputs/refrigerator-final-en.mp4",
+      "outputs/refrigerator.en.srt",
+      "outputs/refrigerator-verification.json"
+    ],
+    "verification": "all checks pass for ko and en: 54.000 s, 1080x1920, 24 fps, full decode, captions match scripts (Whisper 0.966 ko / 1.0 en), title and captions inside their bands with masks clear, centering diff <= 1 px, width <= 74 %, no caption panel, longest static run 16 frames",
+    "higgsfield_jobs": "work/refrigerator/jobs.json (local)",
+    "edit_note": "overlays drawn with Pillow (Noto Sans KR VF Bold, 8 px outline, soft shadow) and encoded with ffmpeg at 7 Mbps; H1 gets a 4 % digital push-in so it never holds still"
+  }
 }

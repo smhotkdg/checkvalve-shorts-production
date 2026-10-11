@@ -1,10 +1,10 @@
 Leave the fridge open to cool your room? It actually gets warmer.
 Sounds absurd, right? The secret is what a fridge really is.
-Rub alcohol on your hand and it feels cool. As it dries, it carries heat away.
-In the fridge's inner pipes, refrigerant evaporates the same way, pulling heat from inside.
-The compressor squeezes that gas, making it even hotter.
-The back coils dump that heat outside, and the refrigerant turns liquid again.
-A narrow passage drops its pressure, so it turns cold and flows back inside.
+Alcohol cools your skin. As it dries, it takes heat.
+Inside, refrigerant evaporates the same way, taking heat.
+The compressor squeezes the gas even hotter.
+The back coils dump that heat, and it turns liquid again.
+A narrow passage drops the pressure, so it goes cold and flows back.
 This loop never stops pumping heat outward.
 A fridge doesn't make cold. It moves heat.
 So with the door open, it pulls heat out of your room and dumps it right back in.
