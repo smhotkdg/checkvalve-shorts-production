@@ -1,7 +1,7 @@
 {
   "slug": "refrigerator",
   "topic": "household refrigerator: it does not make cold, it moves heat from inside to outside (vapor-compression loop)",
-  "status": "script_draft_ready_en_draft_needs_approval",
+  "status": "script_hook_revised_en_draft_needs_approval",
   "topic_selection_status": "selected_by_assistant_from_user_request_simplified_principle_with_final_info",
   "created_on": "2026-10-11",
   "format": "principle_info",
@@ -9,26 +9,40 @@
   "work_dir": "work/refrigerator",
   "narration_file": "topics/refrigerator/narration.txt",
   "narration_file_en": "topics/refrigerator/narration.en.txt",
-  "title_fixed": "냉장고는 어떻게 차가워질까?",
-  "title_fixed_en": "How does a fridge get cold?",
+  "title_fixed": "냉장고 문 열면 시원할까?",
+  "title_fixed_en": "Open fridge = cooler room?",
   "narration_estimate": {
-    "characters_without_spaces": 278,
-    "raw_seconds": 44.7,
-    "after_rate_seconds": 47.6,
+    "characters_without_spaces": 293,
+    "raw_seconds": 47.1,
+    "after_rate_seconds": 50.1,
     "rate_basis": "tower-crane measurement: 287 chars = 46.15 s raw",
-    "status": "unmeasured; replace with actual Piljae audio timings before production"
+    "status": "unmeasured; set the final video length from the measured Piljae audio (about 52 s expected)"
   },
-  "caption_keywords": ["말도 안 되죠", "냉매", "증발", "압축기", "열을 옮기는", "더워지죠"],
-  "caption_keywords_en": ["absurd", "refrigerant", "evaporating", "compressor", "moves heat", "warmer"],
+  "caption_keywords": [
+    "오히려 더워집니다",
+    "말도 안 되죠",
+    "냉매",
+    "압축기",
+    "열을 옮기는",
+    "따뜻한"
+  ],
+  "caption_keywords_en": [
+    "actually gets warmer",
+    "absurd",
+    "refrigerant",
+    "compressor",
+    "moves heat",
+    "always warm"
+  ],
   "hook": {
-    "pattern": "flip a common belief + reaction",
-    "line": "냉장고는 찬 공기를 만드는 기계가 아닙니다. 처음 들으면 말도 안 되죠.",
+    "pattern": "ask the everyday final-info question first, flip it within one second, reaction word, then 'the secret is what it really is'",
+    "line": "냉장고 문을 열어 두면 방이 시원해질까요? 오히려 더워집니다. / 말도 안 되죠? 비밀은 냉장고의 정체에 있습니다.",
     "punch_in": false,
-    "emphasis": "yellow reaction words within the normal caption size, short low hit"
+    "emphasis": "yellow '오히려 더워집니다' and reaction words within the normal caption size, short low hit"
   },
   "final_info": {
-    "line": "그래서 여름에 냉장고 문을 열어 둬도, 방은 시원해지지 않습니다. / 꺼낸 열이 뒤로 나오고, 모터 열까지 더해져 오히려 더워지죠.",
-    "visual": "room cross-section: a little cool air at the open door, more heat dots out of the back coils and compressor, whole room tint slowly warms"
+    "line": "그러니 문을 열어 두면, 방의 열을 꺼내 방에 다시 버리는 셈이죠. / 여기에 모터 열까지 더해져, 방은 오히려 더워집니다. / 냉장고 뒤가 늘 따뜻한 이유도, 바로 이겁니다.",
+    "visual": "return to the opening room cross-section: room heat dots go in through the open door and come straight out the back, extra dots from the compressor, room tint warms; bonus line ends on a hand near the warm back coil"
   },
   "video": {
     "clip_count": 2,
@@ -36,23 +50,29 @@
     "clips": [
       {
         "id": "H1",
-        "purpose": "hook: the same simple white fridge in a plain bright room; door swings open and the inside light comes on; slow gentle camera; same clean stylized look, shape and colors as the start frame; no added props, people or text",
-        "model": "kling3_0",
-        "mode": "pro",
-        "sound": "off",
-        "seconds": 5,
-        "start_frame": "approved Blender front three-quarter frame of the closed fridge",
-        "timeline": [0.0, 5.0]
-      },
-      {
-        "id": "H2",
-        "purpose": "final info setup: a person on a hot day opens the same fridge wide and stands in front of it; plain simple room; same fridge shape and colors; no extra props or text",
+        "purpose": "hook: a person on a hot day opens the same simple white fridge wide and stands in front of it; plain bright room; same fridge shape and colors as the start frame; no added props or text",
         "model": "kling3_0",
         "mode": "pro",
         "sound": "off",
         "seconds": 5,
         "start_frame": "approved Blender room frame with the same fridge and one simple person figure",
-        "timeline": [37.5, 42.5]
+        "timeline": [
+          0.0,
+          4.6
+        ]
+      },
+      {
+        "id": "H2",
+        "purpose": "bonus ending: a hand slowly approaches the back of the same fridge and feels the warmth; calm wide finish; same clean look and colors; no added props or text",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "approved Blender frame of the fridge back coil with a hand nearby",
+        "timeline": [
+          46.8,
+          52.0
+        ]
       }
     ]
   },
@@ -61,7 +81,7 @@
     "fps": 24,
     "continuous_animation": true,
     "sync_to_measured_voice": true,
-    "timeline_seconds_used": 40,
+    "timeline_seconds_used": 42,
     "camera_type": "one main three-quarter side cutaway of the fridge (inside on the left, back coils right, compressor bottom right) for at least 60 percent of runtime; short medium shots that always return to it",
     "groups": [
       "fridge body as a clean white box with the near side panel removed by a flat cut plane",
@@ -92,7 +112,12 @@
     "layout_reference": "config/higgsfield-typecast.json layout v4 (fixed title only, captions without panel)",
     "main_view_fraction": 0.6,
     "viewer_follows": "the orange heat dots: they go into the inner pipe, travel with the refrigerant and leave at the back coil",
-    "style_frames": ["main cutaway, dots entering the inner pipe", "compressor medium shot, blue turning red", "full loop, few dots inside and many outside", "room cross-section of the final info"]
+    "style_frames": [
+      "opening room cross-section: a little cool air at the front, more heat dots from the back",
+      "main cutaway, dots entering the inner pipe",
+      "compressor medium shot, blue turning red",
+      "hand near the warm back coil"
+    ]
   },
   "sound_design": "soft room tone, fridge door and light click, gentle flow through pipes, compressor hum, warm air release at the back coils, thin hiss at the capillary, summer room ambience, one low hit for the reaction and one for the summary line; Piljae remains dominant",
   "guards": [
@@ -100,12 +125,13 @@
     "refrigerant is the same fluid circulating in a closed loop; never consumed or refilled",
     "refrigerant is hot after the compressor and cold after the narrow passage; color changes exactly there",
     "heat dots move only along the loop direction: food/air -> inner pipe -> compressor -> back coil -> room",
-    "the final claim is about the whole room temperature; a little cool air at the open door may be shown",
     "generic simplified household fridge; no brand, refrigerant name, temperature or power figures",
     "use shared layout v4: one fixed title y=500-660, captions y=1140-1380 without background, horizontal center x=540; no step chips, step headings or part labels",
     "clarity before texture: only the parts listed in blender.groups; one main cutaway view keeps the same orientation",
     "measure final Piljae narration before committing shot times; if it runs long, lengthen the video instead of trimming speech",
-    "each generated source duration must cover its final timeline span"
+    "each generated source duration must cover its final timeline span",
+    "the hook and final claim are about the whole room temperature; a little cool air at the open door may be shown",
+    "the bonus line says the back (or side) of the fridge is warm because it releases heat taken from inside; no temperature figures"
   ],
   "sources": [
     {
@@ -117,5 +143,6 @@
   "quote": {
     "status": "not_checked",
     "rule": "query current Higgsfield estimates, Typecast balance and English voice usage before paid generation and get user approval"
-  }
+  },
+  "duration_target_seconds": 52
 }

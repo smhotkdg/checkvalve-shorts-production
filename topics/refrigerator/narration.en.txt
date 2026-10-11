@@ -1,11 +1,12 @@
-A fridge doesn't make cold air. Sounds absurd, right?
-So how does the inside get cold?
+Leave the fridge open to cool your room? It actually gets warmer.
+Sounds absurd, right? The secret is what a fridge really is.
 Rub alcohol on your hand and it feels cool. As it dries, it carries heat away.
-In the fridge's inner pipes, a refrigerant does the same, evaporating and pulling heat from inside.
-That heat-filled gas gets squeezed by the compressor and turns even hotter.
-In the coils at the back, it dumps that heat and becomes a liquid again.
-Through a narrow passage its pressure drops, and it turns cold and heads back inside.
-This loop keeps pumping heat from inside to outside.
-So a fridge doesn't make cold. It moves heat.
-That's why an open fridge won't cool your room in summer.
-The heat comes out the back, plus the motor's heat, so the room gets warmer.
+In the fridge's inner pipes, refrigerant evaporates the same way, pulling heat from inside.
+The compressor squeezes that gas, making it even hotter.
+The back coils dump that heat outside, and the refrigerant turns liquid again.
+A narrow passage drops its pressure, so it turns cold and flows back inside.
+This loop never stops pumping heat outward.
+A fridge doesn't make cold. It moves heat.
+So with the door open, it pulls heat out of your room and dumps it right back in.
+Add the motor's heat, and the room actually gets warmer.
+That's also why the back of your fridge is always warm.

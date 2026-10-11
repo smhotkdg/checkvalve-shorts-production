@@ -10,7 +10,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug re
 직접 붙여 넣을 때는 `<slug>`를 주제 폴더 이름으로 바꿉니다. 현재 다음 제작 주제는 `refrigerator`(원리 + 마지막 정보 포맷)입니다. `canal-lock`(단순화 반영)과 `immersed-tunnel` 초안도 보관합니다.
 
 ```text
-이 저장소에서 50초 9:16 쇼츠를 한국어 세트와 영어 세트로 제작해 줘. 주제 폴더는 topics/<slug>/ 이야.
+이 저장소에서 9:16 쇼츠(기본 50초, topic.json에 duration_target_seconds가 있으면 그 길이)를 한국어 세트와 영어 세트로 제작해 줘. 주제 폴더는 topics/<slug>/ 이야.
 두 세트는 같은 화면 편집과 효과음을 쓰고, 나레이션·자막·고정 제목만 다르게 만들어(config의 language_sets).
 이번 기준 세 가지를 꼭 지켜: (1) 3D는 config의 visual_clarity대로 단순하고 한눈에 이해되게, (2) 화면 텍스트는 고정 제목 하나와 자막뿐이고 진행 칩·단계 제목·부품 이름표는 넣지 않기, (3) 자막과 제목 뒤에 배경 패널·띠·상자를 넣지 않고 외곽선과 그림자만 쓰기.
 
@@ -25,7 +25,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug re
 - .\scripts\connect-typecast.ps1 로 필재 조회만 먼저 실행하고 voice_id와 ssfm-v30 지원을 확인해.
 - 현재 Typecast 잔액과 예상 사용량을 보여 주고 내 승인 후 생성해. 출력: work/<slug>/piljae.wav (덮어쓰기 금지).
 - 원음 길이를 측정해. config의 length_budget(원음 46초 이하)을 조금 넘으면 영상 길이를 늘리는 안(예: 51초)과 대본 축약안을 함께 보여 주고 내가 고르게 해. 속도를 올리거나 잘라서 맞추지 마.
-- atempo 0.94 → apad → atrim 50초로 narration-final.wav를 만들고, 실제 사용할 호스팅 오디오를 Whisper로 분석해 문장별 시작·끝 시간을 work/<slug>/timing.json에 저장해.
+- atempo 0.94 → apad → atrim(계획 길이: 실측 음성 + 끝 여유 1초 이상, topic.json duration_target_seconds 참고)으로 narration-final.wav를 만들고, 실제 사용할 호스팅 오디오를 Whisper로 분석해 문장별 시작·끝 시간을 work/<slug>/timing.json에 저장해.
 - 실측 시간으로 topic.json의 clips timeline과 brief.md 장면표를 갱신해.
 
 2-1. 영어 음성 (config의 voice_en, 화면 기준은 필재 timing.json)
@@ -66,7 +66,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug re
 - 영어 세트: 같은 화면 편집에 영어 믹스 오디오, 영어 자막(config captions_en: 최대 5단어·26자·두 줄, caption_keywords_en 노란색), 영어 고정 제목(title_fixed_en)을 올려. 영어 세트에는 한국어 글자를 넣지 마. 레이아웃·중앙 정렬 규칙은 한국어와 같아.
 
 7. 검수 (전부 통과해야 완료)
-- ffprobe: 영상·음성 길이가 같고 계획 길이(기본 50.000초, 늘리기로 정했으면 그 길이)와 일치, 1080×1920, 24fps. 전체 디코딩 통과.
+- ffprobe: 영상·음성 길이가 같고 계획 길이(기본 50.000초, topic.json duration_target_seconds나 실측 후 정한 길이)와 일치, 1080×1920, 24fps. 전체 디코딩 통과.
 - 자막 문구가 narration.txt와 일치, 정렬 유사도 0.90 이상, 누락 없음.
 - 시작·중간·끝 프레임을 360px 폭으로 확인: 겹침, 글꼴, 대비, 크기. 보수적인 폰 UI 가림 마스크(상단 500px, 하단 540px, 오른쪽 버튼 열)와 9:16·9:19.5·9:20 표시 예시를 겹쳐서 텍스트가 마스크에 닿지 않는지 확인하고, 그 미리보기 이미지를 나에게 보여 줘.
 - 가장 긴 두 줄 자막과 반응어도 같은 안전 영역 안에 있는지 확인해. 단면·부품 설명 중에도 전체 구조를 파악할 수 있어야 해.
