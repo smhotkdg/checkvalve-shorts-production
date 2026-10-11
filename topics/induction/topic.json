@@ -1,0 +1,241 @@
+{
+  "slug": "induction",
+  "topic": "induction cooktop: a fast-alternating current in a copper coil makes a changing magnetic field that drives eddy currents in the pot base, whose resistance turns them into heat; why glass/aluminum pots fail, the magnetic base fix, the ring-shaped hot spot problem and the aluminum-core multi-layer base fix",
+  "status": "draft",
+  "topic_selection_status": "user_request_2026-10-11_induction_basics_principle_problem_solution",
+  "created_on": "2026-10-11",
+  "format": "problem_solution",
+  "format_reference": "https://www.youtube.com/shorts/41vfH3EtqOM",
+  "reference_analysis": "docs/references/41vfH3EtqOM-analysis.md",
+  "language_sets": {
+    "required": [
+      "ko"
+    ]
+  },
+  "work_dir": "work/induction",
+  "narration_file": "topics/induction/narration.txt",
+  "narration_file_en": "topics/induction/narration.en.txt",
+  "title_fixed": "불도 없는데 냄비만 끓는다?",
+  "title_fixed_lines": [
+    "불도 없는데",
+    "냄비만 끓는다?"
+  ],
+  "title_fixed_en": "",
+  "narration_estimate": {
+    "characters_without_spaces": 304,
+    "raw_seconds": 51.7,
+    "after_rate_seconds": 55.0,
+    "rate_basis": "refrigerator measurement: 293 chars = 49.8 s raw (about 5.88 chars/s)",
+    "status": "unmeasured; over the 46 s raw budget. Ask the user at script approval whether to trim or lengthen the video (about 57 s expected)"
+  },
+  "duration_target_seconds": 57,
+  "caption_keywords": [
+    "귀신이 곡할",
+    "구리선",
+    "자기장",
+    "소용돌이 전류",
+    "알루미늄",
+    "진짜 문제",
+    "여러 겹",
+    "자석"
+  ],
+  "caption_keywords_en": [],
+  "hook": {
+    "pattern": "impossible-looking everyday sight (pot boils with no flame or glowing element) + exaggerated reaction word, then 'the secret is the copper wire under the glass'",
+    "line": "불꽃도 열선도 없는데, 냄비만 끓습니다. 처음 보면 귀신이 곡할 노릇이죠. / 비밀은 유리판 아래 구리선입니다.",
+    "reaction_word": "귀신이 곡할 노릇이죠",
+    "punch_in": false,
+    "emphasis": "yellow '귀신이 곡할' within the normal caption size, short low hit"
+  },
+  "story_beats": [
+    {
+      "beat": "hook",
+      "lines": [
+        1,
+        2
+      ]
+    },
+    {
+      "beat": "basics_wire_field",
+      "lines": [
+        3
+      ],
+      "state": "straight wire with current dots, sky-blue field rings, compass needle turns"
+    },
+    {
+      "beat": "basics_coil",
+      "lines": [
+        4
+      ],
+      "state": "the same wire curls into a flat spiral; rings merge and concentrate through the center"
+    },
+    {
+      "beat": "principle",
+      "lines": [
+        5,
+        6
+      ],
+      "state": "current and field arrows flip back and forth; eddy loop in the pot base; base turns grey -> orange"
+    },
+    {
+      "beat": "problem_1",
+      "lines": [
+        7,
+        8
+      ],
+      "state": "glass pot: no eddy loop, stays grey; aluminum pot: fast faint loop, almost no heat color"
+    },
+    {
+      "beat": "solution_1",
+      "lines": [
+        9
+      ],
+      "state": "dark iron-grey magnetic plate attaches under the aluminum base; base heats and water boils"
+    },
+    {
+      "beat": "problem_2",
+      "lines": [
+        10
+      ],
+      "state": "top-down heat map: red ring above the coil turns, cooler center and edge"
+    },
+    {
+      "beat": "solution_2",
+      "lines": [
+        11
+      ],
+      "state": "the earlier rejected aluminum plate returns and slides between stainless layers; heat map spreads to an even orange"
+    },
+    {
+      "beat": "practical_use",
+      "lines": [
+        12,
+        13
+      ],
+      "state": "finished multi-layer pot boils evenly; real hand snaps a fridge magnet onto the pot base"
+    }
+  ],
+  "final_info": {
+    "line": "인덕션 냄비 바닥이 여러 겹인 이유죠. / 바닥에 자석이 착 붙으면, 인덕션용입니다.",
+    "visual": "finished three-layer pot boiling evenly in the main view, then a calm real-world shot of a hand snapping a fridge magnet onto the pot base"
+  },
+  "video": {
+    "clip_count": 2,
+    "timeline_seconds_used": 8.5,
+    "clips": [
+      {
+        "id": "H1",
+        "purpose": "hook: one plain pot on a clean flat black glass induction top, water starts to boil; no flame, no glowing element, no knobs or display text; plain bright background; same pot and cooktop shape and colors as the start frame; no added props, people or text",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "approved Blender frame: same pot on the cooktop, front three-quarter view",
+        "end_frame": "approved Blender frame that matches the main cutaway composition before the cut",
+        "timeline": [
+          0.0,
+          5.0
+        ],
+        "edit_push_in": 0.04
+      },
+      {
+        "id": "H2",
+        "purpose": "ending: a hand brings a simple fridge magnet to the base of the same pot and it snaps on; calm wide finish; same clean look and colors; no added props or text",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "approved Blender frame of the finished pot with a hand holding a magnet nearby",
+        "timeline": [
+          53.5,
+          57.0
+        ]
+      }
+    ]
+  },
+  "blender": {
+    "engine": "BLENDER_EEVEE",
+    "fps": 24,
+    "continuous_animation": true,
+    "sync_to_measured_voice": true,
+    "timeline_seconds_used": 48.5,
+    "camera_type": "one main three-quarter side cutaway (coil at bottom, glass plate, pot base, water) for at least 60 percent of runtime; at most three short auxiliary views (basics stage, top-down heat map, base layer explode) that always return to the main view; same left-to-right orientation throughout",
+    "groups": [
+      "cooktop as a simple flat semi-transparent dark grey glass plate on a plain base, cut in half by a flat cut plane",
+      "one flat copper spiral coil under the glass",
+      "one pot cut in half with interchangeable bases: glass pot, plain aluminum pot, aluminum pot with a magnetic iron-grey plate, three-layer base (stainless / aluminum / magnetic steel)",
+      "water inside the pot with a crisp level line and a few small rising bubbles when it boils",
+      "basics stage: one straight wire on a bright floor and one small compass; the wire curls into the spiral coil",
+      "current shown as small white-cyan dots flowing along the wire, coil and eddy loop",
+      "magnetic field shown as 3-4 sky-blue translucent closed loops with arrowheads that flip when the current reverses",
+      "heat shown only as a color map on the pot base (grey -> orange -> red); top-down heat map view for the ring problem and the even fix",
+      "ending prop: one simple fridge magnet and one simple hand for the H2 start frame"
+    ],
+    "model_detail": [
+      "large clean shapes with small bevels; no knobs, display, fan, circuit board, wire bundle, handle detail, flame, smoke or kitchen props",
+      "the cut faces of glass, base layers and coil are flat single colors and stay in the same place for the whole video",
+      "base layers clearly readable in section: magnetic layer dark iron grey, aluminum bright silver, stainless light grey"
+    ],
+    "materials": "matte light grey and warm white structures; semi-transparent dark glass; muted copper coil; clear blue water; bright even light; soft shadows; AgX",
+    "color_roles": {
+      "heat": "pot base color map grey -> orange #FF7A1A -> red; the one thing the viewer follows",
+      "magnetic_field": "sky-blue translucent loops with arrowheads",
+      "current": "white-cyan flowing dots",
+      "coil": "muted matte copper",
+      "glass_plate": "semi-transparent dark grey",
+      "materials": "glass pot clear, aluminum bright silver, magnetic metal dark iron grey, stainless light grey",
+      "named_part_highlight": "soft yellow #FFD400 rim glow for about 1.5 s when first named",
+      "exception_note": "this topic uses the heat color map as the hero accent and adds sky-blue field and white-cyan current as meaning colors"
+    }
+  },
+  "visual_direction": {
+    "clarity_reference": "config/higgsfield-typecast.json visual_clarity",
+    "layout_reference": "config/higgsfield-typecast.json layout v5 (mandatory global headline/caption proportions)",
+    "main_view_fraction": 0.6,
+    "viewer_follows": "the heat color of the pot base: grey when it fails, a red ring when only the coil-shaped zone heats, even orange when fixed",
+    "style_frames": [
+      "basics stage: sky-blue field rings around a straight wire and the turned compass needle",
+      "main cutaway: field loops pass up through the pot base, cyan eddy loop and orange heat in the base",
+      "top-down heat map: red ring hot zone with cooler center and edge",
+      "base layer explode: aluminum sliding between the layers and heat spreading evenly"
+    ]
+  },
+  "sound_design": "soft room tone, water starting to boil, low electric hum when the coil appears, small tick for the compass, rising pulse for the fast-alternating current, warm low tone as the base heats, a hollow short tone for the failing pots, a heavy 'clack' when the magnetic plate attaches, one interlocking low hit when the aluminum slides in, a crisp magnet snap at the end; Piljae remains dominant",
+  "guards": [
+    "heat is produced inside the pot base metal; never show the glass plate or the coil glowing red; do not claim the glass stays cold",
+    "field loops are closed, pass through the coil center and up through the pot base; arrowheads flip together with the current direction",
+    "eddy currents flow as loops in the plane of the pot base, concentric with the coil; never in the pot walls or water",
+    "glass pot: no eddy current at all; aluminum pot: current flows but almost no heat at normal cooktop frequency",
+    "the magnetic layer is what lets the base heat; the aluminum layer only spreads heat; never show the aluminum core heating by itself",
+    "ring-shaped heat is an illustrative concept; the heat map is relative color, no temperatures",
+    "no kHz, temperature, power or brand figures on screen or in narration beyond '1초에 수만 번'",
+    "do not say every induction pot must be multi-layer; cast iron single-layer pots also work (not shown)",
+    "magnet test claim stops at 'if it sticks well, it works on induction'",
+    "use mandatory shared layout v5: headline block center y=260, max two lines, 87% width; caption block center y=1306, 64px, 74% width; no background panel, x=540 centered",
+    "clarity before texture: only the parts listed in blender.groups; one main cutaway view keeps the same orientation",
+    "measure final Piljae narration before committing shot times; if it runs long, ask whether to trim the script or lengthen the video; never speed up or cut speech",
+    "each generated source duration must cover its final timeline span"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Induction cooking",
+      "url": "https://en.wikipedia.org/wiki/Induction_cooking",
+      "verified_on": "2026-10-11"
+    },
+    {
+      "title": "CENOS: The challenges of induction heating for cooktops",
+      "url": "https://cenos-platform.com/the-challenges-of-induction-heating-for-cooktops-case-study/",
+      "verified_on": "2026-10-11"
+    }
+  ],
+  "quote": {
+    "status": "not_checked"
+  },
+  "layout_policy": {
+    "source": "config/higgsfield-typecast.json",
+    "version": 5,
+    "inherit_global": true,
+    "override_allowed": false,
+    "rule": "all new renders use the user-approved screenshot proportions; historical delivered videos are not rewritten"
+  }
+}
