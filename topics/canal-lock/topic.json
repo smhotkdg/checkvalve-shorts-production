@@ -111,7 +111,7 @@
       "rule": "establish whole lock, explain from medium distance, return to whole lock after key actions; main objects stay readable"
     },
     "secondary_motion": "small boat buoyancy motion, restrained wake, water ripples and gradual gate easing; no violent sloshing",
-    "layout_reference": "config/higgsfield-typecast.json layout v4 (fixed title only, captions without panel)",
+    "layout_reference": "config/higgsfield-typecast.json layout v5 (mandatory global headline/caption proportions)",
     "texture_review": "render style frames (hook, main side section, levels-equal moment, exit) at phone size; judge whether the moving part is obvious in 1 second, then material distinction",
     "clarity_reference": "config/higgsfield-typecast.json visual_clarity",
     "main_view_fraction": 0.6
@@ -132,7 +132,7 @@
     "use generic single-chamber lock geometry; do not claim site dimensions, transit times or an operating procedure",
     "measure final Piljae narration before committing shot times; do not trim speech",
     "each generated source duration must cover its final timeline span; recheck total 50 seconds after timing changes",
-    "use shared layout v4: one fixed title y=500-660, captions y=1140-1380 without background, horizontal center x=540; no step chips or step headings",
+    "use mandatory shared layout v5: headline block center y=260, max two lines, 87% width; caption block center y=1306, 64px, 74% width; no background panel, x=540 centered",
     "clarity before texture: no clutter props or repeated detail; the boat is the only orange object; one main side-section view keeps the same left-to-right orientation",
     "show the level difference with the crisp water level lines on both sides of the closed gate, not with text"
   ],
@@ -160,5 +160,12 @@
     "match",
     "elevator",
     "canal lock"
-  ]
+  ],
+  "layout_policy": {
+    "source": "config/higgsfield-typecast.json",
+    "version": 5,
+    "inherit_global": true,
+    "override_allowed": false,
+    "rule": "all new renders use the user-approved screenshot proportions; historical delivered videos are not rewritten"
+  }
 }

@@ -33,6 +33,7 @@ if (-not $SkipPull) {
 Write-Ok ("HEAD " + (git log --oneline -1))
 
 $config = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $repo 'config\higgsfield-typecast.json') | ConvertFrom-Json
+& (Join-Path $PSScriptRoot 'validate-layout.ps1') -Repo $repo
 if (-not $Slug) { $Slug = $config.active_topic }
 if ($Slug -notmatch '^[a-z0-9][a-z0-9-]*$') { throw "Invalid slug: $Slug" }
 

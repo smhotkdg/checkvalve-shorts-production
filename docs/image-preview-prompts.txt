@@ -1,5 +1,5 @@
 Preview prompts used with the built-in image generation tool, 2026-10-11.
-These are concept/style previews, not verified engineering frames or final layout v4 video overlays.
+These are concept/style previews, not verified engineering frames or final layout v5 video overlays.
 Only the buckle material/lighting feel was accepted. Buckle story and safety-pin topic were not selected.
 
 BUCKLE INITIAL PROMPT

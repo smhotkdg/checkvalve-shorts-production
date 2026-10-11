@@ -8,11 +8,13 @@ Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재**로 9:16
 - 보관 포맷 `principle_info`(원리 + 마지막 정보): https://www.youtube.com/shorts/5UjFpjehQwc
 - 보조 포맷 `problem_solution`(문제 → 해결 → 새 난관 → 추가 해결 → 완성): https://www.youtube.com/shorts/q5C9HCN2QY4
 
-**다음 주제는 검토 중입니다.** 최신 방향은 ‘지금은 당연하지만 옛날에는 어떻게 해결했을까?’라는 난관·발견 이야기입니다. 첫 추천은 아르키메데스의 왕관, 물건 개선형 대안은 캔 따개·지퍼입니다. [후보와 사실 확인](docs/topic-candidates.md) · [최신 레퍼런스 분석](docs/references/41vfH3EtqOM-analysis.md) · [유지할 이미지 느낌](docs/style-direction.md). 앵커볼트는 보류, 버클은 서사 부적합, 안전핀은 너무 단순하다는 피드백으로 제외했습니다. 기존 config의 앵커 경로는 보관된 기획이며 현재 선택을 뜻하지 않습니다. 주제 확정 전 기존 앵커 실행 명령을 새 주제 제작에 사용하지 않습니다.
+**현재 주제는 아르키메데스의 왕관입니다.** 승인한 왕관 이미지의 따뜻한 금속·돌·린넨·청동 저울 형태를 최대한 유지합니다. [주제 설정](topics/archimedes-crown/topic.json). 전해지는 일화와 검증된 밀도 원리를 구분합니다.
+
+**모든 영상의 텍스트는 필수 layout v5입니다.** 사용자가 제공한 예시 비율: 상단 큰 두 줄 제목(블록 y=260), 자막(블록 y=1306), 가로 중앙, 흰색·노란색과 두꺼운 외곽선·그림자, 패널 없음. 한국어·활성 영어·기존 주제 재렌더·새 템플릿 모두 동일. [정확한 비율](docs/text-layout.md). 이전 v1~v4 좌표보다 이 규칙이 우선합니다.
 
 작업 폴더: `C:\Users\cozy0\OneDrive\Desktop\short\checkvalve-shorts-production`. 냉장고의 진행 중 로컬 수정은 보존했습니다.
 
-공통 기준(2026-10-11): 단순하고 한눈에 이해되는 3D(`visual_clarity`), 화면 텍스트는 고정 제목과 자막뿐(진행 칩 없음), 자막 배경 패널 없음(레이아웃 v4), 현재 한국어 한 세트. 기존 영어 자료·설정은 보관하며 `language_sets.required`에 `en`을 명시적으로 다시 켜야 새 영어 제작을 합니다.
+공통 기준(2026-10-11): 단순하고 한눈에 이해되는 3D(`visual_clarity`), 화면 텍스트는 고정 제목과 자막뿐(진행 칩 없음), 자막 배경 패널 없음(레이아웃 v5), 현재 한국어 한 세트. 기존 영어 자료·설정은 보관하며 `language_sets.required`에 `en`을 명시적으로 다시 켜야 새 영어 제작을 합니다.
 
 다른 주제 보관: [`냉장고`](topics/refrigerator/) · [`운하 갑문`](topics/canal-lock/) · [`침매터널`](topics/immersed-tunnel/) / 완료: [`타워크레인`](topics/tower-crane/)
 
@@ -39,7 +41,7 @@ Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재**로 9:16
 
 ## 보관 원칙
 
-- Git: 명령어, 설정, 연결 스크립트, 주제별 **텍스트**만 보관합니다.
+- Git: 명령어, 설정, 연결 스크립트, 주제별 제작 입력 **텍스트**만 보관합니다. 완성 미디어·이미지·Blender 제작 소스는 제외합니다.
 - 로컬 전용: `work/<slug>/`(음성, Blender, 렌더, job 기록), `outputs/`(완성 영상, 자막, 검수 결과), API 키.
 - API 키는 Windows 연결 스크립트가 숨김 입력으로 받아 사용자 계정에 묶인 암호화 파일로 저장합니다. 다른 PC에서는 키와 Higgsfield 연결을 다시 설정합니다.
 - 이전 커밋의 제작 결과물 기록은 히스토리에 남아 있습니다.

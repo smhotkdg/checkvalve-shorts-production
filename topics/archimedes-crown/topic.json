@@ -1,0 +1,97 @@
+{
+  "slug": "archimedes-crown",
+  "topic": "Archimedes crown story: equal mass, different metal volume and water displacement",
+  "status": "production_in_progress",
+  "created_on": "2026-10-11",
+  "format": "historical_problem_solution",
+  "format_reference": "https://www.youtube.com/shorts/41vfH3EtqOM",
+  "reference_analysis": "docs/references/41vfH3EtqOM-analysis.md",
+  "work_dir": "work/archimedes-crown",
+  "narration_file": "topics/archimedes-crown/narration.txt",
+  "language_sets": {"required": ["ko"]},
+  "title_fixed": "왕관을 녹이면 안 된다는데?",
+  "title_fixed_lines": ["왕관을 녹이면", "안 된다는데?"],
+  "duration_target_seconds": 44,
+  "layout_policy": {
+    "source": "config/higgsfield-typecast.json",
+    "version": 5,
+    "inherit_global": true,
+    "override_allowed": false,
+    "rule": "mandatory for every video: global headline/caption proportions; topic supplies words only"
+  },
+  "approved_style": {
+    "approved_on": "2026-10-11",
+    "local_reference": "work/archimedes-crown/style-preview-v1.png",
+    "scope": "user approved gold crown board look and explicitly requested closest possible image fidelity in video; user-approved screenshot layout v5 supersedes board text positions",
+    "portable_prompt": "Warm realistic studio 3D: same low gold circlet with raised olive-leaf ornament and no gems; fine gold scratches, bronze balance with gentle patina; cream woven linen, warm limestone tabletop, tan plaster background, subtle olive plant at rear left. Buttery soft golden daylight, realistic contact shadows, medium shots with complete objects visible. Never flat plastic or low-poly. Pure gold nugget always left, same circlet always right. Identical transparent vessels, same starting water amount. No baked text in raw images or clips; title and captions added using global layout v5."
+  },
+  "narration_measured": {
+    "provider": "Typecast",
+    "voice": "Piljae (authenticated original, ssfm-v30)",
+    "characters": 323,
+    "raw_seconds": 39.05,
+    "postprocess_rate": 0.94,
+    "speech_end_seconds": 41.33,
+    "timing_source": "Whisper medium on actual final clean Piljae audio; local work/archimedes-crown/timing.json",
+    "lines": [[0.11,2.71],[2.89,6.61],[6.95,9.33],[9.57,13.17],[13.45,16.13],[16.51,18.99],[19.31,23.37],[23.79,27.17],[27.17,31.55],[31.89,34.43],[34.67,37.49],[38.05,41.33]]
+  },
+  "caption_keywords": ["멘탈", "녹이면 안", "같은 무게", "순금", "수평", "부피", "완전히", "수위", "빈 공간", "밀어낸 물"],
+  "story_beats": [
+    {"line":1,"timeline":[0,2.89],"action":"intact gold crown begins a gentle linen-thread draw, soft contact with cloth"},
+    {"line":2,"timeline":[2.89,6.95],"action":"unused crucible stays in background; circlet remains intact, then same crown introduced at scale"},
+    {"line":3,"timeline":[6.95,9.57],"action":"gold reference placed left and same crown right; balance approaches horizontal"},
+    {"line":4,"timeline":[9.57,13.45],"action":"damped scale settling shows equal mass; horizontal final beam"},
+    {"line":5,"timeline":[13.45,16.51],"action":"remove intact objects from pans in preparation; appearances do not expose composition"},
+    {"line":6,"timeline":[16.51,19.31],"action":"same objects transfer above identical vessels; same initial water amount"},
+    {"line":7,"timeline":[19.31,23.79],"action":"two objects lower on fine threads: approach then surface contact then level rise"},
+    {"line":8,"timeline":[23.79,27.17],"action":"both fully immersed; right water level ends slightly higher; controlled ripples decay"},
+    {"line":9,"timeline":[27.17,31.89],"action":"hold complete apparatus, small yellow level ticks emphasize different displaced water amounts"},
+    {"line":10,"timeline":[31.89,34.67],"action":"gentle medium overhead angle reveals water filling the open crown center; no trapped air"},
+    {"line":11,"timeline":[34.67,38.05],"action":"return to main view and levels, no axis flip; small measuring cue without numeric purity claim"},
+    {"line":12,"timeline":[38.05,44],"action":"raise same undamaged crown slowly, crown emerges and water falls accordingly; intact crown settles on linen"}
+  ],
+  "video": {
+    "clip_count":1,
+    "timeline_seconds_used":5,
+    "clips":[{"id":"H1","purpose":"approved image fidelity opening: same circlet drawn a few centimeters on linen, no melting","model":"kling3_0","mode":"pro","sound":"off","seconds":5,"start_frame":"work/archimedes-crown/intro-clean-v1.png","timeline":[0,5]}]
+  },
+  "blender": {
+    "engine":"BLENDER_EEVEE",
+    "fps":24,
+    "continuous_animation":true,
+    "sync_to_measured_voice":true,
+    "timeline_seconds_used":39,
+    "groups":["single ornate low gold circlet","equal-mass pure-gold nugget","bronze equal-arm balance with two identical pans","two identical transparent cylindrical vessels and equal initial water volumes","fine suspension threads","warm limestone tabletop and ivory woven linen","unused crucible and tongs","subtle olive plant in background"],
+    "model_detail":["raised olive-leaf ornament identical across scenes","subtle gold and bronze roughness variations","cloth weave and soft folds","limestone grain and gentle bevels","clear vessel rims and smooth water surfaces"],
+    "color_roles":{"crown_and_nugget":"natural warm gold, never orange coding","balance":"aged bronze","water":"clear pale blue","linen":"cream","background":"warm beige"}
+  },
+  "visual_direction": {
+    "layout_reference":"config/higgsfield-typecast.json layout v5, mandatory global proportions",
+    "main_view_fraction":0.65,
+    "wide_medium_fraction_min":0.85,
+    "max_distinct_viewpoints":4,
+    "max_in_shot_scale_change":1.15,
+    "detail_seconds_max":3,
+    "easing_seconds_min":0.4,
+    "viewer_follows":"same gold crown; left pure gold/right crown; rise of water only after contact",
+    "continuity":"gold circlet identity, material, ornament and dimensions persist; no extra crowns; calm object action with soft acceleration",
+    "style_frames":["crown intact on linen","horizontal bronze scale","identical vessels before contact","fully immersed gold/crown with differing levels"]
+  },
+  "sound_design":"quiet linen contact, bronze pan settling and small water-contact ripples; original effects, Piljae dominant, no generated speech",
+  "guards":[
+    "global layout v5 mandatory for every video; never restore old title y=580 or caption y=1260",
+    "preserve approved gold crown image materials and proportions as closely as possible",
+    "Korean Piljae only; do not create English audio or captions now",
+    "Vitruvius later retelling, not a proven contemporary event or literal historic apparatus",
+    "same mass pure gold reference vs assumed gold-silver alloy crown; larger solid metal volume is the difference",
+    "crown opening fills with water; no displacement of its empty bounding volume, sealed air or hidden bubbles",
+    "water contact precedes level rise; same-size vessels and same initial water amount; both objects fully immersed for comparison",
+    "level difference is explanatory exaggeration, not actual ancient accuracy or a precise gold percentage",
+    "never combine displacement comparison with hydrostatic scale tilt in one explanation",
+    "no melting, damage, magic exposed silver, swapped left/right objects or camera-only idle padding",
+    "final audio is complete; extend picture if needed, never truncate or accelerate speech",
+    "raw clips have no baked captions, title, labels or speech; all overlays obey global layout v5"
+  ],
+  "sources":[{"title":"NYU: Archimedes golden crown, Vitruvius story and measurement limitations","url":"https://math.nyu.edu/Archimedes/Crown/CrownIntroOLD.html","verified_on":"2026-10-11"}],
+  "quote":{"status":"checked_and_generation_authorized_by_user","typecast_characters":323,"higgsfield_credits_expected":7.5,"higgsfield_balance_at_preflight":910.3,"rule":"user authorized completing this video; persist job IDs locally and resolve unknown submissions before retries"}
+}

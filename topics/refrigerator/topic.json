@@ -110,7 +110,7 @@
   },
   "visual_direction": {
     "clarity_reference": "config/higgsfield-typecast.json visual_clarity",
-    "layout_reference": "config/higgsfield-typecast.json layout v4 (fixed title only, captions without panel)",
+    "layout_reference": "config/higgsfield-typecast.json layout v5 (mandatory global headline/caption proportions)",
     "main_view_fraction": 0.6,
     "viewer_follows": "the orange heat dots: they go into the inner pipe, travel with the refrigerant and leave at the back coil",
     "style_frames": [
@@ -127,7 +127,7 @@
     "refrigerant is hot after the compressor and cold after the narrow passage; color changes exactly there",
     "heat dots move only along the loop direction: food/air -> inner pipe -> compressor -> back coil -> room",
     "generic simplified household fridge; no brand, refrigerant name, temperature or power figures",
-    "use shared layout v4: one fixed title y=500-660, captions y=1140-1380 without background, horizontal center x=540; no step chips, step headings or part labels",
+    "use mandatory shared layout v5: headline block center y=260, max two lines, 87% width; caption block center y=1306, 64px, 74% width; no background panel, x=540 centered",
     "clarity before texture: only the parts listed in blender.groups; one main cutaway view keeps the same orientation",
     "measure final Piljae narration before committing shot times; if it runs long, lengthen the video instead of trimming speech",
     "each generated source duration must cover its final timeline span",
@@ -348,5 +348,12 @@
     "verification": "all checks pass for ko and en: 54.000 s, 1080x1920, 24 fps, full decode, captions match scripts (Whisper 0.966 ko / 1.0 en), title and captions inside their bands with masks clear, centering diff <= 1 px, width <= 74 %, no caption panel, longest static run 16 frames",
     "higgsfield_jobs": "work/refrigerator/jobs.json (local)",
     "edit_note": "overlays drawn with Pillow (Noto Sans KR VF Bold, 8 px outline, soft shadow) and encoded with ffmpeg at 7 Mbps; H1 gets a 4 % digital push-in so it never holds still"
+  },
+  "layout_policy": {
+    "source": "config/higgsfield-typecast.json",
+    "version": 5,
+    "inherit_global": true,
+    "override_allowed": false,
+    "rule": "all new renders use the user-approved screenshot proportions; historical delivered videos are not rewritten"
   }
 }

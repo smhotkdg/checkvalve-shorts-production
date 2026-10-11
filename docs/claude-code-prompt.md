@@ -7,7 +7,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 # 점검과 프롬프트 생성만: -NoLaunch / Blender 경로가 다르면: -BlenderPath 'D:\...\blender.exe'
 ```
 
-직접 붙여 넣을 때는 `<slug>`를 확정되어 4개 기획 파일이 작성된 주제 폴더 이름으로 바꿉니다. 현재는 [다음 주제 검토 중](topic-candidates.md)이며 이전 `expansion-anchor` 기획은 보류입니다. 주제가 정해지기 전에 이전 앵커 설정으로 제작을 시작하지 않습니다. 최신 역사적 난관·발견과 이미지 방향은 HANDOFF.md, docs/style-direction.md를 우선합니다. `refrigerator` 진행 파일과 기존 주제 초안은 보존합니다.
+직접 붙여 넣을 때는 `<slug>`를 확정되어 4개 기획 파일이 작성된 주제 폴더 이름으로 바꿉니다. 현재 주제는 승인된 **archimedes-crown**이며 이전 `expansion-anchor` 기획은 보류입니다. 최신 역사적 난관·발견과 이미지 방향은 HANDOFF.md, docs/style-direction.md를 우선합니다. `refrigerator` 진행 파일과 기존 주제 초안은 보존합니다.
 
 ```text
 이 저장소에서 9:16 쇼츠(config의 기본 길이와 topic.json의 duration_target_seconds를 참고하되 실제 음성 길이로 확정)를 활성화된 언어 세트만 제작해 줘. 현재는 한국어만이고 영어 제작은 하지 마. 주제 폴더는 topics/<slug>/ 이야.
@@ -15,7 +15,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 이번 기준 세 가지를 꼭 지켜: (1) 3D는 config의 visual_clarity대로 단순하고 한눈에 이해되게, (2) 화면 텍스트는 고정 제목 하나와 자막뿐이고 진행 칩·단계 제목·부품 이름표는 넣지 않기, (3) 자막과 제목 뒤에 배경 패널·띠·상자를 넣지 않고 외곽선과 그림자만 쓰기.
 
 먼저 읽기: README.md, HANDOFF.md, docs/immersion-guide.md, docs/workflow-commands.md, docs/typecast-api.md, config/higgsfield-typecast.json, topics/<slug>/ 의 brief.md, narration.txt, narration.en.txt(en 활성화 시에만), title-description.txt, title-description.en.txt(en 활성화 시에만), topic.json.
-전역 규칙은 config, 주제별 규칙은 topic.json이 우선이야. 이번 reference_analysis 문서를 읽고 원본의 관찰과 우리의 제작 규칙을 구분해. 각 컷에 이전 조립 상태를 이어받고, 접촉 전후를 보여 줘. 두 파일의 guards는 전부 지켜.
+주제 내용·색·장면은 topic.json, 텍스트 좌표·크기·줄 수·폭은 전역 config layout v5가 무조건 우선이야. topic의 과거 v1~v4 좌표는 재사용하지 마. docs/text-layout.md를 읽고 모든 영상에 같은 비율을 유지해. 이번 reference_analysis 문서를 읽고 원본의 관찰과 우리의 제작 규칙을 구분해. 각 컷에 이전 조립 상태를 이어받고, 접촉 전후를 보여 줘. 두 파일의 guards는 전부 지켜.
 
 1. 대본 점검
 - narration.txt가 brief.md의 정확성 기준과 맞는지 확인해. 사실 오류가 있으면 고칠 문장을 제안하고 내 승인을 받아. 표현은 임의로 바꾸지 마.
@@ -39,7 +39,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 - topic.json의 blender.groups에 있는 것만 만들어 work/<slug>/scene.blend에 저장해. 목록에 없는 부품·소품·반복 디테일은 넣지 마. EEVEE, AgX, 밝고 고른 조명, 작은 베벨.
 - config visual_clarity와 topic.json color_roles를 따라: 기본 시점 하나를 60% 이상, 같은 좌→우 방향, 지금 말하는 부분만 뚜렷이 움직이고, 처음 언급되는 부품은 노란 테두리 빛 약 1.5초. 안개·파티클 효과·피사계심도·어두운 장면 금지.
 - 모든 움직임을 timing.json의 문장 시간에 맞춰 키프레임으로 동기화해. 1초 넘게 멈춘 화면이 없게 하고 시작·끝은 0.4초 이상 가속·감속. 필요한 경우에만 크기 비교 요소를 둬. 작은 기구 주제에는 사람 실루엣을 강제로 추가하지 마.
-- 먼저 brief.md의 스타일 프레임 4장만 렌더해서 나에게 보여 줘. 각 장을 360px 흑백으로 줄인 버전도 같이 보여 주고, 장마다 '시청자가 볼 것 하나'를 적어. 내가 승인하기 전엔 전체 렌더와 유료 생성을 하지 마.
+- 기존 사용자 승인을 확인하고 그 범위 안에서 진행해. 왕관 보드의 재질·형태와 사용자 첨부 텍스트 비율은 이미 승인됐어. 먼저 brief.md의 스타일 프레임 4장만 렌더해서 나에게 보여 줘. 각 장을 360px 흑백으로 줄인 버전도 같이 보여 주고, 장마다 '시청자가 볼 것 하나'를 적어. 내가 승인하기 전엔 전체 렌더와 유료 생성을 하지 마.
 - 렌더 출력 경로는 절대 경로로 넘겨.
 - Higgsfield 생성 전에 각 비트의 대표 프레임을 PNG로 뽑아 guards와 대조하고, 나에게 보여 준 뒤 진행해.
 
@@ -53,12 +53,12 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 - en 활성화 시에만 같은 효과음 트랙을 영어 나레이션과도 따로 믹스해(mixed-audio-en.wav). 영어 자막 분석엔 깨끗한 영어 음성만 써.
 
 6. 편집
-- 1080×1920·24fps, 원본 화면은 꽉 채우고 텍스트는 오버레이. config의 layout(v4)을 따라:
-  상단 0~500px 텍스트 금지, 500~660px 영상 내내 같은 고정 제목 한 줄(topic.json title_fixed), 660~1140px 주요 동작의 중심, 1140~1380px 자막(한 줄·두 줄 블록 중심 y=1260), 1380px 아래와 오른쪽 버튼 열은 텍스트 금지.
+- 1080×1920·24fps, 원본 화면은 꽉 채우고 텍스트는 오버레이. config의 필수 공통 layout(v5)을 따라:
+  상단 0~90px 텍스트 금지. 제목 블록 중심 (540,260), 영역 y=100~440, 보통 두 줄(첫 줄 흰색·둘째 노란색), 기본 108px·최소 84px·최대 폭 87%. title_fixed_lines가 있으면 쓰고 없으면 title_fixed를 뜻이 유지되게 줄바꿈해. 주요 동작은 620~1240px 중심, 자막 블록 중심 (540,1306), 영역 y=1180~1430, 64px·최대 폭 74%. 한 줄·두 줄 같은 블록 중심. 1480px 아래와 오른쪽 버튼 열 텍스트 금지.
   진행 칩·단계 번호·단계별 제목·부품 이름표는 넣지 마. 고정 좌표를 모든 폰의 공식 safe area로 간주하지 말고 기종별 표시 비율과 UI로 확인해.
-  Blender 카메라와 생성 클립 구도도 주요 동작이 660~1140px 중심에 오도록 잡아.
-- 자막: Noto Sans CJK KR Bold, 3.8%, 폭 74% 이내(외곽선 포함), 최대 4어절·22자·두 줄, caption_keywords는 #FFD400 노란색.
-- 자막과 제목 뒤에 배경 상자·띠·패널·블러를 넣지 마. 흰 글자 + 8px 어두운 외곽선 + 부드러운 그림자만. 읽기 어려우면 구도나 배경 밝기를 조정해.
+  Blender 카메라와 생성 클립 구도도 주요 동작이 620~1240px 중심에 오도록 잡아.
+- 자막: Noto Sans KR Bold, 64px(높이의 3.333%), 폭 74% 이내(외곽선 포함), 최대 4어절·22자·두 줄, caption_keywords는 #FFD400 노란색.
+- 자막과 제목 뒤에 배경 상자·띠·패널·블러를 넣지 마. 제목은 흰색 첫 줄·노란색 둘째 줄, 14px 어두운 외곽선·약한 기울임·그림자. 자막은 흰 글자 + 노란 강조 + 8px 어두운 외곽선 + 부드러운 그림자만. 읽기 어려우면 구도나 배경 밝기를 조정해.
 - 가로 중앙 정렬 필수: 제목과 자막 각 줄 모두 x=540 기준 정확히 가운데, 좌우 여백 대칭.
 - 훅 반응어는 짧은 저음과 노란색으로 강조하되 위치·크기 상한을 지켜. topic.json visual_direction이 있으면 그 질감·가속감속·카메라 상한을 우선 적용해. 강한 펀치인 없이 기본 시점과 중간 거리 화면을 유지해.
 - 핵심 순간(brief.md에 슬로모션으로 표시된 장면)은 속도 램프와 저음 효과로 강조해.
@@ -68,7 +68,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 7. 검수 (전부 통과해야 완료)
 - ffprobe: 영상·음성 길이가 같고 계획 길이(topic.json duration_target_seconds를 참고하고 실측 후 정한 길이)와 일치, 1080×1920, 24fps. 전체 디코딩 통과.
 - 자막 문구가 narration.txt와 일치, 정렬 유사도 0.90 이상, 누락 없음.
-- 시작·중간·끝 프레임을 360px 폭으로 확인: 겹침, 글꼴, 대비, 크기. 보수적인 폰 UI 가림 마스크(상단 500px, 하단 540px, 오른쪽 버튼 열)와 9:16·9:19.5·9:20 표시 예시를 겹쳐서 텍스트가 마스크에 닿지 않는지 확인하고, 그 미리보기 이미지를 나에게 보여 줘.
+- 시작·중간·끝 프레임을 360px 폭으로 확인: 겹침, 글꼴, 대비, 크기. 보수적인 폰 UI 가림 마스크(상단 90px, 하단 440px, 오른쪽 버튼 열)와 9:16·9:19.5·9:20 표시 예시를 겹쳐서 텍스트가 마스크에 닿지 않는지 확인하고, 그 미리보기 이미지를 나에게 보여 줘.
 - 가장 긴 두 줄 자막과 반응어도 같은 안전 영역 안에 있는지 확인해. 단면·부품 설명 중에도 전체 구조를 파악할 수 있어야 해.
 - 화면에 고정 제목과 자막 외의 글자가 없는지, 자막·제목 뒤에 배경 패널이 없는지 확인해.
 - 대표 프레임을 360px 흑백으로 줄여 무엇이 움직이는지 1초 안에 보이는지 다시 확인해.
@@ -79,6 +79,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 - 결과를 outputs/<slug>-verification.json에 활성화된 언어 키만으로 저장해(현재 ko만).
 
 8. 전달
+- 최종 합성 전에 반드시 전역 layout.version=5와 실제 제목/자막 픽셀 경계가 맞는지 검사해. 틀리면 완료로 보고하지 마.
 - 한국어: outputs/<slug>-final.mp4, outputs/<slug>.srt / en 활성화 시에만 영어: outputs/<slug>-final-en.mp4, outputs/<slug>.en.srt / outputs/<slug>-verification.json.
 - title-description.txt(그리고 en 활성화 시에만 title-description.en.txt)의 제목 후보·설명·해시태그를 실제 결과에 맞게 다듬어서 최종본을 함께 보여 줘.
 - 썸네일 제작과 유튜브 게시는 하지 마.

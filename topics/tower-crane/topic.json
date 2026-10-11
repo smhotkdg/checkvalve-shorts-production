@@ -413,5 +413,12 @@
     "higgsfield_jobs": "work/tower-crane/jobs.json (local)",
     "edit_note": "higgsedit and the caption-burner skill were not installed on this PC; overlays were drawn with Pillow (Noto Sans KR VF Bold) and encoded with ffmpeg at 7 Mbps",
     "slow_motion_note": "the 35.3-39.6 s stroke is keyframed slow in Blender (no time remap) so picture and narration stay in sync"
+  },
+  "layout_policy": {
+    "source": "config/higgsfield-typecast.json",
+    "version": 5,
+    "inherit_global": true,
+    "override_allowed": false,
+    "rule": "all new renders use the user-approved screenshot proportions; historical delivered videos are not rewritten"
   }
 }
