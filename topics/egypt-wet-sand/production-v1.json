@@ -1,0 +1,136 @@
+{
+  "variant": "production-v1",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "duration_seconds": 43
+  },
+  "motion_source": "Higgsfield Kling 3.0 + local explanatory animation",
+  "higgsfield": {
+    "charged_credits": 42.5,
+    "hard_cap": 50,
+    "unused_reserve": 7.5,
+    "submitted_jobs": 6,
+    "all_jobs_completed": true,
+    "additional_paid_operations": 0,
+    "pricing_notice": "Recorded quotes for this run; quote again before future production."
+  },
+  "typecast": {
+    "voice": "original Piljae, resolved from authenticated catalog",
+    "model": "ssfm-v30",
+    "language": "ko",
+    "character_count": 311,
+    "credits_separate": true,
+    "narration_tempo": 0.94,
+    "pitch_preserved": true
+  },
+  "layout": {
+    "inherit": "config/higgsfield-typecast.json",
+    "required_version": 6,
+    "title_center": [
+      540,
+      260
+    ],
+    "caption_center": [
+      540,
+      1360
+    ],
+    "max_caption_lines": 2
+  },
+  "shots": [
+    {
+      "scene": 1,
+      "model": "kling3_0",
+      "mode": "std",
+      "duration": 5,
+      "sound": "off",
+      "aspect_ratio": "9:16",
+      "quoted_credits": 6.25,
+      "start_image_prompt": "Use case: historical-scene. Create ONE clean production keyframe, tall portrait 9:16, NOT a storyboard sheet. The supplied image is style and subject reference only. Match its warm illustrated ink contours, realistic tactile limestone/timber/braided rope/linen/terracotta/granular sand shading. SAME recognizable seated pale limestone Egyptian statue, plain striped headcloth, hands on knees, rectangular seated base, upright and lashed with rope onto SAME dark wooden two-runner sledge facing screen RIGHT. Adult workers wear simple white linen kilts. No whips, chains, modern objects or fantasy. FULL BLEED natural landscape, warm light, restrained ochre/ivory/blue sky. VIDEO LAYOUT: top 24% mostly uncluttered sky (or uncluttered sand for overhead); main whole apparatus and people around center, roughly y=35%-64%; important feet/runner/water must stay ABOVE y=65%; bottom 30% quiet foreground sand for future captions. Keep whole subjects readable, no tight crop. No text, panel borders, arrows, diagrams, outlines of previous poses, watermarks or logos. Statues and people shaded illustration, not photographic. Statues NEVER standing, no round wheels.\nSCENE: Elevated panoramic long view: enormous seated statue on sledge in middle left, a group of six adult workers attached to taut ropes pulling toward middle right, long dry sandy route extends toward a distant limestone temple gate in upper middle background. Water bearer with upright terracotta jar stands beside sledge. Entire sledge and human silhouettes visible. Temple remains distant. Wide sense of scale and route, clean blue sky at top.",
+      "video_prompt": "Animate this exact warm ink shaded illustration. Wide establishing view stays wide: workers take short coordinated pulling steps toward screen right, taut ropes transmit effort and the heavy rigid seated statue and intact wooden sledge move slowly together a short distance. Dry sand gathers gently ahead. Jar bearer walks alongside holding jar upright. Subtle linen flutter and dust. NO wheels, no walking statue, no rope duplication or extreme zoom. Keep all people/rig within frame and preserve empty upper sky. Silent."
+    },
+    {
+      "scene": 2,
+      "model": "kling3_0",
+      "mode": "pro",
+      "duration": 5,
+      "sound": "off",
+      "aspect_ratio": "9:16",
+      "quoted_credits": 7.5,
+      "start_image_prompt": "Use case: historical-scene. Create ONE clean production keyframe, tall portrait 9:16, NOT a storyboard sheet. The supplied image is style and subject reference only. Match its warm illustrated ink contours, realistic tactile limestone/timber/braided rope/linen/terracotta/granular sand shading. SAME recognizable seated pale limestone Egyptian statue, plain striped headcloth, hands on knees, rectangular seated base, upright and lashed with rope onto SAME dark wooden two-runner sledge facing screen RIGHT. Adult workers wear simple white linen kilts. No whips, chains, modern objects or fantasy. FULL BLEED natural landscape, warm light, restrained ochre/ivory/blue sky. VIDEO LAYOUT: top 24% mostly uncluttered sky (or uncluttered sand for overhead); main whole apparatus and people around center, roughly y=35%-64%; important feet/runner/water must stay ABOVE y=65%; bottom 30% quiet foreground sand for future captions. Keep whole subjects readable, no tight crop. No text, panel borders, arrows, diagrams, outlines of previous poses, watermarks or logos. Statues and people shaded illustration, not photographic. Statues NEVER standing, no round wheels.\nSCENE: Medium-wide frontal three-quarter view looking back along taut rope from THREE adult pullers in foreground middle-right toward the SAME seated statue on sledge behind them middle-left. Human torsos angled forward, braced feet planted, believable hand grips, effort. Whole group and almost whole statue visible with ample margins, no face close-up. Dry loose sandy path, tiny sand mound at leading runner. Keep lower caption area quiet.",
+      "video_prompt": "Animate the supplied illustrated rig with believable strained human movement. Three foreground adult pullers brace and pull toward screen right, alternately stepping with bent knees while hands stay gripping the SAME taut rope. Heavy statue/sledge behind advance only slightly over DRY sand, never float. Fine sand is pushed in front of the runner. Keep statue stone face/body rigid. Camera gently eases backward just 5 percent to retain entire rig, no push-in or reframing into faces. No new people or changes in attire. Maintain blank upper sky and foreground. Silent."
+    },
+    {
+      "scene": 4,
+      "model": "kling3_0",
+      "mode": "pro",
+      "duration": 5,
+      "sound": "off",
+      "aspect_ratio": "9:16",
+      "quoted_credits": 7.5,
+      "start_image_prompt": "Use case: historical-scene. Create ONE clean production keyframe, tall portrait 9:16, NOT a storyboard sheet. The supplied image is style and subject reference only. Match its warm illustrated ink contours, realistic tactile limestone/timber/braided rope/linen/terracotta/granular sand shading. SAME recognizable seated pale limestone Egyptian statue, plain striped headcloth, hands on knees, rectangular seated base, upright and lashed with rope onto SAME dark wooden two-runner sledge facing screen RIGHT. Adult workers wear simple white linen kilts. No whips, chains, modern objects or fantasy. FULL BLEED natural landscape, warm light, restrained ochre/ivory/blue sky. VIDEO LAYOUT: top 24% mostly uncluttered sky (or uncluttered sand for overhead); main whole apparatus and people around center, roughly y=35%-64%; important feet/runner/water must stay ABOVE y=65%; bottom 30% quiet foreground sand for future captions. Keep whole subjects readable, no tight crop. No text, panel borders, arrows, diagrams, outlines of previous poses, watermarks or logos. Statues and people shaded illustration, not photographic. Statues NEVER standing, no round wheels.\nSCENE: High top-down oblique view of SAME full seated statue and sledge in middle left. ONE adult water bearer middle right holds tilted terracotta jar with a thin clear blue water stream just beginning to pour onto a narrow dry sand strip immediately ahead of the leading RIGHT runner. THREE adult rope pullers to right farther down path remain visible. Sand darkens locally but NO large puddle, no river, no blue wet road. Whole rig visible. Upper and lower frame areas mostly warm sand. Jar and hands anatomically clear.",
+      "video_prompt": "Animate this exact warm illustrated frame, rigid statue and wooden sledge. One jar bearer pours a SMALL narrow water stream onto the sand IMMEDIATELY AHEAD of the leading runner for the first three seconds, then returns the jar upright and the stream ceases. Dampness spreads a short narrow strip by absorption, turning sand darker brown. NO blue flooded river, no floating sledge, no pouring on statue. Rope pullers make only tiny bracing motions during pouring; statue remains stationary. Locked elevated camera, no zoom. Preserve anatomy, statue identity, scene scale. Silent."
+    },
+    {
+      "scene": 5,
+      "model": "kling3_0",
+      "mode": "pro",
+      "duration": 5,
+      "sound": "off",
+      "aspect_ratio": "9:16",
+      "quoted_credits": 7.5,
+      "start_image_prompt": "Use case: historical-scene. Create ONE clean production keyframe, tall portrait 9:16, NOT a storyboard sheet. The supplied image is style and subject reference only. Match its warm illustrated ink contours, realistic tactile limestone/timber/braided rope/linen/terracotta/granular sand shading. SAME recognizable seated pale limestone Egyptian statue, plain striped headcloth, hands on knees, rectangular seated base, upright and lashed with rope onto SAME dark wooden two-runner sledge facing screen RIGHT. Adult workers wear simple white linen kilts. No whips, chains, modern objects or fantasy. FULL BLEED natural landscape, warm light, restrained ochre/ivory/blue sky. VIDEO LAYOUT: top 24% mostly uncluttered sky (or uncluttered sand for overhead); main whole apparatus and people around center, roughly y=35%-64%; important feet/runner/water must stay ABOVE y=65%; bottom 30% quiet foreground sand for future captions. Keep whole subjects readable, no tight crop. No text, panel borders, arrows, diagrams, outlines of previous poses, watermarks or logos. Statues and people shaded illustration, not photographic. Statues NEVER standing, no round wheels.\nSCENE: Low medium-wide side tracking view: SAME seated statue and lashed wooden sledge in middle left, THREE adult rope pullers ahead in middle-right, damp DARK BROWN firm flat sand strip under runners and ahead of them. Small front sand mound only. Distant temple nearer than first scene but not yet beside statue. No blue puddles, no water coating statue. Jar bearer walking beside sled. Full group and sledge with foot room above caption band.\nCritical framing: upper24% is CLEAR EMPTY sky/ivory, no statue head intruding there. No anatomy touching edges. Main subjects fit within the central region. No text anywhere.",
+      "video_prompt": "Animate this warm illustrated scene. Workers pull toward screen RIGHT with short coordinated steps and unchanged hand grips on taut rope. The SAME heavy rigid statue and tied wooden sled advance right on firm DARK BROWN damp sand, small sand displacement at leading runner, no large front pile. Camera tracks gently alongside maintaining entire apparatus and people, no magnification. Jar bearer walks holding vessel upright. No visible river/puddle, no wheels, no walking statue. Cloth moves subtly, statue stays stone-rigid. Silent."
+    },
+    {
+      "scene": 6,
+      "model": "kling3_0",
+      "mode": "pro",
+      "duration": 5,
+      "sound": "off",
+      "aspect_ratio": "9:16",
+      "quoted_credits": 7.5,
+      "start_image_prompt": "Use case: historical-scene. Create ONE clean production keyframe, tall portrait 9:16, NOT a storyboard sheet. The supplied image is style and subject reference only. Match its warm illustrated ink contours, realistic tactile limestone/timber/braided rope/linen/terracotta/granular sand shading. SAME recognizable seated pale limestone Egyptian statue, plain striped headcloth, hands on knees, rectangular seated base, upright and lashed with rope onto SAME dark wooden two-runner sledge facing screen RIGHT. Adult workers wear simple white linen kilts. No whips, chains, modern objects or fantasy. FULL BLEED natural landscape, warm light, restrained ochre/ivory/blue sky. VIDEO LAYOUT: top 24% mostly uncluttered sky (or uncluttered sand for overhead); main whole apparatus and people around center, roughly y=35%-64%; important feet/runner/water must stay ABOVE y=65%; bottom 30% quiet foreground sand for future captions. Keep whole subjects readable, no tight crop. No text, panel borders, arrows, diagrams, outlines of previous poses, watermarks or logos. Statues and people shaded illustration, not photographic. Statues NEVER standing, no round wheels.\nSCENE: Explanatory analogy, no statue or workers or landscape. TWO adult hands held in the MIDDLE of the portrait above warm cream woven linen. Left hand holds loose dry golden sand trickling from fingers in a narrow stream into a loose pile on cloth. Right hand holds compact slightly darker damp sand clump that keeps its shape. Both full hands and forearms visible, balanced tactile composition. Top24% empty ivory texture, bottom30% quiet linen. No labels, text, arrows, modern plastic tools. Dry vs damp difference unmistakable.\nCritical framing: upper24% is CLEAR EMPTY sky/ivory, no statue head intruding there. No anatomy touching edges. Main subjects fit within the central region. No text anywhere.",
+      "video_prompt": "Animate this exact explanatory illustrated hand comparison. LEFT hand gently loosens its fingers so dry sand continuously trickles down into a small mound; RIGHT hand tilts slightly but keeps the damp sand clump compact and intact. Subtle natural wrist motion, no squeezing wet clump into a different shape, no extra fingers/hands or liquid flooding. No text. Stable wide view keeps BOTH entire hands, clump and falling dry stream visible, no zoom. Preserve material illustration textures. Silent."
+    },
+    {
+      "scene": 10,
+      "model": "kling3_0",
+      "mode": "std",
+      "duration": 5,
+      "sound": "off",
+      "aspect_ratio": "9:16",
+      "quoted_credits": 6.25,
+      "start_image_prompt": "Use case: historical-scene. Create ONE clean production keyframe, tall portrait 9:16, NOT a storyboard sheet. The supplied image is style and subject reference only. Match its warm illustrated ink contours, realistic tactile limestone/timber/braided rope/linen/terracotta/granular sand shading. SAME recognizable seated pale limestone Egyptian statue, plain striped headcloth, hands on knees, rectangular seated base, upright and lashed with rope onto SAME dark wooden two-runner sledge facing screen RIGHT. Adult workers wear simple white linen kilts. No whips, chains, modern objects or fantasy. FULL BLEED natural landscape, warm light, restrained ochre/ivory/blue sky. VIDEO LAYOUT: top 24% mostly uncluttered sky (or uncluttered sand for overhead); main whole apparatus and people around center, roughly y=35%-64%; important feet/runner/water must stay ABOVE y=65%; bottom 30% quiet foreground sand for future captions. Keep whole subjects readable, no tight crop. No text, panel borders, arrows, diagrams, outlines of previous poses, watermarks or logos. Statues and people shaded illustration, not photographic. Statues NEVER standing, no round wheels.\nSCENE: Wide frontal three-quarter arrival view. SAME statue on SAME lashed sledge in middle left now immediately BESIDE a tall limestone temple gate at middle right, sandstone columns lead into a courtyard. THREE adult rope pullers ahead at middle right, ease posture after the journey; one water bearer holds terracotta jar upright. Damp dark brown route recedes behind sledge. Entire statue/sledge/group readable and positioned centrally, enough clear sky above temple for title and quiet sand foreground for caption. No extra large statues, no floating statue or new pedestal.\nCritical framing: upper24% is CLEAR EMPTY sky/ivory, no statue head intruding there. No anatomy touching edges. Main subjects fit within the central region. No text anywhere.",
+      "video_prompt": "Animate this exact warm illustrated arrival scene. Workers finish a very short final pull toward screen RIGHT, heavy seated statue and lashed wooden sledge advance together slightly then stop beside the temple, ropes relax a little as people straighten their posture and catch their breath. Jar bearer holds jar upright. Quiet satisfied ending; statue stays seated stone-rigid on the same sledge, no new pedestal, no wheels, no standing/walking statue. Wide stable camera, maintain entire group and mechanism and blank upper sky, NO zoom-in. Silent."
+    }
+  ],
+  "native_scenes": [
+    3,
+    7,
+    8,
+    9
+  ],
+  "keyframes": [
+    {
+      "scene": 3,
+      "prompt": "Create ONE clean portrait9:16 production illustration, no text anywhere, based on the supplied Egyptian storyboard STYLE and SAME seated limestone statue tied with rope on dark wooden two-runner sledge facing screen RIGHT. This is scene03 ground-level scientific cutaway: upper 25% calm cream sky; statue and full wooden sled are centrally visible, head near y=650 of1920, feet/runner near y=980; below sled a clear horizontal cutaway of tan granular sand extending y1000..1200 shows the leading RIGHT runner pushing a prominent DRY SAND mound on the right. All statue and complete runners visible, no human pullers needed; pulling rope extends a short distance right. Warm expressive ink outlines with realistically shaded textured limestone/timber/sand, tactile educational illustration like supplied reference. Quiet ivory paper bottom35%, no labels, arrows, panel borders or captions. Entire apparatus small enough for fixed future top title and lower caption. This is an illustrative physical sand section, no modern cutaway equipment or floating statue."
+    },
+    {
+      "scene": 9,
+      "prompt": "Create ONE clean illustrated production image tall portrait9:16. Match the supplied warm ink/shaded illustration's aged texture.\nSCENE: NO three-dimensional statue or modern transport landscape. One weathered cream and ochre plaster wall with a readable FLAT ancient Egyptian wall-painting reconstruction in the middle third of portrait. Painted seated male statue on a sledge faces right; painted rope pullers to its right; one painted water bearer pouring a SMALL narrow blue water stream ahead of the sledge. Colored flat figures, ink lines, aged plaster cracks, warm red ochre/sandstone. Upper 27% and bottom32% mostly unpainted plaster. Exactly one painted statue. No hieroglyphs, frame border, museum displays, text or arrows.\nCritical framing: upper24% is CLEAR EMPTY sky/ivory, no statue head intruding there. No anatomy touching edges. Main subjects fit within the central region. No text anywhere."
+    }
+  ],
+  "diagram_assets": [
+    {
+      "name": "sand-grains",
+      "prompt": "Create ONE clean portrait 9:16 scientific explanatory illustration matching supplied warm textured ink Egyptian storyboard. Quiet ivory paper full bleed, no text or arrows. Exactly FIVE large irregular tan mineral SAND GRAINS, shown as an explanatory magnification in central area y650..1150 of a1080x1920 composition. Arrange three grains in upper row with centers approximately (290,770),(545,785),(810,790), and two below at(410,1015),(676,1040). Each grain radius about120px, very small gaps at nearest points, abundant blank ivory pore gaps; NO water yet, NO blue, NO liquid. Rough angular/rounded irregular granular stone texture, rich realistically shaded grain surfaces with fine expressive ink outlines, like panel07 of supplied storyboard but DRY and no surrounding flood. Top30% and bottom33% clear cream paper. These are schematic enlarged sand particles, no hands or statues."
+    },
+    {
+      "name": "mini-sledge",
+      "prompt": "Create ONE isolated sprite on TRANSPARENT background for a native explanatory animation. A SMALL ancient wooden two-runner transport sledge bearing ONE rectangular limestone block securely on its deck, three-quarter side view facing screen RIGHT. Match the supplied warm ink-outline, realistically shaded tactile timber and sandstone texture of the Egyptian storyboard's miniature comparison scene08. Wood grain, small rope lashing around block, rough stone chisel marks, restrained soft contact shadow, no floor or tray, no background, no human figures or statue, no text/labels/arrows/numbers. Compact whole object fully visible with generous transparent margins. The right leading end of the wood runners has a small upturned nose. No wheels. High quality illustration sprite intended to move intact on an animated sand tray."
+    }
+  ],
+  "media_policy": "All images, audio, video, signed URLs, job metadata and production source remain local; only inputs/settings/docs in Git."
+}

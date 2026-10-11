@@ -1,0 +1,35 @@
+{
+  "slug": "egypt-wet-sand",
+  "status": "completed",
+  "delivery": {"duration_seconds": 43, "width": 1080, "height": 1920, "fps": 24, "local_video": "outputs/egypt-wet-sand-final.mp4", "local_subtitles": "outputs/egypt-wet-sand.srt", "verification": "outputs/egypt-wet-sand-verification.json", "passed": true},
+  "latest_variant": "production-v1",
+  "storyboard": "topics/egypt-wet-sand/storyboard-v2.md",
+  "narration": "topics/egypt-wet-sand/narration-v2.txt",
+  "layout_policy": {"version": 6, "inherit_global": true, "override_allowed": false},
+  "title_fixed_lines": ["이집트의 운반 비밀", "물 한 항아리"],
+  "caption_keywords": ["석상", "썰매", "모래", "물", "단단", "벽화"],
+  "language": "ko",
+  "voice": "Typecast Piljae original, ssfm-v30; resolve authenticated catalog before generation",
+  "route": "storyboard keyframes, Higgsfield core motion, authored educational animation, Piljae narration",
+  "credit_budget": {
+    "scope": "Higgsfield credits for this production only; Typecast usage accounted separately",
+    "requested_range": [10, 50],
+    "hard_cap": 50,
+    "initial_quoted_total": 42.5,
+    "actual_spent": 42.5,
+    "unused_reserve": 7.5,
+    "completed_jobs": 6,
+    "balance_delta_verified": true,
+    "repair_reserve": 7.5,
+    "initial_clips": [
+      {"scene": 1, "model": "kling3_0", "mode": "std", "sound": "off", "seconds": 5, "quoted_credits": 6.25},
+      {"scene": 2, "model": "kling3_0", "mode": "pro", "sound": "off", "seconds": 5, "quoted_credits": 7.5},
+      {"scene": 4, "model": "kling3_0", "mode": "pro", "sound": "off", "seconds": 5, "quoted_credits": 7.5},
+      {"scene": 5, "model": "kling3_0", "mode": "pro", "sound": "off", "seconds": 5, "quoted_credits": 7.5},
+      {"scene": 6, "model": "kling3_0", "mode": "pro", "sound": "off", "seconds": 5, "quoted_credits": 7.5},
+      {"scene": 10, "model": "kling3_0", "mode": "std", "sound": "off", "seconds": 5, "quoted_credits": 6.25}
+    ],
+    "rules": ["Quote exact submitted params before every job; include every accepted attempt, failed attempt and regeneration in committed budget until refunds are confirmed.", "Never spend above50 or auto-resubmit after unknown transport outcome.", "Images use built-in image tool; no Higgsfield image generation/upscale/audio/render charges.", "Native explanation scenes3,7,8,9 carry no Higgsfield generation charge. Do not replace all motion with static pans."]
+  },
+  "accuracy_guards": ["Historical route, people and temple arrival are illustrative reconstruction", "Statue water-pouring mural plus modern wet-sand experiments; not proof of whole pyramid construction method", "Small capillary bridges stiffen sand; not a lubricating flood", "Excess water can reduce benefit; no universal optimum percentage or worker-count claim"]
+}

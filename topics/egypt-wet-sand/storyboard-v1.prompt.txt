@@ -1,0 +1,31 @@
+Use case: historical-scene / scientific-educational.
+Asset type: ONE illustrated ten-scene storyboard sheet for a Korean narrated animated short.
+Primary request: Draw EXACTLY TEN numbered panels, FIVE COLUMNS by TWO ROWS, read left-to-right 01-05, then 06-10. Wide landscape high-resolution sheet. Match the supplied Archimedes storyboard reference's warm ivory paper, expressive fine black ink outlines, rich material shading and readable motion diagrams, but create an entirely new ancient Egyptian story. The reference is STYLE AND SHEET LAYOUT ONLY; do not reproduce its crown, scales, glass vessels or characters.
+Header above the grid in large clear Korean: "거대한 석상을 움직인 물 한 항아리".
+Each panel is a tall portrait frame with an external Korean panel heading above it, narrow gutters. Exactly ten panels with no extra cells.
+Scene/backdrop: a simplified sandy ancient Egyptian transport route, small distant low limestone buildings, no pyramids, no modern machinery. Warm natural sunlight, soft shadows, ivory/ochre/sandstone/linen/clay palette with blue water accent.
+Subject invariants: the SAME large seated limestone male statue with a plain ancient Egyptian headcloth, intact neutral stone face, on the SAME two-runner dark wooden sledge, tied securely with rope. Same THREE adult workers in simple white linen kilts pulling the attached long rope, plus ONE water bearer with a terracotta jar. No slave chains, no whips. Worker groups are schematic, not photoreal portraits. Same statue orientation, sledge geometry, rope routing, and scale in every panel. Movement is toward screen RIGHT in a three-quarter slightly elevated view. Full assembly and workers visible, no giant cropped close-up, no extra statue duplicates within a panel. All main action stays in middle of each portrait frame; leave uncluttered margins above and below for future video text. Headings are outside frames; no speech captions inside panels. Small blue movement arrows and dashed previous-position outlines are storyboard annotations only.
+Materials: stone grain and chisel marks, visible timber grain, braided ropes, wrinkled cream linen, granular sand, glazed terracotta water jar. Lively poses and physical cause/effect, not ten static statues.
+EXACT external headings:
+"01 힘껏 당기기"
+"02 나무 썰매"
+"03 모래가 막는다"
+"04 당겨도 버겁다"
+"05 물을 붓는다"
+"06 적당히 적신다"
+"07 모래알의 변화"
+"08 움직임이 달라진다"
+"09 벽화 속 단서"
+"10 해결과 마무리".
+01: workers leaning forward toward screen right, braced legs and hands gripping taut rope, sledge begins to move slightly right; short motion arrows, dusty dry sand at front.
+02: same full rig at a slightly different three-quarter angle, statue firmly lashed on wooden runners, arrows identify the sledge motion and pulling rope visually, same workers continue their pull. No labeling text within frame.
+03: clearly show a prominent wedge of dry sand accumulating immediately IN FRONT OF THE LEADING RIGHT END OF THE SLEDGE. The runners push this mound, not a pile on the rear; the statue remains upright.
+04: workers lean harder to the right while one foot slips slightly backward, taut rope, SAME front sand mound blocks runner. Small strained motion marks, no breaking rope or falling statue.
+05: water bearer beside the front of the sledge tips the jar, a clear blue stream pours ONTO THE SAND DIRECTLY AHEAD of the leading runner, forming a narrow darker damp strip toward the right. Workers pause only briefly with rope still attached. Water NEVER poured onto statue.
+06: water soaks into the narrow track, darkening sand, no large standing puddles, no river, no slurry. Bearer eases jar upright. Show mostly damp flat route immediately before sled, not flooded mud.
+07: the full assembly advances on the damp sand. ONE SMALL circular inset occupying at most 25% of panel, with simple enlarged tan sand grains joined by little blue liquid bridges; a leader line points from the inset to the damp track. This is a conceptual diagram, not giant visible grains in the actual landscape. Keep whole statue/sledge/group visible. Blue connections are water, not oil.
+08: same statue and sledge move decisively to screen right over the damp track, longer travel arrow and slight dashed previous sledge outline. Damp sand remains fairly flat with a MUCH SMALLER front pile than panel03. Workers still exert effort; no magically floating sled, no wheels, no polished ice.
+09: same rig continues moving toward right; a SMALL inset reproduces a simplified ancient Egyptian wall-painting-style seated statue on a sledge with rope pullers and an individual pouring water ahead. The main scene retains one statue. Inset only is an illustrative wall-painting reconstruction, not a claim of an exact photograph; do not add invented readable hieroglyphs or dates.
+10: same statue/sledge reaches farther along the same damp transport route, pullers ease their posture naturally, water bearer walks alongside with jar, a final forward movement arrow and a clear receding track show progress. Warm satisfying wide ending, no rewinding back to dry sand, no duplication, no pedestal magically appearing.
+Footer below the grid in readable Korean: "벽화와 실험을 바탕으로 재구성 · 동작과 차이는 설명용으로 강조".
+Constraints: strong before-and-after sand mound difference, physically continuous same equipment, exactly10panels, all Korean headings spelled correctly, no English, no extra text, no captions covering mechanisms. Preserve the reference's tactile warm ink-and-shaded illustration character, clean accessible visual storytelling.

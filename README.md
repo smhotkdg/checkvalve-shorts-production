@@ -10,6 +10,8 @@
 
 **현재 주제는 아르키메데스의 왕관입니다.** 최신 완료본은 콘티의 음영 있는 잉크 일러스트를 유지한 Higgsfield v4, 44초·1080×1920·24fps입니다. [제작 설정](topics/archimedes-crown/higgsfield-v4.json) · [시작/끝 이미지 지침](topics/archimedes-crown/keyframes-v4.md) · [제작 순서와 명령](docs/storyboard-higgsfield-production.md). 필재 원음 재사용, 의미별 한글 줄바꿈과 낮춘 자막 위치를 적용했습니다. 영상·제작 소스는 로컬에만 있습니다.
 
+신규 완료본: **이집트의 젖은 모래와 운반 썰매**, 콘티 v2 기반 10장면·43초. Higgsfield 동작 클립 6개와 로컬 설명 애니메이션 4개, 원본 필재 한국어 TTS를 사용했습니다. 실제 Higgsfield 사용량 42.5크레딧(상한 50), 예비 7.5 미사용. [제작 순서·명령·비용](topics/egypt-wet-sand/production.md) · [프롬프트·환경 설정](topics/egypt-wet-sand/production-v1.json) · [제목·내용](topics/egypt-wet-sand/title-description.txt). 미디어·제작 소스는 로컬 전용입니다.
+
 **모든 영상의 텍스트는 필수 layout v6입니다.** 승인 예시의 제목 위치는 유지(블록 y=260), 최신 요청에 따라 자막만 54px 아래로 이동(블록 y=1360)했습니다. 가로 중앙, 흰색·노란색과 두꺼운 외곽선·그림자, 패널 없음. 한국어·활성 영어·기존 주제 재렌더·새 템플릿 모두 동일. [정확한 비율](docs/text-layout.md). 이전 v1~v5 좌표보다 이 규칙이 우선합니다.
 
 작업 폴더: `C:\Users\cozy0\OneDrive\Desktop\short\checkvalve-shorts-production`. 냉장고의 진행 중 로컬 수정은 보존했습니다.
