@@ -44,9 +44,18 @@ foreach ($f in 'brief.md', 'narration.txt', 'title-description.txt', 'topic.json
     if ((Get-Item -LiteralPath $p).Length -eq 0) { throw "Empty topics\$Slug\$f" }
 }
 Write-Ok 'brief.md, narration.txt, title-description.txt, topic.json'
-foreach ($f in 'narration.en.txt', 'title-description.en.txt') {
-    if (Test-Path -LiteralPath (Join-Path $topicDir $f)) { Write-Ok "$f (English set)" }
-    else { Write-Warn "No topics\$Slug\$f yet: Claude Code will draft it and ask for approval (English set)." }
+$topic = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $topicDir 'topic.json') | ConvertFrom-Json
+$requiredLanguages = @($config.language_sets.required)
+if ($topic.language_sets -and $topic.language_sets.required) {
+    $requiredLanguages = @($topic.language_sets.required)
+}
+if ($requiredLanguages -contains 'en') {
+    foreach ($f in 'narration.en.txt', 'title-description.en.txt') {
+        if (Test-Path -LiteralPath (Join-Path $topicDir $f)) { Write-Ok "$f (English set)" }
+        else { Write-Warn "No topics\$Slug\$f yet: Claude Code will draft it and ask for approval (English set)." }
+    }
+} else {
+    Write-Ok 'Korean only: skip English drafting, voice generation and rendering.'
 }
 if ($config.active_topic -ne $Slug) {
     Write-Warn "config active_topic is '$($config.active_topic)'; Claude Code will be told to use '$Slug'."

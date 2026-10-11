@@ -1,6 +1,6 @@
 # 환경설정과 실행 명령
 
-아래 명령의 `<slug>`는 주제 폴더 이름입니다(현재 `canal-lock`). 주제별 작업 파일은 `work/<slug>/`에 둡니다.
+아래 명령의 `<slug>`는 주제 폴더 이름입니다(현재 `expansion-anchor`, 한국어만). 주제별 작업 파일은 `work/<slug>/`에 둡니다.
 
 ## 한 번에 시작
 
@@ -34,14 +34,17 @@ New-Item -ItemType Directory -Force -Path work\<slug> | Out-Null
 ffprobe -v error -show_entries format=duration -of json work\<slug>\piljae.wav
 ```
 
-원음이 46초를 넘으면 대본을 줄여 다시 생성합니다. 속도 처리는 피치를 유지하는 atempo를 쓰며, 자막 타이밍은 처리 전 음성에서 추정하지 않습니다. 최종 업로드된 음성을 다시 받아 실제 사용 오디오로 Whisper 분석을 합니다.
+길이는 원음 실측 후 `실측 원음 / 0.94 + 끝 여유 1초 이상`으로 정합니다. 주제의 목표 길이는 초안입니다. 음성이 길어지면 영상을 늘리고, 대사를 잘라 맞추거나 속도를 올리지 않습니다. 속도 처리는 피치를 유지하는 atempo를 쓰며, 자막 타이밍은 처리 전 음성에서 추정하지 않습니다. 최종 업로드된 음성을 다시 받아 실제 사용 오디오로 Whisper 분석을 합니다.
 
 ```bash
-ffmpeg -i work/<slug>/piljae.wav -af 'atempo=0.94,apad,atrim=0:50' -ar 44100 -ac 1 work/<slug>/narration-final.wav
+# <FINAL_SECONDS>는 실측 원음 / 0.94 + 끝 여유 1초 이상. 40 또는 50을 무조건 넣지 마세요.
+ffmpeg -i work/<slug>/piljae.wav -af 'atempo=0.94,apad,atrim=0:<FINAL_SECONDS>' -ar 44100 -ac 1 work/<slug>/narration-final.wav
 python3 "$HF_WORKFLOWS/video-montage/scripts/audio_to_captions.py" work/<slug>/narration-final.wav --srt work/<slug>/caps.srt --json work/<slug>/caption-report.json --script work/<slug>/script.json --language ko --model medium --max-words 4 --max-chars 22 --minimum-similarity .90
 ```
 
-## 영어 세트
+## 영어 세트 (현재 비활성)
+
+`language_sets.required`에 `en`이 없으면 이 절을 건너뜁니다. 이번 주제는 한국어만이며 기존 영어 파일은 보관합니다.
 
 영어 대본은 `topics/<slug>/narration.en.txt`(한국어 문장마다 한 줄), 생성 음성은 `work/<slug>/en-voice.wav`입니다. 명령은 `docs/typecast-api.md`의 영어 세트 절을 따릅니다. 0.94 처리 후 문장별로 잘라 필재 `timing.json`의 문장 시작 시각에 배치해 `narration-final-en.wav`를 만들고, 영어 Whisper로 `timing-en.json`과 영어 자막을 만듭니다. 화면 편집과 효과음은 한국어 세트와 같고, 결과는 `outputs/<slug>-final-en.mp4`, `outputs/<slug>.en.srt`입니다.
 
@@ -65,7 +68,7 @@ Claude Code에서는 저장소의 `.mcp.json`에 공식 Higgsfield MCP(`https://
 
 ## 사운드와 편집
 
-필재와 효과음을 먼저 믹스한 50초 오디오를 한 번 배치합니다. Higgsedit의 cut 기본 트랙에 같은 시간대 오디오를 두 번 넣으면 충돌합니다. 자막 분석에는 혼합 파일 대신 깨끗한 필재를 씁니다.
+필재와 효과음을 먼저 믹스한 최종 계획 길이의 오디오를 한 번 배치합니다. Higgsedit의 cut 기본 트랙에 같은 시간대 오디오를 두 번 넣으면 충돌합니다. 자막 분석에는 혼합 파일 대신 깨끗한 필재를 씁니다.
 
 ```bash
 ffmpeg -v error -y -i work/<slug>/narration-final.wav -i work/<slug>/sound-design.wav -filter_complex '[0:a][1:a]amix=inputs=2:duration=longest:normalize=0[a]' -map '[a]' -c:a pcm_s16le work/<slug>/mixed-audio.wav

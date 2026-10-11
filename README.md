@@ -1,16 +1,19 @@
 # 쇼츠 제작: 명령어, 환경설정, 주제별 텍스트
 
-Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재** 내레이션으로 50초 9:16 공학 원리 쇼츠를 만드는 작업 환경입니다.
+Blender 애니메이션 + Higgsfield 보조 영상 + Typecast **필재**로 9:16 공학 원리 쇼츠를 만드는 작업 환경입니다. 현재는 **한국어만** 제작합니다. 길이는 주제별 초안과 실제 음성 길이로 정합니다.
 
 레퍼런스 ('이런거지' 채널)
-- 기본 포맷 `principle_info`(원리 + 마지막 정보): https://www.youtube.com/shorts/5UjFpjehQwc
+- 현재 기준 `problem_solution`(같은 물체의 실패 → 개선 → 잠금 → 실사용): https://www.youtube.com/shorts/Gko5JrBC020 · [촘촘한 분석](docs/references/Gko5JrBC020-analysis.md)
+- 보관 포맷 `principle_info`(원리 + 마지막 정보): https://www.youtube.com/shorts/5UjFpjehQwc
 - 보조 포맷 `problem_solution`(문제 → 해결 → 새 난관 → 추가 해결 → 완성): https://www.youtube.com/shorts/q5C9HCN2QY4
 
-**다음 제작 주제: 냉장고** — [`topics/refrigerator/`](topics/refrigerator/) · 냉기를 만드는 게 아니라 열을 옮기는 기계, 끝 정보는 문을 열어 둬도 방이 더워지는 이유
+**다음 제작 주제: 콘크리트 속에서 벌어지는 앵커볼트** — [`topics/expansion-anchor/`](topics/expansion-anchor/) · 약 40초 초안, 필재 한국어. 빠지는 막대 → 링 추가 → 조임 → 확장 → 고정 → 받침 적용. 음성 실측·모델링·유료 생성 전 기획 상태입니다.
 
-공통 기준(2026-10-11): 단순하고 한눈에 이해되는 3D(`visual_clarity`), 화면 텍스트는 고정 제목과 자막뿐(진행 칩 없음), 자막 배경 패널 없음(레이아웃 v4), 한국어·영어 두 세트.
+작업 폴더: `C:\Users\cozy0\OneDrive\Desktop\short\checkvalve-shorts-production`. 냉장고의 진행 중 로컬 수정은 보존했습니다.
 
-다른 초안: [`운하 갑문`](topics/canal-lock/) · [`침매터널`](topics/immersed-tunnel/) / 완료: [`타워크레인`](topics/tower-crane/)
+공통 기준(2026-10-11): 단순하고 한눈에 이해되는 3D(`visual_clarity`), 화면 텍스트는 고정 제목과 자막뿐(진행 칩 없음), 자막 배경 패널 없음(레이아웃 v4), 현재 한국어 한 세트. 기존 영어 자료·설정은 보관하며 `language_sets.required`에 `en`을 명시적으로 다시 켜야 새 영어 제작을 합니다.
+
+다른 주제 보관: [`냉장고`](topics/refrigerator/) · [`운하 갑문`](topics/canal-lock/) · [`침매터널`](topics/immersed-tunnel/) / 완료: [`타워크레인`](topics/tower-crane/)
 
 ## 구조
 

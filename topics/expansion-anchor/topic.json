@@ -1,0 +1,219 @@
+{
+  "slug": "expansion-anchor",
+  "topic": "expansion stud anchor in concrete: cone draws into split ring when the nut is tightened",
+  "status": "draft_unmeasured_no_media_generated",
+  "created_on": "2026-10-11",
+  "topic_selection_status": "selected_by_assistant_from_user_request_for_continuous_dynamic_reference_style",
+  "format": "problem_solution",
+  "format_reference": "https://www.youtube.com/shorts/Gko5JrBC020",
+  "reference_analysis": "docs/references/Gko5JrBC020-analysis.md",
+  "work_dir": "work/expansion-anchor",
+  "narration_file": "topics/expansion-anchor/narration.txt",
+  "language_sets": {
+    "required": [
+      "ko"
+    ],
+    "rule": "Korean only for now; no new English script, audio, captions or video"
+  },
+  "title_fixed": "벽 속에서 붙잡는 볼트",
+  "duration_target_seconds": 40,
+  "narration_estimate": {
+    "characters_without_spaces": 213,
+    "raw_seconds": 34.35,
+    "after_rate_seconds": 36.55,
+    "status": "unmeasured estimate; reallocate timeline after actual Piljae speech measurement"
+  },
+  "caption_keywords": [
+    "쑥 빠집니다",
+    "원뿔",
+    "금속 링",
+    "너트",
+    "밀어 벌립니다",
+    "마찰",
+    "확장형 앵커"
+  ],
+  "hook": {
+    "pattern": "visible failed pull first, then question",
+    "line": "벽에 쇠막대를 꽂아도, 당기면 쑥 빠집니다.",
+    "punch_in": false
+  },
+  "timeline_status": "draft, not measured narration timestamps",
+  "story_beats": [
+    {
+      "line": 1,
+      "timeline": [
+        0,
+        4
+      ],
+      "action": "comparison rod slides out"
+    },
+    {
+      "line": 2,
+      "timeline": [
+        4,
+        7
+      ],
+      "action": "same-space setup of the next structure"
+    },
+    {
+      "line": 3,
+      "timeline": [
+        7,
+        12
+      ],
+      "action": "cone and split ring assembled outside bore"
+    },
+    {
+      "line": 4,
+      "timeline": [
+        12,
+        16
+      ],
+      "action": "anchor inserts, small looseness visible"
+    },
+    {
+      "line": 5,
+      "timeline": [
+        16,
+        21
+      ],
+      "action": "nut turns; washer and bracket seat first, then reaction draws stud and cone outward"
+    },
+    {
+      "line": 6,
+      "timeline": [
+        21,
+        26
+      ],
+      "action": "cone expands ring against bore wall"
+    },
+    {
+      "line": 7,
+      "timeline": [
+        26,
+        30
+      ],
+      "action": "pull test with anchor fixed"
+    },
+    {
+      "line": 8,
+      "timeline": [
+        30,
+        33
+      ],
+      "action": "axial-to-radial force cue"
+    },
+    {
+      "line": 9,
+      "timeline": [
+        33,
+        35
+      ],
+      "action": "show already-clamped washer and bracket while rotation tool withdraws; do not reopen a gap"
+    },
+    {
+      "line": 10,
+      "timeline": [
+        35,
+        40
+      ],
+      "action": "same bracket in practical context"
+    }
+  ],
+  "video": {
+    "clip_count": 1,
+    "timeline_seconds_used": 5,
+    "clips": [
+      {
+        "id": "H1",
+        "purpose": "same secured bracket and shelf; tool withdraws with gentle parallax, anchor position locked; match approved Blender start/end states",
+        "model": "kling3_0",
+        "mode": "pro",
+        "sound": "off",
+        "seconds": 5,
+        "start_frame": "approved Blender secured-bracket frame",
+        "end_frame": "approved Blender slightly wider same-bracket frame",
+        "timeline": [
+          35,
+          40
+        ]
+      }
+    ]
+  },
+  "blender": {
+    "engine": "BLENDER_EEVEE",
+    "fps": 24,
+    "continuous_animation": true,
+    "sync_to_measured_voice": true,
+    "timeline_seconds_used": 35,
+    "camera_type": "main three-quarter section; outside left, concrete interior right; no axis reversal",
+    "groups": [
+      "concrete block with constant clean section and pre-existing bore",
+      "comparison plain rod and stud with integral cone, with necessary threads",
+      "split expansion ring",
+      "nut and washer",
+      "bracket and one simple shelf",
+      "single rotation-tool proxy"
+    ],
+    "model_detail": [
+      "small bevels",
+      "faint brushed metal and concrete grain",
+      "threads are a necessary principle detail exception, no unrelated bolt rows"
+    ],
+    "color_roles": {
+      "hero_moving_object": "orange #FF7A1A split ring",
+      "stud_nut_washer": "soft brushed silver",
+      "concrete": "light warm grey",
+      "named_part_highlight": "soft yellow rim at first mention only"
+    }
+  },
+  "visual_direction": {
+    "layout_reference": "config layout v4 unchanged",
+    "main_view_fraction": 0.7,
+    "wide_medium_fraction_min": 0.85,
+    "max_distinct_viewpoints": 3,
+    "max_in_shot_scale_change": 1.15,
+    "detail_seconds_max": 3,
+    "easing_seconds_min": 0.4,
+    "viewer_follows": "same split ring before and after expansion",
+    "continuity": "carry assembly state and cut plane across every shot; meaningful motion every 2-3 s; fixed parts stay fixed",
+    "style_frames": [
+      "rod sliding out with whole bore visible",
+      "cone and split ring outside bore",
+      "ring touching bore wall",
+      "same bracket in use"
+    ]
+  },
+  "sound_design": "original soft sliding, nut rotation, metallic contact, one low impact at ring contact, pull and bracket settle; narration dominant; no native generated speech",
+  "guards": [
+    "Korean Piljae and Korean captions only; English settings dormant",
+    "cone integral with stud; tightening draws it outward into ring, not deeper into wall",
+    "ring expands radially and stays fixed against bore during pull test",
+    "no wall deformation, no adhesive, no toggle-wing anchor, no thread cutting into concrete",
+    "initial plain-rod comparison is conceptual, not historical or an on-site fabrication guide",
+    "no torque, load capacity or depth figures",
+    "carry component identity, state and screen direction across cuts",
+    "no static padding or camera-only motion to disguise an idle mechanism",
+    "source clip must cover final timeline span; remeasure duration before any generation",
+    "use layout v4 fixed title and captions only, no panels or labels",
+    "measure actual speech first; extend video rather than truncate speech",
+    "ending must not show a secured anchor undoing itself to match the opening",
+    "nut and washer seat against bracket before cone-drawing action; later bracket shot explains an existing clamp, never a newly opened gap"
+  ],
+  "sources": [
+    {
+      "title": "Hilti stud anchor principle",
+      "url": "https://www.hilti.com.hk/engineering/articles/article-stud-anchors-are-widely-used-tips-to-select-the-right-one-and-make-it-safe",
+      "verified_on": "2026-10-11"
+    },
+    {
+      "title": "fischer FAZ II Plus function",
+      "url": "https://www.fischer-international.com/en/products/steel-fixings/bolt-anchor/bolt-anchor-faz-ii-plus/bolt-anchor-faz-ii-plus/568858-faz-ii-plus-10-20-bucket",
+      "verified_on": "2026-10-11"
+    }
+  ],
+  "quote": {
+    "status": "not_checked",
+    "rule": "quote current Typecast and Higgsfield costs before approved paid generation; no credits used in this planning update"
+  }
+}

@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "active_topic": "refrigerator",
-  "topic_config": "topics/refrigerator/topic.json",
-  "reference_video": "https://www.youtube.com/shorts/q5C9HCN2QY4",
-  "reference_title": "물속 다리 기둥을 세운 천재적인 해결법, 코퍼댐 공법의 진화",
+  "active_topic": "expansion-anchor",
+  "topic_config": "topics/expansion-anchor/topic.json",
+  "reference_video": "https://www.youtube.com/shorts/Gko5JrBC020",
+  "reference_title": "못 없이 나무를 이어 붙이는 전통 목공 기술, 장부맞춤",
   "reference_channel": "https://www.youtube.com/@%EC%9D%B4%EB%9F%B0%EA%B1%B0%EC%A7%807",
-  "duration_seconds": 50,
+  "duration_seconds": 40,
   "aspect_ratio": "9:16",
   "final_size": [
     1080,
@@ -20,10 +20,10 @@
     "topics/<slug>/narration.txt: exact Piljae TTS text only",
     "topics/<slug>/title-description.txt: 3 Shorts title options, description, hashtags, final script",
     "topics/<slug>/topic.json: clips, draft timeline, caption keywords, topic guards",
-    "topics/<slug>/narration.en.txt: exact English TTS text only, one line per Korean sentence",
-    "topics/<slug>/title-description.en.txt: English title options, description, hashtags, final English script",
+    "topics/<slug>/narration.en.txt: exact English TTS text only, one line per Korean sentence (only when en is enabled in language_sets.required)",
+    "topics/<slug>/title-description.en.txt: English title options, description, hashtags, final English script (only when en is enabled in language_sets.required)",
     "outputs/<slug>-final.mp4, outputs/<slug>.srt, outputs/<slug>-verification.json (local only, not in Git)",
-    "outputs/<slug>-final-en.mp4, outputs/<slug>.en.srt (English set, same picture edit; local only, not in Git)"
+    "outputs/<slug>-final-en.mp4, outputs/<slug>.en.srt (English set, same picture edit; local only, not in Git) (only when en is enabled in language_sets.required)"
   ],
   "voice": {
     "provider": "typecast",
@@ -37,23 +37,22 @@
     "postprocess": {
       "pitch_preserving_rate": 0.94,
       "use_hosted_audio_clock": true,
-      "pad_mixed_audio_to_video_seconds": 50
+      "pad_mixed_audio_to_video_seconds": 40
     },
     "length_budget": {
       "raw_seconds_max": 46.0,
       "after_rate_seconds_max": 49.0,
       "payoff_tail_seconds_min": 1.0,
-      "rule": "if raw Piljae audio exceeds the budget, shorten the script and regenerate; never speed it up and never let atrim cut speech",
+      "rule": "measure final speech first; duration_target_seconds is draft; extend the picture to fit speech plus at least 1 s payoff tail, never speed up or trim speech",
       "estimate": "about 6.2 Korean characters (spaces excluded) per raw second; measured: checkvalve 292 chars = 44.6 s, tower-crane 287 chars = 46.15 s; use the slower rate",
       "over_budget_rule": "2026-10-11 user: running a little long is fine; lengthen the video (e.g. 51 s) instead of cutting speech; still never speed up or trim speech"
     }
   },
   "language_sets": {
     "required": [
-      "ko",
-      "en"
+      "ko"
     ],
-    "rule": "every topic ships a Korean set (Piljae TTS + Korean captions/titles) and an English set (English TTS + English captions/titles) built on the same picture edit and sound design",
+    "rule": "2026-10-11 latest user request: Korean only for now (Piljae + Korean captions/titles); retain existing English assets/settings, skip new English drafting/generation/rendering unless en is explicitly re-enabled",
     "picture_master": "ko: Blender keyframes and clip timelines follow the Korean Piljae timing.json; the English set reuses that picture unchanged",
     "en_files": {
       "narration": "topics/<slug>/narration.en.txt",
@@ -87,25 +86,28 @@
   },
   "story": {
     "reference_structure": [
-      "problem",
-      "solution in motion",
-      "new obstacle",
-      "improved solution",
-      "completed result"
+      "visible failed action with the hero object already moving",
+      "question tied to that failure",
+      "same object structure improves in view",
+      "a real remaining limitation is shown",
+      "additional operation fixes that limitation",
+      "satisfying contact and locking, with both before and after states visible",
+      "same assembly in practical use; name and summarize the principle",
+      "composition continuity at ending, never undo the physical result to force a loop"
     ],
     "immersion_structure": [
-      "0-2 s visual hook: the most impressive moment of the process, already moving",
-      "2-5 s open loop: a spoken question answered only near the end",
-      "problem",
-      "solution in motion",
-      "new obstacle (announced explicitly)",
-      "improved solution with a slowed medium-shot 'satisfying' moment",
-      "payoff line that answers the open loop",
-      "loop ending whose last frame matches the first frame"
+      "visible failed action with the hero object already moving",
+      "question tied to that failure",
+      "same object structure improves in view",
+      "a real remaining limitation is shown",
+      "additional operation fixes that limitation",
+      "satisfying contact and locking, with both before and after states visible",
+      "same assembly in practical use; name and summarize the principle",
+      "composition continuity at ending, never undo the physical result to force a loop"
     ],
     "guide": "docs/immersion-guide.md",
     "formats": {
-      "default": "principle_info",
+      "default": "problem_solution",
       "principle_info": [
         "0-5 s hook: flip a common belief or show a surprising fact + reaction word",
         "open question",
@@ -116,22 +118,22 @@
         "calm wide ending"
       ],
       "problem_solution": [
-        "0-2 s visual hook: the most impressive moment of the process, already moving",
-        "2-5 s open loop: a spoken question answered only near the end",
-        "problem",
-        "solution in motion",
-        "new obstacle (announced explicitly)",
-        "improved solution with a slowed medium-shot 'satisfying' moment",
-        "payoff line that answers the open loop",
-        "loop ending whose last frame matches the first frame"
+        "visible failed action with the hero object already moving",
+        "question tied to that failure",
+        "same object structure improves in view",
+        "a real remaining limitation is shown",
+        "additional operation fixes that limitation",
+        "satisfying contact and locking, with both before and after states visible",
+        "same assembly in practical use; name and summarize the principle",
+        "composition continuity at ending, never undo the physical result to force a loop"
       ]
     }
   },
   "style": {
     "look": "clean, simplified 3D explainer: few large readable shapes, color-coded roles, bright even light, plain background; subtle material texture only where it does not add clutter",
     "priority": "viewer engagement and accurate meaningful motion before credit minimization",
-    "motion_rule": "no static hold over 1 s; a new shot or a clear state change at least every 3 s",
-    "scale_cues": "one simple person silhouette (or one car/boat) in wide shots; no extra site props",
+    "motion_rule": "no static padding over 1 s; meaningful state change every 2-3 s; track object and assembly continuity; fixed parts must stay fixed, camera-only drift is not a mechanism event",
+    "scale_cues": "use a scale cue only when useful; a small tabletop fastener needs no person silhouette",
     "composition": "one fixed short title near y=580; the single moving part being explained is the clearest thing in frame; captions near y=1260 with outline only"
   },
   "layout": {
@@ -263,7 +265,7 @@
     "show the current Higgsfield and Typecast cost and balance and get user approval before any paid generation",
     "one approved mechanism asset reused across clips",
     "no generated speech or baked text in raw clips",
-    "Korean (ko set) and English (en set) labels and captions added in post",
+    "only enabled language sets receive captions and the fixed title in post; currently Korean only; no part labels",
     "never silently replace Piljae",
     "never silently switch route",
     "persist every submitted job_id",
@@ -300,6 +302,11 @@
   },
   "reference_videos": [
     {
+      "url": "https://www.youtube.com/shorts/Gko5JrBC020",
+      "title": "못 없이 나무를 이어 붙이는 전통 목공 기술, 장부맞춤",
+      "use": "current default problem_solution: continuous assembly state, two visible limitations, final lock and application"
+    },
+    {
       "url": "https://www.youtube.com/shorts/q5C9HCN2QY4",
       "title": "물속 다리 기둥을 세운 천재적인 해결법, 코퍼댐 공법의 진화",
       "use": "story format problem_solution"
@@ -307,7 +314,15 @@
     {
       "url": "https://www.youtube.com/shorts/5UjFpjehQwc",
       "title": "자력으로 움직이는 기술, 자기부상열차의 원리",
-      "use": "story format principle_info (default from 2026-10-11): one principle, simple picture, practical info at the end"
+      "use": "alternate principle_info format retained for suitable topics"
     }
-  ]
+  ],
+  "continuous_animation": {
+    "reference_analysis": "docs/references/Gko5JrBC020-analysis.md",
+    "object_state_carries_across_cuts": true,
+    "contact_order": "approach -> contact -> response -> stable result",
+    "motion_source": "object behavior before camera movement",
+    "failure_must_be_visible": true,
+    "loop_rule": "match composition if useful, do not reverse a secured mechanism merely for a looping end"
+  }
 }

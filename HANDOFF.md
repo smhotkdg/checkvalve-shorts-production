@@ -2,16 +2,19 @@
 
 기준일: 2026-10-11 (Asia/Seoul)
 
-## 현재 상태
+## 현재 상태 — 최신 요청 우선
 
-- 경로: Blender + Higgsfield(Plus) + Typecast 필재 API. 현재 PC에서 연결을 확인했습니다. API 키는 `work/typecast-key.xml`에만 있고 Git에 없습니다.
-- 레퍼런스: https://www.youtube.com/shorts/q5C9HCN2QY4. 애니메이션이 계속 진행되고 내레이션이 화면의 원인과 결과를 이어서 설명하는 형식입니다.
-- 사용자는 매 주제를 이 형식으로 만들되, 주제 선정부터 제목·설명·대본 텍스트까지 함께 받기를 원합니다. 보는 사람의 몰입을 크레딧 절약보다 우선합니다.
-- **다음 제작 주제: 냉장고** (`topics/refrigerator/`, 2026-10-11). 사용자가 두 번째 레퍼런스 https://www.youtube.com/shorts/5UjFpjehQwc (자기부상열차의 원리)처럼 단순화하고 끝에 정보를 주는 방식을 요청해 선정했습니다. 포맷 `principle_info`. 한·영 대본, 제목, 설명, 장면표 초안 완료. 영어 대본은 승인 전입니다. 음성·유료 영상·렌더 생성 전입니다.
-- 운하 갑문 (`topics/canal-lock/`): 새 단순화 기준으로 다시 쓴 초안과 영어 대본 초안을 보관합니다.
-- **타워크레인 톱 클라이밍** (`topics/tower-crane/`): 몰입형 버전을 한국어·영어 세트로 제작 완료(2026-10-11, 51초, 레이아웃 v2). 결과물은 로컬 `outputs/`에만 있습니다. 침매터널 초안(`topics/immersed-tunnel/`)은 보관합니다.
-- **2026-10-11부터 모든 주제는 한국어 세트(필재)와 영어 세트(Typecast Hugh, 부드러운 설명형 남성)를 함께 만듭니다.** 같은 화면·효과음에 나레이션·자막·제목만 다릅니다. config `language_sets`, `voice_en`, `captions_en` 참고. canal-lock도 영어 대본(`narration.en.txt`)을 작성해 승인받아야 합니다.
-- 실행: [docs/claude-code-prompt.md](docs/claude-code-prompt.md)의 프롬프트에서 `<slug>`를 바꿔 저장소 루트에서 실행합니다.
+- 작업 폴더: `C:\Users\cozy0\OneDrive\Desktop\short\checkvalve-shorts-production`, GitHub `smhotkdg/checkvalve-shorts-production`, main.
+- 이번 활성 주제: **콘크리트 속에서 벌어지는 앵커볼트** (`topics/expansion-anchor/`). 한국어 대본·제목·설명·약 40초 장면표·정확성 가드 작성. 아직 음성 실측/모델링/유료 생성/영상 렌더 전이다.
+- 최신 언어 요청: **당장은 한국어만**. Typecast 필재와 한국어 자막. config `language_sets.required=[ko]`; 영어 설정·과거 파일은 보관하지만 새 영어 대본·음성·영상은 생성하지 않는다.
+- 현재 레퍼런스: https://www.youtube.com/shorts/Gko5JrBC020 (장부맞춤). [대표 프레임과 한국어 자동 자막을 대조한 분석](docs/references/Gko5JrBC020-analysis.md). 최초 자동 요약의 부정확한 구간 시간을 수정했다.
+- 연출: 같은 물체의 상태가 실패→개선→추가 잠금→실사용으로 이어진다. 부품 동작·접촉의 전후를 보여 주고, 강한 줌이나 카메라 드리프트로 정지 화면을 감추지 않는다. 은은한 재료 질감과 부드러운 그림자. 기존 layout v4의 중앙 텍스트·패널 없음 유지.
+- 제작 경로: Blender에서 정확한 기구 동작, 마지막 약 5초 Higgsfield 보조 계획, Typecast 필재. 현재 비용 조회/크레딧 사용 없음. 최종 길이는 실측 음성으로 확정한다.
+- 업데이트 당시 냉장고 `brief.md`, `topic.json`, `narration.en.txt`에 사용자 측 진행 중 변경이 있었다. 덮어쓰거나 이번 기획 커밋에 섞지 않는다. 과거 기록의 냉장고 생성 전 상태는 최신 로컬 상태를 대신하지 않는다.
+- 실행: `powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug expansion-anchor -NoLaunch`로 점검. 실제 실행은 [Claude Code 프롬프트](docs/claude-code-prompt.md).
+- Git에는 명령·환경설정·기획 텍스트만. 영상/음성/Blender 소스/키/서명 URL은 제외.
+- 사전 점검 통과: 새 한국어 4개 파일, Python, Blender, FFmpeg/ffprobe, Claude Code, 암호화 Typecast 키 파일 존재. `-NoLaunch -SkipPull`로 프롬프트만 생성했으며 API 잔액·현재 연결·필재 카탈로그는 아직 재조회하지 않았다.
+- 아래 날짜별 섹션은 당시 이력이다. 이전의 두 언어 의무·상단 진행 칩·기본 포맷 규칙보다 이 현재 상태와 config를 우선한다.
 
 ## 2026-10-11 오후: 단순한 화면과 텍스트 정리
 
