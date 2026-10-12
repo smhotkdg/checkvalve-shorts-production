@@ -1,0 +1,34 @@
+Use case: historical-scene / illustrated storyboard.
+Create ONE large high-resolution PORTRAIT storyboard contact sheet for an educational Korean short, EXACTLY TWENTY illustrations in a STRICT grid FIVE columns × FOUR rows, ordered 01-20 left to right, top to bottom. Each miniature frame is upright, with consistent 9:16-inspired staging. Clear ivory gutters. Big Korean heading above grid: "나일강 옆인데 밭에 물이 없었다?". Short numbered Korean labels OUTSIDE and ABOVE each panel only. NO spoken subtitles inside paintings, no paragraph text. The sheet is a storyboard review, not final burned-caption frames.
+Image1 approved Egyptian storyboard is primary style reference: warm textured ivory paper, crisp dark ink, detailed realistic shading on wood, linen, earthen banks and water, natural expressive animated people. Image2 Pompeii frame only supplies polished material shading and richly composed scene quality. NEVER copy its Roman buildings, carts or stones into Egypt.
+Setting: ancient Egyptian New Kingdom riverside gardening plot; tan earthen sloping bank, raised small irrigation inlet, blue Nile below, green reeds and palms, low mudbrick houses and cultivated beds. No pyramids dominating background, temples or enormous statues; simple farming task. One consistent adult Egyptian farmer, tan-brown skin, short black hair, off-white knee-length linen kilt, bare upper body, bare feet. No pharaoh regalia, modern pumps or metal crane.
+ONE consistent shaduf: stationary forked timber support on dry riverbank; one intact timber lever pivoted above, with longer arm towards river and shorter arm towards inland. A rope suspends ONE brown open water bucket on the long arm; ONE rounded earthen counterweight fixed directly near end of short arm. Clear physics: when bucket goes DOWN toward low river, short-end weight goes UP; bucket UP means weight DOWN. Human actively operates every cycle. Long arm, short arm, weight and rope length never morph or exchange sides. Water can be carried UP in the bucket and then poured DOWN into higher inlet with farmer's hand tipping bucket; water does not flow uphill on its own. No pulleys, double buckets, rope through water weight, magic perpetual engine. Keep whole geometry readable, no giant macro shots. All water-level changes conspicuous; empty/full/empty states differ greatly. Streams travel from tipped bucket into actual channel mouth, never from the weight. Show gestures and clear successive phases, not twenty identical posed machines. Active body stances, water flows, footprints, foliage, nuanced expressions. No invented famous inventor or date text. Panel19 an illustrative antique wall-painting scene (not exact artifact replica).
+Rows: 01-05 problem; 06-10 change and assembly; 11-15 complete lift action; 16-20 distribution, human reset, evidence, payoff.
+Specific numbered panels:
+01 label "01 물 옆의 고민" — 강·높은 둑·밭이 한눈에 보이는 높은 사선 전경. 농부가 빈 물통을 들고 강과 밭을 번갈아 본다. Motion readiness: 강물과 갈대, 인물의 시선·몸 방향.
+02 label "02 눈앞의 나일강" — 강 수면 가까운 넓은 시점. 풍부한 물과 둑 위의 작은 농부를 함께 보여준다. Motion readiness: 수면 이동과 갈대 흔들림.
+03 label "03 닿지 않는 밭" — 강물은 아래, 밭과 관개 수로 입구는 위인 단면. 물높이와 도달해야 할 높이의 차이가 명확하다. Motion readiness: 낮은 수면의 흐름·위 수로를 짚는 농부.
+04 label "04 한 통을 퍼서" — 농부가 둑 아래에서 빈 물통을 물에 넣는다. 입구로 물이 들어와 충분히 차는 모습을 확인한다. Motion readiness: 몸 숙임·통 기울임·수위 상승.
+05 label "05 둑을 올라가면" — 농부가 무거운 물통을 들고 경사로를 올라가는 옆 전신 시점. 물이 조금 출렁이되 새지 않는다. Motion readiness: 실제 걷기·무게 중심·통 안 출렁임.
+06 label "06 아직 남은 밭" — 밭 입구에 물을 부은 뒤 작은 젖은 구역과 나머지 큰 밭을 함께 보여준다. 식물은 갑자기 자라지 않는다. Motion readiness: 물 붓기·젖은 흙 확장·숨 고르는 몸.
+07 label "07 긴 막대 하나" — 같은 장소의 교육용 조립 시연. 고정 지지대 위에 한 개의 긴 목재 막대를 놓는다. 특정 발명 현장으로 묘사하지 않는다. Motion readiness: 손의 조립 시연·막대의 제한된 회전.
+08 label "08 한쪽의 물통" — 물 쪽의 긴 팔 끝에 밧줄과 같은 물통을 단다. 받침점과 반대쪽 짧은 팔까지 전체가 보인다. Motion readiness: 밧줄 매듭 시연·약한 물통 흔들림.
+09 label "09 반대쪽의 추" — 짧은 육지 쪽 팔에 흙으로 만든 둥근 추를 붙이는 조립 시연. 지지점·긴 팔·짧은 팔의 관계 유지. Motion readiness: 추를 놓는 손·연결된 막대 반응.
+10 label "10 빈 통 내리기" — 완성 샤두프 옆 전신 측면. 농부가 긴 쪽 밧줄을 아래로 당긴다. 물통은 강 쪽으로 내려가고 추는 위로 간다. Motion readiness: 무릎·팔·막대 회전·추 상승.
+11 label "11 물속으로" — 물통이 물에 들어가는 중간 크기 측면. 사람·줄·막대 일부와 낮은 수면을 유지한다. Motion readiness: 통 입수·작은 물보라·강물.
+12 label "12 통이 차는 순간" — 같은 통의 교육용 부분 단면. 수면까지 채워지는 물을 분명히 보이고 밧줄이 팽팽해지는 시작 상태. Motion readiness: 통 안 수위 변화·들어 올림 시작.
+13 label "13 추가 내려간다" — 장치 전체 옆 시점. 짧은 팔 추는 아래로, 긴 팔의 찬 통은 위로. 양쪽이 반대 방향으로 움직인다. Motion readiness: 추 하강·통 상승·막대 한 축 회전.
+14 label "14 물통을 돕는 무게" — 약간 다른 사선 전신 시점. 농부가 통을 안내하며 들어 올리고, 통의 물은 대부분 보존된다. Motion readiness: 사람의 안내 동작·찬 통 상승·수면 출렁임.
+15 label "15 높은 수로에 붓기" — 막대가 들린 상태에서 농부가 통을 손으로 기울여 위쪽 받이/수로 입구에 붓는다. 줄을 떼지 않고 통과 팔은 길이가 변하지 않는다. Motion readiness: 손으로 통 기울임·굵은 물줄기·통 수위 감소.
+16 label "16 밭으로 퍼진 물" — 상부 수로에서 갈라진 밭의 작은 흙고랑을 내려다보는 전경. 물이 낮은 방향으로 퍼져 흙을 적신다. Motion readiness: 물 선단 전진·젖은 흙 확장·잎 흔들림.
+17 label "17 자동은 아니다" — 다시 장치 쪽으로 돌아와 농부가 빈 통을 아래로 당긴다. 추는 올라간다. 앞선 순환의 재설정이다. Motion readiness: 사람의 당김·빈 통 하강·추 상승.
+18 label "18 다시 한 번" — 두 번째 순환의 연결 자세. 동일 농부가 막대를 조절하고 통을 강에 넣는 전신 장면. 한 장에 유령 인물·복제 통 없이 다음 프레임으로 이어진다. Motion readiness: 두 번째 입수·손 위치 변화·몸 무게 이동.
+19 label "19 그림에 남은 장치" — 파피루스가 아닌 회벽의 설명용 벽화 시점. 고대 미술 구도로 농부·막대·물통·추를 보여준다. 실제 소장품 사진이나 정확한 복제라고 주장하지 않는다. Motion readiness: 현장 이미지와 그림을 연결하는 매치 전환·장치 경로를 따라가는 시연 표시.
+20 label "20 강에서 밭으로" — 첫 전경을 회수하되 결과 상태. 찬 통은 위 수로 높이, 물은 수로·밭으로 흐름, 같은 농부가 붓는 중이다. 강과 높은 밭이 동시에 보인다. Motion readiness: 마무리 붓기·고랑 물 흐름·인물과 갈대.
+Critical03: cutaway with river BELOW raised channel/field; no uphill natural blue arrow.
+Critical12: clear close-medium cutaway of a FILLED bucket as teaching visualization, not permanently transparent real bucket.
+Critical13/14: weight/down and filled-bucket/up on opposite arms of same pivot.
+Critical15: farmer manually tips attached bucket at elevated channel inlet, supported on the bank, no automatic self-emptying claim.
+Critical17/18: genuine human reset, no automatic mechanism.
+Critical20: wide solved landscape recalling01 with readable source-to-raised-inlet-to-fields pathway and ongoing farmer effort.
+Text accuracy: EXACTLY all 20 numbered labels, one per panel. Each panel has unique staging and distinct action phase. No duplicate panel numbers, omitted columns or extra panels. Rich frame-filling illustrations; no tiny object surrounded by blank paper except useful cutaways. No speaker text or video-title blocks inside the miniature pictures. Small footer: "문제 → 높이 차이 → 막대와 추 → 물 올리기 → 밭으로".

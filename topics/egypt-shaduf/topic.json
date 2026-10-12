@@ -1,0 +1,310 @@
+{
+  "slug": "egypt-shaduf",
+  "status": "storyboard-ready",
+  "latest_variant": "storyboard-v1",
+  "storyboard": "topics/egypt-shaduf/storyboard-v1.md",
+  "narration": "topics/egypt-shaduf/narration.txt",
+  "language": "ko",
+  "storyboard_frames": 20,
+  "duration_target_seconds": 60,
+  "duration_rule": "Draft only: measure original Piljae speech before locking timings; maintain naturally paced continuous actions rather than twenty abrupt cuts.",
+  "layout_policy": {
+    "version": 6,
+    "inherit_global": true,
+    "override_allowed": false
+  },
+  "title_fixed_lines": [
+    "강은 바로 옆인데",
+    "밭에는 물이 없다?"
+  ],
+  "caption_keywords": [
+    "나일강",
+    "밭",
+    "물통",
+    "막대",
+    "추",
+    "수로",
+    "샤두프"
+  ],
+  "voice": {
+    "provider": "typecast",
+    "name_kor": "필재",
+    "model": "ssfm-v30",
+    "voice_id_rule": "resolve original voice from authenticated catalog",
+    "fallback_allowed": false
+  },
+  "style": "Approved Egypt/Pompeii warm ivory, dark ink, realistic shading and material textures; actively animated characters, water and mechanisms",
+  "route": "20-frame storyboard first, Higgsfield core character motion plus exact authored animation, original Piljae and burned Korean captions",
+  "per_scene_process_motion_required": true,
+  "still_image_camera_pan_only_allowed": false,
+  "storyboard_frame_vs_clip_rule": "Twenty frames are story/action key poses, not twenty paid generations. Preserve action across adjoining frames; only change observation or space where it adds information.",
+  "credit_budget": {
+    "scope": "Higgsfield video credits only; Typecast and built-in image generation separate",
+    "hard_cap": 50,
+    "minimum_spend": 0,
+    "spend_to_cap": false,
+    "planning_paid_clip_count": 4,
+    "planning_estimate": 25,
+    "estimate_is_final_quote": false,
+    "sample_quote": {
+      "date_local": "2026-10-12",
+      "model": "kling3_0",
+      "mode": "std",
+      "sound": "off",
+      "duration": 5,
+      "aspect_ratio": "9:16",
+      "credits": 6.25,
+      "type": "cost-only; no job submitted"
+    },
+    "actual_spent": 0,
+    "paid_jobs_submitted": 0,
+    "rules": [
+      "Requote exact final submission params including confirmed references before each paid job.",
+      "Reuse continuous actions and consistent assets; do not substitute camera pans on static paintings for animated action.",
+      "Animate fixed-pivot beam, counterweight and bucket with authored geometry where AI physics would require repeated repair.",
+      "Only add a quoted clip when visual verification finds an essential motion missing; never spend to the cap.",
+      "Count accepted failures/retries until confirmed refunds; never automatically resubmit unknown outcomes."
+    ]
+  },
+  "physics_guards": [
+    "Single fixed support and pivot, one intact beam, one bucket and one counterweight.",
+    "Long arm towards water carries bucket, shorter inland arm carries counterweight. Opposite ends move oppositely around same pivot.",
+    "Bucket/rope/beam lengths stay fixed through one cycle; bucket can be manually tipped, not magically detached.",
+    "Human actively lowers empty bucket, fills it and guides lifting/pouring; counterweight assistance is not free energy or a perpetual motor.",
+    "Source is below receiving channel. Lift water in bucket, then gravity flow downhill in channel; no natural uphill water stream.",
+    "Watertight hide-lined timber or leather container, not an unlined wicker basket.",
+    "Maintain modest bank/lift height for one device; no giant cliff crossed by a short lever.",
+    "Water volume: empty→fills→full during ascent→pours and empties→next cycle. No simultaneous empty and full states.",
+    "Assembly shots are principle demonstrations, not evidence of a particular inventor or actual invention event.",
+    "No sudden plant growth; wet soil expands while preexisting plants stay consistent.",
+    "Wall-painting frame is an educational reconstruction, not an exact museum-object reproduction.",
+    "Do not claim Egyptian first invention, universal irrigation method, specific output/factor reduction, or pyramid construction by shaduf."
+  ],
+  "research_sources": [
+    {
+      "title": "The Met — Garden Scene, Tomb of Ipuy, object30.4.115",
+      "url": "https://www.metmuseum.org/art/collection/search/557816",
+      "supports": "19th-Dynasty/Ramesside garden-scene facsimile; original tomb context, not a photo of a surviving machine."
+    },
+    {
+      "title": "Elio Nenci (2018), The Water Lifting Devices and the Origin of Ancient Mechanics",
+      "url": "https://refubium.fu-berlin.de/handle/fub188/23832",
+      "supports": "Pivoted unequal timber arms, bucket/rope and counterweight; human lowers, fills, lifts with assistance and pours. Avoid unqualified claims about first invention date."
+    },
+    {
+      "title": "FAO, Water Lifting for Irrigation, section3.3.2",
+      "url": "https://www.fao.org/4/ah810e/ah810e05.htm",
+      "supports": "Counterpoise lift/shadoof and staged lifts; gravity flow downhill, manually operated intermittent cycles."
+    }
+  ],
+  "shots": [
+    {
+      "scene": 1,
+      "label": "물 옆의 고민",
+      "narration": "옛날 이집트 농부들은 머리가 아팠습니다.",
+      "composition": "강·높은 둑·밭이 한눈에 보이는 높은 사선 전경. 농부가 빈 물통을 들고 강과 밭을 번갈아 본다.",
+      "motion": "강물과 갈대, 인물의 시선·몸 방향",
+      "draft_seconds": 3,
+      "draft_start_seconds": 0,
+      "draft_end_seconds": 3
+    },
+    {
+      "scene": 2,
+      "label": "눈앞의 나일강",
+      "narration": "바로 옆에 나일강이 흐르는데,",
+      "composition": "강 수면 가까운 넓은 시점. 풍부한 물과 둑 위의 작은 농부를 함께 보여준다.",
+      "motion": "수면 이동과 갈대 흔들림",
+      "draft_seconds": 2,
+      "draft_start_seconds": 3,
+      "draft_end_seconds": 5
+    },
+    {
+      "scene": 3,
+      "label": "닿지 않는 밭",
+      "narration": "정작 높은 밭까지 물이 올라가지 않았거든요.",
+      "composition": "강물은 아래, 밭과 관개 수로 입구는 위인 단면. 물높이와 도달해야 할 높이의 차이가 명확하다.",
+      "motion": "낮은 수면의 흐름·위 수로를 짚는 농부",
+      "draft_seconds": 3,
+      "draft_start_seconds": 5,
+      "draft_end_seconds": 8
+    },
+    {
+      "scene": 4,
+      "label": "한 통을 퍼서",
+      "narration": "일단 물통으로 퍼서,",
+      "composition": "농부가 둑 아래에서 빈 물통을 물에 넣는다. 입구로 물이 들어와 충분히 차는 모습을 확인한다.",
+      "motion": "몸 숙임·통 기울임·수위 상승",
+      "draft_seconds": 3,
+      "draft_start_seconds": 8,
+      "draft_end_seconds": 11
+    },
+    {
+      "scene": 5,
+      "label": "둑을 올라가면",
+      "narration": "둑을 올라가 밭에 부었습니다.",
+      "composition": "농부가 무거운 물통을 들고 경사로를 올라가는 옆 전신 시점. 물이 조금 출렁이되 새지 않는다.",
+      "motion": "실제 걷기·무게 중심·통 안 출렁임",
+      "draft_seconds": 3,
+      "draft_start_seconds": 11,
+      "draft_end_seconds": 14
+    },
+    {
+      "scene": 6,
+      "label": "아직 남은 밭",
+      "narration": "그런데 한 통을 부어도, 옮길 물은 한참 남았죠.",
+      "composition": "밭 입구에 물을 부은 뒤 작은 젖은 구역과 나머지 큰 밭을 함께 보여준다. 식물은 갑자기 자라지 않는다.",
+      "motion": "물 붓기·젖은 흙 확장·숨 고르는 몸",
+      "draft_seconds": 3,
+      "draft_start_seconds": 14,
+      "draft_end_seconds": 17
+    },
+    {
+      "scene": 7,
+      "label": "긴 막대 하나",
+      "narration": "여기에 긴 막대를 걸치고,",
+      "composition": "같은 장소의 교육용 조립 시연. 고정 지지대 위에 한 개의 긴 목재 막대를 놓는다. 특정 발명 현장으로 묘사하지 않는다.",
+      "motion": "손의 조립 시연·막대의 제한된 회전",
+      "draft_seconds": 3,
+      "draft_start_seconds": 17,
+      "draft_end_seconds": 20
+    },
+    {
+      "scene": 8,
+      "label": "한쪽의 물통",
+      "narration": "한쪽에 물통을 달았습니다.",
+      "composition": "물 쪽의 긴 팔 끝에 밧줄과 같은 물통을 단다. 받침점과 반대쪽 짧은 팔까지 전체가 보인다.",
+      "motion": "밧줄 매듭 시연·약한 물통 흔들림",
+      "draft_seconds": 3,
+      "draft_start_seconds": 20,
+      "draft_end_seconds": 23
+    },
+    {
+      "scene": 9,
+      "label": "반대쪽의 추",
+      "narration": "반대쪽에는 무거운 추를 붙였죠.",
+      "composition": "짧은 육지 쪽 팔에 흙으로 만든 둥근 추를 붙이는 조립 시연. 지지점·긴 팔·짧은 팔의 관계 유지.",
+      "motion": "추를 놓는 손·연결된 막대 반응",
+      "draft_seconds": 3,
+      "draft_start_seconds": 23,
+      "draft_end_seconds": 26
+    },
+    {
+      "scene": 10,
+      "label": "빈 통 내리기",
+      "narration": "빈 물통을 아래로 당기면,",
+      "composition": "완성 샤두프 옆 전신 측면. 농부가 긴 쪽 밧줄을 아래로 당긴다. 물통은 강 쪽으로 내려가고 추는 위로 간다.",
+      "motion": "무릎·팔·막대 회전·추 상승",
+      "draft_seconds": 3,
+      "draft_start_seconds": 26,
+      "draft_end_seconds": 29
+    },
+    {
+      "scene": 11,
+      "label": "물속으로",
+      "narration": "물통이 강물 속으로 내려갑니다.",
+      "composition": "물통이 물에 들어가는 중간 크기 측면. 사람·줄·막대 일부와 낮은 수면을 유지한다.",
+      "motion": "통 입수·작은 물보라·강물",
+      "draft_seconds": 3,
+      "draft_start_seconds": 29,
+      "draft_end_seconds": 32
+    },
+    {
+      "scene": 12,
+      "label": "통이 차는 순간",
+      "narration": "물이 차면 다시 들어 올리는데,",
+      "composition": "같은 통의 교육용 부분 단면. 수면까지 채워지는 물을 분명히 보이고 밧줄이 팽팽해지는 시작 상태.",
+      "motion": "통 안 수위 변화·들어 올림 시작",
+      "draft_seconds": 3,
+      "draft_start_seconds": 32,
+      "draft_end_seconds": 35
+    },
+    {
+      "scene": 13,
+      "label": "추가 내려간다",
+      "narration": "이번엔 반대편 추가 내려오며,",
+      "composition": "장치 전체 옆 시점. 짧은 팔 추는 아래로, 긴 팔의 찬 통은 위로. 양쪽이 반대 방향으로 움직인다.",
+      "motion": "추 하강·통 상승·막대 한 축 회전",
+      "draft_seconds": 3,
+      "draft_start_seconds": 35,
+      "draft_end_seconds": 38
+    },
+    {
+      "scene": 14,
+      "label": "물통을 돕는 무게",
+      "narration": "찬 물통을 올리는 일을 돕습니다.",
+      "composition": "약간 다른 사선 전신 시점. 농부가 통을 안내하며 들어 올리고, 통의 물은 대부분 보존된다.",
+      "motion": "사람의 안내 동작·찬 통 상승·수면 출렁임",
+      "draft_seconds": 3,
+      "draft_start_seconds": 38,
+      "draft_end_seconds": 41
+    },
+    {
+      "scene": 15,
+      "label": "높은 수로에 붓기",
+      "narration": "올라온 물은 위쪽 수로에 붓고,",
+      "composition": "막대가 들린 상태에서 농부가 통을 손으로 기울여 위쪽 받이/수로 입구에 붓는다. 줄을 떼지 않고 통과 팔은 길이가 변하지 않는다.",
+      "motion": "손으로 통 기울임·굵은 물줄기·통 수위 감소",
+      "draft_seconds": 3,
+      "draft_start_seconds": 41,
+      "draft_end_seconds": 44
+    },
+    {
+      "scene": 16,
+      "label": "밭으로 퍼진 물",
+      "narration": "수로를 따라 밭으로 보냈습니다.",
+      "composition": "상부 수로에서 갈라진 밭의 작은 흙고랑을 내려다보는 전경. 물이 낮은 방향으로 퍼져 흙을 적신다.",
+      "motion": "물 선단 전진·젖은 흙 확장·잎 흔들림",
+      "draft_seconds": 3,
+      "draft_start_seconds": 44,
+      "draft_end_seconds": 47
+    },
+    {
+      "scene": 17,
+      "label": "자동은 아니다",
+      "narration": "물론, 저절로 돌아가는 장치는 아니었습니다.",
+      "composition": "다시 장치 쪽으로 돌아와 농부가 빈 통을 아래로 당긴다. 추는 올라간다. 앞선 순환의 재설정이다.",
+      "motion": "사람의 당김·빈 통 하강·추 상승",
+      "draft_seconds": 3,
+      "draft_start_seconds": 47,
+      "draft_end_seconds": 50
+    },
+    {
+      "scene": 18,
+      "label": "다시 한 번",
+      "narration": "내리고, 담고, 붓는 일은 사람이 반복했죠.",
+      "composition": "두 번째 순환의 연결 자세. 동일 농부가 막대를 조절하고 통을 강에 넣는 전신 장면. 한 장에 유령 인물·복제 통 없이 다음 프레임으로 이어진다.",
+      "motion": "두 번째 입수·손 위치 변화·몸 무게 이동",
+      "draft_seconds": 3,
+      "draft_start_seconds": 50,
+      "draft_end_seconds": 53
+    },
+    {
+      "scene": 19,
+      "label": "그림에 남은 장치",
+      "narration": "이런 장치는 고대 이집트 그림에도 남아 있습니다.",
+      "composition": "파피루스가 아닌 회벽의 설명용 벽화 시점. 고대 미술 구도로 농부·막대·물통·추를 보여준다. 실제 소장품 사진이나 정확한 복제라고 주장하지 않는다.",
+      "motion": "현장 이미지와 그림을 연결하는 매치 전환·장치 경로를 따라가는 시연 표시",
+      "draft_seconds": 3,
+      "draft_start_seconds": 53,
+      "draft_end_seconds": 56
+    },
+    {
+      "scene": 20,
+      "label": "강에서 밭으로",
+      "narration": "샤두프. 물 나르기에 반대편의 무게를 보탠 겁니다.",
+      "composition": "첫 전경을 회수하되 결과 상태. 찬 통은 위 수로 높이, 물은 수로·밭으로 흐름, 같은 농부가 붓는 중이다. 강과 높은 밭이 동시에 보인다.",
+      "motion": "마무리 붓기·고랑 물 흐름·인물과 갈대",
+      "draft_seconds": 4,
+      "draft_start_seconds": 56,
+      "draft_end_seconds": 60
+    }
+  ],
+  "media_policy": "Only settings, prompts, narration, commands and docs in Git. Images, generated videos, production source, API keys and signed URLs stay local.",
+  "storyboard_image_local": "work/egypt-shaduf/storyboard-v1/storyboard-20-scenes.png",
+  "storyboard_visual_review": "20 numbered distinct compositions inspected; modest bank, weight added after bucket, watertight container and empty/full/pouring states corrected",
+  "caption_authored_bounds_passed": true,
+  "caption_chunks": 22,
+  "tts_status": "not submitted",
+  "video_status": "not submitted",
+  "next_step": "Measure original Piljae speech; lock contiguous action groups and validate reference geometry before exact quotes and paid generation."
+}

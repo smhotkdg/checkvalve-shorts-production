@@ -1,0 +1,8 @@
+Use case: precise-object-edit. Preserve the attached storyboard exactly: FIVEcolumns FOURrows TWENTY panels01-20, every Korean title/label/footer, all approved illustration styles, people, poses, machinery and frame borders.
+ONLY correct these bucket WATER STATES and one channel state:
+- Panel03 "닿지 않는 밭": the HIGH receiving channel beside the farmer is DRY. Remove its blue water and cascading water down bank. Leave the lower Nile full of water. Farmer points from low river toward dry higher field/inlet. Keep the newly corrected modest bank height.
+- Panel08 "한쪽의 물통": attached bucket is EMPTY, show dark dry inside, no blue surface. Keep short opposite arm BARE with NO counterweight.
+- Panel09 "반대쪽의 추": attached bucket is EMPTY, dark dry interior. Keep the newly attached single counterweight.
+- Panel10 "빈 통 내리기": bucket being lowered is EMPTY, dark dry interior, not full blue water before dipping.
+- Panel17 "자동은 아니다": bucket in the reset descent is EMPTY, dark dry inside, because preceding water has been poured out.
+Do not change other panels. In11/12 water entering and filling bucket remains visible; in13/14 bucket remains FULL during ascent; in15/20 water pours into the elevated inlet and bucket begins emptying; in16 channel water runs downhill. All buckets stay watertight timber with leather lining. Do not add text indicators, numbers, arrows or separate illustrations. Maintain exact20 numbered panels and rich warm shading.
