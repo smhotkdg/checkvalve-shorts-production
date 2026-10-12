@@ -14,6 +14,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start-production.ps1 -Slug <s
 먼저 config의 language_sets.required를 읽고 topic.json에 같은 설정이 있으면 주제 설정을 우선해. en이 없으면 아래 영어 단계·영어 파일 읽기·영어 전달/검수를 모두 건너뛰고 새 영어 파일을 만들지 마. 기존 영어 자료를 삭제하거나 변경하지 마. en이 활성화된 경우에만 두 세트는 같은 화면 편집·효과음을 쓰고 음성·자막·고정 제목을 다르게 만들어.
 이번 기준 세 가지를 꼭 지켜: (1) 3D는 config의 visual_clarity대로 한눈에 이해되게 하되 주제의 승인된 재질·이미지 방향을 우선하기, (2) 화면 텍스트는 고정 제목 블록 하나와 자막뿐이고 진행 칩·단계 제목·부품 이름표는 넣지 않기, (3) 자막과 제목 뒤에 배경 패널·띠·상자를 넣지 않고 외곽선과 그림자만 쓰기. 기존 미디어를 재사용하더라도 예전 제목 PNG·자막 패널·좌표를 재사용하지 말고 전역 v6로 다시 합성해.
 
+화면 구성은 config.visual_clarity.picture_modes를 반드시 적용해. 힉스필드의 풍경 화면 위에 별도 제작한 설명 도해를 겹치지 말고, 설명은 풍경 없는 아이보리/중성 배경에서 독립된 전체 화면으로 보여 줘. 실제 벽화/유물 자료는 작은 삽입창 대신 전체 화면 크롭으로 사용하고 원본 비율을 찌그러뜨리지 마. 복제본/재구성 여부와 출처를 기록해. 자료의 원화 속 인물은 억지로 움직이지 않게 하고 조용한 관찰 팬만 허용해. 제목/자막의 전역v6 좌표는 유지해.
+
 먼저 읽기: README.md, HANDOFF.md, docs/immersion-guide.md, docs/workflow-commands.md, docs/typecast-api.md, config/higgsfield-typecast.json, topics/<slug>/ 의 brief.md, narration.txt, narration.en.txt(en 활성화 시에만), title-description.txt, title-description.en.txt(en 활성화 시에만), topic.json.
 주제 내용·색·장면은 topic.json, 텍스트 좌표·크기·줄 수·폭은 전역 config layout v6가 무조건 우선이야. topic의 과거 v1~v4 좌표는 재사용하지 마. docs/text-layout.md를 읽고 모든 영상에 같은 비율을 유지해. 이번 reference_analysis 문서를 읽고 원본의 관찰과 우리의 제작 규칙을 구분해. 각 컷에 이전 조립 상태를 이어받고, 접촉 전후를 보여 줘. 두 파일의 guards는 전부 지켜.
 

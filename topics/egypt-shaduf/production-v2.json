@@ -1,0 +1,830 @@
+{
+  "variant": "production-v2",
+  "status": "completed-verified",
+  "based_on": "topics/egypt-shaduf/production-v1.json",
+  "language": "ko",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration_seconds": 53,
+  "storyboard_frames": 20,
+  "revision_reason": "User rejected authored diagrams pasted over the scenic Higgsfield backdrop and small inset mural. Separate picture modes and use full-screen authentic documentary image.",
+  "layout_policy": {
+    "inherit_global": true,
+    "required_version": 6,
+    "title_center": [
+      540,
+      260
+    ],
+    "caption_center": [
+      540,
+      1360
+    ],
+    "caption_font_pixels": 64,
+    "max_caption_lines": 2
+  },
+  "higgsfield": {
+    "model": "kling3_0",
+    "mode": "std",
+    "sound": "off",
+    "durations": [
+      5,
+      10,
+      5,
+      10,
+      5
+    ],
+    "count": 5,
+    "initial_exact_quote": 37.5,
+    "essential_pouring_repair": 6.25,
+    "actual_spent": 43.75,
+    "hard_cap": 50,
+    "minimum_spend": 0,
+    "spend_to_cap": false,
+    "balance_delta_confirmed": true,
+    "all_jobs_completed": true,
+    "remaining_budget_unused": 6.25,
+    "cost_scope": "Higgsfield only; Typecast and built-in image tool separately accounted",
+    "source_resolution": [
+      720,
+      1280
+    ],
+    "additional_revision_credits": 0,
+    "additional_revision_jobs": 0,
+    "used_source_clips": [
+      1,
+      4,
+      10,
+      14
+    ],
+    "unused_source_clip15": "Its existing6.25-credit charge remains included in43.75. v1 cleanup/pool overlay is no longer used in v2. Do not regenerate to recover sunk cost.",
+    "generation_prompts_and_quotes": "See immutable production-v1.json; all five paid submissions remain in accumulated cost."
+  },
+  "typecast": {
+    "voice": "original Piljae from authenticated catalog",
+    "model": "ssfm-v30",
+    "characters": 399,
+    "pitch_preserving_tempo": 0.94,
+    "processed_audio_seconds": 50.79501133786848,
+    "speech_end_seconds": 50.54,
+    "caption_chunks": 22,
+    "fallback_allowed": false,
+    "regenerated": false,
+    "existing_final_audio_reused": true
+  },
+  "audio_mix": {
+    "voice_loudnorm": {
+      "integrated_lufs": -16,
+      "true_peak_dbfs": -1.5,
+      "loudness_range": 7
+    },
+    "effects_gain": 0.65,
+    "limiter": 0.95,
+    "sample_rate": 44100,
+    "music": false,
+    "quiet_water_bed": true,
+    "effects": "small water/dipping/pouring, footsteps, timber/rope creaks, gentle swishes and final accent; synthesized locally",
+    "priority": "narration",
+    "events": [
+      [
+        1.4,
+        "sand"
+      ],
+      [
+        3.7,
+        "water"
+      ],
+      [
+        5.4,
+        "whoosh"
+      ],
+      [
+        8.8,
+        "water"
+      ],
+      [
+        10.8,
+        "rope"
+      ],
+      [
+        11.8,
+        "sand"
+      ],
+      [
+        12.5,
+        "sand"
+      ],
+      [
+        14.6,
+        "water"
+      ],
+      [
+        17.0,
+        "rope"
+      ],
+      [
+        19.5,
+        "rope"
+      ],
+      [
+        21.8,
+        "rope"
+      ],
+      [
+        24.4,
+        "rope"
+      ],
+      [
+        26.5,
+        "water"
+      ],
+      [
+        28.7,
+        "water"
+      ],
+      [
+        30.4,
+        "rope"
+      ],
+      [
+        32.8,
+        "rope"
+      ],
+      [
+        34.5,
+        "water"
+      ],
+      [
+        35.7,
+        "water"
+      ],
+      [
+        36.8,
+        "water"
+      ],
+      [
+        38.8,
+        "rope"
+      ],
+      [
+        41.4,
+        "water"
+      ],
+      [
+        44.4,
+        "whoosh"
+      ],
+      [
+        47.5,
+        "rope"
+      ],
+      [
+        48.6,
+        "water"
+      ],
+      [
+        50.3,
+        "water"
+      ],
+      [
+        51.7,
+        "reveal"
+      ]
+    ]
+  },
+  "encoding": {
+    "video": "H.264",
+    "preset": "fast",
+    "crf": 18,
+    "pixel_format": "yuv420p",
+    "audio": "AAC",
+    "audio_bitrate": "192k",
+    "faststart": true,
+    "subtitles": "burned into pixels"
+  },
+  "workflow_bindings": {
+    "voice": "User's original Typecast Piljae overrides default skill voice",
+    "style": "Approved storyboard imagery overrides generic style presets",
+    "runtime": "Continue user's established local production workspace and encrypted Typecast connector with custom native mechanism animation",
+    "text": "Mandatory user layoutv6 and authored Korean line breaks override generic caption defaults",
+    "review": "User authorized completion of approved storyboard; proceed through generation, assembly and verification without repeated stage questions",
+    "thumbnail": false,
+    "publish_to_youtube": false
+  },
+  "timeline": {
+    "fps": 24,
+    "duration": 53,
+    "segments": [
+      {
+        "scene": 1,
+        "start": 0.0,
+        "end": 3.083333,
+        "frames": 74,
+        "route": "higgsfield-recut",
+        "source_clip": 1,
+        "source_start": 0,
+        "source_end": 2.8,
+        "vertical_shift": 220
+      },
+      {
+        "scene": 2,
+        "start": 3.083333,
+        "end": 5.125,
+        "frames": 49,
+        "route": "higgsfield-recut",
+        "source_clip": 1,
+        "source_start": 2.8,
+        "source_end": 5,
+        "vertical_shift": 220
+      },
+      {
+        "scene": 3,
+        "start": 5.125,
+        "end": 8.25,
+        "frames": 75,
+        "route": "native-animated"
+      },
+      {
+        "scene": 4,
+        "start": 8.25,
+        "end": 10.458333,
+        "frames": 53,
+        "route": "higgsfield-recut",
+        "source_clip": 4,
+        "source_start": 0,
+        "source_end": 4,
+        "vertical_shift": 100
+      },
+      {
+        "scene": 5,
+        "start": 10.458333,
+        "end": 13.0,
+        "frames": 61,
+        "route": "higgsfield-recut",
+        "source_clip": 4,
+        "source_start": 4,
+        "source_end": 7,
+        "vertical_shift": 100
+      },
+      {
+        "scene": 6,
+        "start": 13.0,
+        "end": 16.958333,
+        "frames": 95,
+        "route": "higgsfield-recut",
+        "source_clip": 4,
+        "source_start": 7,
+        "source_end": 10,
+        "vertical_shift": 100
+      },
+      {
+        "scene": 7,
+        "start": 16.958333,
+        "end": 19.0,
+        "frames": 49,
+        "route": "native-animated"
+      },
+      {
+        "scene": 8,
+        "start": 19.0,
+        "end": 21.5,
+        "frames": 60,
+        "route": "native-animated"
+      },
+      {
+        "scene": 9,
+        "start": 21.5,
+        "end": 23.833333,
+        "frames": 56,
+        "route": "native-animated"
+      },
+      {
+        "scene": 10,
+        "start": 23.833333,
+        "end": 25.875,
+        "frames": 49,
+        "route": "higgsfield-recut",
+        "source_clip": 10,
+        "source_start": 0,
+        "source_end": 2.2
+      },
+      {
+        "scene": 11,
+        "start": 25.875,
+        "end": 28.041667,
+        "frames": 52,
+        "route": "higgsfield-recut",
+        "source_clip": 10,
+        "source_start": 2.2,
+        "source_end": 5
+      },
+      {
+        "scene": 12,
+        "start": 28.041667,
+        "end": 30.041667,
+        "frames": 48,
+        "route": "native-animated"
+      },
+      {
+        "scene": 13,
+        "start": 30.041667,
+        "end": 32.083333,
+        "frames": 49,
+        "route": "native-animated"
+      },
+      {
+        "scene": 14,
+        "start": 32.083333,
+        "end": 34.125,
+        "frames": 49,
+        "route": "higgsfield-recut",
+        "source_clip": 14,
+        "source_start": 0.7,
+        "source_end": 2.8
+      },
+      {
+        "scene": 15,
+        "start": 34.125,
+        "end": 36.416667,
+        "frames": 55,
+        "route": "native-animated"
+      },
+      {
+        "scene": 16,
+        "start": 36.416667,
+        "end": 38.125,
+        "frames": 41,
+        "route": "native-animated"
+      },
+      {
+        "scene": 17,
+        "start": 38.125,
+        "end": 40.541667,
+        "frames": 58,
+        "route": "higgsfield-recut",
+        "source_clip": 10,
+        "source_start": 0,
+        "source_end": 2.2,
+        "purpose": "Intentional second operating cycle, illustrating repeated human work; no static freeze or unmotivated loop."
+      },
+      {
+        "scene": 18,
+        "start": 40.541667,
+        "end": 44.208333,
+        "frames": 88,
+        "route": "higgsfield-recut",
+        "source_clip": 10,
+        "source_start": 2.2,
+        "source_end": 5,
+        "purpose": "Intentional second operating cycle, illustrating repeated human work; no static freeze or unmotivated loop."
+      },
+      {
+        "scene": 19,
+        "start": 44.208333,
+        "end": 47.041667,
+        "frames": 68,
+        "route": "historical-document-full-bleed"
+      },
+      {
+        "scene": 20,
+        "start": 47.041667,
+        "end": 53.0,
+        "frames": 143,
+        "route": "native-animated",
+        "purpose": "Intentional second operating cycle, illustrating repeated human work; no static freeze or unmotivated loop."
+      }
+    ]
+  },
+  "caption_timing": [
+    {
+      "lines": [
+        "옛날 이집트 농부들은",
+        "머리가 아팠습니다."
+      ],
+      "text": "옛날 이집트 농부들은 머리가 아팠습니다.",
+      "start": 0.0,
+      "end": 3.08
+    },
+    {
+      "lines": [
+        "바로 옆에",
+        "나일강이 흐르는데,"
+      ],
+      "text": "바로 옆에 나일강이 흐르는데,",
+      "start": 3.08,
+      "end": 5.14
+    },
+    {
+      "lines": [
+        "정작 높은 밭까지 물이",
+        "올라가지 않았거든요."
+      ],
+      "text": "정작 높은 밭까지 물이 올라가지 않았거든요.",
+      "start": 5.14,
+      "end": 8.26
+    },
+    {
+      "lines": [
+        "일단 물통으로 퍼서,"
+      ],
+      "text": "일단 물통으로 퍼서,",
+      "start": 8.26,
+      "end": 10.46
+    },
+    {
+      "lines": [
+        "둑을 올라가",
+        "밭에 부었습니다."
+      ],
+      "text": "둑을 올라가 밭에 부었습니다.",
+      "start": 10.46,
+      "end": 13.0
+    },
+    {
+      "lines": [
+        "그런데 한 통을 부어도,"
+      ],
+      "text": "그런데 한 통을 부어도,",
+      "start": 13.0,
+      "end": 14.86
+    },
+    {
+      "lines": [
+        "옮길 물은",
+        "한참 남았죠."
+      ],
+      "text": "옮길 물은 한참 남았죠.",
+      "start": 14.86,
+      "end": 16.96
+    },
+    {
+      "lines": [
+        "여기에 긴 막대를",
+        "걸치고,"
+      ],
+      "text": "여기에 긴 막대를 걸치고,",
+      "start": 16.96,
+      "end": 19.0
+    },
+    {
+      "lines": [
+        "한쪽에 물통을",
+        "달았습니다."
+      ],
+      "text": "한쪽에 물통을 달았습니다.",
+      "start": 19.0,
+      "end": 21.5
+    },
+    {
+      "lines": [
+        "반대쪽에는",
+        "무거운 추를 붙였죠."
+      ],
+      "text": "반대쪽에는 무거운 추를 붙였죠.",
+      "start": 21.5,
+      "end": 23.82
+    },
+    {
+      "lines": [
+        "빈 물통을 아래로",
+        "당기면,"
+      ],
+      "text": "빈 물통을 아래로 당기면,",
+      "start": 23.82,
+      "end": 25.86
+    },
+    {
+      "lines": [
+        "물통이 강물 속으로",
+        "내려갑니다."
+      ],
+      "text": "물통이 강물 속으로 내려갑니다.",
+      "start": 25.86,
+      "end": 28.04
+    },
+    {
+      "lines": [
+        "물이 차면",
+        "다시 들어 올리는데,"
+      ],
+      "text": "물이 차면 다시 들어 올리는데,",
+      "start": 28.04,
+      "end": 30.06
+    },
+    {
+      "lines": [
+        "이번엔 반대편 추가",
+        "내려오며,"
+      ],
+      "text": "이번엔 반대편 추가 내려오며,",
+      "start": 30.06,
+      "end": 32.08
+    },
+    {
+      "lines": [
+        "찬 물통을 올리는 일을",
+        "돕습니다."
+      ],
+      "text": "찬 물통을 올리는 일을 돕습니다.",
+      "start": 32.08,
+      "end": 34.14
+    },
+    {
+      "lines": [
+        "올라온 물은",
+        "위쪽 수로에 붓고,"
+      ],
+      "text": "올라온 물은 위쪽 수로에 붓고,",
+      "start": 34.14,
+      "end": 36.42
+    },
+    {
+      "lines": [
+        "수로를 따라 밭으로",
+        "보냈습니다."
+      ],
+      "text": "수로를 따라 밭으로 보냈습니다.",
+      "start": 36.42,
+      "end": 38.12
+    },
+    {
+      "lines": [
+        "물론, 저절로 돌아가는",
+        "장치는 아니었습니다."
+      ],
+      "text": "물론, 저절로 돌아가는 장치는 아니었습니다.",
+      "start": 38.12,
+      "end": 40.56
+    },
+    {
+      "lines": [
+        "내리고, 담고, 붓는 일은",
+        "사람이 반복했죠."
+      ],
+      "text": "내리고, 담고, 붓는 일은 사람이 반복했죠.",
+      "start": 40.56,
+      "end": 44.22
+    },
+    {
+      "lines": [
+        "이런 장치는 고대 이집트",
+        "그림에도 남아 있습니다."
+      ],
+      "text": "이런 장치는 고대 이집트 그림에도 남아 있습니다.",
+      "start": 44.22,
+      "end": 47.04
+    },
+    {
+      "lines": [
+        "샤두프."
+      ],
+      "text": "샤두프.",
+      "start": 47.04,
+      "end": 47.86
+    },
+    {
+      "lines": [
+        "물 나르기에 반대편의",
+        "무게를 보탠 겁니다."
+      ],
+      "text": "물 나르기에 반대편의 무게를 보탠 겁니다.",
+      "start": 47.86,
+      "end": 50.54
+    }
+  ],
+  "media_policy": "Only settings, prompts, narration, commands and docs in Git; media, production source, secrets, signed URLs and job receipts local only",
+  "composition": {
+    "scenic_scenes": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      10,
+      11,
+      14,
+      17,
+      18
+    ],
+    "isolated_explanation_scenes": [
+      3,
+      7,
+      8,
+      9,
+      12,
+      13,
+      15,
+      16,
+      20
+    ],
+    "historical_document_scenes": [
+      19
+    ],
+    "diagram_background": "Solid warm ivory #F5EFDF. No scenic plate, secondary landscape or generated video behind the authored diagram. This is a baked clean full-screen explanation screen; final MP4 does not have an alpha channel.",
+    "diagram_camera": {
+      "position": [
+        0.2,
+        -6,
+        2.3
+      ],
+      "scale_pixels_per_unit": 184,
+      "screen_center": [
+        660,
+        1140
+      ]
+    },
+    "materials": "Preserved timber grain, earth/clay texture, leather lining and blue water; diagram terrain exists only to show the bank/channel height.",
+    "cuts": "Each mode replaces the full picture at the existing shot boundary. No picture-in-picture, inset border or overlay between scenes. Global title/captions remain the only text overlays.",
+    "motion": "Assembly placement, bucket/counterweight movement, fill level, stream, splash and channel/field flow remain animated. Scene19 is an authentic static document with a camera pan, explicitly an exception to process-animation rules.",
+    "pour15": {
+      "camera": [
+        0.15,
+        -6,
+        2.7
+      ],
+      "scale": 310,
+      "center": [
+        470,
+        1170
+      ],
+      "bucket_radius": 0.4,
+      "bucket_height": 0.8,
+      "bucket_bottom": 0.93,
+      "handle_pivot": [
+        -0.8,
+        0,
+        1.86
+      ],
+      "tip_degrees": "-67*smoothstep(p/.65)",
+      "fill": ".9*(1-smoothstep(p/.8))",
+      "stream_window_normalized": [
+        0.13,
+        0.84
+      ],
+      "destination": "upper clay channel; short descending stream, no river spill"
+    },
+    "summary20": {
+      "rise": "theta=-30+40*smoothstep(p/.52)",
+      "pour": "q=smoothstep((p-.52)/.32); bucket tips-67q about its fixed suspension endpoint",
+      "fill": ".9*(1-q)",
+      "stream_window_normalized": [
+        0.56,
+        0.88
+      ],
+      "result": "water flows into the upper channel; last frame keeps lifted empty bucket and flowing channel, without resetting for a loop"
+    },
+    "v1_receiving_water_composite": "Removed entirely. Both15 and20 are isolated authored explanations."
+  },
+  "native_geometry": {
+    "units": "Illustrative world units, not excavation measurements",
+    "pivot_z": 2.2,
+    "long_bucket_arm": 2.4,
+    "short_weight_arm": 0.9,
+    "suspension_rope": 0.95,
+    "bucket_height": 0.4,
+    "bucket_radius": 0.22,
+    "bank_z": 0.85,
+    "river_surface_z": 0.13,
+    "counterweight_radius": 0.24,
+    "beam_rule": "long tip=(-L*cos(theta),0,P+L*sin(theta)); short tip=(S*cos(theta),0,P-S*sin(theta)); fixed lengths and opposite vertical motions",
+    "renderer": "textured orthographic geometry with per-pixel depth, at1080x1920",
+    "camera": {
+      "position": [
+        0.2,
+        -6,
+        2.3
+      ],
+      "scale_pixels_per_unit": 184,
+      "screen_center": [
+        660,
+        1140
+      ]
+    },
+    "materials": "Preserved timber grain, earth/clay texture, leather lining and blue water; diagram terrain exists only to show the bank/channel height.",
+    "native_scenes": [
+      3,
+      7,
+      8,
+      9,
+      12,
+      13,
+      15,
+      16,
+      20
+    ],
+    "cutaway12": "front half cut away to show full water column rising from bottom, then a small lift; real vessel remains opaque",
+    "suspension_rope_rule": "nominal beam-to-bucket-rim drop0.95; upper suspension0.82 and fixed bail lengths; installation shots precede fixed operating cycle"
+  },
+  "historical_document": {
+    "title": "Garden Scene, Tomb of Ipuy",
+    "museum": "The Metropolitan Museum of Art",
+    "object_number": "30.4.115",
+    "object_id": 557816,
+    "artist": "Norman de Garis Davies",
+    "medium": "Tempera on paper, facsimile of ancient wall painting; not a photograph of the ancient wall",
+    "ancient_original_date": "ca.1290–1224 BCE",
+    "credit_line": "Rogers Fund, 1930",
+    "license": "Public Domain / The Met Open Access",
+    "page": "https://www.metmuseum.org/art/collection/search/557816",
+    "image": "https://images.metmuseum.org/CRDImages/eg/original/vs2973.jpg",
+    "sha256": "f33a682b53cbb28080c34acd988b858cbba184254554c05a0974f58f684cff33",
+    "treatment": "Full-bleed 9:16 crop; source crop height1160 width652.5, y125; x625 to1045 with smoothstep pan. The actual painted content is not reanimated, invented or retouched."
+  },
+  "verification": {
+    "status": "passed",
+    "sha256": "f3d771c21efe952270c2dbd8d4a9d281ef493f468737950b9d1c3ee751576676",
+    "full_decode": "passed",
+    "frames": 1272,
+    "duration_seconds": 53.0,
+    "peak_dbfs": -1.0,
+    "caption_authored_words_exact": true,
+    "asr_similarity": 0.9820143884892086,
+    "asr_source": "The unchanged v1 Piljae audio and caption timing; no new ASR claimed",
+    "layout_bounds_passed": true,
+    "motion_samples": [
+      {
+        "scene": 1,
+        "mean_absolute_frame_difference": 19.266
+      },
+      {
+        "scene": 2,
+        "mean_absolute_frame_difference": 18.4
+      },
+      {
+        "scene": 3,
+        "mean_absolute_frame_difference": 0.117
+      },
+      {
+        "scene": 4,
+        "mean_absolute_frame_difference": 14.338
+      },
+      {
+        "scene": 5,
+        "mean_absolute_frame_difference": 54.18
+      },
+      {
+        "scene": 6,
+        "mean_absolute_frame_difference": 54.944
+      },
+      {
+        "scene": 7,
+        "mean_absolute_frame_difference": 5.077
+      },
+      {
+        "scene": 8,
+        "mean_absolute_frame_difference": 2.064
+      },
+      {
+        "scene": 9,
+        "mean_absolute_frame_difference": 1.612
+      },
+      {
+        "scene": 10,
+        "mean_absolute_frame_difference": 15.605
+      },
+      {
+        "scene": 11,
+        "mean_absolute_frame_difference": 7.834
+      },
+      {
+        "scene": 12,
+        "mean_absolute_frame_difference": 20.068
+      },
+      {
+        "scene": 13,
+        "mean_absolute_frame_difference": 8.044
+      },
+      {
+        "scene": 14,
+        "mean_absolute_frame_difference": 18.935
+      },
+      {
+        "scene": 15,
+        "mean_absolute_frame_difference": 23.583
+      },
+      {
+        "scene": 16,
+        "mean_absolute_frame_difference": 2.391
+      },
+      {
+        "scene": 17,
+        "mean_absolute_frame_difference": 15.611
+      },
+      {
+        "scene": 18,
+        "mean_absolute_frame_difference": 7.54
+      },
+      {
+        "scene": 19,
+        "mean_absolute_frame_difference": 79.317
+      },
+      {
+        "scene": 20,
+        "mean_absolute_frame_difference": 8.599
+      }
+    ],
+    "visual_review": "Encoded contact sheet, isolated pour/summary endpoints, full-bleed document and phone UI simulation inspected",
+    "additional_higgsfield_credits": 0
+  },
+  "completed_local_date": "2026-10-12"
+}

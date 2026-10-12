@@ -368,7 +368,7 @@
       "water": "clear medium blue, semi-transparent with a crisp level line",
       "hero_moving_object": "one saturated accent (orange #FF7A1A) for the main moving object",
       "named_part_highlight": "when narration first names a part, give it a soft yellow (#FFD400) rim glow for about 1.5 s, then return to normal",
-      "background": "soft sky-to-horizon gradient and a plain ground plane",
+      "background": "Scenic clips follow approved topic imagery; authored explanation scenes use plain warm ivory/neutral background without a scenic plate.",
       "rule": "one accent color per frame besides the yellow highlight; no other saturated colors"
     },
     "camera": {
@@ -385,7 +385,16 @@
     "style_frame_gate": "Reuse the user-approved storyboard/style for an authorized continuation. For a newly proposed visual direction not already approved, show hook/main/key/ending style frames before full production.",
     "glance_test": "downscale each style frame to 360 px wide grayscale; a viewer must be able to name the moving part within 1 second; write the one thing each frame should show and confirm it is the most visible element",
     "layout_authority": "global layout v6 is mandatory; topic colors/style never change text proportions",
-    "scope": "baseline for engineering topics; the current approved topic reference determines illustration versus 3D, material textures and object palette. Global text layout cannot be overridden."
+    "scope": "baseline for engineering topics; the current approved topic reference determines illustration versus 3D, material textures and object palette. Global text layout cannot be overridden.",
+    "picture_modes": {
+      "required": true,
+      "reason": "2026-10-12 user: scenic Higgsfield footage and separately authored explanation overlapped awkwardly. Use clean background-free explanatory presentation and full-screen actual historical imagery.",
+      "scenic": "Approved generated footage fills the frame; no separate authored explanatory scene composited over it.",
+      "explanation": "Full-screen clean warm ivory or neutral background. Show only mechanism, necessary schematic terrain, fluid and restrained effects; no scenic photographic/generated landscape behind the diagram. Alpha assets may be used during assembly, but final delivery is a clean baked video.",
+      "historical_document": "Full-bleed authenticated image crop; no small inset over a scene, no distorted aspect ratio. Identify facsimiles/reconstructions accurately in source metadata and upload description.",
+      "motion_exception": "Authentic historical documents remain static; restrained camera pan may reveal them. Do not pretend the painted figures have physical process motion. All action/explanation scenes still need meaningful object or fluid motion.",
+      "transitions": "Cut between complete picture modes. Keep the approved title/caption coordinates unchanged."
+    }
   },
   "reference_videos": [
     {

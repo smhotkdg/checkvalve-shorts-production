@@ -1,7 +1,7 @@
 {
   "slug": "egypt-shaduf",
   "status": "completed-verified",
-  "latest_variant": "production-v1",
+  "latest_variant": "production-v2",
   "storyboard": "topics/egypt-shaduf/storyboard-v1.md",
   "narration": "topics/egypt-shaduf/narration.txt",
   "language": "ko",
@@ -33,7 +33,7 @@
     "voice_id_rule": "resolve original voice from authenticated catalog",
     "fallback_allowed": false
   },
-  "style": "Approved Egypt/Pompeii warm ivory, dark ink, realistic shading and material textures; actively animated characters, water and mechanisms",
+  "style": "Approved illustrated scenic Higgsfield shots; isolated textured mechanism/flow explanations on plain warm ivory; full-bleed authentic museum facsimile for documentary shot; global layoutv6 unchanged.",
   "route": "20-frame storyboard first, Higgsfield core character motion plus exact authored animation, original Piljae and burned Korean captions",
   "per_scene_process_motion_required": true,
   "still_image_camera_pan_only_allowed": false,
@@ -72,7 +72,8 @@
     "balance_delta_verified": true,
     "unused_budget": 6.25,
     "initial_motion_clips_cost": 37.5,
-    "essential_pour_repair_cost": 6.25
+    "essential_pour_repair_cost": 6.25,
+    "revision_additional_credits": 0
   },
   "physics_guards": [
     "Single fixed support and pivot, one intact beam, one bucket and one counterweight.",
@@ -90,11 +91,6 @@
   ],
   "research_sources": [
     {
-      "title": "The Met — Garden Scene, Tomb of Ipuy, object30.4.115",
-      "url": "https://www.metmuseum.org/art/collection/search/557816",
-      "supports": "19th-Dynasty/Ramesside garden-scene facsimile; original tomb context, not a photo of a surviving machine."
-    },
-    {
       "title": "Elio Nenci (2018), The Water Lifting Devices and the Origin of Ancient Mechanics",
       "url": "https://refubium.fu-berlin.de/handle/fub188/23832",
       "supports": "Pivoted unequal timber arms, bucket/rope and counterweight; human lowers, fills, lifts with assistance and pours. Avoid unqualified claims about first invention date."
@@ -103,6 +99,11 @@
       "title": "FAO, Water Lifting for Irrigation, section3.3.2",
       "url": "https://www.fao.org/4/ah810e/ah810e05.htm",
       "supports": "Counterpoise lift/shadoof and staged lifts; gravity flow downhill, manually operated intermittent cycles."
+    },
+    {
+      "title": "The Met — Garden Scene, Tomb of Ipuy (30.4.115)",
+      "url": "https://www.metmuseum.org/art/collection/search/557816",
+      "supports": "Authenticated public-domain facsimile showing the shaduf; scene19 documentary source, not a photograph of the original ancient wall."
     }
   ],
   "shots": [
@@ -304,17 +305,12 @@
       "scene": 15,
       "label": "높은 수로에 붓기",
       "narration": "올라온 물은 위쪽 수로에 붓고,",
-      "composition": "막대가 들린 상태에서 농부가 통을 손으로 기울여 위쪽 받이/수로 입구에 붓는다. 줄을 떼지 않고 통과 팔은 길이가 변하지 않는다.",
-      "motion": "손으로 통 기울임·굵은 물줄기·통 수위 감소",
-      "route": "higgsfield-recut",
+      "composition": "풍경 없는 아이보리 설명 화면. 기울어지는 물통과 위쪽 수로 받이를 크게 보여 준다.",
+      "motion": "물통 기울임·잔여 수위 감소·수로에 닿는 물줄기·작은 물방울·받이 수위 증가",
+      "route": "native-animated",
       "start_seconds": 34.125,
       "end_seconds": 36.416667,
-      "frames": 55,
-      "source_clip": 15,
-      "source_range": [
-        0.2,
-        3.0
-      ]
+      "frames": 55
     },
     {
       "scene": 16,
@@ -363,9 +359,9 @@
       "scene": 19,
       "label": "그림에 남은 장치",
       "narration": "이런 장치는 고대 이집트 그림에도 남아 있습니다.",
-      "composition": "파피루스가 아닌 회벽의 설명용 벽화 시점. 고대 미술 구도로 농부·막대·물통·추를 보여준다. 실제 소장품 사진이나 정확한 복제라고 주장하지 않는다.",
-      "motion": "현장 이미지와 그림을 연결하는 매치 전환·장치 경로를 따라가는 시연 표시",
-      "route": "native-animated",
+      "composition": "메트로폴리탄 박물관의 이푸이 무덤 벽화 복제본 전체 화면. 세로 크롭으로 인물/막대에서 반대쪽 추로 관찰 방향을 이동한다.",
+      "motion": "실제 그림 자체는 움직이지 않으며 다큐멘터리 카메라 팬만 사용한다.",
+      "route": "historical-document-full-bleed",
       "start_seconds": 44.208333,
       "end_seconds": 47.041667,
       "frames": 68
@@ -374,17 +370,12 @@
       "scene": 20,
       "label": "강에서 밭으로",
       "narration": "샤두프. 물 나르기에 반대편의 무게를 보탠 겁니다.",
-      "composition": "첫 전경을 회수하되 결과 상태. 찬 통은 위 수로 높이, 물은 수로·밭으로 흐름, 같은 농부가 붓는 중이다. 강과 높은 밭이 동시에 보인다.",
-      "motion": "마무리 붓기·고랑 물 흐름·인물과 갈대",
-      "route": "higgsfield-recut",
+      "composition": "풍경 없는 독립 설명 화면에서 샤두프 전체 장치와 강/높은 수로를 보여 준다.",
+      "motion": "물통 상승·반대편 추 하강·통 기울임·수로 입구에 붓기·수로 흐름 유지",
+      "route": "native-animated",
       "start_seconds": 47.041667,
       "end_seconds": 53.0,
-      "frames": 143,
-      "source_clip": 15,
-      "source_range": [
-        0,
-        5
-      ]
+      "frames": 143
     }
   ],
   "media_policy": "Only settings, prompts, narration, commands and docs in Git. Images, generated videos, production source, API keys and signed URLs stay local.",
@@ -400,9 +391,20 @@
   "duration_actual_seconds": 53,
   "prior_storyboard_duration_seconds": 60,
   "delivery": {
-    "local_video": "outputs/egypt-shaduf-final.mp4",
-    "local_subtitles": "outputs/egypt-shaduf.srt",
-    "verification": "outputs/egypt-shaduf-verification.json",
-    "passed": true
+    "local_video": "outputs/egypt-shaduf-final-v2.mp4",
+    "local_subtitles": "outputs/egypt-shaduf-v2.srt",
+    "verification": "outputs/egypt-shaduf-v2-verification.json",
+    "passed": true,
+    "previous_video_preserved": "outputs/egypt-shaduf-final.mp4"
+  },
+  "composition_policy": {
+    "reference": "config/higgsfield-typecast.json visual_clarity.picture_modes",
+    "explanations": "Own clean full-screen ivory background; never paste authored scene over scenic video",
+    "historical_documents": "Full-bleed authenticated source; facsimile/reconstruction must be disclosed",
+    "settings": "topics/egypt-shaduf/production-v2.json",
+    "document_motion_exception": {
+      "scene": 19,
+      "rule": "Static painted figures stay static; documentary camera pan is acceptable; do not classify it as physical process animation."
+    }
   }
 }
